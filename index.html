@@ -39,27 +39,17 @@
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
 
-
-
 </head>
-
-
-
-
 
 <body>
   <!-- header -->
-  <div class="position-relative overflow-hidden p-3  text-center bg-light bgbg">
-    <div class="col-md-5 p-lg-5 mx-auto" style="float:right; height: 200px;">
-      <!-- <h1 class="display-4 font-weight-normal">Punny headline</h1>
-      <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with
-        this example based on Apple's marketing pages.</p>
-      <a class="btn btn-outline-secondary" href="https://getbootstrap.com/docs/4.1/examples/product/#">Coming soon</a> -->
+  <div class="position-relative overflow-hidden  text-center bgbg">
+    <div class="col-md-5 p-lg-5 mx-auto mobileBG">
     </div>
-    <div class="col-md-5 p-lg-5 mx-auto justify-content-center" style="float:left; display: flex;">
-      <model-viewer 
-        class="text-center"
-        style="height: 400px; background-color: whitesmoke; border-radius: 20px;"
+
+
+    <div class="col-md-5 p-5 mx-auto justify-content-center" style="float:left; display: flex;">
+      <model-viewer class="text-center" style="height: 400px; background-color: whitesmoke; border-radius: 20px;"
         src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948"
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
         poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
@@ -67,31 +57,48 @@
       </model-viewer>
 
     </div>
-  </div>
 
+    <div class="d-md-flex flex-md-equal w-100 bg-darkGradient">
+      <div>
+        <img class="mt-3 mr-4" src="https://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png"
+          style="width: 35px;float:right" ; />
+        <img class="mt-3 mr-4" src="https://www.pngkey.com/png/full/40-407409_logo-instagram-png-icon-putih.png"
+          style="width: 35px;float:right" ; />
+      </div>
+    </div>
+  </div>
 
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="bg-darkd mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
       <div class="my-3 py-3">
         <h2 class="display-5">Another headline</h2>
-        <p class="lead">The last male descendant of the emperor Augustus, Nero succeeded to the throne in AD 54 aged just 16 and died a violent death at 30. His turbulent rule saw momentous events including the Great Fire of Rome, Boudicca’s rebellion in Britain, the execution of his own mother and first wife, grand projects and extravagant excesses.
+        <p class="lead">The last male descendant of the emperor Augustus, Nero succeeded to the throne in AD 54 aged
+          just 16 and died a violent death at 30. His turbulent rule saw momentous events including the Great Fire of
+          Rome, Boudicca’s rebellion in Britain, the execution of his own mother and first wife, grand projects and
+          extravagant excesses.
 
-          Drawing on the latest research, this major exhibition questions the traditional narrative of the ruthless tyrant and eccentric performer, revealing a different Nero, a populist leader at a time of great change in Roman society.
-          </p>
+          Drawing on the latest research, this major exhibition questions the traditional narrative of the ruthless
+          tyrant and eccentric performer, revealing a different Nero, a populist leader at a time of great change in
+          Roman society.
+        </p>
       </div>
     </div>
-    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="bg-darkd  mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
       <div class="my-3 p-3">
         <h2 class="display-5">Another headline</h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, odio tempore minima, voluptatum reprehenderit perspiciatis mollitia illum, placeat assumenda ut officia nobis iste necessitatibus magnam! Nam est delectus maxime accusantium!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, odio tempore minima, voluptatum reprehenderit perspiciatis mollitia illum, placeat assumenda ut officia nobis iste necessitatibus magnam! Nam est delectus maxime accusantium!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, odio tempore minima, voluptatum reprehenderit perspiciatis mollitia illum, placeat assumenda ut officia nobis iste necessitatibus magnam! Nam est delectus maxime accusantium!</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, odio tempore minima,
+          voluptatum reprehenderit perspiciatis mollitia illum, placeat assumenda ut officia nobis iste necessitatibus
+          magnam! Nam est delectus maxime accusantium!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+          odio tempore minima, voluptatum reprehenderit perspiciatis mollitia illum, placeat assumenda ut officia nobis
+          iste necessitatibus magnam! Nam est delectus maxime accusantium!Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Fugiat, odio tempore minima, voluptatum reprehenderit perspiciatis mollitia illum, placeat
+          assumenda ut officia nobis iste necessitatibus magnam! Nam est delectus maxime accusantium!</p>
       </div>
     </div>
   </div>
 
-
-
-
+  </div>
 
 
 </body>
@@ -99,10 +106,62 @@
 </html>
 
 <style>
-  .bgbg {
-    background-image: url("123.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+  @media (min-width: 991.98px) {
+    .bgbg {
+      background-image: url("123.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      background-position: center;
+    }
+
+    .mobileBG {
+      float: right;
+      height: 180px;
+      display: none;
+    }
+
+    .bg-darkGradient {
+      background-color: #000;
+      opacity: .8;
+      height: 60px;
+      display: flex;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .bgbg {
+      background-color: #000;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      background-position: center;
+    }
+
+    .mobileBG {
+      background-image: url("123.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      float: right;
+      height: 180px;
+    }
+
+    .bg-darkGradient {
+      background-color: #000;
+      opacity: .8;
+      display: none;
+      height: 60px;
+    }
+  }
+
+
+
+  .bg-darkd {
+    background-color: #000;
+  }
+
+
+  body {
+    background-color: #000;
   }
 </style>
