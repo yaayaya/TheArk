@@ -25,14 +25,73 @@
   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
 </head>
+<!-- 
+    src="0727.glb" 
+    ios-src="0742.usdz" 
+    poster="0717.png"   
+
+ -->
+
+ <style>
+  
+  /* 長度標籤 */
+  #controls {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    max-width: unset;
+    transform: unset;
+  }
+
+  .dot {
+    display: block;
+    min-width: 12px;
+    min-height: 12px;
+    border: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: white;
+    --min-hotspot-opacity: 0;
+  }
+
+  .dim {
+    background: #fff;
+    border: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-family: Futura, Helvetica Neue, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    max-width: 128px;
+    overflow-wrap: break-word;
+    padding: 0.3em 1em;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: translate3d(-50%, -50%, 0);
+    --min-hotspot-opacity: 0;
+  }
+
+  .show {
+    --min-hotspot-opacity: 1;
+  }
+
+  .hide {
+    display: none;
+  }
+</style>
+
 
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
     <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center" ar-scale="fixed"  
-    src="0727.glb" 
-    ios-src="0742.usdz" 
-    poster="0717.png" 
+
+    src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948"
+    ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+    poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
     alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar style="background-color: white;">
 
       <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
@@ -167,55 +226,5 @@
   });
 </script>
 
-<style>
-  
-  /* 長度標籤 */
-  #controls {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    max-width: unset;
-    transform: unset;
-  }
-
-  .dot {
-    display: block;
-    min-width: 12px;
-    min-height: 12px;
-    border: white;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    background: white;
-    --min-hotspot-opacity: 0;
-  }
-
-  .dim {
-    background: #fff;
-    border: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(0, 0, 0, 0.8);
-    display: block;
-    font-family: Futura, Helvetica Neue, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    max-width: 128px;
-    overflow-wrap: break-word;
-    padding: 0.3em 1em;
-    position: absolute;
-    width: max-content;
-    height: max-content;
-    transform: translate3d(-50%, -50%, 0);
-    --min-hotspot-opacity: 0;
-  }
-
-  .show {
-    --min-hotspot-opacity: 1;
-  }
-
-  .hide {
-    display: none;
-  }
-</style>
 
 </html>
