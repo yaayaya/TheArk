@@ -25,12 +25,7 @@
   <script src="./plugin/focus-visible.js" defer></script>
 
 </head>
-<!-- 
-    src="0727.glb" 
-    ios-src="0742.usdz" 
-    poster="0717.png"   
 
- -->
 
  <style>
   
@@ -45,8 +40,8 @@
 
   .dot {
     display: block;
-    width: .8em;
-    height: 1em;
+    min-width: 1em;
+    min-height: 1.5em;
     border: white;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -82,16 +77,23 @@
     display: none;
   }
 </style>
-
+<!-- 
+    src="0727.glb" 
+    ios-src="0742.usdz" 
+    poster="0717.png"   
+    src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948"
+    ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+    poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"   
+ -->
 
 <body>
   <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center" ar-scale="fixed"  
-
-    src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948"
-    ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
-    poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
+    <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center" 
+    src="0727.glb" 
+    ios-src="0742.usdz" 
+    poster="0717.png" 
+    
     alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar style="background-color: white;">
 
       <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
@@ -169,7 +171,7 @@
       position: `${center.x + x2} ${center.y - y2} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
-      `${(size.z * 100).toFixed(0)} cm`;
+      `${(size.z * 10).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X-Y-Z',
@@ -181,7 +183,7 @@
       position: `${center.x + x2} ${center.y} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
-      `${(size.y * 100).toFixed(0)} cm`;
+      `${(size.y * 10).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X+Y-Z',
@@ -193,7 +195,7 @@
       position: `${center.x} ${center.y + y2} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
-      `${(size.x * 100).toFixed(0)} cm`;
+      `${(size.x * 10).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X+Y-Z',
@@ -205,7 +207,7 @@
       position: `${center.x - x2} ${center.y} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent =
-      `${(size.y * 100).toFixed(0)} cm`;
+      `${(size.y * 10).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y-Z',
@@ -217,7 +219,7 @@
       position: `${center.x - x2} ${center.y - y2} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent =
-      `${(size.z * 100).toFixed(0)} cm`;
+      `${(size.z * 10).toFixed(0)} cm`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y+Z',
