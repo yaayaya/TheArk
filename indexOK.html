@@ -14,11 +14,6 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/product/">
 
-  <!-- Bootstrap core CSS -->
-  <link href="./Product example for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="./Product example for Bootstrap_files/product.css" rel="stylesheet">
   <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 
@@ -39,49 +34,74 @@
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
   </script>
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+
 </head>
 
 <body>
-  <!-- header -->
-  <div class="position-relative overflow-hidden  text-left bgbg">
-    <div class="col-md-5 p-lg-5 mx-auto mobileBG">
-    </div>
-
-
-    <div class="col-md-5 p-5 mx-auto justify-content-center" style="float:left; display: flex;">
-      <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center" ar-scale="fixed" style="height: 400px; background-color: whitesmoke; border-radius: 20px;" src="0727.glb" ios-src="0742.usdz" poster="0717.png" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar>
-
-        <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
-        <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
-        <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
-        <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
-        <button slot="hotspot-dot+X+Y-Z" class="dot show" data-position="1 1 -1" data-normal="0 1 0"></button>
-        <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
-        <button slot="hotspot-dot-X+Y-Z" class="dot show" data-position="-1 1 -1" data-normal="0 1 0"></button>
-        <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
-        <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
-        <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
-        <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
-        <div id="controls" class="dim" style="display: none;">
-          <label for="show-dimensions">Show Dimensions:</label>
-          <input id="show-dimensions" type="checkbox" checked="true">
-        </div>
-      </model-viewer>
-    </div>
-
-    <div class="d-md-flex flex-md-equal w-100 bg-darkGradient" >
-      <div>
-        <img class="mt-3 mr-4" src="https://www.pngkey.com/png/full/445-4451805_best-photos-of-fb-icon-white-facebook-icon.png" style="width: 35px;float:right" ; />
-        <img class="mt-3 mr-4" src="https://www.pngkey.com/png/full/40-407409_logo-instagram-png-icon-putih.png" style="width: 35px;float:right" ; />
-        <span class="mt-4 mr-4" style="color: white;float:right;font-size: .5em;">Share this page</span>
-
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navClass">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link mx-2" href="#Artwork">Artwork</a>
+        <a class="nav-item nav-link mx-2" href="#Author">Author</a>
+        <a class="nav-item nav-link disabled mx-2" href="#Video">Video</a>
       </div>
     </div>
-  </div>
+  </nav>
 
+  <main>
+    <!-- 上方區塊 AR -->
+    <div class="position-relative overflow-hidden  text-left pcBG">
+      <div class="col-md-5 p-lg-5 mx-auto mobileBG">
+      </div>
+      <!-- AR 放置 -->
+      <div class="p-5 mx-auto justify-content-center">
+        <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center" ar-scale="fixed" style="height: 400px; background-color: whitesmoke; border-radius: 20px;" src="0727.glb" ios-src="0742.usdz" poster="0717.png" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar> -->
+        <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar>
 
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-    <div class="bg-darkd mr-md-3 px-3 px-md-5 text-left text-white overflow-hidden">
+          <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
+          <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
+          <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
+          <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+          <button slot="hotspot-dot+X+Y-Z" class="dot show" data-position="1 1 -1" data-normal="0 1 0"></button>
+          <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
+          <button slot="hotspot-dot-X+Y-Z" class="dot show" data-position="-1 1 -1" data-normal="0 1 0"></button>
+          <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+          <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
+          <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+          <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
+          <div id="controls" class="dim" style="display: none;">
+            <label for="show-dimensions">Show Dimensions:</label>
+            <input id="show-dimensions" type="checkbox" checked="true">
+          </div>
+        </model-viewer>
+      </div>
+      <!-- 分享連結 -->
+      <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
+        <div>
+          <img class="mt-3 mr-4" src="./images/fb_icon.png" style="width: 35px;float:right" ; />
+          <img class="mt-3 mr-4" src="./images/ig_icon.png" style="width: 35px;float:right" ; />
+          <span class="mt-4 mr-4" style="color: #ffffffe0;float:right;font-size: .8em;">Share this page</span>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 介紹、內文 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 justify-content-center"">
+      <div class=" bg-darkd mr-md-3 px-3 px-md-1 text-left text-white overflow-hidden" id="Artwork">
 
       <div class="contentCenter p-3">
         <div class="text-left" style="line-height: 1.2em;">
@@ -103,7 +123,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-darkd  mr-md-3 px-3 px-md-5 text-left text-white overflow-hidden">
+    <div class="bg-darkd  mr-md-3 px-3 px-md-1 text-left text-white overflow-hidden" id="Author">
       <div class="contentCenter p-3">
 
         <div class="text-left mb-2 ">
@@ -111,7 +131,7 @@
         </div>
 
         <div class="text-left" style="line-height: 1.2em;">
-          <span style="font-size: 2em; ">涂維政</span>
+          <span style="font-size: 2em; ">Wei</span>
           <span class="ml-2" style="font-size: 1em;">Tu Wei-Cheng</span>
         </div>
 
@@ -129,12 +149,24 @@
         </div>
       </div>
     </div>
-  </div>
-
-  </div>
+    </div>
 
 
+    <!-- 影片 -->
+    <div class="youtube">
+      <iframe src="http://www.youtube.com/embed/NlOF03DUoWc" frameborder="0" allowfullscreen class="embedded-video-16-9"></iframe>
+    </div>
+
+    <div class="pt-3"></div>
+  </main>
 </body>
+
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">Copyright © 2020-2021 Service Co., Ltd. All rights reserved.</span>
+  </div>
+</footer>
 
 <script>
   const modelViewer = document.querySelector('#dimension-demo');
@@ -228,12 +260,24 @@
   });
 </script>
 
+<script>
+  $('.navbar-nav>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+  });
+</script>
+
 </html>
 
 <style>
+  /* 滑動 */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 電腦版CSS */
   @media (min-width: 768px) {
-    .bgbg {
-      background-image: url("123.png");
+    .pcBG {
+      background-image: url("./images/123.png");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -247,17 +291,30 @@
     }
 
     .bg-darkGradient {
-      background-color: #000;
-      opacity: .8;
+      background-color: #000000b5;
       height: 60px;
       display: flex;
     }
+
+    /* ViewModel Custom */
+    .vmc {
+      width: 100%;
+      height: 450px;
+    }
   }
 
+  /* 共通Viewer Model CSS */
+  .vmc {
+    border-radius: 20px;
+    background-image: url("./images/bg_test.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
-
+  /* 手機板CSS */
   @media (max-width: 768px) {
-    .bgbg {
+    .pcBG {
       background-color: #000;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -266,7 +323,7 @@
     }
 
     .mobileBG {
-      background-image: url("123.png");
+      background-image: url("./images/123.png");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       float: right;
@@ -279,34 +336,38 @@
       display: none;
       height: 60px;
     }
+
+    .vmc {
+      width: 100%;
+      height: 60vh;
+    }
   }
 
-
   @media (min-width: 1825px) {
-    body {
+    main {
       max-width: 80%;
     }
   }
 
   @media (min-width: 1024px) {
-    body {
+    main {
       padding: 0 50px;
     }
   }
 
   @media (min-width: 768px) {
-    body {
+    main {
       padding: 0 30px;
     }
   }
 
   @media (min-width: 480px) {
-    body {
+    main {
       padding: 0 20px;
     }
   }
 
-  body {
+  main {
     background-color: #000;
     margin: 0 auto;
   }
@@ -373,5 +434,51 @@
   /* This keeps child nodes hidden while the element loads */
   :not(:defined)>* {
     display: none;
+  }
+
+  /* Youtube */
+  .youtube {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .embedded-video-16-9 {
+    width: 90vw;
+    height: 50.625vw;
+    /* 90*9/16 */
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  @media (min-width: 893px) {
+    .embedded-video-16-9 {
+      width: 45vw;
+      height: 25.3125vw;
+      /* 45*9/16 */
+      margin-left: 2vw;
+      margin-right: 2vw
+    }
+  }
+
+  /* Footer */
+  .footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #000;
+    border-top: solid .1em #ffffff59;
+    text-align: center;
+  }
+
+  .text-muted {
+    color: #f0f0f0 !important;
+  }
+
+  /* nav */
+  .navClass {
+    border-bottom: solid .1em #ffffff59;
+    background-color: #000 !important;
+    font-weight: bold;
   }
 </style>
