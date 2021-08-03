@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
 
   <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-  <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+  <script src="./plugin/ResizeObserver.js"></script>
 
   <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
@@ -67,7 +67,16 @@
       </div>
       <!-- AR 放置 -->
       <div class="p-5 mx-auto justify-content-center">
-          <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar> -->
+          <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
+            src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
+            ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
+            poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar> -->
+<!-- 
+          <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
+          src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
+          ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
+          alt="A 3D model" shadow-intensity="1" camera-controls auto-rotate ar> -->
+
 
           <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
           src="./glb/0803.glb" 
@@ -309,7 +318,7 @@
     /* ViewModel Custom */
     .vmc {
       width: 100%;
-      height: 100%;
+      height: 550px;
     }
   }
 
@@ -349,7 +358,7 @@
 
     .vmc {
       width: 100%;
-      height: 100%;
+      height: 350px;
     }
   }
 
