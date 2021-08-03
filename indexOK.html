@@ -68,8 +68,14 @@
       </div>
       <!-- AR 放置 -->
       <div class="p-5 mx-auto justify-content-center">
-        <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center" ar-scale="fixed" style="height: 400px; background-color: whitesmoke; border-radius: 20px;" src="0727.glb" ios-src="0742.usdz" poster="0717.png" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar> -->
-        <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar>
+          <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar> -->
+
+          <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
+          src="/glb/0803.glb" 
+          ios-src="/glb/0803.usdz" 
+          poster="/glb/0717.png" 
+          alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar>
+
 
           <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
           <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
