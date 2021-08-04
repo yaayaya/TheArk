@@ -44,7 +44,7 @@
 <body style="background-color: black;">
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass">
-    <a class="navbar-brand" href="#">Logo0804_9</a>
+    <a class="navbar-brand" href="#">Logo0804_10</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -69,7 +69,7 @@
             ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
             poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar> -->
 
-          <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" 
+          <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" 
           src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
           ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
           poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
@@ -78,7 +78,10 @@
           <div id="lazy-load-poster" slot="poster"></div>
           <div id="button-load" slot="poster">Load Model</div>
 
-
+          <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+              👋 Activate AR
+          </button>
+          
           <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
           src="./glb/0803.glb" 
           ios-src="./glb/0803.usdz" 
