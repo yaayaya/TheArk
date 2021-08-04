@@ -147,12 +147,12 @@
     display: block;
     font-size: 1em !important;
     font-weight: 700;
-    max-width: 128px !important;
-    height: 40px;
+    /* max-width: 128px !important; */
     overflow-wrap: break-word;
     padding: 0.3em 1em;
     position: absolute;
-    width: max-content !important;
+    width: max-content;
+    height: max-content;
     transform: translate3d(-50%, -50%, 0);
     --min-hotspot-opacity: 0;
     pointer-events: none;
