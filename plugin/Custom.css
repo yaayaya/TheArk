@@ -151,7 +151,7 @@
     overflow-wrap: break-word;
     padding: 0.3em 1em;
     position: absolute;
-    width: max-content;
+    width: max-content !important;
     height: max-content;
     transform: translate3d(-50%, -50%, 0);
     --min-hotspot-opacity: 0;
