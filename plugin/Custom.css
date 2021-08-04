@@ -148,9 +148,9 @@ main {
       background: #fff;
       --min-hotspot-opacity: 0;
       pointer-events: none;
-  
+
     }
-  
+
     .dim {
       background: #fff;
       border: white;
@@ -190,13 +190,14 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.8);
     display: block;
-    font-size: 12px;
+    font-size: 12px !important;
+    width: 65px !important;
     font-weight: 700;
     max-width: 128px !important;
     overflow-wrap: break-word;
     padding: 0.3em 1em;
     position: absolute;
-    width: max-content;
+    /* width: max-content; */
     height: max-content;
     transform: translate3d(-50%, -50%, 0);
     --min-hotspot-opacity: 0;
