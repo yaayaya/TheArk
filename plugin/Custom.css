@@ -127,8 +127,9 @@
 
   .dot {
     display: block;
-    width: 12px;
-    height: 12px;
+    min-width: 12px !important;
+    min-height : 12px !important;
+    height: auto;
     border: white;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -145,7 +146,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.8);
     display: block;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
     max-width: 128px !important;;
     overflow-wrap: break-word;
