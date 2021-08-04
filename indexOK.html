@@ -11,34 +11,29 @@
 
   <title>WebAR</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/product/">
+  <link rel="stylesheet" href="./plugin/Custom.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./plugin/Bootstrap/bootstrap.min.css">
 
   <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+  <script src="./plugin/webcomponents-loader.js"></script>
 
   <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="./plugin/intersection-observer.js"></script>
 
   <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
   <script src="./plugin/ResizeObserver.js"></script>
 
   <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <script src="./plugin/focus-visible.js" defer></script>
 
   <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
+  <script type="module" src="./plugin/model-viewer.min.js"></script>
 
-  <!-- Loads <model-viewer> for old browsers like IE11: -->
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-  </script>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
-  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./plugin/Bootstrap/jquery-3.5.1.slim.min.js"></script>
 
 
 
@@ -118,7 +113,7 @@
     </div>
 
     <!-- 介紹、內文 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 justify-content-center"">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 justify-content-center">
       <div class=" bg-darkd mr-md-3 px-3 px-md-1 text-left text-white overflow-hidden" id="Artwork">
 
       <div class="contentCenter p-3">
@@ -186,7 +181,7 @@
 
 <footer class="footer">
   <div class="container">
-    <span class="text-muted">Copyright © 2020-2021 Service Co., Ltd. All rights reserved.</span>
+    <span class="text-muted">Copyright © 2020-2021 Service Co.</span>
   </div>
 </footer>
 
@@ -294,7 +289,10 @@
   /* 滑動 */
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+  }
+
+  main{
+    overflow-x: hidden !important;
   }
 
   /* 電腦版CSS */
