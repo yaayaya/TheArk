@@ -127,9 +127,8 @@
 
   .dot {
     display: block;
-    min-width: 12px !important;
-    min-height : 12px !important;
-    height: auto;
+    width: 12px !important;
+    height : 12px !important;
     border: white;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
