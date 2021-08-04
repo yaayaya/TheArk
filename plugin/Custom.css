@@ -1,113 +1,111 @@
+/* 滑動 */
+html {
+  scroll-behavior: smooth;
+}
 
-  /* 滑動 */
-  html {
-    scroll-behavior: smooth;
-  }
+main {
+  overflow-x: hidden !important;
+}
 
-  main{
-    overflow-x: hidden !important;
-  }
-
-  /* 電腦版CSS */
-  @media (min-width: 768px) {
-    .pcBG {
-      background-image: url("../images/123.png");
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .mobileBG {
-      display: none;
-    }
-
-    .bg-darkGradient {
-      background-color: #000000b5;
-      height: 60px;
-      display: flex;
-    }
-
-    /* ViewModel Custom */
-    .vmc {
-      width: 100%;
-      height: 550px;
-    }
-
-    .dot {
-      display: block;
-      width: 12px !important;
-      height : 12px !important;
-      border: white;
-      border-radius: 50%;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-      background: #fff;
-      --min-hotspot-opacity: 0;
-      pointer-events: none;
-  
-    }
-  
-    .dim {
-      background: #fff;
-      border: white;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-      color: rgba(0, 0, 0, 0.8);
-      display: block;
-      font-size: 1vw !important;
-      font-weight: 700;
-      /* max-width: 128px !important; */
-      overflow-wrap: break-word;
-      padding: 0.3em 1em;
-      position: absolute;
-      width: max-content;
-      height: max-content;
-      transform: translate3d(-50%, -50%, 0);
-      --min-hotspot-opacity: 0;
-      pointer-events: none;
-    }
-  }
-
-  /* 共通Viewer Model CSS */
-  .vmc {
-    border-radius: 20px;
-    background-image: url("../images/bg_test.jpg");
+/* 電腦版CSS */
+@media (min-width: 768px) {
+  .pcBG {
+    background-image: url("../images/123.png");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
   }
 
-  /* 手機板CSS */
-  @media (max-width: 768px) {
-    .pcBG {
-      background-color: #000;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 100% 100%;
-      background-position: center;
-    }
+  .mobileBG {
+    display: none;
+  }
 
-    .mobileBG {
-      background-image: url("../images/123.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      float: right;
-      min-height: 180px;
-      display: block;
-    }
+  .bg-darkGradient {
+    background-color: #000000b5;
+    height: 60px;
+    display: flex;
+  }
 
-    .bg-darkGradient {
-      background-color: #000;
-      opacity: .8;
-      display: none;
-      height: 60px;
-    }
+  /* ViewModel Custom */
+  .vmc {
+    width: 100%;
+    height: 550px;
+  }
 
-    .vmc {
-      width: 100%;
-      height: 350px;
-    }
-    /* .dot {
+  .dot {
+    display: block;
+    width: 12px !important;
+    height: 12px !important;
+    border: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+
+  .dim {
+    background: #fff;
+    border: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-size: 1vw !important;
+    font-weight: 700;
+    /* max-width: 128px !important; */
+    overflow-wrap: break-word;
+    padding: 0.3em 1em;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: translate3d(-50%, -50%, 0);
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* 共通Viewer Model CSS */
+.vmc {
+  border-radius: 20px;
+  background-image: url("../images/bg_test.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 手機板CSS */
+@media (max-width: 768px) {
+  .pcBG {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  .mobileBG {
+    background-image: url("../images/123.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    min-height: 180px;
+    display: block;
+  }
+
+  .bg-darkGradient {
+    background-color: #000;
+    opacity: 0.8;
+    display: none;
+    height: 60px;
+  }
+
+  .vmc {
+    width: 100%;
+    height: 350px;
+  }
+  /* .dot {
       display: block;
       min-width: 1em;
       min-height: 1.6em;
@@ -140,8 +138,7 @@
       pointer-events: none;
     } */
 
-
-    .dot {
+  /* .dot {
       display: block;
       width: 12px !important;
       height : 12px !important;
@@ -172,147 +169,176 @@
       transform: translate3d(-50%, -50%, 0);
       --min-hotspot-opacity: 0;
       pointer-events: none;
-    }
-  }
+    } */
 
-  @media (min-width: 1825px) {
-    main {
-      max-width: 80%;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    main {
-      padding: 0 50px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    main {
-      padding: 0 30px;
-    }
-  }
-
-  @media (min-width: 480px) {
-    main {
-      padding: 0 20px;
-    }
-  }
-
-  main {
-    background-color: #000;
-    margin: 0 auto;
-  }
-
-  .bg-darkd {
-    background-color: #000;
-  }
-
-  .contentCenter {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  /* 長度標籤 */
-  #controls {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    max-width: unset;
-    transform: unset;
-  }
-
-
-
-  .show {
-    --min-hotspot-opacity: 1;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  /* This keeps child nodes hidden while the element loads */
-  :not(:defined)>* {
-    display: none;
-  }
-
-  /* Youtube */
-  .youtube {
-    margin: 0 auto;
+  .dot {
     display: block;
+    width: 12px !important;
+    height: 12px !important;
+    border: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
   }
 
-  .embedded-video-16-9 {
-    width: 90vw;
-    height: 50.625vw;
-    /* 90*9/16 */
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-
-  @media (min-width: 893px) {
-    .embedded-video-16-9 {
-      width: 45vw;
-      height: 25.3125vw;
-      /* 45*9/16 */
-      margin-left: 2vw;
-      margin-right: 2vw
-    }
-  }
-
-  /* Footer */
-  .footer {
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #000;
-    border-top: solid .1em #ffffff59;
-    text-align: center;
-  }
-
-  .text-muted {
-    color: #f0f0f0 !important;
-  }
-
-  /* nav */
-  .navClass {
-    border-bottom: solid .1em #ffffff59;
-    background-color: #000 !important;
-    font-weight: bold;
-  }
-
-  /* Lazy Loading */
-  #lazy-load-poster {
+  .dim {
+    background: #fff;
+    border: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-size: 5px;
+    font-weight: 700;
+    max-width: 128px !important;
+    overflow-wrap: break-word;
+    padding: 0.3em 1em;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    /* background-image: url("../../assets/poster-damagedhelmet.png"); */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  #button-load {
-    background-image: white;
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: 6% 50%;
-    background-color: #000;
-    color: white;
-    cursor: pointer;
-    border-radius: 6px;
-    display: inline-block;
-    padding: 10px 18px 9px 40px;
-    font-weight: 500;
-    box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    width: max-content;
+    height: max-content;
     transform: translate3d(-50%, -50%, 0);
-    z-index: 100;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
   }
+}
+
+@media (min-width: 1825px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 480px) {
+  main {
+    padding: 0 20px;
+  }
+}
+
+main {
+  background-color: #000;
+  margin: 0 auto;
+}
+
+.bg-darkd {
+  background-color: #000;
+}
+
+.contentCenter {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 長度標籤 */
+#controls {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  max-width: unset;
+  transform: unset;
+}
+
+.show {
+  --min-hotspot-opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+  display: none;
+}
+
+/* Youtube */
+.youtube {
+  margin: 0 auto;
+  display: block;
+}
+
+.embedded-video-16-9 {
+  width: 90vw;
+  height: 50.625vw;
+  /* 90*9/16 */
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+@media (min-width: 893px) {
+  .embedded-video-16-9 {
+    width: 45vw;
+    height: 25.3125vw;
+    /* 45*9/16 */
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+}
+
+/* Footer */
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #000;
+  border-top: solid 0.1em #ffffff59;
+  text-align: center;
+}
+
+.text-muted {
+  color: #f0f0f0 !important;
+}
+
+/* nav */
+.navClass {
+  border-bottom: solid 0.1em #ffffff59;
+  background-color: #000 !important;
+  font-weight: bold;
+}
+
+/* Lazy Loading */
+#lazy-load-poster {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* background-image: url("../../assets/poster-damagedhelmet.png"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#button-load {
+  background-image: white;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 6% 50%;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px 18px 9px 40px;
+  font-weight: 500;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 100;
+}

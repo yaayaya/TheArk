@@ -35,12 +35,9 @@
 
 <body>
     <div>
-        <model-viewer id="dimension-demo" ar ar-modes="webxr" ar-scale="fixed" camera-orbit="-30deg auto auto"
+        <model-viewer id="dimension-demo" ar ar-modes="webxr" ar-scale="fixed" camera-orbit="-30deg auto auto" style="width:800px ;height: 1000px;"
             max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls
-            src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948"
-            alt="A 3D model of an armchair.">
-
-
+            src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" alt="A 3D model of an armchair.">
             <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
             <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
             <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
@@ -56,15 +53,14 @@
             <div id="controls" class="dim">
                 <label for="src">Product:</label>
                 <select id="src">
-                    <option
-                        value="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948">
-                        Chair</option>
                 </select><br>
 
                 <label for="show-dimensions">Show Dimensions:</label>
                 <input id="show-dimensions" type="checkbox" checked="true">
             </div>
         </model-viewer>
+
+
     </div>
 </body>
 
@@ -159,7 +155,6 @@
         });
     });
 </script>
-
 <style>
     #controls {
         position: absolute;
@@ -211,5 +206,6 @@
         display: none;
     }
 </style>
+
 
 </html>
