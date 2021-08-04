@@ -11,7 +11,7 @@
   /* 電腦版CSS */
   @media (min-width: 768px) {
     .pcBG {
-      background-image: url("./images/123.png");
+      background-image: url("../images/123.png");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -38,7 +38,7 @@
   /* 共通Viewer Model CSS */
   .vmc {
     border-radius: 20px;
-    background-image: url("./images/bg_test.jpg");
+    background-image: url("../images/bg_test.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -55,7 +55,7 @@
     }
 
     .mobileBG {
-      background-image: url("./images/123.png");
+      background-image: url("../images/123.png");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       float: right;
@@ -145,9 +145,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.8);
     display: block;
-    font-size: 3vw;
+    font-size: 16px;
     font-weight: 700;
-    /* max-width: 128px; */
+    max-width: 128px !important;;
     overflow-wrap: break-word;
     padding: 0.3em 1em;
     position: absolute;
@@ -156,7 +156,6 @@
     transform: translate3d(-50%, -50%, 0);
     --min-hotspot-opacity: 0;
     pointer-events: none;
-
   }
 
   .show {
@@ -225,7 +224,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-image: url("../../assets/poster-damagedhelmet.png");
+    /* background-image: url("../../assets/poster-damagedhelmet.png"); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
