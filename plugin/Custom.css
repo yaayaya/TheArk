@@ -190,7 +190,7 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.8);
     display: block;
-    font-size: 1vw;
+    font-size: 12px;
     font-weight: 700;
     max-width: 128px !important;
     overflow-wrap: break-word;
