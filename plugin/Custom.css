@@ -191,7 +191,7 @@ main {
     color: rgba(0, 0, 0, 0.8);
     display: block;
     font-size: 12px !important;
-    width: 65px !important;
+    width:max-content;
     font-weight: 700;
     max-width: 128px !important;
     overflow-wrap: break-word;
