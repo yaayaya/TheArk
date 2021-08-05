@@ -43,7 +43,7 @@
 <body style="background-color: black;">
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0805_B</a>
+    <a class="navbar-brand" href="#">Logo0805_C</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -58,6 +58,17 @@
   </nav>
 
   <main>
+    <input type="text" id="A">
+    <input type="text" id="B">
+    <input type="text" id="C">
+    <button onclick="setData()">setDeg</button>
+    <br>
+
+    <input type="text" id="as">
+    <input type="text" id="bs">
+    <input type="text" id="bs">
+    <button onclick="setScale()">setScale</button>
+
     <!-- 上方區塊 AR -->
     <div class="position-relative overflow-hidden text-left ">
 
@@ -73,15 +84,16 @@
 
 
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc"
+          orientation="20deg 0 0"
           max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
           src="./glb/0805_2.glb" 
-            ios-src="./glb/0805_2.usdz" 
+          ios-src="./glb/0805_2.usdz" 
           auto-rotate
           poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction"
           >
 
           <div id="lazy-load-poster" slot="poster"></div>
-          <div id="button-load" slot="poster">Load Model</div>
+          <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;">Loading</div>
 
           <div slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></div>
           <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
@@ -249,8 +261,18 @@
 </footer>
 
 <script>
-
-
+  function setData(){
+    var a = $("#a").val()
+    var b = $("#b").val()
+    var c = $("#c").val()
+    $("#dimension-demo").attr("orientation" , `${a} ${b} ${c}`)
+  }
+  function setScale(){
+    var as = $("#as").val()
+    var bs = $("#bs").val()
+    var cs = $("#cs").val()
+    $("#dimension-demo").attr("scale" , `${as} ${bs} ${cs}`)
+  }
 
 
 
@@ -312,7 +334,7 @@
       position: `${center.x} ${center.y + y2} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
-      `${(size.x / 10).toFixed(1)} m`;
+      `${(size.x / 100).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X+Y-Z',
@@ -324,7 +346,7 @@
       position: `${center.x - x2} ${center.y} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent =
-      `${(size.y / 10 ).toFixed(1)} m`;
+      `${(size.y / 100 ).toFixed(2)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y-Z',
@@ -336,7 +358,7 @@
       position: `${center.x - x2} ${center.y - y2} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent =
-      `${(size.z /10).toFixed(1)} m`;
+      `${(size.z /100).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y+Z',
