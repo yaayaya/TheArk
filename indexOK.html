@@ -43,7 +43,7 @@
 <body style="background-color: black;">
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0805_L</a>
+    <a class="navbar-brand" href="#">Logo0805_M</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -86,7 +86,7 @@
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc"
           max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
           src="./glb/0805_2.glb" 
-            ios-src="./glb/0805_2.usdz"
+          ios-src="./glb/0805_2.usdz" 
           ar-scale="auto"
           poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction"
           >
@@ -263,14 +263,18 @@
   function loadingModel(){
     console.log(jQuery(window).width())
     // PC設置
-    if (jQuery(window).width() > 768) {
+    if (jQuery(window).width() > 1280) {
       $("#dimension-demo").attr("camera-orbit" , "0deg 45deg 0%")
-      $("#dimension-demo").attr("Scale" , "2.2 2.2 2.2")
-      console.log($("#dimension-demo").attr("Scale"))
+      // $("#dimension-demo").attr("scale" , "1 1 1")
+    }
+    else if (jQuery(window).width() > 1000) {
+      console.log("???")
+      $("#dimension-demo").attr("camera-orbit" , "0deg 45deg 90%")
+      // $("#dimension-demo").attr("scale" , "1 1 1")
     }
     else {
-      $("#dimension-demo").attr("camera-orbit" , "90deg 0deg 0%")
-      $("#dimension-demo").attr("Scale" , ".65 .65 .65")
+      $("#dimension-demo").attr("camera-orbit" , "90deg 0deg 180%")
+      // $("#dimension-demo").attr("Scale" , "0.65 0.65 0.65")
     }
   }
 
