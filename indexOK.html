@@ -43,8 +43,9 @@
 <body style="background-color: black;">
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0805_A</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Logo0805_B</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -66,17 +67,19 @@
         ios-src="./glb/0805_2.usdz"  -->
 
         <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
+          src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
 
-        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" 
-        max-camera-orbit="auto 75deg auto"
-        min-camera-orbit="auto  22.5deg auto"
-        src="./glb/0805_2.glb" 
-        ios-src="./glb/0805_2.usdz" 
-        poster="./images/0805fish.png" 
-        alt="A 3D model"  camera-controls ar reveal="interaction">
+        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc"
+          max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
+          src="./glb/0805_2.glb" 
+            ios-src="./glb/0805_2.usdz" 
+          auto-rotate
+          poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction"
+          >
+
           <div id="lazy-load-poster" slot="poster"></div>
           <div id="button-load" slot="poster">Load Model</div>
 
@@ -107,9 +110,9 @@
         <p class="hero__meta pt-3" style="color:white">
           <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
           <span style="font-size: 1em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
-          <div class="pt-1" style="color: white;">
-            開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
-          </div>
+        <div class="pt-1" style="color: white;">
+          開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
+        </div>
         </p>
       </div>
 
@@ -122,9 +125,9 @@
         <p class="hero__meta pt-3" style="color:white">
           <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
           <span style="font-size: 1.2em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
-          <div class="pt-1" style="color: white;">
-            開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
-          </div>
+        <div class="pt-1" style="color: white;">
+          開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
+        </div>
         </p>
       </div>
 
@@ -166,7 +169,7 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
-          <div class="contentCenter p-3" style="text-align: -webkit-center;" >
+          <div class="contentCenter p-3" style="text-align: -webkit-center;">
             <img class="pcShow" style="width: 55%;" src="./images/1.jpg">
             <img class="mobileShow" style="width: 100%;" src="./images/1.jpg">
             <div style="text-align: center; font-style: italic;">JellyFish1</div>
@@ -228,7 +231,8 @@
     </div>
     <div class="row">
       <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center" id="video_id">
-        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
+        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo" frameborder="0" allowfullscreen
+          allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
       </div>
       <div class="col-md-12 col-sm-12"></div>
     </div>
@@ -245,6 +249,11 @@
 </footer>
 
 <script>
+
+
+
+
+
   const modelViewer = document.querySelector('#dimension-demo');
 
   // modelViewer.querySelector('#src').addEventListener('input', (event) => {
@@ -279,7 +288,7 @@
       position: `${center.x + x2} ${center.y - y2} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
-      `${(size.z * 100).toFixed(0)} cm`;
+      `${(size.z /10).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X-Y-Z',
@@ -291,7 +300,7 @@
       position: `${center.x + x2} ${center.y} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
-      `${(size.y * 100).toFixed(0)} cm`;
+      `${(size.y /10).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X+Y-Z',
@@ -303,7 +312,7 @@
       position: `${center.x} ${center.y + y2} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
-      `${(size.x * 100).toFixed(0)} cm`;
+      `${(size.x / 10).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X+Y-Z',
@@ -315,7 +324,7 @@
       position: `${center.x - x2} ${center.y} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent =
-      `${(size.y * 100).toFixed(0)} cm`;
+      `${(size.y / 10 ).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y-Z',
@@ -327,13 +336,19 @@
       position: `${center.x - x2} ${center.y - y2} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent =
-      `${(size.z * 100).toFixed(0)} cm`;
+      `${(size.z /10).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot-X-Y+Z',
       position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
     });
   });
+
+  var roundDecimal = function (val, precision) {
+    return Math.round(Math.round(val * Math.pow(10, (precision || 0) + 1)) / 10) / Math.pow(10, (precision || 0));
+  }
+
+
 </script>
 
 <script>
