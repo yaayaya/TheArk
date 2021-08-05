@@ -9,7 +9,16 @@ main {
 
 /* 電腦版CSS */
 @media (min-width: 768px) {
-  .pcBG {
+  .pcShow {
+    display: block;
+    position: relative;
+  }
+
+  .mobileShow {
+    display: none;
+  }
+
+  .fixedBG {
     background-image: url("../images/123.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -68,7 +77,6 @@ main {
 
 /* 共通Viewer Model CSS */
 .vmc {
-  border-radius: 20px;
   background-image: url("../images/bg_test.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,11 +85,20 @@ main {
 
 /* 手機板CSS */
 @media (max-width: 768px) {
-  .pcBG {
-    background-color: #000;
+  .pcShow {
+    display: none;
+
+  }
+
+  .mobileShow {
+    display: block;
+  }
+
+  .fixedBG {
+    background-image: url("../images/123.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
   }
 
@@ -103,73 +120,8 @@ main {
 
   .vmc {
     width: 100%;
-    height: 350px;
+    height: 550px;
   }
-  /* .dot {
-      display: block;
-      min-width: 1em;
-      min-height: 1.6em;
-      border: white;
-      border-radius: 50%;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-      background: white;
-      --min-hotspot-opacity: 0;
-      pointer-events: none;
-    }
-
-    .dim {
-      background: #fff;
-      border: white;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-      color: rgba(0, 0, 0, 0.8);
-      display: block;
-      font-family: Futura, Helvetica Neue, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      min-width: 100px;
-      overflow-wrap: normal;
-      padding: 0.4em .5em;
-      position: absolute;
-      width: max-content;
-      height: max-content;
-      transform: translate3d(-50%, -50%, 0);
-      --min-hotspot-opacity: 0;
-      pointer-events: none;
-    } */
-
-  /* .dot {
-      display: block;
-      width: 12px !important;
-      height : 12px !important;
-      border: white;
-      border-radius: 50%;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-      background: #fff;
-      --min-hotspot-opacity: 0;
-      pointer-events: none;
-
-    }
-
-    .dim {
-      background: #fff;
-      border: white;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-      color: rgba(0, 0, 0, 0.8);
-      display: block;
-      font-size: 16px !important;
-      font-weight: 700;
-      max-width: 128px !important;
-      overflow-wrap: break-word;
-      padding: 0.3em 1em;
-      position: absolute;
-      width: max-content;
-      height: max-content;
-      transform: translate3d(-50%, -50%, 0);
-      --min-hotspot-opacity: 0;
-      pointer-events: none;
-    } */
 
   .dot {
     display: block;
@@ -205,30 +157,6 @@ main {
   }
 }
 
-@media (min-width: 1825px) {
-  main {
-    max-width: 80%;
-  }
-}
-
-@media (min-width: 1024px) {
-  main {
-    padding: 0 50px;
-  }
-}
-
-@media (min-width: 768px) {
-  main {
-    padding: 0 30px;
-  }
-}
-
-@media (min-width: 480px) {
-  main {
-    padding: 0 20px;
-  }
-}
-
 main {
   background-color: #000;
   margin: 0 auto;
@@ -236,6 +164,9 @@ main {
 
 .bg-darkd {
   background-color: #000;
+}
+.bg-darkd_2 {
+  background-color: #1d1d1d;
 }
 
 .contentCenter {
@@ -262,7 +193,7 @@ main {
 }
 
 /* This keeps child nodes hidden while the element loads */
-:not(:defined) > * {
+:not(:defined)>* {
   display: none;
 }
 
@@ -272,21 +203,22 @@ main {
   display: block;
 }
 
+
 .embedded-video-16-9 {
-  width: 90vw;
+  width: 80vw;
   height: 50.625vw;
   /* 90*9/16 */
-  margin-left: 5vw;
-  margin-right: 5vw;
 }
 
-@media (min-width: 893px) {
+@media (min-width: 768px) {
   .embedded-video-16-9 {
-    width: 45vw;
-    height: 25.3125vw;
+    width: 72vw;
+    height: 35.625vw;
+    /* width: 35vw; */
+    /* height: 20.3125vw; */
     /* 45*9/16 */
-    margin-left: 2vw;
-    margin-right: 2vw;
+    padding-left: 5vw;
+    padding-right: 2vw;
   }
 }
 
@@ -324,6 +256,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #button-load {
   background-image: white;
   background-repeat: no-repeat;
@@ -342,4 +275,41 @@ main {
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   z-index: 100;
+}
+
+
+
+/* hero title 手機板 */
+@media (min-width: 768px) {
+  .hero_title {
+    font-size: 2.44444rem;
+    line-height: 1.18182;
+    text-shadow: none;
+  }
+
+  .hero__meta {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: .5em;
+    width: 100%;
+  }
+}
+
+
+
+
+/* hero title 手機板 */
+@media (max-width: 768px) {
+  .hero_title {
+    font-size: 1.77778rem;
+    line-height: 1.25;
+    text-shadow: none;
+  }
+
+  .hero__meta {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .5em;
+    width: 100%;
+  }
 }

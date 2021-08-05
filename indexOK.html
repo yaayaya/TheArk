@@ -34,8 +34,7 @@
   <!-- jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="./plugin/Bootstrap/jquery-3.5.1.slim.min.js"></script>
   <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
-  <script type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
 
 
@@ -43,8 +42,8 @@
 
 <body style="background-color: black;">
   <!-- 導覽列 -->
-  <nav class="navbar navbar-expand-lg navbar-dark navClass">
-    <a class="navbar-brand" href="#">Logo0804_19</a>
+  <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
+    <a class="navbar-brand" href="#">Logo0805</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,25 +58,21 @@
 
   <main>
     <!-- 上方區塊 AR -->
-    <div class="position-relative overflow-hidden text-left pcBG">
+    <div class="position-relative overflow-hidden text-left ">
       <!-- <div class="col-md-5 p-lg-5 mx-auto mobileBG">
       </div> -->
+
       <!-- AR 放置 mx-auto-->
-      <div class="p-5 justify-content-center">
-          <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
+      <div class="pb-0 justify-content-center">
+        <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
             src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
             ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
             poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model of an astronaut" shadow-intensity="1" camera-controls auto-rotate ar> -->
 
-          <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" 
-          src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
-          ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
-          poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
-          alt="A 3D model" shadow-intensity="1" camera-controls ar 
-          reveal="interaction">
+        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" alt="A 3D model" shadow-intensity="1" camera-controls ar reveal="interaction">
           <div id="lazy-load-poster" slot="poster"></div>
           <div id="button-load" slot="poster">Load Model</div>
-          
+
           <!-- <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" ar-scale="fixed" 
           src="./glb/0803.glb" 
           ios-src="./glb/0803.usdz" 
@@ -107,77 +102,141 @@
           </div>
         </model-viewer>
       </div>
-      <!-- 分享連結 -->
-      <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
-        <div>
-          <img class="mt-3 mr-4" src="./images/fb_icon.png" style="width: 35px;float:right" ; />
-          <img class="mt-3 mr-4" src="./images/ig_icon.png" style="width: 35px;float:right" ; />
-          <span class="mt-4 mr-4" style="color: #ffffffe0;float:right;font-size: .8em;">Share this page</span>
 
+      <!-- Title 展出時間 PC -->
+      <div class="p-3 justify-content-center pcShow" style="left:10%">
+        <strong class="hero_title" style="color: white;">Nero</strong>
+        <strong class="hero_title" style="color: #8441DC; ">the man</strong>
+        <strong class="hero_title" style="color: #8441DC;">behind the myth</strong>
+
+        <p class="hero__meta pt-3" style="color:white">
+          <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
+          <span style="font-size: 1em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
+          </div>
+        </p>
+      </div>
+
+      <!-- Title 展出時間 mbile -->
+      <div class="p-4 justify-content-center mobileShow">
+        <strong class="hero_title" style="color: white;">Nero</strong><br>
+        <strong class="hero_title" style="color: #8441DC; ">the man</strong><br>
+        <strong class="hero_title" style="color: #8441DC;">behind the myth</strong>
+
+        <p class="hero__meta pt-3" style="color:white">
+          <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
+          <span style="font-size: 1.2em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
+          </div>
+        </p>
+      </div>
+
+
+      <div class="fixedBG">
+        <div style="height: 130px;"></div>
+        <!-- 分享連結 -->
+        <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
+          <div>
+            <img class="mt-3 mr-4" src="./images/fb_icon.png" style="width: 35px;float:right" ; />
+            <img class="mt-3 mr-4" src="./images/ig_icon.png" style="width: 35px;float:right" ; />
+            <span class="mt-4 mr-4" style="color: #ffffffe0;float:right;font-size: .8em;">Share this page</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 介紹、內文 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 justify-content-center">
-      <div class=" bg-darkd mr-md-3 px-3 px-md-1 text-left text-white overflow-hidden" id="Artwork">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Artwork">
 
-      <div class="contentCenter p-3">
-        <div class="text-left" style="line-height: 1.2em;">
-          <span style="font-size: 3em; color:cyan">Artwork</span>
-          <span class="ml-3" style="font-size: 1em; color:cyan">2021</span>
+          <div class="contentCenter p-3">
+            <div class="text-left" style="line-height: 1.2em;">
+              <span style="font-size: 3em; color:cyan">Artwork</span>
+              <span class="ml-3" style="font-size: 1em; color:cyan">2021</span>
+            </div>
+
+            <div class="text-left">
+              <span style="margin-top:1em;font-size: 1.5em; color:rgba(61, 124, 240, 0.753)">Artwork</span>
+
+              <span class="ml-1" style="margin-top:1em;font-size: 1.5em;">Artwork</span>
+            </div>
+
+
+            <!-- <p class="lead mt-3"> -->
+            <div class=" mt-3">
+              様こだちめ樹年フ蓄百ヒセ洲糸きへーほ新断フす写多サワ午過どんなっ測法モ逃平表橋ノマロヒ格写組ぶい級多ご係千呼州然で富起ケフ茶竹ぎあ。視ヌタ需般こ向個なよ違帯客セコ教患わこはせ生楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ。
+              善よりの新神ぴ制済ンそごぐ村投光江マムイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす安良美とンリぽ際主母ぎかげ多容講候披づ。
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
+          <div class="contentCenter p-3">
+            <img style="width: 100%;" src="./images/1.jpg">
+            <div style="text-align: center; font-style: italic;">JellyFish1</div>
+          </div>
         </div>
 
-        <div class="text-left">
-          <span style="margin-top:1em;font-size: 1.5em; color:rgba(61, 124, 240, 0.753)">Artwork</span>
+      </div>
+    </div>
 
-          <span class="ml-1" style="margin-top:1em;font-size: 1.5em;">Artwork</span>
+    <!-- 介紹、內文 2 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" id="Author">
+          <div class="contentCenter p-3">
+            <img style="width: 100%;" src="./images/3.jpg">
+            <div style="text-align: center; font-style: italic;">JellyFish2</div>
+          </div>
         </div>
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" id="Author">
+          <div class="contentCenter p-3">
 
+            <div class="text-left mb-2 ">
+              <span style="font-size: 1em;text-decoration:underline cyan;">Artist</span>
+            </div>
 
-        <!-- <p class="lead mt-3"> -->
-        <div class=" mt-3">
-          様こだちめ樹年フ蓄百ヒセ洲糸きへーほ新断フす写多サワ午過どんなっ測法モ逃平表橋ノマロヒ格写組ぶい級多ご係千呼州然で富起ケフ茶竹ぎあ。視ヌタ需般こ向個なよ違帯客セコ教患わこはせ生楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ。
-          善よりの新神ぴ制済ンそごぐ村投光江マムイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす安良美とンリぽ際主母ぎかげ多容講候披づ。
+            <div class="text-left" style="line-height: 1.2em;">
+              <span style="font-size: 2em; ">Wei</span>
+              <span class="ml-2" style="font-size: 1em;">Tu Wei-Cheng</span>
+            </div>
+
+            <div class="text-left">
+              <span style="font-size: 1em;">Taiwan</span>
+            </div>
+
+            <!-- <p class="lead mt-3"> -->
+
+            <div class="mt-3">
+              根兄び目半タワ典政イ者会ちみり穴網ぱドれび試意エマヒ位占でぞ評約ぽフか一需ツミセマ男面ヱヤ法7航か場聞納キヱ惑無田あてむだ給削電延従フだッぼ。豊エ定表政ぽ営禁報ナヤコ彰16問やばのり申済ヱ権期ヘリト属塗ハノミ害方際を奉己我洗らぶり。購らがかづ浜慶良ぱぜ続変数ロモ挙器へトみ躍陽ヘニリフ群意コマラヌ万好改エトノネ自子へぼじぶ作今たふろ収弘はが更応そぶーめ中討ゃずけぶ周拓泰やフっ。
+              供ましち者都京作てさす止掲リはり島香やざ体子がれぎゅ薄訪投せだへ店町いー済右カリソテ懸誠トぱ材房イク万論ワタヤム康官づトの騒十亨う。会さへぐ宿好要野キ声業生チ表測投サロヤ日合ロツ現関すふ法面セルウ像4岐ヤオカノ酒跡乏びく。加だれ女抗ワ意積あざ八基旅ざ鬼稿こぞ語展ヒ運関て文討ニ再済スほ米戒孝ぜぼゃぶ。
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="bg-darkd  mr-md-3 px-3 px-md-1 text-left text-white overflow-hidden" id="Author">
-      <div class="contentCenter p-3">
-
-        <div class="text-left mb-2 ">
-          <span style="font-size: 1em;text-decoration:underline cyan;">Artist</span>
-        </div>
-
-        <div class="text-left" style="line-height: 1.2em;">
-          <span style="font-size: 2em; ">Wei</span>
-          <span class="ml-2" style="font-size: 1em;">Tu Wei-Cheng</span>
-        </div>
-
-        <div class="text-left">
-          <span style="font-size: 1em;">Taiwan</span>
-        </div>
 
 
-
-        <!-- <p class="lead mt-3"> -->
-
-        <div class="mt-3">
-          根兄び目半タワ典政イ者会ちみり穴網ぱドれび試意エマヒ位占でぞ評約ぽフか一需ツミセマ男面ヱヤ法7航か場聞納キヱ惑無田あてむだ給削電延従フだッぼ。豊エ定表政ぽ営禁報ナヤコ彰16問やばのり申済ヱ権期ヘリト属塗ハノミ害方際を奉己我洗らぶり。購らがかづ浜慶良ぱぜ続変数ロモ挙器へトみ躍陽ヘニリフ群意コマラヌ万好改エトノネ自子へぼじぶ作今たふろ収弘はが更応そぶーめ中討ゃずけぶ周拓泰やフっ。
-          供ましち者都京作てさす止掲リはり島香やざ体子がれぎゅ薄訪投せだへ店町いー済右カリソテ懸誠トぱ材房イク万論ワタヤム康官づトの騒十亨う。会さへぐ宿好要野キ声業生チ表測投サロヤ日合ロツ現関すふ法面セルウ像4岐ヤオカノ酒跡乏びく。加だれ女抗ワ意積あざ八基旅ざ鬼稿こぞ語展ヒ運関て文討ニ再済スほ米戒孝ぜぼゃぶ。
-        </div>
-      </div>
-    </div>
+    <!-- 背景圖 -->
+    <div class="fixedBG">
+      <div class="pcShow" style="height: 200px;"></div>
+      <div class="mobileShow" style="height: 120px;"></div>
     </div>
 
 
     <!-- 影片 -->
-    <div class="youtube mt-3" id="video_id">
-      <iframe src="https://www.youtube.com/embed/BI8rpcXitBo"  
-      frameborder="0" 
-      allowfullscreen 
-      allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      class="embedded-video-16-9"></iframe>
+    <div class="row pt-5 pb-4">
+      <div class=" col-12 bg-darkd text-center text-white overflow-hidden" id="Author">
+        <h2>おすすめ動画</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center" id="video_id">
+        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
+      </div>
+      <div class="col-md-12 col-sm-12"></div>
     </div>
 
     <div class="pt-3"></div>
@@ -290,253 +349,3 @@
 </script>
 
 </html>
-<!-- 
-<style>
-  /* 滑動 */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  main{
-    overflow-x: hidden !important;
-  }
-
-  /* 電腦版CSS */
-  @media (min-width: 768px) {
-    .pcBG {
-      background-image: url("./images/123.png");
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .mobileBG {
-      display: none;
-    }
-
-    .bg-darkGradient {
-      background-color: #000000b5;
-      height: 60px;
-      display: flex;
-    }
-
-    /* ViewModel Custom */
-    .vmc {
-      width: 100%;
-      height: 550px;
-    }
-  }
-
-  /* 共通Viewer Model CSS */
-  .vmc {
-    border-radius: 20px;
-    background-image: url("./images/bg_test.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* 手機板CSS */
-  @media (max-width: 768px) {
-    .pcBG {
-      background-color: #000;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: 100% 100%;
-      background-position: center;
-    }
-
-    .mobileBG {
-      background-image: url("./images/123.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      float: right;
-      min-height: 180px;
-      display: block;
-    }
-
-    .bg-darkGradient {
-      background-color: #000;
-      opacity: .8;
-      display: none;
-      height: 60px;
-    }
-
-    .vmc {
-      width: 100%;
-      height: 350px;
-    }
-  }
-
-  @media (min-width: 1825px) {
-    main {
-      max-width: 80%;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    main {
-      padding: 0 50px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    main {
-      padding: 0 30px;
-    }
-  }
-
-  @media (min-width: 480px) {
-    main {
-      padding: 0 20px;
-    }
-  }
-
-  main {
-    background-color: #000;
-    margin: 0 auto;
-  }
-
-  .bg-darkd {
-    background-color: #000;
-  }
-
-  .contentCenter {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  /* 長度標籤 */
-  #controls {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    max-width: unset;
-    transform: unset;
-  }
-
-  .dot {
-    display: block;
-    width: 12px;
-    height: 12px;
-    border: white;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    background: #fff;
-    --min-hotspot-opacity: 0;
-  }
-
-  .dim {
-    background: #fff;
-    border: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(0, 0, 0, 0.8);
-    display: block;
-    font-family: Futura, Helvetica Neue, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    max-width: 128px;
-    overflow-wrap: break-word;
-    padding: 0.3em 1em;
-    position: absolute;
-    width: max-content;
-    height: max-content;
-    transform: translate3d(-50%, -50%, 0);
-    --min-hotspot-opacity: 0;
-  }
-
-  .show {
-    --min-hotspot-opacity: 1;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  /* This keeps child nodes hidden while the element loads */
-  :not(:defined)>* {
-    display: none;
-  }
-
-  /* Youtube */
-  .youtube {
-    margin: 0 auto;
-    display: block;
-  }
-
-  .embedded-video-16-9 {
-    width: 90vw;
-    height: 50.625vw;
-    /* 90*9/16 */
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-
-  @media (min-width: 893px) {
-    .embedded-video-16-9 {
-      width: 45vw;
-      height: 25.3125vw;
-      /* 45*9/16 */
-      margin-left: 2vw;
-      margin-right: 2vw
-    }
-  }
-
-  /* Footer */
-  .footer {
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #000;
-    border-top: solid .1em #ffffff59;
-    text-align: center;
-  }
-
-  .text-muted {
-    color: #f0f0f0 !important;
-  }
-
-  /* nav */
-  .navClass {
-    border-bottom: solid .1em #ffffff59;
-    background-color: #000 !important;
-    font-weight: bold;
-  }
-
-  /* Lazy Loading */
-  #lazy-load-poster {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-image: url("../../assets/poster-damagedhelmet.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  #button-load {
-    background-image: white;
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: 6% 50%;
-    background-color: #000;
-    color: white;
-    cursor: pointer;
-    border-radius: 6px;
-    display: inline-block;
-    padding: 10px 18px 9px 40px;
-    font-weight: 500;
-    box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    z-index: 100;
-  }
-</style> -->
