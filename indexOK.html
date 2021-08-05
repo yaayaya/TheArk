@@ -62,14 +62,19 @@
 
       <!-- AR 放置 mx-auto-->
       <div class="pb-0 justify-content-center">
+        <!-- src="./glb/0805_2.glb" 
+        ios-src="./glb/0805_2.usdz"  -->
+
         <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
-        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
-        poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
+        <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
 
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" 
+        max-camera-orbit="auto 75deg auto"
+        min-camera-orbit="auto  22.5deg auto"
         src="./glb/0805_2.glb" 
-        ios-src="./glb/0805_2.usdz" 
+          ios-src="./glb/0805_2.usdz" 
         poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717" 
         alt="A 3D model" shadow-intensity="1" camera-controls ar reveal="interaction">
           <div id="lazy-load-poster" slot="poster"></div>
