@@ -43,7 +43,7 @@
 <body style="background-color: black;">
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0805_H</a>
+    <a class="navbar-brand" href="#">Logo0805_I</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
   </nav>
 
   <main>
-    <!-- <input type="text" id="A">
+    <input type="text" id="A">
     <input type="text" id="B">
     <input type="text" id="C">
     <button onclick="setData()">setData</button>
@@ -67,7 +67,7 @@
     <input type="text" id="as">
     <input type="text" id="bs">
     <input type="text" id="cs">
-    <button onclick="setScale()">setScale</button> -->
+    <button onclick="setScale()">setScale</button>
 
     <!-- 上方區塊 AR -->
     <div class="position-relative overflow-hidden text-left ">
@@ -84,15 +84,15 @@
 
 
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc"
-          orientation="20deg 0 0"
           max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
           src="./glb/0805_2.glb" 
-          ios-src="./glb/0805_2.usdz" 
+            ios-src="./glb/0805_2.usdz" 
+          auto-rotate
           poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction"
           >
 
           <div id="lazy-load-poster" slot="poster"></div>
-          <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;">Loading</div>
+          <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
 
           <div slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></div>
           <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
@@ -260,31 +260,34 @@
 </footer>
 
 <script>
-  $(function(){
+  function loadingModel(){
     console.log(jQuery(window).width())
     // PC設置
     if (jQuery(window).width() > 768) {
-      $("#dimension-demo").attr("orientation" , "0deg 45deg 0deg")
-      $("#dimension-demo").attr("scale" , "2.2 2.2 2.2")
+      $("#dimension-demo").attr("camera-orbit" , "0deg 45deg 0deg")
+      $("#dimension-demo").attr("Scale" , "2.2 2.2 2.2")
+      console.log($("#dimension-demo").attr("Scale"))
     }
     else {
-      $("#dimension-demo").attr("orientation" , "90deg 180deg 90deg")
-      $("#dimension-demo").attr("scale" , "1.5 1.5 1.5")
+      $("#dimension-demo").attr("camera-orbit" , "90deg 180deg 90deg")
+      $("#dimension-demo").attr("Scale" , "1.5 1.5 1.5")
     }
-  })
+  }
 
-  // function setData(){
-  //   var a = $("#A").val()
-  //   var b = $("#B").val()
-  //   var c = $("#C").val()
-  //   $("#dimension-demo").attr("orientation" , `${a}deg ${b}deg ${c}deg`)
-  // }
-  // function setScale(){
-  //   var as = $("#as").val()
-  //   var bs = $("#bs").val()
-  //   var cs = $("#cs").val()
-  //   $("#dimension-demo").attr("scale" , `${as} ${bs} ${cs}`)
-  // }
+  function setData(){
+    var a = $("#A").val()
+    var b = $("#B").val()
+    var c = $("#C").val()
+    $("#dimension-demo").attr("camera-orbit" , `${a}deg ${b}deg ${c}deg`)
+  }
+  function setScale(){
+    var as = $("#as").val()
+    var bs = $("#bs").val()
+    var cs = $("#cs").val()
+    $("#dimension-demo").attr("scale" , `${as} ${bs} ${cs}`)
+  }
+
+  
 
   const modelViewer = document.querySelector('#dimension-demo');
 
