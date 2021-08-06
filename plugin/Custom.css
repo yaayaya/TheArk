@@ -316,8 +316,9 @@ main {
   }
 }
 
-#default-ar-button {
-  width: 30px !important
+.ar-button , #default-ar-button {
+  height: 50px !important;
+  width: 50px !important
 }
 
 .f-icon {
@@ -375,4 +376,10 @@ main {
 
 .ytp-chrome-top{
   display: none !important;
+}
+
+.shareIcon{
+  cursor: pointer;
+  width: 35px;
+  float:right;
 }
