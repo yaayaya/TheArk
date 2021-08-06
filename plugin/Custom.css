@@ -95,7 +95,7 @@ main {
   .fixedBG {
     background-image: url("../images/123.png");
     background-repeat: no-repeat;
-    background-attachment: inherit;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
   }
