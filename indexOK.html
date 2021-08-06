@@ -86,7 +86,7 @@
           ios-src="./glb/0805_2.usdz" 
         ar-scale="auto" poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction" ontouchmove="touchMove(event)">
 
-          <div id="lazy-load-poster" slot="poster"></div>
+          <label for="button-load" id="lazy-load-poster" slot="poster"></label>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
 
           <div slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></div>
@@ -413,8 +413,8 @@
 
   $("#show-dimensions").change(() => {
     if ($('#show-dimensions').prop('checked')) {
-      $(".dim").fadeIn(800)
-      $(".dot").fadeIn(800)
+      $(".dim").show()
+      $(".dot").show()
     } else {
       $(".dim").fadeOut(500)
       $(".dot").fadeOut(500)
