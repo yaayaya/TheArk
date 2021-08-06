@@ -25,6 +25,8 @@ main {
     background-position: center;
   }
 
+
+
   .bg-darkGradient {
     background-color: #000000b5;
     height: 60px;
@@ -77,12 +79,20 @@ main {
   background-size: cover;
   background-position: center;
 }
-
+.fixed-img {
+  background-image: url("../images/123.png");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
 /* 手機板CSS */
 @media (max-width: 768px) {
   .pcShow {
     display: none;
-
   }
 
   .mobileShow {
@@ -110,8 +120,6 @@ main {
     background-attachment: scroll;
 
   } */
-
-
 
   .bg-darkGradient {
     background-color: #000;
@@ -197,7 +205,7 @@ main {
 }
 
 /* This keeps child nodes hidden while the element loads */
-:not(:defined)>* {
+:not(:defined) > * {
   display: none;
 }
 
@@ -206,7 +214,6 @@ main {
   margin: 0 auto;
   display: block;
 }
-
 
 .embedded-video-16-9 {
   width: 80vw;
@@ -279,8 +286,6 @@ main {
   z-index: 100;
 }
 
-
-
 /* hero title 手機板 */
 @media (min-width: 768px) {
   .hero_title {
@@ -292,13 +297,10 @@ main {
   .hero__meta {
     font-size: 1.4rem;
     font-weight: 500;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     width: 100%;
   }
 }
-
-
-
 
 /* hero title 手機板 */
 @media (max-width: 768px) {
@@ -311,14 +313,15 @@ main {
   .hero__meta {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     width: 100%;
   }
 }
 
-.ar-button , #default-ar-button {
+.ar-button,
+#default-ar-button {
   height: 50px !important;
-  width: 50px !important
+  width: 50px !important;
 }
 
 .f-icon {
@@ -334,11 +337,13 @@ main {
 }
 
 .f-facebook-icon {
-  background: url(https://www.npm.gov.tw/images/icon/Social-fb.svg) no-repeat center/contain;
+  background: url(https://www.npm.gov.tw/images/icon/Social-fb.svg) no-repeat
+    center/contain;
 }
 
 .f-youtube-icon {
-  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat center/contain;
+  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat
+    center/contain;
 }
 
 .menu {
@@ -368,18 +373,18 @@ main {
 }
 
 .arrow {
-  background-image: url(https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg  );
+  background-image: url(https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg);
   background-repeat: no-repeat;
   background-position: center right 0px;
   padding-right: 60px;
 }
 
-.ytp-chrome-top{
+.ytp-chrome-top {
   display: none !important;
 }
 
-.shareIcon{
+.shareIcon {
   cursor: pointer;
   width: 35px;
-  float:right;
+  float: right;
 }

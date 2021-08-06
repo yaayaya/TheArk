@@ -40,7 +40,7 @@
 
 </head>
 
-<body style="background-color: black;">
+<body >
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
     <a class="navbar-brand" href="#">Logo0806_G</a>
@@ -59,7 +59,8 @@
     
   </nav>
 
-  <main>
+  <main style="background-color: black;">
+    <div class="fixed-img"></div>
     <!-- <input type="text" id="A">
     <input type="text" id="B">
     <input type="text" id="C">
@@ -92,7 +93,6 @@
           src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
-s
 
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
         src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
@@ -408,7 +408,6 @@ s
 
   // model rotate reset time
   function touchMove(event , time) {
-    console.log("???")
     hideTime = time
   }
 
