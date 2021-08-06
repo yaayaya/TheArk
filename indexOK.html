@@ -41,7 +41,13 @@
 </head>
 
 <body style="background-color: black;">
-
+    <iframe 
+    id="bgm"
+    style="width: 100px;"
+    src="https://www.youtube.com/embed/wL3G7BpLBB0?rel=0&enablejsapi=1&loop=1"
+    frameborder="0" 
+    allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    ></iframe>
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
     <a class="navbar-brand" href="#">Logo0806_E</a>
@@ -50,9 +56,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link mx-2" href="#Artwork">Artwork</a>
-        <a class="nav-item nav-link mx-2" href="#Author">Author</a>
-        <a class="nav-item nav-link mx-2" href="#video_id">Video</a>
+        <a class="nav-item nav-link mx-2" href="#Artwork_id">Artwork</a>
+        <a class="nav-item nav-link mx-2" href="#Author_id">Author</a>
+        <a class="nav-item nav-link mx-2" href="#Video_id">Video</a>
+        <a class="nav-item nav-link mx-2" href="#Studio_id">Studio</a>
       </div>
     </div>
   </nav>
@@ -70,6 +77,7 @@
     <button onclick="setScale()">setScale</button> -->
 
     <!-- 上方區塊 AR -->
+    
     <div class="position-relative overflow-hidden text-left ">
 
       <!-- AR 放置 mx-auto-->
@@ -83,9 +91,12 @@
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
 
-        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" src="./glb/0805_2.glb" 
-        ios-src="./glb/0805_2.usdz"
-        ar-scale="auto" poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction" ontouchmove="touchMove(event)">
+        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
+        src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
+        ar-scale="auto" poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction" 
+        ontouchmove="touchMove(event)"
+        >
 
           <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
@@ -150,7 +161,7 @@
     <!-- 介紹、內文 -->
     <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center">
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Artwork">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Artwork_id">
 
           <div class="contentCenter p-3">
             <div class="text-left" style="line-height: 1.2em;">
@@ -181,15 +192,15 @@
     </div>
 
     <!-- 介紹、內文 2 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2">
+    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2"  id="Author_id">
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" id="Author">
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" >
           <div class="contentCenter p-3">
             <img style="width: 80%;" src="./images/3.jpg">
             <div style="text-align: center; font-style: italic;">Studio2</div>
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" id="Author">
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" >
           <div class="contentCenter p-3">
 
             <div class="text-left mb-2 ">
@@ -225,13 +236,13 @@
 
 
     <!-- 影片 -->
-    <div class="row pt-5 pb-5">
-      <div class=" col-12 bg-darkd text-center text-white overflow-hidden" id="Author">
+    <div class="row pt-5 pb-5" id="Video_id">
+      <div class=" col-12 bg-darkd text-center text-white overflow-hidden" >
         <h2>おすすめ動画</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center" id="video_id">
+      <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
         <iframe 
         src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1"
         frameborder="0" 
@@ -243,9 +254,9 @@
     </div>
 
     <!-- 介紹、內文 3 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center" id="Studio_id">
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Artwork">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" >
 
           <div class="contentCenter p-3">
             <div class="text-left" style="line-height: 1.2em;">
@@ -363,11 +374,9 @@
 <script>
   let hideTime = 0;
 
-
-
   // init pos setting
   function loadingModel() {
-    console.log(jQuery(window).width())
+    bgmPlay()
     // PC設置
     if (jQuery(window).width() > 1280) {
       $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
@@ -391,6 +400,7 @@
 
   // model rotate reset time
   function touchMove(event) {
+    console.log("???")
     hideTime = 3
   }
 
@@ -407,8 +417,6 @@
   //   var cs = $("#cs").val()
   //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
   // }
-
-
 
   const modelViewer = document.querySelector('#dimension-demo');
 
@@ -439,7 +447,7 @@
       position: `${center.x + x2} ${center.y - y2} ${center.z}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
-      `${(size.z /10).toFixed(1)} m`;
+      `${(size.z /100).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X-Y-Z',
@@ -451,7 +459,7 @@
       position: `${center.x + x2} ${center.y} ${center.z - z2}`
     });
     modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
-      `${(size.y /10).toFixed(1)} m`;
+      `${(size.y /100).toFixed(1)} m`;
 
     modelViewer.updateHotspot({
       name: 'hotspot-dot+X+Y-Z',
@@ -501,6 +509,18 @@
 </script>
 
 <script>
+  function bgmPlay(){
+    $('#bgm').each(function(){
+      this.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
+    });
+  }
+
+  // function bgmPause(){
+  //   $('#bgm').each(function(){
+  //     this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+  //   });
+  // }
+
   $('.navbar-nav>a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
   });
