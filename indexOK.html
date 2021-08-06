@@ -32,7 +32,7 @@
   <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
 
   <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-  <script src="./plugin/Bootstrap/jquery-3.5.1.slim.min.js"></script>
+  <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
   <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
@@ -43,9 +43,8 @@
 <body style="background-color: black;">
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0805_P</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Logo0806_A</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -83,13 +82,7 @@
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
 
-        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc"
-          max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
-          src="./glb/0805_2.glb" 
-          ios-src="./glb/0805_2.usdz" 
-          ar-scale="auto"
-          poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction"
-          >
+        <model-viewer id="dimension-demo" ar-modes="webxr" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" ar-scale="auto" poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction" ontouchmove="touchMove(event)">
 
           <div id="lazy-load-poster" slot="poster"></div>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
@@ -106,10 +99,7 @@
           <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
           <div slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></div>
 
-          <div id="controls" class="dim" style="display: none;">
-            <label for="show-dimensions">Show Dimensions:</label>
-            <input id="show-dimensions" type="checkbox" checked="true">
-          </div>
+          <input id="show-dimensions" type="checkbox" style="display: none;">
         </model-viewer>
       </div>
 
@@ -121,24 +111,22 @@
         <p class="hero__meta pt-3" style="color:white">
           <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
           <span style="font-size: 1em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
-        <div class="pt-1" style="color: white;">
-          開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
-        </div>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
+          </div>
         </p>
       </div>
 
       <!-- Title 展出時間 mbile -->
       <div class="p-4 justify-content-center mobileShow">
         <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong><br>
-        <!-- <strong class="hero_title" style="color: #8441DC; ">the man</strong><br>
-        <strong class="hero_title" style="color: #8441DC;">behind the myth</strong> -->
 
         <p class="hero__meta pt-3" style="color:white">
           <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
           <span style="font-size: 1.2em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
-        <div class="pt-1" style="color: white;">
-          開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
-        </div>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
+          </div>
         </p>
       </div>
 
@@ -180,13 +168,12 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
-          <div class="contentCenter p-3" style="text-align: -webkit-center;">
-            <img class="pcShow" style="width: 55%;" src="./images/1.jpg">
-            <img class="mobileShow" style="width: 100%;" src="./images/1.jpg">
-            <div style="text-align: center; font-style: italic;">JellyFish1</div>
+          <div class="contentCenter p-3">
+            <img class="pcShow" style="width: 50%;" src="./images/1.jpg">
+            <img class="mobileShow" style="width: 80%;" src="./images/1.jpg">
+            <div style="text-align: center; font-style: italic;">Studio1</div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -195,8 +182,8 @@
       <div class="row">
         <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" id="Author">
           <div class="contentCenter p-3">
-            <img style="width: 100%;" src="./images/3.jpg">
-            <div style="text-align: center; font-style: italic;">JellyFish2</div>
+            <img style="width: 80%;" src="./images/3.jpg">
+            <div style="text-align: center; font-style: italic;">Studio2</div>
           </div>
         </div>
         <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" id="Author">
@@ -235,80 +222,202 @@
 
 
     <!-- 影片 -->
-    <div class="row pt-5 pb-4">
+    <div class="row pt-5 pb-5">
       <div class=" col-12 bg-darkd text-center text-white overflow-hidden" id="Author">
         <h2>おすすめ動画</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center" id="video_id">
-        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo" frameborder="0" allowfullscreen
-          allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
+        <iframe 
+        src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1"
+        frameborder="0" 
+        allowfullscreen 
+        allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        class="embedded-video-16-9"></iframe>
       </div>
       <div class="col-md-12 col-sm-12"></div>
+    </div>
+
+    <!-- 介紹、內文 3 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Artwork">
+
+          <div class="contentCenter p-3">
+            <div class="text-left" style="line-height: 1.2em;">
+              <span style="font-size: 3em; color:cyan">Studio</span>
+            </div>
+
+            <div class="text-left">
+              <span style="margin-top:1em;font-size: 1.5em; color:rgba(61, 124, 240, 0.753)">Studio</span>
+
+              <span class="ml-1" style="margin-top:1em;font-size: 1.5em;">Studio</span>
+            </div>
+
+            <div class=" mt-3">
+              様こだちめ樹年フ蓄百ヒセ洲糸きへーほ新断フす写多サワ午過どんなっ測法モ逃平表橋ノマロヒ格写組ぶい級多ご係千呼州然で富起ケフ茶竹ぎあ。視ヌタ需般こ向個なよ違帯客セコ教患わこはせ生楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ。。
+              善よりの新神ぴ制済ンそごぐ村投光江マムイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす安良美とンリぽ際主母ぎかげ多容講候披づイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにすイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす。
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
+          <div class="contentCenter p-3">
+            <img class="pcShow pt-5" style="width: 50%;" src="./images/2.jpg">
+            <img class="mobileShow" style="width: 80%;" src="./images/2.jpg">
+            <div style="text-align: center; font-style: italic;">Studio3</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <div class="pt-3"></div>
   </main>
 </body>
 
+<!-- mobile Footer -->
+<footer class="footer mobileShow">
+  <!-- Contact us -->
+  <div class="container py-3 px-4" style="background-color: #1d1d1d;">
+    <h2 style="color: white ;">Connect with us</h2>
+    <div class="pt-2">
+      <ul class="menu menu--icon-menu ">
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
+            <span class="f-icon f-facebook-icon"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Back Top -->
+    <div class="pt-3">
+      <button class="toTopButtonMobile" onclick="location.href='#'">
+        <div class="arrow">Back to the top</div>
+      </button>
+    </div>
+    <!-- info -->
+    <div class="pt-4" style="color: white;">
+      <div>Great Russell Street London WC1B 3DG</div>
+      <div>+44 (0)20 7323 8000</div>
 
-<footer class="footer">
-  <div class="container">
-    <span class="text-muted">Copyright © 2020-2021 Service Co.</span>
+      <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/clock_icon.png" width="16px"></image>
+      <span class="pt-1" style="font-size: 1em;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</span>
+    </div>
   </div>
+  <!-- About  -->
+  <div class="py-2 px-4 " style="color: white; text-align: center;">© 2021 The Fish of the Co Museum</div>
 </footer>
 
+<!-- PC Footer -->
+<footer class="footer pcShow ">
+  <!-- Contact us -->
+  <div class="pt-3 pb-2 row " style="background-color: #1d1d1d;margin-right:0px">
+    <div class="col-6" style="left:10%">
+      <h2 style="color: white ;">Connect with us</h2>
+      <div class="pt-2">
+        <ul class="menu menu--icon-menu ">
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
+              <span class="f-icon f-facebook-icon"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- info -->
+    <div class="col-3" style="color: white;">
+      <div style="font-weight: 500;">Address:</div>
+      <div>Great Russell Street London WC1B 3DG</div>
+      <div>+44 (0)20 7323 8000</div>
+    </div>
+
+    <div class="col-3" style="color: white;">
+      <div style="font-weight: 500;">
+        <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/clock_icon.png" width="16px"></image>
+        Opening hours
+      </div>
+      <div style="margin-top: -10px;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</div>
+      <br>
+      <!-- Back to the top -->
+      <div style="font-size: 18px; font-weight: 500;cursor:pointer" onclick="location.href='#'">Back to the top
+        <image class="pt-3 ml-2" style="margin-bottom: 18px;" src="https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg" width="16px"></image>
+      </div>
+    </div>
+  </div>
+  <div class="py-2 px-4 " style="color: white;text-align: center;">© 2021 The Fish of the Co Museum</div>
+
+</footer>
+
+
 <script>
-  function loadingModel(){
+  let hideTime = 0;
+
+
+
+  // init pos setting
+  function loadingModel() {
     console.log(jQuery(window).width())
     // PC設置
     if (jQuery(window).width() > 1280) {
-      $("#dimension-demo").attr("camera-orbit" , "0deg 45deg 0%")
-      // $("#dimension-demo").attr("scale" , "1 1 1")
-    }
-    else if (jQuery(window).width() >= 768) {
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
+    } else if (jQuery(window).width() >= 768) {
       console.log("???")
-      $("#dimension-demo").attr("camera-orbit" , "0deg 45deg 80%")
-      // $("#dimension-demo").attr("scale" , "1 1 1")
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 80%")
+    } else {
+      $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
     }
-    else {
-      $("#dimension-demo").attr("camera-orbit" , "90deg 0deg 90%")
-      // $("#dimension-demo").attr("Scale" , "0.65 0.65 0.65")
-    }
+
+    setInterval(() => {
+      if (hideTime > 0) {
+        $("#show-dimensions").prop('checked', false)
+      } else {
+        $("#show-dimensions").prop('checked', true)
+      }
+      $("#show-dimensions").change()
+      hideTime -= 1
+    }, 1000);
   }
 
-  function setData(){
-    var a = $("#A").val()
-    var b = $("#B").val()
-    var c = $("#C").val()
-    $("#dimension-demo").attr("camera-orbit" , `${a}deg ${b}deg ${c}%`)
-  }
-  function setScale(){
-    var as = $("#as").val()
-    var bs = $("#bs").val()
-    var cs = $("#cs").val()
-    $("#dimension-demo").attr("scale" , `${as} ${bs} ${cs}`)
+  // model rotate reset time
+  function touchMove(event) {
+    hideTime = 3
   }
 
-  
+  // function setData() {
+  //   var a = $("#A").val()
+  //   var b = $("#B").val()
+  //   var c = $("#C").val()
+  //   $("#dimension-demo").attr("camera-orbit", `${a}deg ${b}deg ${c}%`)
+  // }
+
+  // function setScale() {
+  //   var as = $("#as").val()
+  //   var bs = $("#bs").val()
+  //   var cs = $("#cs").val()
+  //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
+  // }
+
+
 
   const modelViewer = document.querySelector('#dimension-demo');
 
-  // modelViewer.querySelector('#src').addEventListener('input', (event) => {
-  //   modelViewer.src = event.target.value;
-  // });
-
-  const checkbox = modelViewer.querySelector('#show-dimensions');
-  checkbox.addEventListener('change', () => {
-    modelViewer.querySelectorAll('button').forEach((hotspot) => {
-      if (checkbox.checked) {
-        hotspot.classList.remove('hide');
-      } else {
-        hotspot.classList.add('hide');
-      }
-    });
-  });
+  $("#show-dimensions").change(() => {
+    if ($('#show-dimensions').prop('checked')) {
+      $(".dim").fadeIn(800)
+      $(".dot").fadeIn(800)
+    } else {
+      $(".dim").fadeOut(500)
+      $(".dot").fadeOut(500)
+    }
+  })
 
   modelViewer.addEventListener('load', () => {
     const center = modelViewer.getCameraTarget();
@@ -386,8 +495,6 @@
   var roundDecimal = function (val, precision) {
     return Math.round(Math.round(val * Math.pow(10, (precision || 0) + 1)) / 10) / Math.pow(10, (precision || 0));
   }
-
-
 </script>
 
 <script>
