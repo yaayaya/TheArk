@@ -28,10 +28,6 @@ main {
     background-position: center;
   }
 
-  .mobileBG {
-    display: none;
-  }
-
   .bg-darkGradient {
     background-color: #000000b5;
     height: 60px;
@@ -99,19 +95,26 @@ main {
   .fixedBG {
     background-image: url("../images/123.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: inherit;
     background-size: cover;
     background-position: center;
   }
 
-  .mobileBG {
-    background-image: url("../images/123.png");
+  /* #background_wrap {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-image: url('../images/123.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    float: right;
-    min-height: 180px;
-    display: block;
-  }
+    background-attachment: scroll;
+
+  } */
+
+
 
   .bg-darkGradient {
     background-color: #000;
