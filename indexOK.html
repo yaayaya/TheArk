@@ -39,21 +39,21 @@
 
 </head>
 
-<body>
+<body id="body_id">
   <div class="fixed-img"></div>
 
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0809_H</a>
+    <a class="navbar-brand" href="#">Logo0809_I</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link mx-2" href="#Artwork_id">Artwork</a>
-        <a class="nav-item nav-link mx-2" href="#Artist_id">Artist</a>
-        <a class="nav-item nav-link mx-2" href="#Video_id">Video</a>
-        <a class="nav-item nav-link mx-2" href="#Studio_id">Studio</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Artwork_id')">Artwork</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Artist_id')" >Artist</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Video_id')">Video</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Studio_id')" >Studio</a>
       </div>
     </div>
   </nav>
@@ -160,9 +160,9 @@
     </div>
 
     <!-- 介紹、內文 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Artwork_id"> 
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Artwork_id">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" >
 
           <div class="contentCenter p-3">
             <div class="text-left" style="line-height: 1.2em;">
@@ -305,7 +305,7 @@
     </div>
     <!-- Back Top -->
     <div class="pt-3">
-      <button class="toTopButtonMobile" onclick="location.href='#'">
+      <button class="toTopButtonMobile" onclick="ToScroll('body_id')">
         <div class="arrow">Back to the top</div>
       </button>
     </div>
@@ -357,7 +357,7 @@
       <div style="margin-top: -10px;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</div>
       <br>
       <!-- Back to the top -->
-      <div style="font-size: 18px; font-weight: 500;cursor:pointer" onclick="location.href='#'">Back to the top
+      <div style="font-size: 18px; font-weight: 500;cursor:pointer" onclick="ToScroll('body_id')">Back to the top
         <image class="pt-3 ml-2" style="margin-bottom: 18px;" src="https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg" width="16px"></image>
       </div>
     </div>
@@ -520,6 +520,15 @@
 
   var roundDecimal = function (val, precision) {
     return Math.round(Math.round(val * Math.pow(10, (precision || 0) + 1)) / 10) / Math.pow(10, (precision || 0));
+  }
+
+  function ToScroll(id){
+    if (jQuery(window).width() >= 768){
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top }, 800);
+    }
+    else{
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top - 150}, 800);
+    }
   }
 </script>
 
