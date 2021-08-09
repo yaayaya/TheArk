@@ -44,7 +44,7 @@
 
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0809_E</a>
+    <a class="navbar-brand" href="#">Logo0809_F</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -91,12 +91,12 @@
 
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
         src="./glb/0805_2.glb" 
-        ios-src="./glb/0805_2.usdz" 
+          ios-src="./glb/0805_2.usdz" 
         ar-scale="auto"  alt="A 3D model" camera-controls ar reveal="interaction" auto-rotate ontouchmove="touchMove(event , 3)" onmousedown="touchMove(event , 20)" 
         onmouseup="touchMove(event , 3)">
 
           <div id="progress" slot="progress-bar">
-            <div class="bar" style="transform: scaleX(1);"></div>
+            <div class="bar" ></div>
           </div>
 
           <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
@@ -439,7 +439,8 @@
     const {totalProgress} = event.detail;
     console.log(totalProgress)
     progress.classList.toggle('show', totalProgress < 1);
-    bar.style.transform = `scaleX(${totalProgress});`
+    //  bar.style.transform = `scaleX(${totalProgress});`
+    $(".bar").css('transform' , `scaleX(${totalProgress})`)
 
   });
 
