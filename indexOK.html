@@ -29,20 +29,20 @@
   <script src="./plugin/focus-visible.js" defer></script>
 
   <!-- Loads <model-viewer> for modern browsers: -->
-  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
+  <script type="module" src="./plugin/model-viewer.min.js"></script>
 
   <!-- jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
   <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
 
 
 </head>
 
-<body style="background-color: black;">
+<body>
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0806_M</a>
+    <a class="navbar-brand" href="#">Logo0809</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,7 +59,7 @@
   </nav>
 
   <main >
-    <!-- <div class="fixed-img"></div> -->
+    <div class="fixed-img"></div>
     <!-- <input type="text" id="A">
     <input type="text" id="B">
     <input type="text" id="C">
@@ -84,7 +84,7 @@
     <!-- 上方區塊 AR -->
     <div class="position-relative overflow-hidden text-left ">
       <!-- AR 放置 mx-auto-->
-      <div class="pb-0 justify-content-center">
+      <div class="pb-0 justify-content-center bg-darkd">
         <!-- src="./glb/0805_2.glb" 
         ios-src="./glb/0805_2.usdz"  -->
 
@@ -124,7 +124,7 @@
       </div>
 
       <!-- Title 展出時間 PC -->
-      <div class="p-3 justify-content-center pcShow" style="left:10%">
+      <div class="p-3 justify-content-center pcShow bg-darkd" style="left:10%">
         <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong>
         <!-- <strong class="hero_title" style="color: #8441DC; ">鯨魚傳說遺址》</strong> -->
 
@@ -138,7 +138,7 @@
       </div>
 
       <!-- Title 展出時間 mbile -->
-      <div class="p-4 justify-content-center mobileShow">
+      <div class="p-4 justify-content-center mobileShow bg-darkd">
         <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong><br>
 
         <p class="hero__meta pt-3" style="color:white">
@@ -167,7 +167,7 @@
     </div>
 
     <!-- 介紹、內文 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd">
       <div class="row">
         <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Artwork_id">
 
@@ -244,12 +244,12 @@
 
 
     <!-- 影片 -->
-    <div class="row pt-5 pb-5" id="Video_id">
+    <div class="row pt-5 pb-5 bg-darkd" id="Video_id">
       <div class=" col-12 bg-darkd text-center text-white overflow-hidden" >
         <h2>おすすめ動画</h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row bg-darkd">
       <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
         <iframe 
         src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1"
@@ -262,7 +262,7 @@
     </div>
 
     <!-- 介紹、內文 3 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center" id="Studio_id">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Studio_id">
       <div class="row">
         <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" >
 
@@ -294,7 +294,7 @@
       </div>
     </div>
 
-    <div class="pt-3"></div>
+    <div class="pt-3 bg-darkd"></div>
   </main>
 </body>
 
