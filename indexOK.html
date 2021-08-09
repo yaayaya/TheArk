@@ -29,12 +29,12 @@
   <script src="./plugin/focus-visible.js" defer></script>
 
   <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module" src="./plugin/model-viewer.min.js"></script>
+  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
 
   <!-- jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
   <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 
 </head>
@@ -44,7 +44,7 @@
 
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0809_C</a>
+    <a class="navbar-brand" href="#">Logo0809_E</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,12 +55,10 @@
         <a class="nav-item nav-link mx-2" href="#Video_id">Video</a>
         <a class="nav-item nav-link mx-2" href="#Studio_id">Studio</a>
       </div>
-
     </div>
-    
   </nav>
 
-  <main >
+  <main>
     <!-- <input type="text" id="A">
     <input type="text" id="B">
     <input type="text" id="C">
@@ -73,10 +71,7 @@
     <button onclick="setScale()">setScale</button> -->
     <!-- BGM -->
     <div style="display: none;">
-      <audio id="audio_bgm"
-        controls
-        loop
-        src="./plugin/bgm.mp3">
+      <audio id="audio_bgm" controls loop src="./plugin/bgm.mp3">
       </audio>
       <code>audio</code> element.
     </div>
@@ -94,16 +89,15 @@
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
-        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
-          src="./glb/0805_2.glb" 
-          ios-src="./glb/0805_2.usdz" 
-          ar-scale="auto" poster="./images/0805fish.png" alt="A 3D model" camera-controls ar reveal="interaction" 
-          auto-rotate
-          ontouchmove="touchMove(event , 3)"
-          onmousedown="touchMove(event , 20)"
-          onmouseup="touchMove(event , 3)"
-        >
+        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
+        src="./glb/0805_2.glb" 
+        ios-src="./glb/0805_2.usdz" 
+        ar-scale="auto"  alt="A 3D model" camera-controls ar reveal="interaction" auto-rotate ontouchmove="touchMove(event , 3)" onmousedown="touchMove(event , 20)" 
+        onmouseup="touchMove(event , 3)">
 
+          <div id="progress" slot="progress-bar">
+            <div class="bar" style="transform: scaleX(1);"></div>
+          </div>
 
           <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
@@ -157,10 +151,8 @@
         <!-- 分享連結 -->
         <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
           <div>
-            <img class="mt-3 mr-4 shareIcon" src="./images/fb_icon.png"  
-            onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')""/>
-            <img class="mt-3 mr-4 shareIcon" src="./images/ig_icon.png" 
-              onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
+            <img class="mt-3 mr-4 shareIcon" src="./images/fb_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')""/>
+            <img class=" mt-3 mr-4 shareIcon" src="./images/ig_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
             <span class="mt-4 mr-4" style="color: #ffffffe0;float:right;font-size: .8em;">Share this page</span>
           </div>
         </div>
@@ -201,15 +193,15 @@
     </div>
 
     <!-- 介紹、內文 2 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2"  id="Artist_id">
+    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2" id="Artist_id">
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" >
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
           <div class="contentCenter p-3">
             <img style="width: 80%;" src="./images/3.jpg">
             <div style="text-align: center; font-style: italic;">Studio2</div>
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" >
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
           <div class="contentCenter p-3">
 
             <div class="text-left mb-2 ">
@@ -246,18 +238,13 @@
 
     <!-- 影片 -->
     <div class="row pt-5 pb-5 bg-darkd" id="Video_id">
-      <div class=" col-12 bg-darkd text-center text-white overflow-hidden" >
+      <div class=" col-12 bg-darkd text-center text-white overflow-hidden">
         <h2>おすすめ動画</h2>
       </div>
     </div>
     <div class="row bg-darkd">
       <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
-        <iframe 
-        src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1"
-        frameborder="0" 
-        allowfullscreen 
-        allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        class="embedded-video-16-9"></iframe>
+        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
       </div>
       <div class="col-md-12 col-sm-12"></div>
     </div>
@@ -265,7 +252,7 @@
     <!-- 介紹、內文 3 -->
     <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Studio_id">
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" >
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
 
           <div class="contentCenter p-3">
             <div class="text-left" style="line-height: 1.2em;">
@@ -302,7 +289,7 @@
 <!-- mobile Footer -->
 <footer class="footer mobileShow" style="background-color: #1d1d1d;">
   <!-- Contact us -->
-  <div class="container py-3 px-4" >
+  <div class="container py-3 px-4">
     <h2 style="color: white ;">Connect with us</h2>
     <div class="pt-2">
       <ul class="menu menu--icon-menu ">
@@ -323,7 +310,7 @@
       </button>
     </div>
     <!-- info -->
-    <div class="pt-4" style="color: white; " >
+    <div class="pt-4" style="color: white; ">
       <div>Great Russell Street London WC1B 3DG</div>
       <div>+44 (0)20 7323 8000</div>
 
@@ -385,6 +372,7 @@
 
   // init pos setting
   function loadingModel() {
+    $("#button-load").hide()
     $("#audio_bgm")[0].play()
     // PC設置
     if (jQuery(window).width() > 1280) {
@@ -411,7 +399,7 @@
   }
 
   // model rotate reset time
-  function touchMove(event , time) {
+  function touchMove(event, time) {
     hideTime = time
   }
 
@@ -440,6 +428,21 @@
       $(".dot").fadeOut(500)
     }
   })
+
+  const progress = document.querySelector('#progress');
+  const bar = progress.querySelector('.bar');
+
+
+
+  modelViewer.addEventListener('progress', (event) => {
+    console.log(event.detail)
+    const {totalProgress} = event.detail;
+    console.log(totalProgress)
+    progress.classList.toggle('show', totalProgress < 1);
+    bar.style.transform = `scaleX(${totalProgress});`
+
+  });
+
 
   modelViewer.addEventListener('load', () => {
     const center = modelViewer.getCameraTarget();
