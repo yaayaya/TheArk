@@ -44,7 +44,7 @@
 
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0809_I</a>
+    <a class="navbar-brand" href="#">Logo0811</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -91,7 +91,7 @@
 
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
         src="./glb/0805_2.glb" 
-          ios-src="./glb/0805_2.usdz" 
+        ios-src="./glb/0805_2.usdz" 
         ar-scale="5%"  alt="A 3D model" camera-controls ar reveal="interaction" auto-rotate ontouchmove="touchMove(event , 3)" onmousedown="touchMove(event , 20)" 
         onmouseup="touchMove(event , 3)">
 
@@ -367,23 +367,31 @@
 </footer>
 
 
+
+<script src="./js/mv_setting.js"></script>
+
 <script>
   let hideTime = 0;
+
+  
 
   // init pos setting
   function loadingModel() {
     $("#button-load").hide()
     $("#audio_bgm")[0].play()
-    // PC設置
+
+    // PC
     if (jQuery(window).width() > 1280) {
       $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
+    // TAB
     } else if (jQuery(window).width() >= 768) {
-      console.log("???")
       $("#dimension-demo").attr("camera-orbit", "0deg 45deg 80%")
+    // mobile
     } else {
       $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
     }
 
+    // Annotations 
     setInterval(() => {
       if (hideTime > 0) {
         $("#show-dimensions").prop('checked', false)
@@ -393,9 +401,7 @@
       $("#show-dimensions").change()
       hideTime -= 1
     }, 1000);
-
     $("#ar_button").show()
-
   }
 
   // model rotate reset time
@@ -403,6 +409,23 @@
     hideTime = time
   }
 
+  // Scroll
+  function ToScroll(id){
+    if (jQuery(window).width() >= 768){
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top }, 800);
+    }
+    else{
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top - 150}, 800);
+    }
+  }
+
+  // Navbar
+  $('.navbar-nav>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+
+  
   // function setData() {
   //   var a = $("#A").val()
   //   var b = $("#B").val()
@@ -416,126 +439,5 @@
   //   var cs = $("#cs").val()
   //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
   // }
-
-  const modelViewer = document.querySelector('#dimension-demo');
-
-  $("#show-dimensions").change(() => {
-    if ($('#show-dimensions').prop('checked')) {
-      $(".dim").show()
-      $(".dot").show()
-    } else {
-      $(".dim").fadeOut(500)
-      $(".dot").fadeOut(500)
-    }
-  })
-
-  const progress = document.querySelector('#progress');
-  const bar = progress.querySelector('.bar');
-
-
-
-  modelViewer.addEventListener('progress', (event) => {
-    console.log(event.detail)
-    const {totalProgress} = event.detail;
-    console.log(totalProgress)
-    progress.classList.toggle('show', totalProgress < 1);
-    //  bar.style.transform = `scaleX(${totalProgress});`
-    $(".bar").css('transform' , `scaleX(${totalProgress})`)
-
-  });
-
-
-  modelViewer.addEventListener('load', () => {
-    const center = modelViewer.getCameraTarget();
-    const size = modelViewer.getDimensions();
-    const x2 = size.x / 2;
-    const y2 = size.y / 2;
-    const z2 = size.z / 2;
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dot+X-Y+Z',
-      position: `${center.x + x2} ${center.y - y2} ${center.z + z2}`
-    });
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dim+X-Y',
-      position: `${center.x + x2} ${center.y - y2} ${center.z}`
-    });
-    modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
-      `${(size.z /100).toFixed(1)} m`;
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dot+X-Y-Z',
-      position: `${center.x + x2} ${center.y - y2} ${center.z - z2}`
-    });
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dim+X-Z',
-      position: `${center.x + x2} ${center.y} ${center.z - z2}`
-    });
-    modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
-      `${(size.y /100).toFixed(1)} m`;
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dot+X+Y-Z',
-      position: `${center.x + x2} ${center.y + y2} ${center.z - z2}`
-    });
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dim+Y-Z',
-      position: `${center.x} ${center.y + y2} ${center.z - z2}`
-    });
-    modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
-      `${(size.x / 100).toFixed(1)} m`;
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dot-X+Y-Z',
-      position: `${center.x - x2} ${center.y + y2} ${center.z - z2}`
-    });
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dim-X-Z',
-      position: `${center.x - x2} ${center.y} ${center.z - z2}`
-    });
-    modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent =
-      `${(size.y / 100 ).toFixed(2)} m`;
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dot-X-Y-Z',
-      position: `${center.x - x2} ${center.y - y2} ${center.z - z2}`
-    });
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dim-X-Y',
-      position: `${center.x - x2} ${center.y - y2} ${center.z}`
-    });
-    modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent =
-      `${(size.z /100).toFixed(1)} m`;
-
-    modelViewer.updateHotspot({
-      name: 'hotspot-dot-X-Y+Z',
-      position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
-    });
-  });
-
-  var roundDecimal = function (val, precision) {
-    return Math.round(Math.round(val * Math.pow(10, (precision || 0) + 1)) / 10) / Math.pow(10, (precision || 0));
-  }
-
-  function ToScroll(id){
-    if (jQuery(window).width() >= 768){
-      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top }, 800);
-    }
-    else{
-      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top - 150}, 800);
-    }
-  }
 </script>
-
-<script>
-  $('.navbar-nav>a').on('click', function () {
-    $('.navbar-collapse').collapse('hide');
-  });
-</script>
-
 </html>

@@ -12,6 +12,18 @@ $("#show-dimensions").change(() => {
     }
 })
 
+// function test(){
+//     console.log(modelViewer.canActivateAR)
+
+//     if (modelViewer.canActivateAR) {
+//         console.log("A")
+//         modelViewer.activateAR();
+//     } else {
+//         console.log("B")
+//         modelViewer.dismissPoster(); // if AR is not available dismiss poster so it displays 3D anyway
+//     }
+// }
+
 // Status check
 modelViewer.addEventListener('ar-status', (event) => {
     alert(event)
@@ -37,7 +49,6 @@ modelViewer.addEventListener('progress', (event) => {
 
 // Anotations
 modelViewer.addEventListener('load', (event) => {
-    alert(event)
     console.log(event)
     const center = modelViewer.getCameraTarget();
     const size = modelViewer.getDimensions();
