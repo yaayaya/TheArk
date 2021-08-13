@@ -36,14 +36,15 @@
   <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
+
 </head>
 
 <body id="body_id">
   <div class="fixed-img"></div>
-  
+
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0809_I</a>
+    <a class="navbar-brand" href="#">Logo0813</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -58,7 +59,6 @@
   </nav>
 
   <main>
-    <input type="button" value="check" onclick="test()">
     <!-- <input type="text" id="A">
     <input type="text" id="B">
     <input type="text" id="C">
@@ -92,17 +92,40 @@
         <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
         src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
-        ar-scale="5%"  alt="A 3D model" camera-controls ar reveal="interaction" auto-rotate ontouchmove="touchMove(event , 3)" onmousedown="touchMove(event , 20)" 
+        ar-scale="5%"  alt="A 3D model" camera-controls ar reveal="interaction" ontouchmove="touchMove(event , 3)" onmousedown="touchMove(event , 20)"
         onmouseup="touchMove(event , 3)">
 
           <div id="progress" slot="progress-bar">
             <div class="bar" ></div>
           </div>
 
+          <!-- Tip -->
+          <div class="tooltipDiv" style="display: none;">
+            <div onclick="toggleTip()" class="tipIcon">
+              <span></span>
+              <span class="tooltipText Desktop" style="width: 260px;">
+                使用說明：<br>
+                轉動：滑鼠左鍵按壓拖曳<br>
+                放大：滑鼠滾輪上滑、PageDown<br>
+                縮小：滑鼠滾輪下滑、PageUp<br>
+                平移：Ctrl + 滑鼠左鍵按壓拖曳<br>
+                重心切換：滑鼠左鍵點擊
+              </span>
+              <span class="tooltipText Mobile" style="width: 210px;">
+                使用說明：<br>
+                轉動：單指按壓拖曳<br>
+                放大：兩指按壓向外滑動<br>
+                縮小：兩指按壓向內滑動<br>
+                平移：兩指按壓上下拖曳<br>
+                重心切換：單指點擊
+              </span>
+            </div>
+          </div>
+
           <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
-
-          <div slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></div>
+          
+          <!-- <div slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></div>
           <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
           <div slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></div>
           <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
@@ -112,7 +135,7 @@
           <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
           <div slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></div>
           <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
-          <div slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></div>
+          <div slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></div> -->
 
           <input id="show-dimensions" type="checkbox" style="display: none;">
         </model-viewer>
@@ -366,40 +389,52 @@
 
 </footer>
 
+
+
 <script src="./js/mv_setting.js"></script>
 
 <script>
   let hideTime = 0;
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+  $(function(){
+		if (isMobile){
+      $(".Desktop").hide()
+    }
+    else{
+      $(".Mobile").hide()
+    }
+  })
   
 
   // init pos setting
   function loadingModel() {
     $("#button-load").hide()
+    $(".tooltipDiv").show()
     $("#audio_bgm")[0].play()
 
-    // PC
+    // Large
     if (jQuery(window).width() > 1280) {
       $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
-    // TAB
+    // Midium
     } else if (jQuery(window).width() >= 768) {
       $("#dimension-demo").attr("camera-orbit", "0deg 45deg 80%")
-    // mobile
+    // Small
     } else {
       $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
     }
 
     // Annotations 
-    setInterval(() => {
-      if (hideTime > 0) {
-        $("#show-dimensions").prop('checked', false)
-      } else {
-        $("#show-dimensions").prop('checked', true)
-      }
-      $("#show-dimensions").change()
-      hideTime -= 1
-    }, 1000);
-    $("#ar_button").show()
+
+    // setInterval(() => {
+    //   if (hideTime > 0) {
+    //     $("#show-dimensions").prop('checked', false)
+    //   } else {
+    //     $("#show-dimensions").prop('checked', true)
+    //   }
+    //   $("#show-dimensions").change()
+    //   hideTime -= 1
+    // }, 1000);
   }
 
   // model rotate reset time
@@ -422,7 +457,10 @@
     $('.navbar-collapse').collapse('hide');
   });
 
-
+  // toggleTip
+  function toggleTip(){
+    $(".tooltipText").toggleClass('showTip')
+  }
   
   // function setData() {
   //   var a = $("#A").val()
@@ -438,5 +476,4 @@
   //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
   // }
 </script>
-
 </html>
