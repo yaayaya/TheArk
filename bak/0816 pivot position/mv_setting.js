@@ -26,6 +26,91 @@ modelViewer.addEventListener('progress', (event) => {
     $(".bar").css('transform', `scaleX(${totalProgress})`)
 });
 
+// Anotations
+// $("#show-dimensions").change(() => {
+//     if ($('#show-dimensions').prop('checked')) {
+//         $(".dim").show()
+//         $(".dot").show()
+//     } else {
+//         $(".dim").fadeOut(500)
+//         $(".dot").fadeOut(500)
+//     }
+// })
+
+// modelViewer.addEventListener('load', (event) => {
+//     console.log(event)
+//     const center = modelViewer.getCameraTarget();
+//     const size = modelViewer.getDimensions();
+//     const x2 = size.x / 2;
+//     const y2 = size.y / 2;
+//     const z2 = size.z / 2;
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot+X-Y+Z',
+//         position: `${center.x + x2} ${center.y - y2} ${center.z + z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim+X-Y',
+//         position: `${center.x + x2} ${center.y - y2} ${center.z}`
+//     });
+//     modelViewer.querySelector('button[slot="hotspot-dim+X-Y"]').textContent =
+//         `${(size.z /100).toFixed(1)} m`;
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot+X-Y-Z',
+//         position: `${center.x + x2} ${center.y - y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim+X-Z',
+//         position: `${center.x + x2} ${center.y} ${center.z - z2}`
+//     });
+//     modelViewer.querySelector('button[slot="hotspot-dim+X-Z"]').textContent =
+//         `${(size.y /100).toFixed(1)} m`;
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot+X+Y-Z',
+//         position: `${center.x + x2} ${center.y + y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim+Y-Z',
+//         position: `${center.x} ${center.y + y2} ${center.z - z2}`
+//     });
+//     modelViewer.querySelector('button[slot="hotspot-dim+Y-Z"]').textContent =
+//         `${(size.x / 100).toFixed(1)} m`;
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot-X+Y-Z',
+//         position: `${center.x - x2} ${center.y + y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim-X-Z',
+//         position: `${center.x - x2} ${center.y} ${center.z - z2}`
+//     });
+//     modelViewer.querySelector('button[slot="hotspot-dim-X-Z"]').textContent =
+//         `${(size.y / 100 ).toFixed(2)} m`;
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot-X-Y-Z',
+//         position: `${center.x - x2} ${center.y - y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim-X-Y',
+//         position: `${center.x - x2} ${center.y - y2} ${center.z}`
+//     });
+//     modelViewer.querySelector('button[slot="hotspot-dim-X-Y"]').textContent =
+//         `${(size.z /100).toFixed(1)} m`;
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot-X-Y+Z',
+//         position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
+//     });
+// });
+
 // 
 const tapDistance = 2;
 let panning = false;
@@ -78,12 +163,12 @@ const recenter = (pointer) => {
     if (Math.abs(pointer.clientX - startX) > tapDistance ||
         Math.abs(pointer.clientY - startY) > tapDistance)
         return;
-    // const rect = modelViewer.getBoundingClientRect();
-    // const x = event.clientX - rect.left;
-    // const y = event.clientY - rect.top;
-    // const hit = modelViewer.positionAndNormalFromPoint(x, y);
-    // modelViewer.cameraTarget =
-    //     hit == null ? 'auto auto auto' : hit.position.toString();
+    const rect = modelViewer.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const hit = modelViewer.positionAndNormalFromPoint(x, y);
+    modelViewer.cameraTarget =
+        hit == null ? 'auto auto auto' : hit.position.toString();
 };
 
 const onPointerUp = (event) => {
@@ -127,6 +212,7 @@ modelViewer.addEventListener('touchstart', (event) => {
 modelViewer.addEventListener('mousemove', (event) => {
     if (!panning)
         return;
+
     movePan(event.clientX, event.clientY);
     event.stopPropagation();
 }, true);
@@ -148,7 +234,6 @@ self.addEventListener('mouseup', (event) => {
 }, true);
 
 self.addEventListener('touchend', (event) => {
-    recenter(event);
     if (event.touches.length === 0) {
         recenter(event.changedTouches[0]);
     }

@@ -143,7 +143,7 @@
 /* 手機板CSS */
 @media (max-width: 768px) {
   .pcShow {
-    display: none;
+    display: none !important;
   }
 
   .mobileShow {
@@ -350,11 +350,7 @@
   }
 }
 
-#default-ar-button {
-  height: 50px !important;
-  width: 50px !important;
-}
-
+/* Icon設置 */
 .f-icon {
   width: 45px;
   height: 45px;
@@ -375,6 +371,7 @@
   background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat center/contain;
 }
 
+/* Footer Menu */
 .menu {
   list-style: none;
   padding: 0;
@@ -443,4 +440,33 @@
   background-color: #1d1d1d;
   transform-origin: top left;
   transform: scaleX(0);
+}
+
+/* ImageSetting */
+.cencen {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-item{
+  padding:10px;
+  position: relative;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+/* 不顯示下標題 */
+.my-gallery figcaption {
+  display: none;
+}
+
+.pswp__caption__center {
+  font-size: 1rem;
+  line-height: 1.55556;
+  max-width: 800px;
 }

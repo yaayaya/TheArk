@@ -37,12 +37,6 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 
-
-  <link rel="stylesheet" href="./plugin/Photoswipe/photoswipe.css" />
-  <link rel="stylesheet" href="./plugin/Photoswipe/default-skin/default-skin.css" />
-  <script src="./plugin/Photoswipe/photoswipe-ui-default.js"></script>
-  <script src="./plugin/Photoswipe/photoswipe.js"></script>
-
 </head>
 
 <body id="body_id">
@@ -57,20 +51,19 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link mx-2" onclick="ToScroll('Artwork_id')">Artwork</a>
-        <a class="nav-item nav-link mx-2" onclick="ToScroll('Artist_id')">Artist</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Artist_id')" >Artist</a>
         <a class="nav-item nav-link mx-2" onclick="ToScroll('Video_id')">Video</a>
-        <a class="nav-item nav-link mx-2" onclick="ToScroll('Studio_id')">Studio</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Studio_id')" >Studio</a>
       </div>
     </div>
   </nav>
 
   <main>
-    <input type="text" id="A">
-    <button onclick="setData()">SetLight</button>
-    <br>
-
     <!-- <input type="text" id="A">
-    
+    <input type="text" id="B">
+    <input type="text" id="C">
+    <button onclick="setData()">setData</button>
+    <br>
 
     <input type="text" id="as">
     <input type="text" id="bs">
@@ -96,10 +89,14 @@
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
-        <model-viewer exposure="0.1" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
+        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
+        src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
+        ar-scale="5%"  alt="A 3D model" camera-controls ar reveal="interaction" ontouchmove="touchMove(event , 3)" onmousedown="touchMove(event , 20)"
+        onmouseup="touchMove(event , 3)">
 
           <div id="progress" slot="progress-bar">
-            <div class="bar"></div>
+            <div class="bar" ></div>
           </div>
 
           <!-- Tip -->
@@ -112,6 +109,7 @@
                 放大：滑鼠滾輪上滑、PageDown<br>
                 縮小：滑鼠滾輪下滑、PageUp<br>
                 平移：Ctrl + 滑鼠左鍵按壓拖曳<br>
+                重心切換：滑鼠左鍵點擊
               </span>
               <span class="tooltipText Mobile" style="width: 210px;">
                 使用說明：<br>
@@ -119,13 +117,27 @@
                 放大：兩指按壓向外滑動<br>
                 縮小：兩指按壓向內滑動<br>
                 平移：兩指按壓上下拖曳<br>
+                重心切換：單指點擊
               </span>
             </div>
           </div>
 
           <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
+          
+          <!-- <div slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
+          <div slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></div>
+          <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+          <div slot="hotspot-dot+X+Y-Z" class="dot show" data-position="1 1 -1" data-normal="0 1 0"></div>
+          <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
+          <div slot="hotspot-dot-X+Y-Z" class="dot show" data-position="-1 1 -1" data-normal="0 1 0"></div>
+          <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+          <div slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></div>
+          <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+          <div slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></div> -->
 
+          <input id="show-dimensions" type="checkbox" style="display: none;">
         </model-viewer>
       </div>
 
@@ -170,23 +182,10 @@
       </div>
     </div>
 
-    <!-- 影片 -->
-    <!-- <div class="row pt-5 pb-5 bg-darkd" id="Video_id">
-      <div class=" col-12 bg-darkd text-center text-white overflow-hidden">
-        <h2>おすすめ動画</h2>
-      </div>
-    </div> -->
-    <div class="row bg-darkd">
-      <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
-        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
-      </div>
-      <div class="col-md-12 col-sm-12"></div>
-    </div>
-
     <!-- 介紹、內文 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Artwork_id">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Artwork_id"> 
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" >
 
           <div class="contentCenter p-3">
             <div class="text-left" style="line-height: 1.2em;">
@@ -201,52 +200,16 @@
             </div>
 
             <div class="mt-3 text-left">
-              就在近期石川縣政府對外宣布，在珠洲市的一座廢棄操場，發現了一具長約11.5公尺
-              寬約 3.5公尺的 奇異 生物骨骸 化石 。 現場已經封鎖，並已有相關考古團隊進駐，主導考古調查與開挖。
-              考古坑挖掘面積長約 13公尺、寬 6.5公尺、深約 1.5公尺 。 該生物骨骸化石 相當完整， 狀似 鯨魚骸骨，
-              但該骸骨有著兩隻前鰭與兩隻 巨大的後足。
+              様こだちめ樹年フ蓄百ヒセ洲糸きへーほ新断フす写多サワ午過どんなっ測法モ逃平表橋ノマロヒ格写組ぶい級多ご係千呼州然で富起ケフ茶竹ぎあ。視ヌタ需般こ向個なよ違帯客セコ教患わこはせ生楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ。
+              善よりの新神ぴ制済ンそごぐ村投光江マムイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす安良美とンリぽ際主母ぎかげ多容講候披づ。
             </div>
           </div>
         </div>
-        <!-- 圖片區域 1  -->
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
-          <div id="carouselExampleIndicators" class="carousel slide contentCenter p-3 mx-2 " 
-            data-ride="carousel" style="height: 100%;" >
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <!-- 圖片 -->
-            <div class="carousel-inner my-gallery">
-              <div class="carousel-item cencen active">
-                <figure>
-                  <a href="./images/1_1.jpg" itemprop="contentUrl" data-size="1265x406">
-                    <img class="d-block w-100" src="./images/1_1.jpg" itemprop="thumbnail" alt="Image description" />
-                  </a>
-                  <figcaption itemprop=" caption">
-                    <h3>日本遺址的照片1</h3>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="carousel-item cencen ">
-                <figure>
-                  <a href="./images/1_2.jpg" itemprop="contentUrl" data-size="866x577">
-                    <img class="d-block w-100" src="./images/1_2.jpg" itemprop="thumbnail" alt="Image description" />
-                  </a>
-                  <figcaption itemprop="caption description">
-                    <h3>日本遺址的照片2</h3>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-            <a class="carousel-control-prev pcShow" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next pcShow" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
+          <div class="contentCenter p-3">
+            <img class="pcShow" style="width: 50%;" src="./images/1.jpg">
+            <img class="mobileShow" style="width: 80%;" src="./images/1.jpg">
+            <div style="text-align: center; font-style: italic;">Studio1</div>
           </div>
         </div>
       </div>
@@ -426,82 +389,23 @@
 
 </footer>
 
-<!-- Photoswipe. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-  <!-- Background of PhotoSwipe. 
-  It's a separate element, as animating opacity is faster than rgba(). -->
-  <div class="pswp__bg"></div>
-
-  <!-- Slides wrapper with overflow:hidden. -->
-  <div class="pswp__scroll-wrap">
-
-    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-
-    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-    <div class="pswp__ui pswp__ui--hidden">
-
-      <div class="pswp__top-bar">
-
-        <!--  Controls are self-explanatory. Order can be changed. -->
-
-        <div class="pswp__counter"></div>
-
-        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-        <!-- element will get class pswp__preloader--active when preloader is running -->
-        <div class="pswp__preloader">
-          <div class="pswp__preloader__icn">
-            <div class="pswp__preloader__cut">
-              <div class="pswp__preloader__donut"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-        <div class="pswp__share-tooltip"></div>
-      </div>
-
-      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-      </button>
-
-      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-      </button>
-
-      <div class="pswp__caption">
-        <div class="pswp__caption__center"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 <script src="./js/mv_setting.js"></script>
-<script src="./js/ps_setting.js"></script>
 
 <script>
   let hideTime = 0;
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  $(function () {
-    if (isMobile) {
+  $(function(){
+		if (isMobile){
       $(".Desktop").hide()
-    } else {
+    }
+    else{
       $(".Mobile").hide()
     }
   })
-
+  
 
   // init pos setting
   function loadingModel() {
@@ -512,26 +416,39 @@
     // Large
     if (jQuery(window).width() > 1280) {
       $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
-      // Midium
+    // Midium
     } else if (jQuery(window).width() >= 768) {
       $("#dimension-demo").attr("camera-orbit", "0deg 45deg 80%")
-      // Small
+    // Small
     } else {
       $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
     }
 
+    // Annotations 
+
+    // setInterval(() => {
+    //   if (hideTime > 0) {
+    //     $("#show-dimensions").prop('checked', false)
+    //   } else {
+    //     $("#show-dimensions").prop('checked', true)
+    //   }
+    //   $("#show-dimensions").change()
+    //   hideTime -= 1
+    // }, 1000);
+  }
+
+  // model rotate reset time
+  function touchMove(event, time) {
+    hideTime = time
   }
 
   // Scroll
-  function ToScroll(id) {
-    if (jQuery(window).width() >= 768) {
-      $("html, body").animate({
-        scrollTop: $(`#${id}`).offset().top
-      }, 800);
-    } else {
-      $("html, body").animate({
-        scrollTop: $(`#${id}`).offset().top - 150
-      }, 800);
+  function ToScroll(id){
+    if (jQuery(window).width() >= 768){
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top }, 800);
+    }
+    else{
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top - 150}, 800);
     }
   }
 
@@ -541,29 +458,16 @@
   });
 
   // toggleTip
-  function toggleTip() {
+  function toggleTip(){
     $(".tooltipText").toggleClass('showTip')
   }
-
-  // Image Setting
-  $(document).ready(function () {
-    $("#carouselExampleIndicators").on("swiperight", function () {
-      $(this).carousel('prev');
-    });
-    $("#carouselExampleIndicators").on("swipeleft", function () {
-      $(this).carousel('next');
-    });
-    $('.carousel').carousel({
-      interval: 50000
-    })
-  });
-
-
-
-  function setData() {
-    let a = $("#A").val()
-    $("#dimension-demo").attr("exposure", a)
-  }
+  
+  // function setData() {
+  //   var a = $("#A").val()
+  //   var b = $("#B").val()
+  //   var c = $("#C").val()
+  //   $("#dimension-demo").attr("camera-orbit", `${a}deg ${b}deg ${c}%`)
+  // }
 
   // function setScale() {
   //   var as = $("#as").val()
@@ -572,6 +476,4 @@
   //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
   // }
 </script>
-
-
 </html>
