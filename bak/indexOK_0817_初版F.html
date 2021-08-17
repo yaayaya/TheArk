@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>WebAR</title>
+  <link rel="stylesheet" href="./plugin/Custom.css">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./plugin/Bootstrap/bootstrap.min.css">
+
+  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+  <script src="./plugin/webcomponents-loader.js"></script>
+
+  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+  <script src="./plugin/intersection-observer.js"></script>
+
+  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+  <script src="./plugin/ResizeObserver.js"></script>
+
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="./plugin/focus-visible.js" defer></script>
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
+
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
+  <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+</head>
+
+<body id="body_id">
+  <div class="fixed-img"></div>
+
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
+    <a class="navbar-brand" href="#">Logo0811</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Artwork_id')">Artwork</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Artist_id')" >Artist</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Video_id')">Video</a>
+        <a class="nav-item nav-link mx-2" onclick="ToScroll('Studio_id')" >Studio</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- <input type="text" id="A">
+    <input type="text" id="B">
+    <input type="text" id="C">
+    <button onclick="setData()">setData</button>
+    <br>
+
+    <input type="text" id="as">
+    <input type="text" id="bs">
+    <input type="text" id="cs">
+    <button onclick="setScale()">setScale</button> -->
+    <!-- BGM -->
+    <div style="display: none;">
+      <audio id="audio_bgm" controls loop src="./plugin/bgm.mp3">
+      </audio>
+      <code>audio</code> element.
+    </div>
+
+
+    <!-- 上方區塊 AR -->
+    <div class="position-relative overflow-hidden text-left ">
+      <!-- AR 放置 mx-auto-->
+      <div class="pb-0 justify-content-center bg-darkd">
+        <!-- src="./glb/0805_2.glb" 
+        ios-src="./glb/0805_2.usdz"  -->
+
+        <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
+          src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
+        <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
+
+        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
+        src="./glb/0805_2.glb" 
+        ios-src="./glb/0805_2.usdz" 
+        ar-scale="5%"  alt="A 3D model" camera-controls ar reveal="interaction" ontouchmove="touchMove(event , 3)" onmousedown="touchMove(event , 20)"
+        onmouseup="touchMove(event , 3)">
+
+          <div id="progress" slot="progress-bar">
+            <div class="bar" ></div>
+          </div>
+
+          <!-- Tip -->
+          <div class="tooltipDiv" style="display: none;">
+            <div onclick="toggleTip()" class="tipIcon">
+              <span></span>
+              <span class="tooltipText Desktop" style="width: 260px;">
+                使用說明：<br>
+                轉動：滑鼠左鍵按壓拖曳<br>
+                放大：滑鼠滾輪上滑、PageDown<br>
+                縮小：滑鼠滾輪下滑、PageUp<br>
+                平移：Ctrl + 滑鼠左鍵按壓拖曳<br>
+                重心切換：滑鼠左鍵點擊
+              </span>
+              <span class="tooltipText Mobile" style="width: 210px;">
+                使用說明：<br>
+                轉動：單指按壓拖曳<br>
+                放大：兩指按壓向外滑動<br>
+                縮小：兩指按壓向內滑動<br>
+                平移：兩指按壓上下拖曳<br>
+                重心切換：單指點擊
+              </span>
+            </div>
+          </div>
+
+          <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
+          <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
+          
+          <!-- <div slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
+          <div slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></div>
+          <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+          <div slot="hotspot-dot+X+Y-Z" class="dot show" data-position="1 1 -1" data-normal="0 1 0"></div>
+          <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
+          <div slot="hotspot-dot-X+Y-Z" class="dot show" data-position="-1 1 -1" data-normal="0 1 0"></div>
+          <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+          <div slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></div>
+          <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+          <div slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></div> -->
+
+          <input id="show-dimensions" type="checkbox" style="display: none;">
+        </model-viewer>
+      </div>
+
+      <!-- Title 展出時間 PC -->
+      <div class="p-3 justify-content-center pcShow bg-darkd" style="left:10%">
+        <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong>
+        <!-- <strong class="hero_title" style="color: #8441DC; ">鯨魚傳說遺址》</strong> -->
+
+        <p class="hero__meta pt-3" style="color:white">
+          <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
+          <span style="font-size: 1em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
+          </div>
+        </p>
+      </div>
+
+      <!-- Title 展出時間 mbile -->
+      <div class="p-4 justify-content-center mobileShow bg-darkd">
+        <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong><br>
+
+        <p class="hero__meta pt-3" style="color:white">
+          <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
+          <span style="font-size: 1.2em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
+          </div>
+        </p>
+      </div>
+
+
+      <div class="fixedBG">
+        <div style="height: 130px;"></div>
+        <!-- 分享連結 -->
+        <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
+          <div>
+            <img class="mt-3 mr-4 shareIcon" src="./images/fb_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')""/>
+            <img class=" mt-3 mr-4 shareIcon" src="./images/ig_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
+            <span class="mt-4 mr-4" style="color: #ffffffe0;float:right;font-size: .8em;">Share this page</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 介紹、內文 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Artwork_id"> 
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" >
+
+          <div class="contentCenter p-3">
+            <div class="text-left" style="line-height: 1.2em;">
+              <span style="font-size: 3em; color:cyan">Artwork</span>
+              <span class="ml-3" style="font-size: 1em; color:cyan">2021</span>
+            </div>
+
+            <div class="text-left">
+              <span style="margin-top:1em;font-size: 1.5em; color:rgba(61, 124, 240, 0.753)">Artwork</span>
+
+              <span class="ml-1" style="margin-top:1em;font-size: 1.5em;">Artwork</span>
+            </div>
+
+            <div class="mt-3 text-left">
+              様こだちめ樹年フ蓄百ヒセ洲糸きへーほ新断フす写多サワ午過どんなっ測法モ逃平表橋ノマロヒ格写組ぶい級多ご係千呼州然で富起ケフ茶竹ぎあ。視ヌタ需般こ向個なよ違帯客セコ教患わこはせ生楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ。
+              善よりの新神ぴ制済ンそごぐ村投光江マムイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす安良美とンリぽ際主母ぎかげ多容講候披づ。
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
+          <div class="contentCenter p-3">
+            <img class="pcShow" style="width: 50%;" src="./images/1.jpg">
+            <img class="mobileShow" style="width: 80%;" src="./images/1.jpg">
+            <div style="text-align: center; font-style: italic;">Studio1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 介紹、內文 2 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2" id="Artist_id">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
+          <div class="contentCenter p-3">
+            <img style="width: 80%;" src="./images/3.jpg">
+            <div style="text-align: center; font-style: italic;">Studio2</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
+          <div class="contentCenter p-3">
+
+            <div class="text-left mb-2 ">
+              <span style="font-size: 1em;text-decoration:underline cyan;">Artist</span>
+            </div>
+
+            <div class="text-left" style="line-height: 1.2em;">
+              <span style="font-size: 2em; ">Wei</span>
+              <span class="ml-2" style="font-size: 1em;">Tu Wei-Cheng</span>
+            </div>
+
+            <div class="text-left">
+              <span style="font-size: 1em;">Taiwan</span>
+            </div>
+
+            <!-- <p class="lead mt-3"> -->
+
+            <div class="mt-3 text-left">
+              根兄び目半タワ典政イ者会ちみり穴網ぱドれび試意エマヒ位占でぞ評約ぽフか一需ツミセマ男面ヱヤ法7航か場聞納キヱ惑無田あてむだ給削電延従フだッぼ。豊エ定表政ぽ営禁報ナヤコ彰16問やばのり申済ヱ権期ヘリト属塗ハノミ害方際を奉己我洗らぶり。購らがかづ浜慶良ぱぜ続変数ロモ挙器へトみ躍陽ヘニリフ群意コマラヌ万好改エトノネ自子へぼじぶ作今たふろ収弘はが更応そぶーめ中討ゃずけぶ周拓泰やフっ。
+              供ましち者都京作てさす止掲リはり島香やざ体子がれぎゅ薄訪投せだへ店町いー済右カリソテ懸誠トぱ材房イク万論ワタヤム康官づトの騒十亨う。会さへぐ宿好要野キ声業生チ表測投サロヤ日合ロツ現関すふ法面セルウ像4岐ヤオカノ酒跡乏びく。加だれ女抗ワ意積あざ八基旅ざ鬼稿こぞ語展ヒ運関て文討ニ再済スほ米戒孝ぜぼゃぶ。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 背景圖 -->
+    <div class="fixedBG">
+      <div class="pcShow" style="height: 200px;"></div>
+      <div class="mobileShow" style="height: 120px;"></div>
+    </div>
+
+
+    <!-- 影片 -->
+    <div class="row pt-5 pb-5 bg-darkd" id="Video_id">
+      <div class=" col-12 bg-darkd text-center text-white overflow-hidden">
+        <h2>おすすめ動画</h2>
+      </div>
+    </div>
+    <div class="row bg-darkd">
+      <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
+        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
+      </div>
+      <div class="col-md-12 col-sm-12"></div>
+    </div>
+
+    <!-- 介紹、內文 3 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Studio_id">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+
+          <div class="contentCenter p-3">
+            <div class="text-left" style="line-height: 1.2em;">
+              <span style="font-size: 3em; color:cyan">Studio</span>
+            </div>
+
+            <div class="text-left">
+              <span style="margin-top:1em;font-size: 1.5em; color:rgba(61, 124, 240, 0.753)">Studio</span>
+
+              <span class="ml-1" style="margin-top:1em;font-size: 1.5em;">Studio</span>
+            </div>
+
+            <div class=" mt-3 text-left">
+              様こだちめ樹年フ蓄百ヒセ洲糸きへーほ新断フす写多サワ午過どんなっ測法モ逃平表橋ノマロヒ格写組ぶい級多ご係千呼州然で富起ケフ茶竹ぎあ。視ヌタ需般こ向個なよ違帯客セコ教患わこはせ生楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ。。
+              善よりの新神ぴ制済ンそごぐ村投光江マムイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす安良美とンリぽ際主母ぎかげ多容講候披づイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにすイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす。
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
+          <div class="contentCenter p-3">
+            <img class="pcShow pt-5" style="width: 50%;" src="./images/2.jpg">
+            <img class="mobileShow" style="width: 80%;" src="./images/2.jpg">
+            <div style="text-align: center; font-style: italic;">Studio3</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="pt-3 bg-darkd"></div>
+  </main>
+</body>
+
+<!-- mobile Footer -->
+<footer class="footer mobileShow" style="background-color: #1d1d1d;">
+  <!-- Contact us -->
+  <div class="container py-3 px-4">
+    <h2 style="color: white ;">Connect with us</h2>
+    <div class="pt-2">
+      <ul class="menu menu--icon-menu ">
+        <li>
+          <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
+            <span class="f-icon f-facebook-icon"></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Back Top -->
+    <div class="pt-3">
+      <button class="toTopButtonMobile" onclick="ToScroll('body_id')">
+        <div class="arrow">Back to the top</div>
+      </button>
+    </div>
+    <!-- info -->
+    <div class="pt-4" style="color: white; ">
+      <div>Great Russell Street London WC1B 3DG</div>
+      <div>+44 (0)20 7323 8000</div>
+
+      <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/clock_icon.png" width="16px"></image>
+      <span class="pt-1" style="font-size: 1em;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</span>
+    </div>
+  </div>
+  <!-- About  -->
+  <div class="py-2 px-4 " style="color: white; text-align: center;background-color: #000;">© 2021 The Fish of the Co Museum</div>
+</footer>
+
+<!-- PC Footer -->
+<footer class="footer pcShow ">
+  <!-- Contact us -->
+  <div class="pt-3 pb-2 row " style="background-color: #1d1d1d;margin-right:0px">
+    <div class="col-6" style="left:10%">
+      <h2 style="color: white ;">Connect with us</h2>
+      <div class="pt-2">
+        <ul class="menu menu--icon-menu ">
+          <li>
+            <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
+              <span class="f-icon f-facebook-icon"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- info -->
+    <div class="col-3" style="color: white;">
+      <div style="font-weight: 500;">Address:</div>
+      <div>Great Russell Street London WC1B 3DG</div>
+      <div>+44 (0)20 7323 8000</div>
+    </div>
+
+    <div class="col-3" style="color: white;">
+      <div style="font-weight: 500;">
+        <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/clock_icon.png" width="16px"></image>
+        Opening hours
+      </div>
+      <div style="margin-top: -10px;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</div>
+      <br>
+      <!-- Back to the top -->
+      <div style="font-size: 18px; font-weight: 500;cursor:pointer" onclick="ToScroll('body_id')">Back to the top
+        <image class="pt-3 ml-2" style="margin-bottom: 18px;" src="https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg" width="16px"></image>
+      </div>
+    </div>
+  </div>
+  <div class="py-2 px-4 " style="color: white;text-align: center;">© 2021 The Fish of the Co Museum</div>
+
+</footer>
+
+
+
+<script src="./js/mv_setting.js"></script>
+
+<script>
+  let hideTime = 0;
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  $(function(){
+		if (isMobile){
+      $(".Desktop").hide()
+    }
+    else{
+      $(".Mobile").hide()
+    }
+  })
+  
+
+  // init pos setting
+  function loadingModel() {
+    $("#button-load").hide()
+    $(".tooltipDiv").show()
+    $("#audio_bgm")[0].play()
+
+    // Large
+    if (jQuery(window).width() > 1280) {
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
+    // Midium
+    } else if (jQuery(window).width() >= 768) {
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 80%")
+    // Small
+    } else {
+      $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
+    }
+
+    // Annotations 
+
+    // setInterval(() => {
+    //   if (hideTime > 0) {
+    //     $("#show-dimensions").prop('checked', false)
+    //   } else {
+    //     $("#show-dimensions").prop('checked', true)
+    //   }
+    //   $("#show-dimensions").change()
+    //   hideTime -= 1
+    // }, 1000);
+  }
+
+  // model rotate reset time
+  function touchMove(event, time) {
+    hideTime = time
+  }
+
+  // Scroll
+  function ToScroll(id){
+    if (jQuery(window).width() >= 768){
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top }, 800);
+    }
+    else{
+      $("html, body").animate({ scrollTop: $(`#${id}`).offset().top - 150}, 800);
+    }
+  }
+
+  // Navbar
+  $('.navbar-nav>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+  // toggleTip
+  function toggleTip(){
+    $(".tooltipText").toggleClass('showTip')
+  }
+  
+  // function setData() {
+  //   var a = $("#A").val()
+  //   var b = $("#B").val()
+  //   var c = $("#C").val()
+  //   $("#dimension-demo").attr("camera-orbit", `${a}deg ${b}deg ${c}%`)
+  // }
+
+  // function setScale() {
+  //   var as = $("#as").val()
+  //   var bs = $("#bs").val()
+  //   var cs = $("#cs").val()
+  //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
+  // }
+</script>
+</html>

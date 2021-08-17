@@ -21,8 +21,9 @@ html {
   }
 }
 
-.nav-item{
+.nav-item {
   cursor: pointer;
+  text-align: center;
 }
 
 /* 電腦版CSS */
@@ -46,9 +47,9 @@ html {
     background-image: url("../images/bg_PC.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    
+
   }
 
 
@@ -109,7 +110,7 @@ html {
 }
 
 .tipIcon {
-  cursor:pointer;
+  cursor: pointer;
   background-image: url("../images/tips_icon.svg");
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -131,7 +132,7 @@ html {
   padding: 5px 10px;
   position: absolute;
   bottom: 100%;
-  margin : 10px;
+  margin: 10px;
 
   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   opacity: 0;
@@ -172,6 +173,10 @@ html {
 
   .mobileShow {
     display: block;
+  }
+
+  .navbar-logo {
+    width: 210px;
   }
 
   main {
@@ -433,6 +438,14 @@ html {
   display: none !important;
 }
 
+.sharePageText {
+  height: 100%;
+  transform: translateY(35%);
+  color: #ffffffe0;
+  float: right;
+  font-size: .8em;
+}
+
 .shareIcon {
   cursor: pointer;
   width: 35px;
@@ -471,8 +484,9 @@ html {
   top: 50%;
   transform: translateY(-50%);
 }
-.carousel-item{
-  padding:10px;
+
+.carousel-item {
+  padding: 10px;
   position: relative;
 }
 
@@ -495,22 +509,24 @@ html {
   max-width: 800px;
 }
 
-.w-90{
+.w-90 {
   width: 90% !important;
 }
 
 /* 輪播圖片 */
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .carousel {
-    /* any dimensions are fine, it can be responsive with max-width */
     width: 700px;
   }
 }
-@media (man-width: 768px) {
+
+@media (man-width: 1025px) {
   .carousel {
-    /* any dimensions are fine, it can be responsive with max-width */
     width: 100%;
   }
+}
+.carousel{
+  height: 100%;
 }
 
 .carousel-inner {
@@ -528,4 +544,17 @@ html {
 
 .carousel-item img {
   visibility: hidden;
+}
+
+.titleText_1 {
+  color: cyan;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+.titleText_2 {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
 }
