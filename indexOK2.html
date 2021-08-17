@@ -50,7 +50,7 @@
 
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-dark navClass py-3 ">
-    <a class="navbar-brand" href="#">Logo0816</a>
+    <a class="navbar-brand" href="#">Logo0817</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -88,15 +88,18 @@
     <div class="position-relative overflow-hidden text-left ">
       <!-- AR 放置 mx-auto-->
       <div class="pb-0 justify-content-center bg-darkd">
-        <!-- src="./glb/0805_2.glb" 
-        ios-src="./glb/0805_2.usdz"  -->
+        <!-- src="./glb/0817.glb" 
+        ios-src="./glb/0817.usdz"  -->
 
         <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
           src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
-        <model-viewer exposure="0.1" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
+        <model-viewer exposure="0.1" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
+        src="./glb/0817.glb" 
+        ios-src="./glb/0817.usdz"
+        ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
 
           <div id="progress" slot="progress-bar">
             <div class="bar"></div>
@@ -184,7 +187,7 @@
     </div>
 
     <!-- 介紹、內文 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Artwork_id">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 md-py-3 justify-content-center bg-darkd" id="Artwork_id">
       <div class="row">
         <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
 
@@ -208,42 +211,37 @@
             </div>
           </div>
         </div>
-        <!-- 圖片區域 1  -->
+        <!-- 圖片區塊 1  -->
         <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
-          <div id="carouselExampleIndicators" class="carousel slide contentCenter p-3 mx-2 " 
-            data-ride="carousel" style="height: 100%;" >
+          <div id="carousel_1" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel" style="height: 100%;">
             <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carousel_1" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel_1" data-slide-to="1"></li>
             </ol>
-            <!-- 圖片 -->
+            <!-- carousel  -->
             <div class="carousel-inner my-gallery">
-              <div class="carousel-item cencen active">
-                <figure>
-                  <a href="./images/1_1.jpg" itemprop="contentUrl" data-size="1265x406">
-                    <img class="d-block w-100" src="./images/1_1.jpg" itemprop="thumbnail" alt="Image description" />
-                  </a>
-                  <figcaption itemprop=" caption">
-                    <h3>日本遺址的照片1</h3>
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="carousel-item cencen ">
-                <figure>
-                  <a href="./images/1_2.jpg" itemprop="contentUrl" data-size="866x577">
-                    <img class="d-block w-100" src="./images/1_2.jpg" itemprop="thumbnail" alt="Image description" />
-                  </a>
-                  <figcaption itemprop="caption description">
-                    <h3>日本遺址的照片2</h3>
-                  </figcaption>
-                </figure>
-              </div>
+              <figure class="carousel-item cencen active" style="background-image: url('./images/1_1.jpg');">
+                <a href="./images/1_1.jpg" itemprop="contentUrl" data-size="1265x406">
+                  <img class="d-block w-100" src="./images/1_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop=" caption">
+                  <div>photo1</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/1_2.jpg');">
+                <a href="./images/1_2.jpg" itemprop="contentUrl" data-size="866x577">
+                  <img class="d-block w-100" src="./images/1_2.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">
+                  <div>photo2</div>
+                </figcaption>
+              </figure>
             </div>
-            <a class="carousel-control-prev pcShow" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev pcShow" href="#carousel_1" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next pcShow" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next pcShow" href="#carousel_1" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -253,14 +251,45 @@
     </div>
 
     <!-- 介紹、內文 2 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2" id="Artist_id">
+    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 md-py-3 justify-content-center bg-darkd_2" id="Artist_id">
       <div class="row">
-        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
-          <div class="contentCenter p-3">
-            <img style="width: 80%;" src="./images/3.jpg">
-            <div style="text-align: center; font-style: italic;">Studio2</div>
+        <!-- 圖片區塊 2 -->
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" style="height: 420px;">
+          <div id="carousel_2" class="carousel slide contentCenter  py-3 md-mx-2" data-ride="carousel" style="height: 100%;">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel_2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel_2" data-slide-to="1"></li>
+            </ol>
+            <!-- carousel -->
+            <div class="carousel-inner my-gallery">
+              <figure class="carousel-item cencen active" style="background-image: url('./images/2_1.jpg');">
+                <a href="./images/2_1.jpg" itemprop="contentUrl" data-size="3500x1308">
+                  <img class="d-block w-100" src="./images/2_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>photo1</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/2_2.jpg');">
+                <a href="./images/2_2.jpg" itemprop="contentUrl" data-size="1830x810">
+                  <img class="d-block w-100" src="./images/2_2.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">
+                  <div>photo2</div>
+                </figcaption>
+              </figure>
+            </div>
+            <a class="carousel-control-prev mobile_hide" href="#carousel_2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next mobile_hide" href="#carousel_2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
+
         <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
           <div class="contentCenter p-3">
 
@@ -277,17 +306,18 @@
               <span style="font-size: 1em;">Taiwan</span>
             </div>
 
-            <!-- <p class="lead mt-3"> -->
-
             <div class="mt-3 text-left">
-              根兄び目半タワ典政イ者会ちみり穴網ぱドれび試意エマヒ位占でぞ評約ぽフか一需ツミセマ男面ヱヤ法7航か場聞納キヱ惑無田あてむだ給削電延従フだッぼ。豊エ定表政ぽ営禁報ナヤコ彰16問やばのり申済ヱ権期ヘリト属塗ハノミ害方際を奉己我洗らぶり。購らがかづ浜慶良ぱぜ続変数ロモ挙器へトみ躍陽ヘニリフ群意コマラヌ万好改エトノネ自子へぼじぶ作今たふろ収弘はが更応そぶーめ中討ゃずけぶ周拓泰やフっ。
-              供ましち者都京作てさす止掲リはり島香やざ体子がれぎゅ薄訪投せだへ店町いー済右カリソテ懸誠トぱ材房イク万論ワタヤム康官づトの騒十亨う。会さへぐ宿好要野キ声業生チ表測投サロヤ日合ロツ現関すふ法面セルウ像4岐ヤオカノ酒跡乏びく。加だれ女抗ワ意積あざ八基旅ざ鬼稿こぞ語展ヒ運関て文討ニ再済スほ米戒孝ぜぼゃぶ。
+              根據最近古生物學家在祕魯發現一具保存完好的「
+              陸行 鯨 」 Ambulocetus natans化石，有下顎、牙齒，四條腿和蹼狀腳趾的特徵，和半水生哺乳動物 的
+              尾部脊椎骨，牠被 考古學家認為 是鯨魚的祖先。 在珠洲市 發現的這個生物骨骸
+              化石 是否是類似陸行鯨的生物？ 或者是 陸行鯨演化到鯨魚 更直接的證據？
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="pt-3 bg-darkd_2"></div>
 
     <!-- 背景圖 -->
     <div class="fixedBG">
@@ -297,7 +327,7 @@
 
 
     <!-- 影片 -->
-    <div class="row pt-5 pb-5 bg-darkd" id="Video_id">
+    <!-- <div class="row pt-5 pb-5 bg-darkd" id="Video_id">
       <div class=" col-12 bg-darkd text-center text-white overflow-hidden">
         <h2>おすすめ動画</h2>
       </div>
@@ -307,7 +337,7 @@
         <iframe src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
       </div>
       <div class="col-md-12 col-sm-12"></div>
-    </div>
+    </div> -->
 
     <!-- 介紹、內文 3 -->
     <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Studio_id">
@@ -326,16 +356,49 @@
             </div>
 
             <div class=" mt-3 text-left">
-              様こだちめ樹年フ蓄百ヒセ洲糸きへーほ新断フす写多サワ午過どんなっ測法モ逃平表橋ノマロヒ格写組ぶい級多ご係千呼州然で富起ケフ茶竹ぎあ。視ヌタ需般こ向個なよ違帯客セコ教患わこはせ生楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ楽ル田事立断ーび瞬争ょ。首チサカ部修す結芸らご研1院タハリ考定うさぼを側百リツソク道駒ソナ済迫テナメケ第金よおルび日多かゃ綱了根然教だをざさ。。
-              善よりの新神ぴ制済ンそごぐ村投光江マムイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす安良美とンリぽ際主母ぎかげ多容講候披づイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにすイノ図況がッ訪味せよりじ教社サタ転割ヤレク出邦な止発句ごろぎ。指ちは際象ラヘ安企つせ車護言能ヘ伝着ヘヨタ活及崎ユアセ風困ドけんて予港芝団しお。職ぴせのを放文起キセワ美簸は早類カ件描ヤ日歳と温乱ふせづ経記らげせ横8球べいにす。
+              位在石川縣
+              能登町的真脅市，早在 1981年便發現標記著繩文時代 （距今約
+              6000-2000年前） 的「真脅遺址」 。其中有著大量的 海豚遺骨及 鯨魚遺骨，證實
+              了自兩千年前，人們便有捕食鯨魚的文化。 在江戶時代平均一年也有捕獲幾十
+              頭鯨魚的紀錄。自古以來若是有個村莊捕獲鯨魚 鯨魚肉一半給捕獲的村，其
+              他一半分給周邊六個村莊。所以每當有鯨魚出現，七個村莊都因此得利 。
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" id="Author">
-          <div class="contentCenter p-3">
-            <img class="pcShow pt-5" style="width: 50%;" src="./images/2.jpg">
-            <img class="mobileShow" style="width: 80%;" src="./images/2.jpg">
-            <div style="text-align: center; font-style: italic;">Studio3</div>
+        <!-- 圖片區域 3 -->
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 450px;">
+          <div id="carousel_3" class="carousel slide contentCenter  py-3 md-mx-2" data-ride="carousel" style="height: 100%;">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel_3" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel_3" data-slide-to="1"></li>
+            </ol>
+            <!-- carousel -->
+            <div class="carousel-inner my-gallery">
+              <figure class="carousel-item cencen active" style="background-image: url('./images/3_1.jpg');">
+                <a href="./images/3_1.jpg" itemprop="contentUrl" data-size="1815x2121">
+                  <img class="d-block w-90 " src="./images/3_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>photo1</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/3_2.jpg');">
+                <a href="./images/3_2.jpg" itemprop="contentUrl" data-size="1803x1707">
+                  <img class="d-block w-100" src="./images/3_2.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">
+                  <div>photo2</div>
+                </figcaption>
+              </figure>
+            </div>
+            <a class="carousel-control-prev mobile_hide" href="#carousel_3" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next mobile_hide" href="#carousel_3" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
 
@@ -492,10 +555,11 @@
 
 <script>
   let hideTime = 0;
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  var isMobile = /iPhone|iPad|iPod|Android|iPadPro/i.test(navigator.userAgent);
 
   $(function () {
     if (isMobile) {
+      $(".mobile_hide").hide()
       $(".Desktop").hide()
     } else {
       $(".Mobile").hide()
@@ -554,7 +618,7 @@
       $(this).carousel('next');
     });
     $('.carousel').carousel({
-      interval: 50000
+      interval: 10000
     })
   });
 
