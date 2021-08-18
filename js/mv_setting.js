@@ -238,8 +238,6 @@ modelViewer.addEventListener("load", (ev) => {
   metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
   roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
 
-  // Defaults to gold
-  material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
 
   document.querySelector('#metalness').addEventListener('input', (event) => {
     material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
