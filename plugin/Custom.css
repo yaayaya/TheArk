@@ -22,6 +22,7 @@ html {
 }
 
 .nav-item {
+  color: rgb(255 255 255 / 80%);
   cursor: pointer;
   text-align: center;
 }
@@ -571,20 +572,16 @@ html {
   visibility: hidden;
 }
 
-.titleText_1 {
-  color: cyan;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-
-.titleText_2 {
+.titleText_1 , .titleText_2 {
   color: white;
   font-size: 2em;
   font-weight: bold;
 }
 
+
+
 .footer_h2{
   color:white;
+  letter-spacing: 2px;
   font-weight: bold;
 }
