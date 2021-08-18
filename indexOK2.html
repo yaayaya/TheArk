@@ -52,7 +52,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-dark navClass">
     <div class="d-flex flex-grow-1">
 
-      <img src="./images/logo.svg" class="navbar-logo" style="padding-bottom: 0px;">
+      <img src="./images/icon/logo.png" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
       <div class="w-100 text-right">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
           <span class="navbar-toggler-icon"></span>
@@ -132,6 +132,21 @@
           <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
 
+          <!-- Hu -->
+          <!-- <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="-1 -1 -1" data-normal="1 0 0"></div> -->
+          <!-- <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div> -->
+<!-- 
+          <div slot="hotspot-dot+X-Y+Z" class="dotHu" data-position="1 0 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dot+X-Y-Z" class="dotHu" data-position="1 0 -1" data-normal="1 0 0"></div> -->
+          <!-- <div slot="hotspot-dot+X+Y-Z" class="dotHu show" data-position="1 1 -1" data-normal="0 1 0"></div> -->
+          <!-- <div slot="hotspot-dot-X+Y-Z" class="dotHu show" data-position="-1 1 -1" data-normal="0 1 0"></div>
+          <div slot="hotspot-dot-X-Y-Z" class="dotHu" data-position="-1 0 -1" data-normal="-1 0 0"></div>
+          <div slot="hotspot-dot-X-Y+Z" class="dotHu" data-position="-1 0 1" data-normal="-1 0 0"></div>
+
+          <input id="show-dimensions" type="checkbox" style="display: none;"> -->
+
         </model-viewer>
       </div>
 
@@ -140,7 +155,7 @@
         <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong>
 
         <p class="hero__meta pt-3" style="color:white">
-          <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
+          <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
           <span style="font-size: 1em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
           <div class="pt-1" style="color: white;">
             開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
@@ -153,7 +168,7 @@
         <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong><br>
 
         <p class="hero__meta pt-3" style="color:white">
-          <image class="mb-2" src="./images/clock_icon.png" width="18px"></image>
+          <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
           <span style="font-size: 1.2em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
           <div class="pt-1" style="color: white;">
             開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
@@ -167,8 +182,9 @@
         <!-- 分享連結 -->
         <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
           <div>
-            <img class="mt-3 mr-4 shareIcon" src="./images/fb_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
-            <img class=" mt-3 mr-4 shareIcon" src="./images/ig_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
+            <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
+            <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
+            <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
             <span class="mr-4 sharePageText">Share this page</span>
           </div>
         </div>
@@ -215,17 +231,17 @@
             </ol>
             <!-- carousel  -->
             <div class="carousel-inner my-gallery">
-              <figure class="carousel-item cencen active" style="background-image: url('./images/1_1.jpg');">
-                <a href="./images/1_1.jpg" itemprop="contentUrl" data-size="1265x406">
-                  <img class="d-block w-100" src="./images/1_1.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/1_1.jpg');">
+                <a href="./images/Contents/1_1.jpg" itemprop="contentUrl" data-size="1265x406">
+                  <img class="d-block w-100" src="./images/Contents/1_1.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>考古團隊作業情形</div>
                 </figcaption>
               </figure>
-              <figure class="carousel-item cencen " style="background-image: url('./images/1_2.jpg');">
-                <a href="./images/1_2.jpg" itemprop="contentUrl" data-size="866x577">
-                  <img class="d-block w-100" src="./images/1_2.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1_2.jpg');">
+                <a href="./images/Contents/1_2.jpg" itemprop="contentUrl" data-size="866x577">
+                  <img class="d-block w-100" src="./images/Contents/1_2.jpg" itemprop="thumbnail" alt="images description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>奇異生物骨骸化石</div>
@@ -257,17 +273,17 @@
             </ol>
             <!-- carousel -->
             <div class="carousel-inner my-gallery">
-              <figure class="carousel-item cencen active" style="background-image: url('./images/2_1.jpg');">
-                <a href="./images/2_1.jpg" itemprop="contentUrl" data-size="3500x1308">
-                  <img class="d-block w-100" src="./images/2_1.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/2_1.jpg');">
+                <a href="./images/Contents/2_1.jpg" itemprop="contentUrl" data-size="3500x1308">
+                  <img class="d-block w-100" src="./images/Contents/2_1.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>陸行鯨化石</div>
                 </figcaption>
               </figure>
-              <figure class="carousel-item cencen " style="background-image: url('./images/2_2.jpg');">
-                <a href="./images/2_2.jpg" itemprop="contentUrl" data-size="1830x810">
-                  <img class="d-block w-100" src="./images/2_2.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/2_2.jpg');">
+                <a href="./images/Contents/2_2.jpg" itemprop="contentUrl" data-size="1830x810">
+                  <img class="d-block w-100" src="./images/Contents/2_2.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>陸行鯨還原圖</div>
@@ -333,17 +349,17 @@
             </ol>
             <!-- carousel -->
             <div class="carousel-inner my-gallery">
-              <figure class="carousel-item cencen active" style="background-image: url('./images/3_1.jpg');">
-                <a href="./images/3_1.jpg" itemprop="contentUrl" data-size="1815x2121">
-                  <img class="d-block w-90 " src="./images/3_1.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen active" style="background-image: url('./images/contents/3_1.jpg');">
+                <a href="./images/contents/3_1.jpg" itemprop="contentUrl" data-size="1815x2121">
+                  <img class="d-block w-90 " src="./images/contents/3_1.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>真脅遺址</div>
                 </figcaption>
               </figure>
-              <figure class="carousel-item cencen " style="background-image: url('./images/3_2.jpg');">
-                <a href="./images/3_2.jpg" itemprop="contentUrl" data-size="1803x1707">
-                  <img class="d-block w-100" src="./images/3_2.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/3_2.jpg');">
+                <a href="./images/Contents/3_2.jpg" itemprop="contentUrl" data-size="1803x1707">
+                  <img class="d-block w-100" src="./images/Contents/3_2.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>真脅遺址</div>
@@ -394,9 +410,9 @@
           <div id="carousel_1" class="carousel slide contentCenter md-mx-2 " data-ride="carousel">
             <!-- carousel  -->
             <div class="carousel-inner my-gallery">
-              <figure class="carousel-item cencen active" style="background-image: url('./images/4_1.jpg');">
-                <a href="./images/4_1.jpg" itemprop="contentUrl" data-size="2508x1672">
-                  <img class="d-block w-100" src="./images/4_1.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/4_1.jpg');">
+                <a href="./images/Contents/4_1.jpg" itemprop="contentUrl" data-size="2508x1672">
+                  <img class="d-block w-100" src="./images/Contents/4_1.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>珠州市鯨魚慰靈碑</div>
@@ -446,33 +462,33 @@
             </ol>
             <!-- carousel -->
             <div class="carousel-inner my-gallery">
-              <figure class="carousel-item cencen active" style="background-image: url('./images/5_1.jpg');">
-                <a href="./images/5_1.jpg" itemprop="contentUrl" data-size="1229x839">
-                  <img class="d-block w-100" src="./images/5_1.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/5_1.jpg');">
+                <a href="./images/Contents/5_1.jpg" itemprop="contentUrl" data-size="1229x839">
+                  <img class="d-block w-100" src="./images/Contents/5_1.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>鯨魚傳說報導「矢波」</div>
                 </figcaption>
               </figure>
-              <figure class="carousel-item cencen " style="background-image: url('./images/5_2.jpg');">
-                <a href="./images/5_2.jpg" itemprop="contentUrl" data-size="1217x813">
-                  <img class="d-block w-100" src="./images/5_2.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_2.jpg');">
+                <a href="./images/Contents/5_2.jpg" itemprop="contentUrl" data-size="1217x813">
+                  <img class="d-block w-100" src="./images/Contents/5_2.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>鯨魚傳說報導「波並」、「藤波」</div>
                 </figcaption>
               </figure>
-              <figure class="carousel-item cencen " style="background-image: url('./images/5_3.jpg');">
-                <a href="./images/5_3.jpg" itemprop="contentUrl" data-size="1593x2499">
-                  <img class="d-block w-100" src="./images/5_3.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_3.jpg');">
+                <a href="./images/Contents/5_3.jpg" itemprop="contentUrl" data-size="1593x2499">
+                  <img class="d-block w-100" src="./images/Contents/5_3.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>鯨魚傳說相關出版書籍</div>
                 </figcaption>
               </figure>
-              <figure class="carousel-item cencen " style="background-image: url('./images/5_4.jpg');">
-                <a href="./images/5_4.jpg" itemprop="contentUrl" data-size="1440x2560">
-                  <img class="d-block w-100" src="./images/5_4.jpg" itemprop="thumbnail" alt="Image description" />
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_4.jpg');">
+                <a href="./images/Contents/5_4.jpg" itemprop="contentUrl" data-size="1440x2560">
+                  <img class="d-block w-100" src="./images/Contents/5_4.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
                 <figcaption itemprop="caption">
                   <div>能登和珠洲市的鯨魚傳說</div>
@@ -551,7 +567,7 @@
       <div>Great Russell Street London WC1B 3DG</div>
       <div>+44 (0)20 7323 8000</div>
 
-      <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/clock_icon.png" width="16px"></image>
+      <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/icon/clock_icon.png" width="16px"></image>
       <span class="pt-1" style="font-size: 1em;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</span>
     </div>
   </div>
@@ -588,7 +604,7 @@
 
     <div class="col-3" style="color: white;">
       <div style="font-weight: 500;">
-        <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/clock_icon.png" width="16px"></image>
+        <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/icon/clock_icon.png" width="16px"></image>
         Opening hours
       </div>
       <div style="margin-top: -10px;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</div>
@@ -742,6 +758,8 @@
   //   var cs = $("#cs").val()
   //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
   // }
+
+  
 </script>
 
 

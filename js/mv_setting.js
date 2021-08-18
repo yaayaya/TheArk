@@ -134,7 +134,6 @@ modelViewer.addEventListener('mousemove', (event) => {
 modelViewer.addEventListener('touchmove', (event) => {
     if (!panning || event.touches.length !== 2)
         return;
-
     const {
         touches
     } = event;
@@ -153,3 +152,77 @@ self.addEventListener('touchend', (event) => {
         recenter(event.changedTouches[0]);
     }
 }, true);
+
+// // Anotations
+// $("#show-dimensions").change(() => {
+//     if ($('#show-dimensions').prop('checked')) {
+//         $(".dim").show()
+//         $(".dot").show()
+//     } else {
+//         $(".dim").fadeOut(500)
+//         $(".dot").fadeOut(500)
+//     }
+// })
+
+// modelViewer.addEventListener('load', (event) => {
+//     console.log(event)
+//     const center = modelViewer.getCameraTarget();
+//     const size = modelViewer.getDimensions();
+//     const x2 = size.x / 2;
+//     const y2 = size.y / 2;
+//     const z2 = size.z / 2;
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot+X-Y+Z',
+//         position: `${center.x + x2} ${center.y - y2} ${center.z + z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim+X-Y',
+//         position: `${center.x + x2} ${center.y - y2} ${center.z}`
+//     });
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot+X-Y-Z',
+//         position: `${center.x + x2} ${center.y - y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim+X-Z',
+//         position: `${center.x + x2} ${center.y} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot+X+Y-Z',
+//         position: `${center.x + x2} ${center.y + y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim+Y-Z',
+//         position: `${center.x} ${center.y + y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot-X+Y-Z',
+//         position: `${center.x - x2} ${center.y + y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim-X-Z',
+//         position: `${center.x - x2} ${center.y} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot-X-Y-Z',
+//         position: `${center.x - x2} ${center.y - y2} ${center.z - z2}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dim-X-Y',
+//         position: `${center.x - x2} ${center.y - y2} ${center.z}`
+//     });
+
+//     modelViewer.updateHotspot({
+//         name: 'hotspot-dot-X-Y+Z',
+//         position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
+//     });
+// });

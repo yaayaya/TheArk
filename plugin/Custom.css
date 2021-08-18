@@ -66,6 +66,13 @@ html {
     height: 780px;
   }
 
+  .dotHu {
+    content: url("../images/human.png");
+    display: block;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+
   .dot {
     display: block;
     width: 12px !important;
@@ -111,7 +118,7 @@ html {
 
 .tipIcon {
   cursor: pointer;
-  background-image: url("../images/tips_icon.svg");
+  background-image: url("../images/icon/tips_icon.png");
   background-repeat: no-repeat;
   border-radius: 50%;
   background-color: white;
@@ -176,7 +183,9 @@ html {
   }
 
   .navbar-logo {
-    width: 210px;
+    width: 220px;
+    height: 100%;
+    transform: translateY(80%);
   }
 
   main {
@@ -198,7 +207,15 @@ html {
     height: 520px;
   }
 
+  .dotHu {
+    content: url("../images/human.png");
+    display: block;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+
   .dot {
+    content: url("../images/human.png");
     display: block;
     width: 12px !important;
     height: 12px !important;
