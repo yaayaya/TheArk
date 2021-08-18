@@ -410,12 +410,20 @@ html {
 }
 
 .f-facebook-icon {
-  background: url(https://www.npm.gov.tw/images/icon/Social-fb.svg) no-repeat center/contain;
+  background: url("../images/icon/fb_icon.png") no-repeat center/contain;
 }
 
 .f-youtube-icon {
   background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat center/contain;
 }
+
+.f-twitter-icon {
+  background: url("../images/icon/twitter_icon.png") no-repeat center/contain;
+}
+.f-ig-icon {
+  background: url("../images/icon/ig_icon.png") no-repeat center/contain;
+}
+
 
 /* Footer Menu */
 .menu {
@@ -573,5 +581,10 @@ html {
 .titleText_2 {
   color: white;
   font-size: 2em;
+  font-weight: bold;
+}
+
+.footer_h2{
+  color:white;
   font-weight: bold;
 }

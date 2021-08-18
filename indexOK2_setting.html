@@ -60,21 +60,21 @@
       </div>
     </div>
     <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-      <div class="navbar-nav ml-auto flex-nowrap">
-        <a class="nav-item nav-link mx-2" onclick="ToScroll('News_id')">新聞</a>
-        <a class="nav-item nav-link mx-2" onclick="ToScroll('RuinsInfo_id')">遺址資訊</a>
-        <a class="nav-item nav-link mx-2" onclick="ToScroll('Evolution_id')">演化</a>
-        <a class="nav-item nav-link mx-2" onclick="ToScroll('Ruins_id')">真脅遺址</a>
-        <a class="nav-item nav-link mx-2" onclick="ToScroll('Whale_id')">鯨魚傳說</a>
-      </div>
+        <div class="navbar-nav ml-auto flex-nowrap">
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('News_id')">新聞</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('RuinsInfo_id')">遺址資訊</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('Evolution_id')">演化</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('Ruins_id')">真脅遺址</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('Whale_id')">鯨魚傳說</a>
+        </div>
     </div>
   </nav>
 
 
   <main>
-    <!-- <input type="text" id="A">
+    <input type="text" id="A">
     <button onclick="setData()">SetLight</button>
-    <br> -->
+    <br>
 
     <!-- <input type="text" id="A">
     
@@ -94,8 +94,8 @@
     <div class="position-relative overflow-hidden text-left ">
       <!-- AR 放置 mx-auto-->
       <div class="pb-0 justify-content-center bg-darkd">
-        <!-- src="./glb/0818.glb" 
-        ios-src="./glb/0818.usdz"  -->
+        <!-- src="./glb/0817.glb" 
+        ios-src="./glb/0817.usdz"  -->
 
         <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
           src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
@@ -108,18 +108,33 @@
             <div class="bar"></div>
           </div>
 
+          <div id="progress" slot="progress-bar">
+            <div class="bar"></div>
+          </div>
+
+          <div class="controls">
+            <div>
+              <p>Metalness: <span id="metalness-value"></span></p>
+              <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div>
+              <p>Roughness: <span id="roughness-value"></span></p>
+              <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
+            </div>
+          </div>
+
           <!-- Tip -->
           <div class="tooltipDiv" style="display: none;">
             <div onclick="toggleTip()" class="tipIcon">
               <span></span>
-              <span class="tooltipText DesktopShow" style="width: 260px;">
+              <span class="tooltipText Desktop" style="width: 260px;">
                 使用說明：<br>
                 轉動：滑鼠左鍵按壓拖曳<br>
                 放大：滑鼠滾輪上滑、PageDown<br>
                 縮小：滑鼠滾輪下滑、PageUp<br>
                 平移：Ctrl + 滑鼠左鍵按壓拖曳<br>
               </span>
-              <span class="tooltipText MobileDeviceShow" style="width: 220px;">
+              <span class="tooltipText Mobile" style="width: 220px;">
                 使用說明：<br>
                 轉動：單指按壓拖曳<br>
                 放大：兩指按壓向外滑動<br>
@@ -131,6 +146,21 @@
 
           <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
           <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
+
+          <!-- Hu -->
+          <!-- <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="-1 -1 -1" data-normal="1 0 0"></div> -->
+          <!-- <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div> -->
+<!-- 
+          <div slot="hotspot-dot+X-Y+Z" class="dotHu" data-position="1 0 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dot+X-Y-Z" class="dotHu" data-position="1 0 -1" data-normal="1 0 0"></div> -->
+          <!-- <div slot="hotspot-dot+X+Y-Z" class="dotHu show" data-position="1 1 -1" data-normal="0 1 0"></div> -->
+          <!-- <div slot="hotspot-dot-X+Y-Z" class="dotHu show" data-position="-1 1 -1" data-normal="0 1 0"></div>
+          <div slot="hotspot-dot-X-Y-Z" class="dotHu" data-position="-1 0 -1" data-normal="-1 0 0"></div>
+          <div slot="hotspot-dot-X-Y+Z" class="dotHu" data-position="-1 0 1" data-normal="-1 0 0"></div>
+
+          <input id="show-dimensions" type="checkbox" style="display: none;"> -->
 
         </model-viewer>
       </div>
@@ -167,9 +197,9 @@
         <!-- 分享連結 -->
         <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
           <div>
-            <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
+            <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
             <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
-            <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
+            <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
             <span class="mr-4 sharePageText">Share this page</span>
           </div>
         </div>
@@ -275,11 +305,11 @@
                 </figcaption>
               </figure>
             </div>
-            <a class="carousel-control-prev DesktopShow" href="#carousel_2" role="button" data-slide="prev">
+            <a class="carousel-control-prev Mobile_hide" href="#carousel_2" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next DesktopShow" href="#carousel_2" role="button" data-slide="next">
+            <a class="carousel-control-next Mobile_hide" href="#carousel_2" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -351,11 +381,11 @@
                 </figcaption>
               </figure>
             </div>
-            <a class="carousel-control-prev DesktopShow" href="#carousel_3" role="button" data-slide="prev">
+            <a class="carousel-control-prev Mobile_hide" href="#carousel_3" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next DesktopShow" href="#carousel_3" role="button" data-slide="next">
+            <a class="carousel-control-next Mobile_hide" href="#carousel_3" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -412,7 +442,7 @@
     <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 justify-content-center bg-darkd" id="Evolution_id">
       <div class="row">
         <!-- 內文 2 -->
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden greater_1024_show">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden Desktop_hide">
           <div class="contentCenter px-3">
             <div class="text-left">
               當地有關鯨魚的 傳說故事 分別是能登町的「藤波」、「波並」、「 矢波」。
@@ -480,18 +510,18 @@
                 </figcaption>
               </figure>
             </div>
-            <a class="carousel-control-prev DesktopShow" href="#carousel_4" role="button" data-slide="prev">
+            <a class="carousel-control-prev Mobile_hide" href="#carousel_4" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next DesktopShow" href="#carousel_4" role="button" data-slide="next">
+            <a class="carousel-control-next Mobile_hide" href="#carousel_4" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
         <!-- 內文 2 -->
-        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden less_1024_show">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden Mobile_hide">
           <div class="contentCenter px-3">
             <div class="mt-3 text-left">
               當地有關鯨魚的傳說故事 分別是能登町的「藤波」、「波並」、「矢波」。
@@ -522,68 +552,42 @@
   </main>
 </body>
 
+
+
 <!-- mobile Footer -->
 <footer class="footer mobileShow" style="background-color: #1d1d1d;">
   <!-- Contact us -->
   <div class="container py-3 px-4">
-    <div>
-      <h2 class="footer_h2">分享網站</h2>
-      <div class="pt-1">
-        <ul class="menu menu--icon-menu ">
-          <li>
-            <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="twitter_Share">
-              <span class="f-icon f-twitter-icon"></span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="ig_Share">
-              <span class="f-icon f-ig-icon"></span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook_Share">
-              <span class="f-icon f-facebook-icon"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <h2 style="color: white ;">Connect with us</h2>
+    <div class="pt-2">
+      <ul class="menu menu--icon-menu ">
+        <li>
+          <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
+            <span class="f-icon f-facebook-icon"></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+        </li>
+      </ul>
     </div>
-    
     <!-- Back Top -->
     <div class="pt-3">
       <button class="toTopButtonMobile" onclick="ToScroll('body_id')">
         <div class="arrow">Back to the top</div>
       </button>
     </div>
-    <!-- Contact Us -->
-    <div>
-      <h2 class="footer_h2 pt-3">關於我們</h2>
-      <div class="pt-1">
-        <ul class="menu menu--icon-menu ">
-          <li>
-            <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
-              <span class="f-icon f-facebook-icon"></span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
     <!-- info -->
     <div class="pt-4" style="color: white; ">
       <div>Great Russell Street London WC1B 3DG</div>
       <div>+44 (0)20 7323 8000</div>
-      <div class="pt-2">
-        <image class="mr-1" src="./images/icon/clock_icon.png" width="16px"></image>
-        <span class="pt-1" style="font-size: 1em;">火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館</span>
-      </div>
+
+      <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/icon/clock_icon.png" width="16px"></image>
+      <span class="pt-1" style="font-size: 1em;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</span>
     </div>
   </div>
   <!-- About  -->
-  <div class="py-2 px-4 " style="color: white; text-align: center;background-color: #000;font-size: 14px;">© 2021 Tu's Archeology Team All Rights Reserved</div>
+  <div class="py-2 px-4 " style="color: white; text-align: center;background-color: #000;">© 2021 Tu's Archeology Team All Rights Reserved</div>
 </footer>
 
 <!-- PC Footer -->
@@ -649,7 +653,7 @@
         <div class="pswp__counter"></div>
         <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
         <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
+        
         <div class="pswp__preloader">
           <div class="pswp__preloader__icn">
             <div class="pswp__preloader__cut">
@@ -663,10 +667,10 @@
         <div class="pswp__share-tooltip"></div>
       </div>
 
-      <button class="pswp__button pswp__button--arrow--left DesktopShow" title="Previous (arrow left)">
+      <button class="pswp__button pswp__button--arrow--left Mobile_hide" title="Previous (arrow left)">
       </button>
 
-      <button class="pswp__button pswp__button--arrow--right DesktopShow" title="Next (arrow right)">
+      <button class="pswp__button pswp__button--arrow--right Mobile_hide" title="Next (arrow right)">
       </button>
 
       <div class="pswp__caption">
@@ -678,7 +682,7 @@
 
 
 
-<script src="./js/mv_setting.js"></script>
+<script src="./js/mv_setting_GLB.js"></script>
 <script src="./js/ps_setting.js"></script>
 
 <script>
@@ -688,16 +692,16 @@
   $(function () {
     if (isMobile) {
 
-      $(".DesktopShow").hide()
+      $(".Desktop").hide()
     } else {
-      $(".MobileDeviceShow").hide()
+      $(".Mobile").hide()
     }
 
-    // >1024 行動裝置隱藏
+    // >1280 行動裝置隱藏
     if (jQuery(window).width() > 1024) {
-      $(".less_1024_show").hide()
+      $(".Mobile_hide").hide()
     } else {
-      $(".greater_1024_show").hide()
+      $(".Desktop_hide").hide()
     }
   })
 
@@ -769,6 +773,8 @@
   //   var cs = $("#cs").val()
   //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
   // }
+
+  
 </script>
 
 
