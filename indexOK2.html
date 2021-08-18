@@ -72,9 +72,9 @@
 
 
   <main>
-    <!-- <input type="text" id="A">
+    <input type="text" id="A">
     <button onclick="setData()">SetLight</button>
-    <br> -->
+    <br>
 
     <!-- <input type="text" id="A">
     
@@ -102,10 +102,25 @@
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
-        <model-viewer id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
+        <model-viewer exposure="0.7" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
 
           <div id="progress" slot="progress-bar">
             <div class="bar"></div>
+          </div>
+
+          <div id="progress" slot="progress-bar">
+            <div class="bar"></div>
+          </div>
+
+          <div class="controls">
+            <div>
+              <p>Metalness: <span id="metalness-value"></span></p>
+              <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div>
+              <p>Roughness: <span id="roughness-value"></span></p>
+              <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
+            </div>
           </div>
 
           <!-- Tip -->

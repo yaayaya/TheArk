@@ -226,3 +226,28 @@ self.addEventListener('touchend', (event) => {
 //         position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
 //     });
 // });
+
+
+modelViewer.addEventListener("load", (ev) => {
+
+  let material = modelViewer.model.materials[0];
+
+  let metalnessDisplay = document.querySelector("#metalness-value");
+  let roughnessDisplay = document.querySelector("#roughness-value");
+
+  metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
+  roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
+
+  // Defaults to gold
+  material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
+
+  document.querySelector('#metalness').addEventListener('input', (event) => {
+    material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
+    metalnessDisplay.textContent = event.target.value;
+  });
+  
+  document.querySelector('#roughness').addEventListener('input', (event) => {
+    material.pbrMetallicRoughness.setRoughnessFactor(event.target.value);
+    roughnessDisplay.textContent = event.target.value;
+  });
+})

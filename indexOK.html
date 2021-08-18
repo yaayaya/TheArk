@@ -72,9 +72,9 @@
 
 
   <main>
-    <!-- <input type="text" id="A">
+    <input type="text" id="A">
     <button onclick="setData()">SetLight</button>
-    <br> -->
+    <br>
 
     <!-- <input type="text" id="A">
     
@@ -109,6 +109,17 @@
 
           <div id="progress" slot="progress-bar">
             <div class="bar"></div>
+          </div>
+
+          <div class="controls">
+            <div>
+              <p>Metalness: <span id="metalness-value"></span></p>
+              <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div>
+              <p>Roughness: <span id="roughness-value"></span></p>
+              <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
+            </div>
           </div>
 
           <!-- Tip -->
