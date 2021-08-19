@@ -583,3 +583,17 @@ html {
     color: #555;
     background-color: #e7e7e7;
 }    
+
+.show > .dropdown-menu {
+  max-height: 800px;
+  visibility: visible;
+}
+  
+.dropdown-menu {
+  display: block;
+  max-height: 0 ;
+  visibility: hidden;
+  transition: all 0.8s ease-in-out !important;
+  overflow: hidden !important;
+}
+
