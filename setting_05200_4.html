@@ -75,7 +75,9 @@
     <input type="text" id="A">
     <button onclick="setData()">SetLight</button>
     <br>
-
+    <input type="text" id="B" value="https://i.imgur.com/IR4nF1m.jpeg">
+    <button onclick="setEnvUrl()">SetEnvImageUrl</button>
+    <br>
     <!-- <input type="text" id="A">
     
 
@@ -103,8 +105,10 @@
         <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
         <model-viewer exposure="0.75" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
-        src="./glb/05200.glb" 
-          ios-src="./glb/05200.usdz" 
+        src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
+
+        environment-image = ''
         ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
 
           <div id="progress" slot="progress-bar">
@@ -769,6 +773,15 @@
     let a = $("#A").val()
     $("#dimension-demo").attr("exposure", a)
   }
+
+  function setEnvUrl(){
+    let b = $("#B").val()
+    console.log(b)
+
+    $("#dimension-demo").attr("environment-Image", b)
+  }
+
+
 
   // function setScale() {
   //   var as = $("#as").val()
