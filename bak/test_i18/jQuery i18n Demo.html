@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://thottingal.in/projects/js/jquery.i18n/demo/ -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+	<!--
+	Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess
+	-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>jQuery i18n Demo</title>
+	<meta name="author" content="Santhosh Thottingal">
+	<!-- Libs -->
+	<script src="./jQuery i18n Demo_files/jquery-3.2.1.min.js.下載" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="./jQuery i18n Demo_files/CLDRPluralRuleParser.js.下載"></script>
+	<!-- Source -->
+	<script src="./jQuery i18n Demo_files/jquery.i18n.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/jquery.i18n.messagestore.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/jquery.i18n.fallbacks.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/jquery.i18n.parser.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/jquery.i18n.emitter.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/jquery.i18n.language.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/he.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/fi.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/ml.js.下載"></script>
+
+	<!-- Demo -->
+	<link rel="stylesheet" href="./jQuery i18n Demo_files/bootstrap.min.css">
+	<script src="./jQuery i18n Demo_files/bootstrap.min.js.下載"></script>
+	<script src="./jQuery i18n Demo_files/demo.js.下載"></script>
+</head>
+
+<body>
+	<div class="container">
+		<header id="overview" class="subhead well">
+			<h1>jQuery i18n Demo</h1>
+			<p class="lead">
+				jQuery i18n Demo
+			</p>
+		</header>
+		<div class="lead">
+			<select class="input-small person">
+				<option data-i18n="Meera" value="female">Meera</option>
+				<option data-i18n="Harry" value="male">Harry</option>
+			</select>
+			has <input class="input-mini kittens" value="1" size="3" type="number"> kitten(s). He/She loves to play with it/them.
+		</div>
+		<div class="lead">
+			Display the above sentence in
+			<select class="language span3">
+				<option value="bn">Bengali</option>
+				<option value="de">German</option>
+				<option value="en">English</option>
+				<option value="he">Hebrew</option>
+				<option value="es">Spanish</option>
+				<option value="fi">Finnish</option>
+				<option value="ml">Malayalam</option>
+				<option value="ru">Russian</option>
+				<option value="ta">Tamil</option>
+			</select>
+		</div>
+		<div class="result lead alert alert-success" title="$1-র কাছে $2-টি {{plural:$2|বেড়ালছানা|বেড়ালছানা}} আছে। {{gender:$3|সে|সে}}  {{plural:$2|সেটির|সেগুলির}} সাথে খেলতে ভালোবাসে।">মীরা-র কাছে 1-টি বেড়ালছানা আছে। সে  সেটির সাথে খেলতে ভালোবাসে।</div>
+		<hr>
+		<footer>
+			<p>
+				© Copyright by Santhosh Thottingal ( santhosh dot thottingal at gmail dot com ).
+			</p>
+		</footer>
+	</div>
+
+
+</body></html>

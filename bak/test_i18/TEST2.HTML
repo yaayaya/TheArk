@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script src="../../plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/8.1.0/i18next.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.0/jquery-i18next.min.js"></script>
+    <!-- <script src="/jquery-i18next.min.js" ></script> -->
+</head>
+
+<body id="body_id">
+    <button onclick="cl('zhtw')">zhtw</button>
+    <button onclick="cl('en')">EN</button>
+
+    <ul class="nav">
+        <li><a href="#" data-i18n="nav.home"></a></li>
+        <li><a href="#" data-i18n="nav.page1"></a></li>
+        <li><a href="#" data-i18n="nav.page2"></a></li>
+    </ul>
+
+    <div class="content">
+        <input data-i18n="[placeholder]input.placeholder; [title]input.placeholder" />
+    </div>
+
+    <script src="./lang.js"></script>
+    <script>
+
+        let i18 = i18next.init({
+            lng: 'zhtw', 
+            resources: { 
+                zhtw,
+                jp
+            }
+        }, function (err, t) {
+            jqueryI18next.init(i18next, $);
+            $('#body_id').localize();
+        });
+
+        function cl(lang) {
+            i18next
+                .changeLanguage(lang)
+            $('#body_id').localize();
+        }
+    </script>
+
+</body>
+
+</html>
