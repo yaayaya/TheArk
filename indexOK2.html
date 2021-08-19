@@ -787,10 +787,23 @@
 </script>
 
 <script>
+  let lang = window.navigator.userLanguage || window.navigator.language ;
+  let lng = 'en'
+  if (lang.indexOf('zh') != -1){
+    lng = 'zhtw'
+  }
+  else if (lang == 'ja'){
+    lng = 'jp'
+  }
+  else{
+    lng = 'en'
+  }
+
+
   // use plugins and options as needed, for options, detail see
   // http://i18next.com/docs/
   let i18 = i18next.init({
-    lng: 'zhtw', // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
+    lng: lng, // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
     resources: { // evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
       zhtw,
       jp,
