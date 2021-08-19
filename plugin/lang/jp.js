@@ -9,9 +9,9 @@ let jp = {
       Whale: "クジラ伝説",
     },
     Lang: {
-      Title: "Language",
-      zhtw: "中文",
-      en: "英文",
+      Title: "言語",
+      zhtw: "中国語",
+      en: "英語",
       jp: "日本語",
     },
     Instructions: {
@@ -39,7 +39,7 @@ let jp = {
       WeeksOpen_1: "火曜日～ 日曜日 9:00-17:00",
       WeeksOpen_2: "毎週月曜日休館",
     },
-    ShareThisPage: "分享網站",
+    ShareThisPage: "シェアリンク",
     RuinsInfo: {
       t1: "石川県は、珠洲市の廃棄場で長さ約11.5メートル、幅約3.5メートルにまで及ぶ非常に珍しい生物の骨の化石を発見したと発表しました。",
       t2: "現場はすでに立ち入り禁止となっており、考古学チームが主導となり調査や発掘を進めています。",
@@ -92,8 +92,8 @@ let jp = {
       imgDescription_3: "鯨伝説に関連する出版された本",
       imgDescription_4: "能登と珠洲市のクジラ伝説",
     },
-    BackToTop: "トップ",
-    AboutUs: "About Us",
+    BackToTop: "トップページ",
+    AboutUs: "関連リンク",
     Address: {
       Title: "アドレス:",
       Address: "No.221、Section 2、Zhishan Road、Shilin District、Taipei 111001",

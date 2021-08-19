@@ -8,7 +8,7 @@ let zhtw = {
             Whale: '鯨魚傳說'
         },
         Lang: {
-            Title: "Language",
+            Title: "語言",
             zhtw: "中文",
             en: "英文",
             jp: "日本語",
