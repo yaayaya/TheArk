@@ -2,10 +2,10 @@ let en = {
     translation: {
         Title: {
             News: 'News',
-            RuinsInfo: 'RuinsInfo',
+            RuinsInfo: 'Site Info',
             Evolution: 'Evolution',
-            Ruins: '真脅遺址',
-            Whale: '鯨魚傳說'
+            Ruins: 'Mawaki Site',
+            Whale: 'Whale legends'
         },
         Lang: {
             Title: "Language",
@@ -31,7 +31,7 @@ let en = {
         },
         loadingText: 'Load',
         ExhibitionInfo: {
-            Title: "《珠洲鯨魚傳說遺址》",
+            Title: "《The whale legends of Noto and Suzu City》",
             TodayOpen: "Open today 09:00 - 17: 00",
             WeeksOpenFull: "Opening time｜Tuesday～Sunday 9:00-17:00　Closed every Tuesday",
             OpeningTitle: "Opening time",
