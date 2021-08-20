@@ -115,29 +115,12 @@
           <model-viewer exposure="0.75" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
             class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
             src="./glb/0818.glb" 
-              ios-src="./glb/0818.usdz" 
+            ios-src="./glb/0818.usdz" 
             ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
 
             <div id="progress" slot="progress-bar">
               <div class="bar"></div>
             </div>
-            <div slot="ar-button" id="arButtonDiv" 
-              style="position: absolute; bottom: 16px; right: 16px; display: none;">
-            </div>
-
-            <style>
-              #arButtonDiv {
-                cursor: pointer;
-                background-image: url("./images/icon/AR_icon.png");
-                background-repeat: no-repeat;
-                border-radius: 50%;
-                background-color: white;
-                background-size: cover;
-                background-position: center;
-                height: 2em;
-                width: 2em;
-              }
-            </style>
 
             <!-- Tip -->
             <div class="tooltipDiv" style="display: none;">
@@ -784,7 +767,7 @@
   function loadingModel() {
     $("#button-load").hide()
     $(".tooltipDiv").show()
-    $("#arButtonDiv").show()
+    $(".arButtonDiv").show()
     // $("#audio_bgm")[0].play()
 
     // Large

@@ -31,7 +31,8 @@ html {
 /* 電腦版CSS */
 @media (min-width: 768px) {
   .navbar-logo {
-    width: 110px;
+    padding: 10px !important;
+    width: 200px;
     height: 100%;
     /* transform: translateY(80%); */
   }
@@ -115,7 +116,7 @@ html {
   position: absolute;
   bottom: 16px;
   text-align: left;
-  width: 100%;
+  width: 20%;
   margin: 0 10px;
 }
 
