@@ -15,18 +15,18 @@ let en = {
         },
         Instructions: {
             desktop: {
-                t1: 'Instructions for use:',
-                t2: 'Rotate: Press and drag the left mouse button',
-                t3: 'Zoom in: mouse scroll up, PageDown',
-                t4: 'Zoom out: Mouse scroll down, PageUp',
-                t5: 'Pan: Ctrl + left mouse button press and drag'
+                t1: 'Instructions for use：',
+                t2: 'Rotate：Press and drag the left mouse button.',
+                t3: 'Zoom in：mouse scroll up, PageDown.',
+                t4: 'Zoom out：Mouse scroll down, PageUp.',
+                t5: 'Pan：Ctrl + left mouse button press and drag.'
             },
             mobile: {
-                t1: 'Instructions for use:',
-                t2: 'Rotate: Single finger press and drag',
-                t3: 'Zoom in: press with two fingers and slide outward',
-                t4: 'Zoom out: Press with two fingers and slide inward',
-                t5: 'Pan: Press with two fingers and drag up and down'
+                t1: 'Instructions for use：',
+                t2: 'Rotate：Single finger press and drag.',
+                t3: 'Zoom in：press with two fingers and slide outward.',
+                t4: 'Zoom out：Press with two fingers and slide inward.',
+                t5: 'Pan：Press with two fingers and drag up and down.'
             }
         },
         loadingText: 'Load',
