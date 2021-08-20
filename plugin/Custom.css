@@ -30,6 +30,12 @@ html {
 
 /* 電腦版CSS */
 @media (min-width: 768px) {
+  .navbar-logo {
+    width: 110px;
+    height: 100%;
+    /* transform: translateY(80%); */
+  }
+
   .pcShow {
     display: block;
     position: relative;
@@ -178,9 +184,9 @@ html {
   }
 
   .navbar-logo {
-    width: 220px;
+    width: 110px;
     height: 100%;
-    transform: translateY(80%);
+    /* transform: translateY(80%); */
   }
 
   main {
@@ -416,6 +422,10 @@ html {
 
 .f-ig-icon {
   background: url("../images/icon/ig_icon.png") no-repeat center/contain;
+}
+
+.f-line-icon {
+  background: url("../images/icon/line_icon.png") no-repeat center/contain;
 }
 
 /* Footer Menu */
