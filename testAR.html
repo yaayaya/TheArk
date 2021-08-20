@@ -21,21 +21,30 @@
 
   <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-
+  <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
 </head>
 
 <body>
+  <!-- src="./glb/1616.glb" 
+  ios-src="./glb/1616.usdz"  -->
+
+  <!-- src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" 
+  ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"  -->
+
   <model-viewer id="MVMVMV" camera-controls 
+  src="./glb/1616.glb" 
+  ios-src="./glb/1616.usdz" 
   
-  src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" 
-  ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
-  ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a helmet" style="width: 90%;
+  ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a helmet" style="width: 100%;
   height: 800px;">
     <!-- 材質 Normal Occlusion Emission  -->
     <div class="controls">
       <div>
         <p>Normals</p>
         <select id="normals">
+          <option >None</option>
+          <option value="https://i.imgur.com/euWRrtT.jpeg">0817</option>
+
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_normal.jpg">Damaged helmet</option>
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Lantern/glTF/Lantern_normal.png">Lantern Pole</option>
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/WaterBottle/glTF/WaterBottle_normal.png">Water Bottle</option>
@@ -44,6 +53,9 @@
       <div>
         <p>Occlusion</p>
         <select id="occlusion">
+          <option >None</option>
+          <option value="https://i.imgur.com/euWRrtT.jpeg">0817</option>
+
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_AO.jpg">Damaged helmet</option>
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/WaterBottle/glTF/WaterBottle_occlusionRoughnessMetallic.png">Water Bottle</option>
         </select>
@@ -51,6 +63,9 @@
       <div>
         <p>Emission</p>
         <select id="emission">
+          <option >None</option>
+          <option value="https://i.imgur.com/euWRrtT.jpeg">0817</option>
+
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_emissive.jpg">Damaged helmet</option>
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Lantern/glTF/Lantern_emissive.png">Lantern Pole</option>
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/WaterBottle/glTF/WaterBottle_emissive.png">Water Bottle</option>
@@ -74,15 +89,15 @@
       <button data-color="0,1,0,1">Green</button>
       <button data-color="0,0,1,1">Blue</button>
     </div>
-      <br>
-      <!-- Light -->
+    <br>
+    <!-- Light -->
     <div class="controls">
       <input type="text" id="A">
       <button onclick="setData()">SetLight</button>
     </div>
     <!-- Env Light -->
-      <br>
-      <div class="controls">
+    <br>
+    <div class="controls">
       <input type="text" id="B" value="https://i.imgur.com/IR4nF1m.jpeg">
       <button onclick="setEnvUrl()">SetEnvImageUrl</button>
     </div>
@@ -95,8 +110,15 @@
     let material = modelViewerTexture.model.materials[0];
   
     let createAndApplyTexture = async (channel, event) => {
-      let texture = await modelViewerTexture.createTexture(event.target.value);
-      material[channel].setTexture(texture);
+
+      if (event.target.value == 'None'){
+        console.log(event.target.value)
+        material[channel].setTexture(null);
+      }
+      else{
+        let texture = await modelViewerTexture.createTexture(event.target.value);
+        material[channel].setTexture(texture);
+      }
     }
   
     document.querySelector('#normals').addEventListener('input', (event) => {
@@ -205,5 +227,11 @@
 
   .controls {
     width: 20%;
+  }
+  #MVMVMV{
+    background-image: url('./images/bg_AR.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 </style>

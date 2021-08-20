@@ -230,8 +230,33 @@ self.addEventListener('touchend', (event) => {
 
 modelViewer.addEventListener("load", (ev) => {
 
-  let material = modelViewer.model.materials[0];
-  material.pbrMetallicRoughness.setMetallicFactor(.3);
-  material.pbrMetallicRoughness.setRoughnessFactor(.65);
+    let material = modelViewer.model.materials[0];
+    material.pbrMetallicRoughness.setMetallicFactor(.3);
+    material.pbrMetallicRoughness.setRoughnessFactor(.65);
 
+    let createAndApplyTexture = async (channel, v) => {
+        let texture = await modelViewer.createTexture(v);
+        material[channel].setTexture(texture);
+    }
+
+
+    // let applyPBRTexture = (channel, url) => {
+    //     console.log(material.pbrMetallicRoughness)
+    //     material.pbrMetallicRoughness[channel].texture.source.setURI(url);
+    // }
+
+
+    // let createAndApplyTexture = async (channel, _t) => {
+    //     if (_t == "None") {
+    //         material[channel].setTexture(null);
+    //     } else if (_t) {
+    //         let texture = await modelViewer.createTexture(_t);
+    //         material[channel].setTexture(texture);
+    //         console.log(material[channel].texture)
+    //     }
+    // }
+    // 0817 https://i.imgur.com/euWRrtT.jpeg
+    // full white https://i.imgur.com/ilvk9x0.png
+    createAndApplyTexture('normalTexture', 'https://i.imgur.com/euWRrtT.jpeg');
+    // createAndApplyTexture('normalTexture', 'https://i.imgur.com/ilvk9x0.png');
 })

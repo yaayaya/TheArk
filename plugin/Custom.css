@@ -577,23 +577,36 @@ html {
   letter-spacing: 2px;
   font-weight: bold;
 }
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:focus,
-.navbar-default .navbar-nav > .open > a:hover {
+.navbar-default .navbar-nav > .show > a, 
+.navbar-default .navbar-nav > .show > a:focus,
+.navbar-default .navbar-nav > .show > a:hover {
     color: #555;
     background-color: #e7e7e7;
-}    
+}  
 
-.show > .dropdown-menu {
-  max-height: 800px;
-  visibility: visible;
+.nav-link{
+  color: rgb(255 255 255 / 90%) !important;
+
 }
-  
-.dropdown-menu {
+.nav-link:hover{
+  color: rgb(255 255 255 / 70%) !important;
+}  
+
+/* actual dropdown animation */
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  max-height: 0;
   display: block;
-  max-height: 0 ;
-  visibility: hidden;
-  transition: all 0.8s ease-in-out !important;
-  overflow: hidden !important;
+  overflow: hidden;
+  opacity: 0;
 }
 
+.dropdown .show {
+  max-height: 200px;
+  opacity: 1;
+}

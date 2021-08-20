@@ -70,7 +70,7 @@
       </div>
       <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
         <div class="navbar-nav ml-auto flex-nowrap ">
-          <li class="nav-item dropdown ">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
             </a>
             <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
@@ -732,7 +732,7 @@
   function loadingModel() {
     $("#button-load").hide()
     $(".tooltipDiv").show()
-    $("#audio_bgm")[0].play()
+    // $("#audio_bgm")[0].play()
 
     // Large
     if (jQuery(window).width() > 1280) {
@@ -790,10 +790,23 @@
 </script>
 
 <script>
+  let lang = window.navigator.userLanguage || window.navigator.language ;
+  let lng = 'en'
+  if (lang.indexOf('zh') != -1){
+    lng = 'zhtw'
+  }
+  else if (lang == 'ja'){
+    lng = 'jp'
+  }
+  else{
+    lng = 'en'
+  }
+
+
   // use plugins and options as needed, for options, detail see
   // http://i18next.com/docs/
   let i18 = i18next.init({
-    lng: 'zhtw', // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
+    lng: lng, // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
     resources: { // evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
       zhtw,
       jp,
