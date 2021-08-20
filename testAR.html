@@ -28,21 +28,30 @@
   <!-- src="./glb/1616.glb" 
   ios-src="./glb/1616.usdz"  -->
 
-  <!-- src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" 
+  <!-- src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Duck/glTF-Binary/Duck.glb" 
   ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"  -->
 
-  <model-viewer id="MVMVMV" camera-controls 
-  src="./glb/1616.glb" 
-  ios-src="./glb/1616.usdz" 
-  
-  ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a helmet" style="width: 100%;
-  height: 800px;">
+  <model-viewer id="MVMVMV" camera-controls src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Duck/glTF-Binary/Duck.glb" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a helmet" style="width: 100%;
+  height: 100vh;">
+    <!-- 模型選項 -->
+    <div class="controls">
+      <h3>Model Select</h3>
+      <div>
+        <select id="ModelSelect">
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Duck/glTF-Binary/Duck.glb">Duck</option>
+          <option value="./glb/1616.glb">1616_0820</option>
+          <option value="https://modelviewer.dev/shared-assets/models/Astronaut.glb">Space man</option>
+
+        </select>
+      </div>
+    </div>
     <!-- 材質 Normal Occlusion Emission  -->
     <div class="controls">
+      <h3>材質選擇</h3>
       <div>
         <p>Normals</p>
         <select id="normals">
-          <option >None</option>
+          <option>None</option>
           <option value="https://i.imgur.com/euWRrtT.jpeg">0817</option>
 
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_normal.jpg">Damaged helmet</option>
@@ -53,7 +62,7 @@
       <div>
         <p>Occlusion</p>
         <select id="occlusion">
-          <option >None</option>
+          <option>None</option>
           <option value="https://i.imgur.com/euWRrtT.jpeg">0817</option>
 
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_AO.jpg">Damaged helmet</option>
@@ -63,7 +72,7 @@
       <div>
         <p>Emission</p>
         <select id="emission">
-          <option >None</option>
+          <option>None</option>
           <option value="https://i.imgur.com/euWRrtT.jpeg">0817</option>
 
           <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_emissive.jpg">Damaged helmet</option>
@@ -74,6 +83,7 @@
     </div>
     <!-- 材質 Metalness Roughness-->
     <div class="controls">
+      <h3>材質 Metalness Roughness</h3>
       <div>
         <p>Metalness: <span id="metalness-value"></span></p>
         <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
@@ -84,28 +94,49 @@
       </div>
     </div>
     <!-- 顏色 -->
-    <div class="controls" id="color-controls">
-      <button data-color="1,0,0,1">Red</button>
-      <button data-color="0,1,0,1">Green</button>
-      <button data-color="0,0,1,1">Blue</button>
+    <div class="controls">
+      <h3>Color BaseFactor</h3>
+      Color:
+      <input id="color_pick" type="color" onchange="changeColor(event)"><br><br>
+      <!-- Alpha: -->
+      <!-- <input id="alpha-pick" type="color" value="1" onchange="changeAlpha()"> -->
     </div>
     <br>
     <!-- Light -->
     <div class="controls">
-      <input type="text" id="A">
+      <h3>光線 (數字)</h3>
+      <input type="text" id="A" value="1">
       <button onclick="setData()">SetLight</button>
     </div>
     <!-- Env Light -->
     <br>
     <div class="controls">
-      <input type="text" id="B" value="https://i.imgur.com/IR4nF1m.jpeg">
+    <h3>環境光源 (圖片url)</h3>
+    <input type="text" id="B" value="https://i.imgur.com/IR4nF1m.jpeg">
       <button onclick="setEnvUrl()">SetEnvImageUrl</button>
     </div>
   </model-viewer>
+
+
   <script type="module">
+    // 模型選擇
+    const modelViewer = document.querySelector("#MVMVMV");
+
+
+    document.querySelector('#ModelSelect').addEventListener('input', (event) => {
+        let Model_Url = event.target.value
+        modelViewer.src = Model_Url
+      });
+  </script>
+
+
+
+
+  <script type="module">
+    // Texture 選擇
     const modelViewerTexture = document.querySelector("#MVMVMV");
   
-  modelViewerTexture.addEventListener("load", () => {
+    modelViewerTexture.addEventListener("load", () => {
   
     let material = modelViewerTexture.model.materials[0];
   
@@ -132,6 +163,7 @@
     });
     
     document.querySelector('#emission').addEventListener('input', (event) => {
+      console.log(event.target.value)
       createAndApplyTexture('emissiveTexture', event);
     });
   });
@@ -139,6 +171,7 @@
   </script>
 
   <script>
+    // Metal Rough 材質調整
     const modelViewerParameters = document.querySelector("#MVMVMV");
 
     modelViewerParameters.addEventListener("load", (ev) => {
@@ -150,9 +183,6 @@
 
       metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
       roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
-
-      // Defaults to gold
-      material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
 
       document.querySelector('#metalness').addEventListener('input', (event) => {
         material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
@@ -167,22 +197,33 @@
   </script>
 
   <script>
+    function formatFloat(num, pos) {
+      var size = Math.pow(10, pos);
+      return Math.round(num * size) / size;
+    }
+
+    // 選擇顏色
     const modelViewerColor = document.querySelector("#MVMVMV");
 
-    document.querySelector('#color-controls').addEventListener('click', (event) => {
-      const colorString = event.target.dataset.color;
+    function changeColor(ev) {
+      let color = ev.target.value
+      let r = parseInt(color.substr(1, 2), 16)
+      let g = parseInt(color.substr(3, 2), 16)
+      let b = parseInt(color.substr(5, 2), 16)
+      console.log(`red: ${r}, green: ${g}, blue: ${b}`)
 
-      if (!colorString) {
-        return;
-      }
+      let material = modelViewerColor.model.materials[0];
+      console.log(material)
+      r = formatFloat(r / 255, 4)
+      g = formatFloat(g / 255, 4)
+      b = formatFloat(b / 255, 4)
+      let cc = `${r}, ${g}, ${b}, 1`
+      cc = cc.split(",")
 
-      const color = colorString.split(',')
-        .map(numberString => parseFloat(numberString));
+      material.pbrMetallicRoughness.setBaseColorFactor(cc);
 
-      console.log('Changing color to: ', color);
-      const [material] = modelViewerColor.model.materials;
-      material.pbrMetallicRoughness.setBaseColorFactor(color);
-    });
+    }
+
   </script>
 
 
@@ -227,8 +268,10 @@
 
   .controls {
     width: 20%;
+    color: white;
   }
-  #MVMVMV{
+
+  #MVMVMV {
     background-image: url('./images/bg_AR.jpg');
     background-repeat: no-repeat;
     background-size: cover;
