@@ -232,7 +232,7 @@ modelViewer.addEventListener("load", (ev) => {
 
     let material = modelViewer.model.materials[0];
     material.pbrMetallicRoughness.setMetallicFactor(.3);
-    material.pbrMetallicRoughness.setRoughnessFactor(.6);
+    material.pbrMetallicRoughness.setRoughnessFactor(.5);
 
     let createAndApplyTexture = async (channel, v) => {
         let texture = await modelViewer.createTexture(v);
