@@ -29,7 +29,7 @@
   <script src="./plugin/focus-visible.js" defer></script>
 
   <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module" src="./plugin/model-viewer.min.js"></script>
+  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
 
 
 
@@ -37,7 +37,7 @@
   <!-- jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
   <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 
 
@@ -112,11 +112,12 @@
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
           <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
-          <model-viewer exposure="0.75" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
+          <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
             class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
-            src="./glb/08224.glb" 
-            ios-src="./glb/08224.usdz" 
-            ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
+             src="./glb/0431.glb" 
+              ios-src="./glb/0431.usdz" 
+            environment-Image="https://i.imgur.com/rIqOiW7.jpeg" ar-scale="5%" alt="A 3D model" camera-controls ar
+            reveal="interaction">
 
             <div id="progress" slot="progress-bar">
               <div class="bar"></div>
