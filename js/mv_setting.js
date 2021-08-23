@@ -62,8 +62,10 @@ const movePan = (thisX, thisY) => {
     target.x += dx * panX[0] + dy * panY[0];
     target.y += dx * panX[1] + dy * panY[1];
     target.z += dx * panX[2] + dy * panY[2];
-    modelViewer.cameraTarget = `${target.x}m ${target.y}m ${target.z}m`;
+    target.y = target.y <= 8 ? 8 : target.y   
 
+    modelViewer.cameraTarget = `${target.x}m ${target.y}m ${target.z}m`;
+    
     // This pauses turntable rotation
     modelViewer.dispatchEvent(new CustomEvent(
         'camera-change', {
