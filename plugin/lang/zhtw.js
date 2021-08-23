@@ -29,7 +29,7 @@ let zhtw = {
                 t5: '平移：兩指按壓上下拖曳'
             }
         },
-        loadingText: '讀取',
+        loadingText: '讀取3D模型',
         ExhibitionInfo: {
             Title: "《珠洲鯨魚傳說遺址》",
             TodayOpen: "本日開館 09:00 - 17: 00",

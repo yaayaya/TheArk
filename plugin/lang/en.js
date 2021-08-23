@@ -29,7 +29,7 @@ let en = {
                 t5: 'Pan：Press with two fingers and drag up and down.'
             }
         },
-        loadingText: 'Load',
+        loadingText: 'Loading 3D Model',
         ExhibitionInfo: {
             Title: "《The whale legends of Noto and Suzu City》",
             TodayOpen: "Open today 09:00 - 17: 00",

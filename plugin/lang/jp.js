@@ -30,7 +30,7 @@ let jp = {
         t5: "移行：二本指を押したまま上下引っ張る",
       },
     },
-    loadingText: "込む",
+    loadingText: "Loading 3D Model",
     ExhibitionInfo: {
       Title: "《珠洲クジラ伝説遺跡》",
       TodayOpen: "本日開館 09:00 - 17: 00",
