@@ -358,9 +358,11 @@
       target.y += dx * panX[1] + dy * panY[1];
       target.z += dx * panX[2] + dy * panY[2];
 
-      target.x = target.x >= maxDX ? maxDX : target.x <= -minDX ? -minDX : target.x
+      
+
+      // target.x = target.x >= maxDX ? maxDX : target.x <= -minDX ? -minDX : target.x
       target.y = target.y >= maxDY ? maxDY : target.y <= -minDY ? -minDY : target.y
-      target.z = target.z >= maxDZ ? maxDZ : target.z <= -minDZ ? -minDZ : target.z
+      // target.z = target.z >= maxDZ ? maxDZ : target.z <= -minDZ ? -minDZ : target.z
       console.log(`${target.x}m ${target.y}m ${target.z}m`)
 
       modelViewer.cameraTarget = `${target.x}m ${target.y}m ${target.z}m`;

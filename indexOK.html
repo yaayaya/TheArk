@@ -9,7 +9,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>WebAR</title>
+  <title>《珠洲クジラ伝説遺跡》</title>
+  <link rel="icon" href="./images/icon/web_title_icon.svg" type="image/x-icon" /> 
+
+
   <link rel="stylesheet" href="./plugin/Custom.css">
 
 
@@ -114,9 +117,8 @@
 
           <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
             class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
-             src="./glb/0431.glb" 
+            src="./glb/0431.glb" 
               ios-src="./glb/0431.usdz" 
-      
             environment-Image="https://i.imgur.com/rIqOiW7.jpeg"
             ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
 
@@ -155,7 +157,7 @@
         </div>
 
         <!-- Title 展出時間 PC -->
-        <!-- <div class="p-3 justify-content-center pcShow bg-darkd" style="left:10%">
+        <div class="p-3 justify-content-center pcShow bg-darkd" style="left:10%">
           <strong class="hero_title" style="color: white;" data-i18n="ExhibitionInfo.Title"></strong>
 
           <p class="hero__meta pt-3" style="color:white">
@@ -163,10 +165,10 @@
             <span style="font-size: 1em; font-weight: bold;" data-i18n="ExhibitionInfo.TodayOpen"></span>
           <div class="pt-1" style="color: white;" data-i18n="ExhibitionInfo.WeeksOpenFull"></div>
           </p>
-        </div> -->
+        </div>
 
         <!-- Title 展出時間 mbile -->
-        <!-- <div class="p-4 justify-content-center mobileShow bg-darkd">
+        <div class="p-4 justify-content-center mobileShow bg-darkd">
           <strong class="hero_title" style="color: white;" data-i18n="ExhibitionInfo.Title"></strong><br>
 
           <p class="hero__meta pt-3" style="color:white">
@@ -178,7 +180,7 @@
             <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
           </div>
           </p>
-        </div> -->
+        </div>
 
 
         <div class="fixedBG">
@@ -853,13 +855,20 @@
   }, function (err, t) {
     jqueryI18next.init(i18next, $);
     $('#i18next').localize();
+    updateWebTitle()
   });
 
   function langChange(lang) {
     i18next.changeLanguage(lang)
     $('#i18next').localize();
     $('.navbar-collapse').collapse('hide')
+    updateWebTitle()
+  }
 
+  function updateWebTitle(){
+    let nowlang = i18next.language
+    let webTitle = i18next.store.data[nowlang].translation.ExhibitionInfo.Title
+    $('title').text(webTitle)
   }
 </script>
 
