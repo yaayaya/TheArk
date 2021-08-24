@@ -3,6 +3,7 @@ let zhtw = {
         Title: {
             News: '新聞',
             RuinsInfo: '遺址資訊',
+            BiologicalSize : '生物大小',
             Evolution: '演化',
             Ruins: '真脇遺址',
             Whale: '鯨魚傳說'
@@ -50,6 +51,16 @@ let zhtw = {
             imgDescription_4: ""
 
         },
+        BiologicalSize: {
+            t1: '歡水提外一同苦的明媽不爭的元來眾程廠大長和同？得出分樹完居打種是。水不動南銀當充感一很行力候到站營也銷一基不：的太一？',
+            t2: '意福不境對害排聞子加場說行庭雨全快力基整，血科利定帶且的。畫企爾的他弟；母這緊是長；供的福多顯門名故！怕一國那定國價子和人向藝日還評假入之象。',
+            t3: '光條建度久效不景知車樹投作、樣斷也息的那環節變有她際定時政家其。',
+            t4: '',
+            imgDescription_1: "國價子和人向藝",
+            imgDescription_2: "",
+            imgDescription_3: "",
+            imgDescription_4: ""
+        },
         Evolution: {
             t1: '根據最近古生物學家在祕魯發現一具保存完好的「陸行鯨 」Ambulocetus natans化石，有下顎、牙齒，四條腿和蹼狀腳趾的特徵，和半水生哺乳動物的尾部脊椎骨，牠被考古學家認為是鯨魚的祖先。',
             t2: '在珠洲市發現的這個生物骨骸化石是否是類似陸行鯨的生物？或者是陸行鯨演化到鯨魚更直接的證據？',
@@ -96,7 +107,7 @@ let zhtw = {
         AboutUs: "關於我們",
         Address: {
             Title: '地址:',
-            Address: '111001台北市士林區至善路二段221號',
+            Address: '333009台灣桃園市龜山區中坑街521號',
             Phone: '886-2-6610-3600'
         },
         License: "© 2021 Tu's Archeology Team 版權所有"

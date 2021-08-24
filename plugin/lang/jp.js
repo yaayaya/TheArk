@@ -4,6 +4,7 @@ let jp = {
     Title: {
       News: "ニュース",
       RuinsInfo: "遺跡情報",
+      BiologicalSize : '生物大小',
       Evolution: "進化史",
       Ruins: "真脇遺跡",
       Whale: "クジラ伝説",
@@ -50,6 +51,16 @@ let jp = {
       imgDescription_3: "",
       imgDescription_4: "",
     },
+    BiologicalSize: {
+      t1: '就在近期石川縣政府對外宣布，在珠洲市的一座廢棄操場，發現了一具長約11.5公尺寬約3.5公尺的奇異生物骨骸化石。',
+      t2: '現場已經封鎖，並已有相關考古團隊進駐，主導考古調查與開挖。',
+      t3: '考古坑挖掘面積長約13公尺、寬6.5公尺、深約1.5公尺。該生物骨骸化石相當完整，狀似鯨魚骸骨，但該骸骨有著兩隻前鰭與兩隻巨大的後足。',
+      t4: '',
+      imgDescription_1: "考古團隊作業情形",
+      imgDescription_2: "奇異生物骨骸化石",
+      imgDescription_3: "",
+      imgDescription_4: ""
+  },
     Evolution: {
       t1: "考古学者の最近の発表によると、ペルーできれいに保存された「泳ぐ歩行クジラ」（アンビュロケトゥス・ナタンス）の化石が発見されたようです。下顎や歯、水かきのある四肢があり、また尾椎には水陸両性哺乳類の特徴も見られ、考古学者たちはクジラの祖先だとみています。",
       t2: "珠洲市で発見されたこの生物の化石は「泳ぐ歩行クジラ」のような生物なのでしょうか。それとも「泳ぐ歩行クジラ」が今のクジラに進化した確かな証拠なのでしょうか。",
@@ -96,7 +107,7 @@ let jp = {
     AboutUs: "関連リンク",
     Address: {
       Title: "アドレス:",
-      Address: "No.221、Section 2、Zhishan Road、Shilin District、Taipei 111001",
+      Address: "No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)",
       Phone: "886-2-6610-3600",
     },
     License: "© 2021 Tu's Archeology Team All Rights Reserved",
