@@ -108,7 +108,7 @@ let zhtw = {
         Address: {
             Title: '地址:',
             Address: '333009台灣桃園市龜山區中坑街521號',
-            Phone: '886-2-6610-3600'
+            Phone: '03-329-6662'
         },
         License: "© 2021 Tu's Archeology Team 版權所有"
     }

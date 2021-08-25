@@ -107,7 +107,7 @@ let en = {
         Address: {
             Title: 'Address:',
             Address: 'No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)',
-            Phone: '886-2-6610-3600'
+            Phone: '03-329-6662'
         },
         License: "© 2021 Tu's Archeology Team All Rights Reserved"
     }
