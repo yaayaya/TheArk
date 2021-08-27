@@ -50,3 +50,25 @@ INSTAGRAM
 
 <!-- https://twitter.com/share?text=文字&url=https://www.thearkmuseum.com/ -->
 <a href="https://twitter.com/share?text=&url=https%3A%2F%2Fwww.minwt.com">TWITTER</a>
+
+
+            <li>
+              <a onclick="window.open(`http://line.naver.jp/R/msg/text/?https://www.thearkmuseum.com/`, '_blank')" rel="noopener noreferrer" title="twitter_Share">
+                <span class="f-icon f-line-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a onclick="window.open(`https://twitter.com/share?url=https://www.thearkmuseum.com/`, '_blank')" target="_blank" rel="noopener noreferrer" title="twitter_Share">
+                <span class="f-icon f-twitter-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a onclick="window.open(`https://www.facebook.com/weizheng.tu`, '_blank')" target="_blank" rel="noopener noreferrer" title="ig_Share">
+                <span class="f-icon f-ig-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a onclick="window.open(`https://www.facebook.com/sharer.php?u=https://www.thearkmuseum.com/`, '_blank')" target="_blank" rel="noopener noreferrer" title="facebook_Share">
+                <span class="f-icon f-facebook-icon"></span>
+              </a>
+            </li>
