@@ -214,7 +214,7 @@
           <div class="video-thumbnail fa fa-play-circle-o">
             <img id="videoImage" src="./images/VideoImage.jpg" class="embedded-video-16-9">
           </div>
-
+          <iframe allow='autoplay' id="ytVideo" style="display: none;" src="https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
           <!-- <iframe 
           data-thumbnail-src="./images/VideoImage.jpg"
           src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" 
@@ -573,7 +573,7 @@
             <img class="pt-3 greater_1024_show" src="./images/Contents/OtherImage_w1.jpg" style="width: 80vw;">
             <!-- less 1024 -->
             <div class="my-gallery pt-3 px-3 less_1024_show">
-              <figure  style="background-image: url('./images/Contents/OtherImage_m1.jpg'); margin:0 0 2.5em" >
+              <figure style="background-image: url('./images/Contents/OtherImage_m1.jpg'); margin:0 0 2.5em">
                 <a href="./images/Contents/OtherImage_m1.jpg" itemprop="contentUrl" data-size="1498x2261">
                   <img class="d-block w-100" src="./images/Contents/OtherImage_m1.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
@@ -581,7 +581,7 @@
                   <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
                 </figcaption> -->
               </figure>
-              <figure  style="background-image: url('./images/Contents/OtherImage_m2.jpg'); margin:0 0 2.5em">
+              <figure style="background-image: url('./images/Contents/OtherImage_m2.jpg'); margin:0 0 2.5em">
                 <a href="./images/Contents/OtherImage_m2.jpg" itemprop="contentUrl" data-size="1498x2261">
                   <img class="d-block w-100" src="./images/Contents/OtherImage_m2.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
@@ -589,7 +589,7 @@
                   <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
                 </figcaption> -->
               </figure>
-              <figure  style="background-image: url('./images/Contents/OtherImage_m3.jpg'); margin:0 0 2.5em">
+              <figure style="background-image: url('./images/Contents/OtherImage_m3.jpg'); margin:0 0 2.5em">
                 <a href="./images/Contents/OtherImage_m3.jpg" itemprop="contentUrl" data-size="1498x3433">
                   <img class="d-block w-100" src="./images/Contents/OtherImage_m3.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
@@ -597,7 +597,7 @@
                   <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
                 </figcaption> -->
               </figure>
-              <figure  style="background-image: url('./images/Contents/OtherImage_m4.jpg'); margin:0 0 2.5em">
+              <figure style="background-image: url('./images/Contents/OtherImage_m4.jpg'); margin:0 0 2.5em">
                 <a href="./images/Contents/OtherImage_m4.jpg" itemprop="contentUrl" data-size="1498x3433">
                   <img class="d-block w-100" src="./images/Contents/OtherImage_m4.jpg" itemprop="thumbnail" alt="Image description" />
                 </a>
@@ -879,7 +879,6 @@
       interval: 10000
     })
   });
-
 </script>
 
 <script>
@@ -894,8 +893,8 @@
   }
 
   let i18 = i18next.init({
-    lng: lng, 
-    resources: { 
+    lng: lng,
+    resources: {
       zhtw,
       jp,
       en
@@ -920,16 +919,45 @@
   }
 
   // video 
-  $('.video-thumbnail').click(()=>{
-      let src='https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0'
-      let video = `<iframe allow='autoplay'
+  $('.video-thumbnail').click(() => {
+    // $("#ytVideo").show()
+    // $(.video-thumbnail).hide()
+
+
+    let src = 'https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0'
+    let video = `<iframe allow='autoplay' id="ytVideo"
           src="${src}" frameborder="0" 
           allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>`
 
-      // video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
-      $('.video-thumbnail').replaceWith(video);
+    // video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+    $('.video-thumbnail').replaceWith(video);
+
 
   });
+
+  $(function () {
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+
+      video = document.getElementById('#ytVideo');
+      console.log(video)
+      player = new YT.Player(video, {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      })
+    }
+
+    function onPlayerReady(e) {
+      console.log("hey Im ready");
+    }
+
+    function onPlayerStateChange(e) {
+      console.log(e)
+    }
+  })
 </script>
 
 
