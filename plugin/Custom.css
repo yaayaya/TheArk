@@ -295,7 +295,7 @@ html {
 }
 
 .embedded-video-16-9 {
-  width: 80vw;
+  width: 85vw;
   height: 50.625vw;
   /* 90*9/16 */
 }
@@ -631,4 +631,27 @@ html {
 .legend_class {
   display: block;
   padding-bottom: .5em;
+}
+
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 30px;
+}
+.video-thumbnail:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background: url('../images/play_button.png')  no-repeat;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  opacity: 0.8;
+}
+.video-thumbnail:hover:before {
+  color: #eee;
 }

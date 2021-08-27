@@ -6,7 +6,8 @@ let zhtw = {
             BiologicalSize : '生物大小',
             Evolution: '演化',
             Ruins: '真脇遺址',
-            Whale: '鯨魚傳說'
+            Whale: '鯨魚傳說',
+            OtherRuins: '其他遺址'
         },
         Lang: {
             Title: "語言",
@@ -45,20 +46,19 @@ let zhtw = {
             t2: '現場已經封鎖，並已有相關考古團隊進駐，主導考古調查與開挖。',
             t3: '考古坑挖掘面積長約13公尺、寬6.5公尺、深約1.5公尺。該生物骨骸化石相當完整，狀似鯨魚骸骨，但該骸骨有著兩隻前鰭與兩隻巨大的後足。',
             t4: '',
-            imgDescription_1: "考古團隊作業情形",
-            imgDescription_2: "奇異生物骨骸化石",
-            imgDescription_3: "",
-            imgDescription_4: ""
-
-        },
-        BiologicalSize: {
-            t1: '歡水提外一同苦的明媽不爭的元來眾程廠大長和同？得出分樹完居打種是。水不動南銀當充感一很行力候到站營也銷一基不：的太一？',
-            t2: '意福不境對害排聞子加場說行庭雨全快力基整，血科利定帶且的。畫企爾的他弟；母這緊是長；供的福多顯門名故！怕一國那定國價子和人向藝日還評假入之象。',
-            t3: '光條建度久效不景知車樹投作、樣斷也息的那環節變有她際定時政家其。',
-            t4: '',
-            imgDescription_1: "國價子和人向藝",
+            imgDescription_1: "遺址現場照片",
             imgDescription_2: "",
             imgDescription_3: "",
+            imgDescription_4: ""
+        },
+        BiologicalSize: {
+            t1: '這個酷似鯨魚或陸行鯨生物的骨頭化石，相當龐大，全長11.5公尺，寬度約3.5公尺，狀似鯨魚骸骨，但值得注意的是該生物化石，有著兩隻前鰭與兩隻巨大的後足，足部近似陸行鯨的腿骨腳掌。',
+            t2: '保存得相當完整，而且排列相當整齊，化石雖有明顯的裂縫孔洞，但因為被堅硬含鈣質的圍岩保護，才能保持良好狀態。',
+            t3: '根據地層年代，推斷應該是一百五十萬到五百萬年前。這巨大生物的化石為什麼會出現在這裡，非常值得研究。',
+            t4: '',
+            imgDescription_1: "BiologicalSize1",
+            imgDescription_2: "BiologicalSize2",
+            imgDescription_3: "BiologicalSize3",
             imgDescription_4: ""
         },
         Evolution: {

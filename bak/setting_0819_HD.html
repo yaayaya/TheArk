@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>WebAR</title>
+  <link rel="stylesheet" href="./plugin/Custom.css">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./plugin/Bootstrap/bootstrap.min.css">
+
+  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+  <script src="./plugin/webcomponents-loader.js"></script>
+
+  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+  <script src="./plugin/intersection-observer.js"></script>
+
+  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+  <script src="./plugin/ResizeObserver.js"></script>
+
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="./plugin/focus-visible.js" defer></script>
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
+
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
+  <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="./plugin/Photoswipe/photoswipe.css" />
+  <link rel="stylesheet" href="./plugin/Photoswipe/default-skin/default-skin.css" />
+  <script src="./plugin/Photoswipe/photoswipe-ui-default.js"></script>
+  <script src="./plugin/Photoswipe/photoswipe.js"></script>
+
+</head>
+
+<body id="body_id">
+  <div class="fixed-img"></div>
+
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-dark navClass">
+    <div class="d-flex flex-grow-1">
+
+      <img src="./images/icon/logo.png" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
+      <div class="w-100 text-right">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+        <div class="navbar-nav ml-auto flex-nowrap">
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('News_id')">新聞</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('RuinsInfo_id')">遺址資訊</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('Evolution_id')">演化</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('Ruins_id')">真脅遺址</a>
+          <a class="nav-item nav-link mx-2" onclick="ToScroll('Whale_id')">鯨魚傳說</a>
+        </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <input type="text" id="A">
+    <button onclick="setData()">SetLight</button>
+    <br>
+
+    <!-- <input type="text" id="A">
+    
+
+    <input type="text" id="as">
+    <input type="text" id="bs">
+    <input type="text" id="cs">
+    <button onclick="setScale()">setScale</button> -->
+    <!-- BGM -->
+    <div style="display: none;">
+      <audio id="audio_bgm" controls loop src="./plugin/bgm.mp3">
+      </audio>
+      <code>audio</code> element.
+    </div>
+
+    <!-- 上方區塊 AR -->
+    <div class="position-relative overflow-hidden text-left ">
+      <!-- AR 放置 mx-auto-->
+      <div class="pb-0 justify-content-center bg-darkd">
+        <!-- src="./glb/0818.glb" 
+        ios-src="./glb/0818.usdz"  -->
+
+        <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
+          src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
+        <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
+
+        <model-viewer exposure="0.75" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
+        src="./glb/07100.glb" 
+        ios-src="./glb/07100.usdz" 
+        ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
+
+          <div id="progress" slot="progress-bar">
+            <div class="bar"></div>
+          </div>
+
+          <div id="progress" slot="progress-bar">
+            <div class="bar"></div>
+          </div>
+
+          <div class="controls">
+            <div>
+              <p>Metalness: <span id="metalness-value"></span></p>
+              <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div>
+              <p>Roughness: <span id="roughness-value"></span></p>
+              <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
+            </div>
+          </div>
+
+          <!-- Tip -->
+          <div class="tooltipDiv" style="display: none;">
+            <div onclick="toggleTip()" class="tipIcon">
+              <span></span>
+              <span class="tooltipText Desktop" style="width: 260px;">
+                使用說明：<br>
+                轉動：滑鼠左鍵按壓拖曳<br>
+                放大：滑鼠滾輪上滑、PageDown<br>
+                縮小：滑鼠滾輪下滑、PageUp<br>
+                平移：Ctrl + 滑鼠左鍵按壓拖曳<br>
+              </span>
+              <span class="tooltipText Mobile" style="width: 220px;">
+                使用說明：<br>
+                轉動：單指按壓拖曳<br>
+                放大：兩指按壓向外滑動<br>
+                縮小：兩指按壓向內滑動<br>
+                平移：兩指按壓上下拖曳<br>
+              </span>
+            </div>
+          </div>
+
+          <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
+          <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">Loading</div>
+
+          <!-- Hu -->
+          <!-- <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="-1 -1 -1" data-normal="1 0 0"></div> -->
+          <!-- <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dotHu-1-0-0" class="dotHu" data-position="1 -1 1" data-normal="1 0 0"></div> -->
+<!-- 
+          <div slot="hotspot-dot+X-Y+Z" class="dotHu" data-position="1 0 1" data-normal="1 0 0"></div>
+          <div slot="hotspot-dot+X-Y-Z" class="dotHu" data-position="1 0 -1" data-normal="1 0 0"></div> -->
+          <!-- <div slot="hotspot-dot+X+Y-Z" class="dotHu show" data-position="1 1 -1" data-normal="0 1 0"></div> -->
+          <!-- <div slot="hotspot-dot-X+Y-Z" class="dotHu show" data-position="-1 1 -1" data-normal="0 1 0"></div>
+          <div slot="hotspot-dot-X-Y-Z" class="dotHu" data-position="-1 0 -1" data-normal="-1 0 0"></div>
+          <div slot="hotspot-dot-X-Y+Z" class="dotHu" data-position="-1 0 1" data-normal="-1 0 0"></div>
+
+          <input id="show-dimensions" type="checkbox" style="display: none;"> -->
+
+        </model-viewer>
+      </div>
+
+      <!-- Title 展出時間 PC -->
+      <div class="p-3 justify-content-center pcShow bg-darkd" style="left:10%">
+        <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong>
+
+        <p class="hero__meta pt-3" style="color:white">
+          <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
+          <span style="font-size: 1em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館
+          </div>
+        </p>
+      </div>
+
+      <!-- Title 展出時間 mbile -->
+      <div class="p-4 justify-content-center mobileShow bg-darkd">
+        <strong class="hero_title" style="color: white;">《珠洲鯨魚傳說遺址》</strong><br>
+
+        <p class="hero__meta pt-3" style="color:white">
+          <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
+          <span style="font-size: 1.2em; font-weight: bold;">本日開館 09:00 - 17: 00</span>
+          <div class="pt-1" style="color: white;">
+            開館時間｜火曜日～ 日曜日 9:00-17:00　<br>毎週月曜日休館
+          </div>
+        </p>
+      </div>
+
+
+      <div class="fixedBG">
+        <div style="height: 130px;"></div>
+        <!-- 分享連結 -->
+        <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
+          <div>
+            <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
+            <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')" />
+            <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter.png" onclick="window.open('https://www.facebook.com/weizheng.tu', '_blank')"/>
+            <span class="mr-4 sharePageText">Share this page</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 影片 -->
+    <div class="row pt-3 pb-2 bg-darkd" id="News_id">
+      <div class=" col-12 bg-darkd text-center text-white overflow-hidden">
+        <span class="titleText_2">新聞</span>
+      </div>
+    </div>
+    <div class="row bg-darkd ">
+      <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
+        <iframe src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
+      </div>
+      <div class="col-md-12 col-sm-12"></div>
+    </div>
+
+    <!-- 區塊 1 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="RuinsInfo_id">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+          <!-- 內文 1 -->
+          <div class="contentCenter px-3 pt-md-5 pt-3">
+            <div class="text-left" style="line-height: 1.2em;">
+              <span class="titleText_1">遺址資訊</span>
+            </div>
+
+            <div class="mt-3 text-left">
+              就在近期石川縣政府對外宣布，在珠洲市的一座廢棄操場，發現了一具長約11.5公尺寬約3.5公尺的奇異生物骨骸化石。<br><br>
+              現場已經封鎖，並已有相關考古團隊進駐，主導考古調查與開挖。<br><br>
+              考古坑挖掘面積長約13公尺、寬6.5公尺、深約1.5公尺。該生物骨骸化石相當完整，狀似鯨魚骸骨，
+              但該骸骨有著兩隻前鰭與兩隻巨大的後足。
+            </div>
+          </div>
+        </div>
+        <!-- 圖片區塊 1  -->
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
+          <div id="carousel_1" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel_1" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel_1" data-slide-to="1"></li>
+            </ol>
+            <!-- carousel  -->
+            <div class="carousel-inner my-gallery">
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/1_1.jpg');">
+                <a href="./images/Contents/1_1.jpg" itemprop="contentUrl" data-size="1265x406">
+                  <img class="d-block w-100" src="./images/Contents/1_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>考古團隊作業情形</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1_2.jpg');">
+                <a href="./images/Contents/1_2.jpg" itemprop="contentUrl" data-size="866x577">
+                  <img class="d-block w-100" src="./images/Contents/1_2.jpg" itemprop="thumbnail" alt="images description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>奇異生物骨骸化石</div>
+                </figcaption>
+              </figure>
+            </div>
+            <a class="carousel-control-prev pcShow" href="#carousel_1" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next pcShow" href="#carousel_1" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 區塊 2 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2" id="Evolution_id">
+      <div class="row">
+        <!-- 圖片區塊 2 -->
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" style="height: 420px;">
+          <div id="carousel_2" class="carousel slide contentCenter  py-3 md-mx-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel_2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel_2" data-slide-to="1"></li>
+            </ol>
+            <!-- carousel -->
+            <div class="carousel-inner my-gallery">
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/2_1.jpg');">
+                <a href="./images/Contents/2_1.jpg" itemprop="contentUrl" data-size="3500x1308">
+                  <img class="d-block w-100" src="./images/Contents/2_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>陸行鯨化石</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/2_2.jpg');">
+                <a href="./images/Contents/2_2.jpg" itemprop="contentUrl" data-size="1830x810">
+                  <img class="d-block w-100" src="./images/Contents/2_2.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>陸行鯨還原圖</div>
+                </figcaption>
+              </figure>
+            </div>
+            <a class="carousel-control-prev Mobile_hide" href="#carousel_2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next Mobile_hide" href="#carousel_2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <!-- 內文 2 -->
+        <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
+          <div class="contentCenter px-3 pt-md-5 pt-3">
+
+            <div class="text-left mb-2 ">
+              <span style="font-size: 2em;font-weight: bold;">演化</span>
+            </div>
+
+            <div class="mt-3 text-left">
+              根據最近古生物學家在祕魯發現一具保存完好的「陸行鯨 」Ambulocetus natans化石，
+              有下顎、牙齒，四條腿和蹼狀腳趾的特徵，和半水生哺乳動物的尾部脊椎骨，牠被考古學家認為是鯨魚的祖先。<br><br>
+              在珠洲市發現的這個生物骨骸化石是否是類似陸行鯨的生物？或者是陸行鯨演化到鯨魚更直接的證據？
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-3 bg-darkd_2"></div>
+
+
+
+    <!-- 區塊 3 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Ruins_id">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+          <!-- 內文 3 -->
+          <div class="contentCenter px-3 pt-md-5 pt-3">
+            <div class="text-left" style="line-height: 1.2em;">
+              <span class="titleText_1">真脅遺址</span>
+            </div>
+
+            <div class=" mt-3 text-left">
+              位在石川縣能登町的真脅市，早在 1981年便發現標記著繩文時代（距今約6000-2000年前）的「真脅遺址」。<br><br>
+              其中有著大量的海豚遺骨及鯨魚遺骨，證實了自兩千年前，人們便有捕食鯨魚的文化。在江戶時代平均一年也有捕獲幾十頭鯨魚的紀錄。<br><br>
+              自古以來若是有個村莊捕獲鯨魚，鯨魚肉一半給捕獲的村，其他一半分給周邊六個村莊。
+              所以每當有鯨魚出現，七個村莊都因此得利 。
+            </div>
+          </div>
+        </div>
+        <!-- 圖片區域 3 -->
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 450px;">
+          <div id="carousel_3" class="carousel slide contentCenter py-3 md-mx-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel_3" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel_3" data-slide-to="1"></li>
+            </ol>
+            <!-- carousel -->
+            <div class="carousel-inner my-gallery">
+              <figure class="carousel-item cencen active" style="background-image: url('./images/contents/3_1.jpg');">
+                <a href="./images/contents/3_1.jpg" itemprop="contentUrl" data-size="1815x2121">
+                  <img class="d-block w-90 " src="./images/contents/3_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>真脅遺址</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/3_2.jpg');">
+                <a href="./images/Contents/3_2.jpg" itemprop="contentUrl" data-size="1803x1707">
+                  <img class="d-block w-100" src="./images/Contents/3_2.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>真脅遺址</div>
+                </figcaption>
+              </figure>
+            </div>
+            <a class="carousel-control-prev Mobile_hide" href="#carousel_3" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next Mobile_hide" href="#carousel_3" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 背景圖 -->
+    <div class="fixedBG">
+      <div class="pcShow" style="height: 200px;"></div>
+      <div class="mobileShow" style="height: 120px;"></div>
+    </div>
+
+    <!-- 區塊 4-1 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Whale_id">
+      <div class="row">
+        <!-- 標題 -->
+        <div class=" col-12 bg-darkd text-center text-white overflow-hidden">
+          <span class="titleText_2">鯨魚傳說</span>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+          <!-- 內文 -->
+          <div class="contentCenter px-3 pt-md-2 ">
+            <div class="mt-3 text-left">
+              另珠州市當地的慰靈碑上記載著三次鯨魚的擱淺，分別發生在明治及昭和時代。
+              <br><br>
+              「明治11年月日不詳，鰐崎海岸白長鬚鯨體長 35米。昭和36年2月11日，赤神海岸，白長鬚鯨，體長10米。昭和62年1月9日，白山海岸鰯鯨。」
+              這個碑文正是感念鯨魚擱淺犧牲造福當地住民的生活感恩祈福冥界獸靈所立下。<br><br>
+              而這個考古遺跡的出土，也顯示著當地和鯨魚的密切關係，有了另一個歷史證據。
+            </div>
+          </div>
+        </div>
+        <!-- 圖片區塊  -->
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 380px;">
+          <div id="carousel_1" class="carousel slide contentCenter md-mx-2 " data-ride="carousel">
+            <!-- carousel  -->
+            <div class="carousel-inner my-gallery">
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/4_1.jpg');">
+                <a href="./images/Contents/4_1.jpg" itemprop="contentUrl" data-size="2508x1672">
+                  <img class="d-block w-100" src="./images/Contents/4_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>珠州市鯨魚慰靈碑</div>
+                </figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 區塊 4-2 -->
+    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 justify-content-center bg-darkd" id="Evolution_id">
+      <div class="row">
+        <!-- 內文 2 -->
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden Desktop_hide">
+          <div class="contentCenter px-3">
+            <div class="text-left">
+              當地有關鯨魚的 傳說故事 分別是能登町的「藤波」、「波並」、「 矢波」。
+              <br><br>
+              「藤波」：於三四百年前，有位村莊的老人因自覺受村人照顧，在臨死前說往生
+              後要變成鯨魚來回報村莊。死後隔天村人在當地寺廟海藏院前的海灘發現有鯨
+              魚擱淺，便傳說是老人說的諾言實現。
+              <br><br>
+              「波並」：
+              相傳 1673年時有頭約 59公尺的鯨魚擱淺在小島上，被島民發現後馬上將鯨魚分解，
+              後被其他村民發現，告發至政府官員。後來決定將鯨魚肉分發 給村莊。後人將那個小島稱為鯨島。
+              <br><br>
+              「矢波」：1664年庄次兵衛受村民照顧，承諾死後化身鯨魚報恩的故事，跟第一個故事很雷同。
+              珠洲市也有相似的傳說，一位祖母因管理不善而燒毀房屋，感到遺憾 之際曾說她死後會變成鯨魚來報償。
+              老婦去世幾年後，該村被指控支付了巨款。
+              第二年一條大鯨魚被吸引到海灘上，在那裡被出售，村莊因此還清債務，據說這頭鯨是祖母幻變回來回報的。
+              <br><br>
+              這個考古遺跡的出土是鯨魚骨骸化石？是陸行鯨化石？是陸行鯨演化成鯨魚的證據？
+              還是與當地的傳說有關？
+              就有待考古學家 研究之後來為我們解答謎底。
+            </div>
+          </div>
+        </div>
+        <!-- 圖片區塊 -->
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 480px;">
+          <div id="carousel_4" class="carousel slide contentCenter px-3 md-mx-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel_4" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel_4" data-slide-to="1"></li>
+              <li data-target="#carousel_4" data-slide-to="2"></li>
+              <li data-target="#carousel_4" data-slide-to="3"></li>
+            </ol>
+            <!-- carousel -->
+            <div class="carousel-inner my-gallery">
+              <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/5_1.jpg');">
+                <a href="./images/Contents/5_1.jpg" itemprop="contentUrl" data-size="1229x839">
+                  <img class="d-block w-100" src="./images/Contents/5_1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>鯨魚傳說報導「矢波」</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_2.jpg');">
+                <a href="./images/Contents/5_2.jpg" itemprop="contentUrl" data-size="1217x813">
+                  <img class="d-block w-100" src="./images/Contents/5_2.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>鯨魚傳說報導「波並」、「藤波」</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_3.jpg');">
+                <a href="./images/Contents/5_3.jpg" itemprop="contentUrl" data-size="1593x2499">
+                  <img class="d-block w-100" src="./images/Contents/5_3.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>鯨魚傳說相關出版書籍</div>
+                </figcaption>
+              </figure>
+              <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_4.jpg');">
+                <a href="./images/Contents/5_4.jpg" itemprop="contentUrl" data-size="1440x2560">
+                  <img class="d-block w-100" src="./images/Contents/5_4.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption">
+                  <div>能登和珠洲市的鯨魚傳說</div>
+                </figcaption>
+              </figure>
+            </div>
+            <a class="carousel-control-prev Mobile_hide" href="#carousel_4" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next Mobile_hide" href="#carousel_4" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <!-- 內文 2 -->
+        <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden Mobile_hide">
+          <div class="contentCenter px-3">
+            <div class="mt-3 text-left">
+              當地有關鯨魚的傳說故事 分別是能登町的「藤波」、「波並」、「矢波」。
+              <br><br>
+              「藤波」：於三四百年前，有位村莊的老人因自覺受村人照顧，在臨死前說往生
+              後要變成鯨魚來回報村莊。死後隔天村人在當地寺廟海藏院前的海灘發現有鯨
+              魚擱淺，便傳說是老人說的諾言實現。
+              <br><br>
+              「波並」：
+              相傳 1673年時有頭約 59公尺的鯨魚擱淺在小島上，被島民發現後馬上將鯨魚分解，
+              後被其他村民發現，告發至政府官員。後來決定將鯨魚肉分發 給村莊。後人將那個小島稱為鯨島。
+              <br><br>
+              「矢波」：1664年庄次兵衛受村民照顧，承諾死後化身鯨魚報恩的故事，跟第一個故事很雷同。
+              珠洲市也有相似的傳說，一位祖母因管理不善而燒毀房屋，感到遺憾 之際曾說她死後會變成鯨魚來報償。
+              老婦去世幾年後，該村被指控支付了巨款。
+              第二年一條大鯨魚被吸引到海灘上，在那裡被出售，村莊因此還清債務，據說這頭鯨是祖母幻變回來回報的。
+              <br><br>
+              這個考古遺跡的出土是鯨魚骨骸化石？是陸行鯨化石？是陸行鯨演化成鯨魚的證據？
+              還是與當地的傳說有關？
+              就有待考古學家研究之後來為我們解答謎底。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5 bg-darkd"></div>
+  </main>
+</body>
+
+
+
+<!-- mobile Footer -->
+<footer class="footer mobileShow" style="background-color: #1d1d1d;">
+  <!-- Contact us -->
+  <div class="container py-3 px-4">
+    <h2 style="color: white ;">Connect with us</h2>
+    <div class="pt-2">
+      <ul class="menu menu--icon-menu ">
+        <li>
+          <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
+            <span class="f-icon f-facebook-icon"></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Back Top -->
+    <div class="pt-3">
+      <button class="toTopButtonMobile" onclick="ToScroll('body_id')">
+        <div class="arrow">Back to the top</div>
+      </button>
+    </div>
+    <!-- info -->
+    <div class="pt-4" style="color: white; ">
+      <div>Great Russell Street London WC1B 3DG</div>
+      <div>+44 (0)20 7323 8000</div>
+
+      <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/icon/clock_icon.png" width="16px"></image>
+      <span class="pt-1" style="font-size: 1em;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</span>
+    </div>
+  </div>
+  <!-- About  -->
+  <div class="py-2 px-4 " style="color: white; text-align: center;background-color: #000;">© 2021 Tu's Archeology Team All Rights Reserved</div>
+</footer>
+
+<!-- PC Footer -->
+<footer class="footer pcShow ">
+  <!-- Contact us -->
+  <div class="pt-3 pb-2 row " style="background-color: #1d1d1d;margin-right:0px">
+    <div class="col-6" style="left:10%">
+      <h2 style="color: white ;">Connect with us</h2>
+      <div class="pt-2">
+        <ul class="menu menu--icon-menu ">
+          <li>
+            <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
+              <span class="f-icon f-facebook-icon"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- info -->
+    <div class="col-3" style="color: white;">
+      <div style="font-weight: 500;">Address:</div>
+      <div>Great Russell Street London WC1B 3DG</div>
+      <div>+44 (0)20 7323 8000</div>
+    </div>
+
+    <div class="col-3" style="color: white;">
+      <div style="font-weight: 500;">
+        <image class="pt-3 mr-1" style="margin-bottom: 18px;" src="./images/icon/clock_icon.png" width="16px"></image>
+        Opening hours
+      </div>
+      <div style="margin-top: -10px;">火曜日～ 日曜日 9:00-17:00　毎週月曜日休館</div>
+      <br>
+      <!-- Back to the top -->
+      <div style="font-size: 18px; font-weight: 500;cursor:pointer" onclick="ToScroll('body_id')">Back to the top
+        <image class="pt-3 ml-2" style="margin-bottom: 18px;" src="https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg" width="16px"></image>
+      </div>
+    </div>
+  </div>
+  <div class="py-2 px-4 " style="color: white;text-align: center;">© 2021 Tu's Archeology Team All Rights Reserved</div>
+
+</footer>
+
+<!-- Photoswipe. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+  <div class="pswp__bg"></div>
+
+  <div class="pswp__scroll-wrap">
+
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+
+    <div class="pswp__ui pswp__ui--hidden">
+
+      <div class="pswp__top-bar">
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+
+      <button class="pswp__button pswp__button--arrow--left Mobile_hide" title="Previous (arrow left)">
+      </button>
+
+      <button class="pswp__button pswp__button--arrow--right Mobile_hide" title="Next (arrow right)">
+      </button>
+
+      <div class="pswp__caption">
+        <div class="pswp__caption__center" style="text-align: center;font-size: 1em;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="./js/mv_setting_GLB.js"></script>
+<script src="./js/ps_setting.js"></script>
+
+<script>
+  let hideTime = 0;
+  var isMobile = /iPhone|iPad|iPod|Android|iPadPro/i.test(navigator.userAgent);
+
+  $(function () {
+    if (isMobile) {
+
+      $(".Desktop").hide()
+    } else {
+      $(".Mobile").hide()
+    }
+
+    // >1280 行動裝置隱藏
+    if (jQuery(window).width() > 1024) {
+      $(".Mobile_hide").hide()
+    } else {
+      $(".Desktop_hide").hide()
+    }
+  })
+
+  // init pos setting
+  function loadingModel() {
+    $("#button-load").hide()
+    $(".tooltipDiv").show()
+    $("#audio_bgm")[0].play()
+
+    // Large
+    if (jQuery(window).width() > 1280) {
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
+      // Midium
+    } else if (jQuery(window).width() > 768) {
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 80%")
+      // Small
+    } else {
+      $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
+    }
+
+  }
+
+  // Scroll
+  function ToScroll(id) {
+    if (jQuery(window).width() > 768) {
+      $("html, body").animate({
+        scrollTop: $(`#${id}`).offset().top
+      }, 800);
+    } else {
+      $("html, body").animate({
+        scrollTop: $(`#${id}`).offset().top - 200
+      }, 800);
+    }
+  }
+
+  // Navbar
+  $('.navbar-nav>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+  // toggleTip
+  function toggleTip() {
+    $(".tooltipText").toggleClass('showTip')
+  }
+
+  // Image Setting
+  $(document).ready(function () {
+    $("#carouselExampleIndicators").on("swiperight", function () {
+      $(this).carousel('prev');
+    });
+    $("#carouselExampleIndicators").on("swipeleft", function () {
+      $(this).carousel('next');
+    });
+    $('.carousel').carousel({
+      interval: 10000
+    })
+  });
+
+
+
+  function setData() {
+    let a = $("#A").val()
+    $("#dimension-demo").attr("exposure", a)
+  }
+
+  // function setScale() {
+  //   var as = $("#as").val()
+  //   var bs = $("#bs").val()
+  //   var cs = $("#cs").val()
+  //   $("#dimension-demo").attr("scale", `${as} ${bs} ${cs}`)
+  // }
+
+  
+</script>
+
+
+</html>

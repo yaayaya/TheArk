@@ -5,14 +5,18 @@ nav id 修正                     #
 share this page fb yt 連結      #
 圖標改大                        最完時需把cdn改為本地
 
-點下AR時讀取畫面                X
+點下AR時讀取畫面                #
 Camera target功能               #
 
 排版重製                        #
 輪播圖片                        #
 模型反光太重  調整光線          #
-三語切換                        等提供
-人模型
+三語切換                        #
+人模型                          X
+生物大小                        #
+
+qrcode 記得換
+分享連結                        
 
 03 329 6662
 
@@ -21,3 +25,26 @@ skybox-image="https://i.imgur.com/fhwQkws.png"
 skybox-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_LDR.jpg"
 environment-image="https://i.imgur.com/fhwQkws.png"
 environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_LDR.jpg"
+
+
+
+<a href="https://www.facebook.com/sharer.php?u=https://www.minwt.com" target="_blank">
+Facebook
+</a>
+<br>
+<a href="http://line.naver.jp/R/msg/text/?https://www.minwt.com/" target="_blank">
+LINE
+</a>
+<br>
+<a href="http://pinterest.com/pin/create/link/?url=https://www.minwt.com" target="_blank">
+PINTEREST</a>
+<br>
+
+<!-- http://instagram.com/sharer.php?u=連結&media=圖片路徑&description=摘要 -->
+<a href="http://instagram.com/sharer.php?u=https://www.minwt.com&media=imgurl&description=title" target="_blank">
+INSTAGRAM
+</a>
+<br>
+
+<!-- https://twitter.com/share?text=文字&url=網址 -->
+<a href="https://twitter.com/share?text=&url=https%3A%2F%2Fwww.minwt.com">TWITTER</a>
