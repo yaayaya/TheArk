@@ -647,10 +647,10 @@ html {
   -webkit-transform: translate(-50%, -50%);
   background: url('../images/play_button.png')  no-repeat;
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   background-size: contain;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 .video-thumbnail:hover:before {
   opacity: 1;

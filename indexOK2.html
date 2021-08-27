@@ -272,16 +272,16 @@
           </div>
           <!-- 圖片區塊 1.5  -->
           <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
-            <div id="carousel_1.5" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
+            <div id="carousel_1-5" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
               <ol class="carousel-indicators">
-                <li data-target="#carousel_1.5" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel_1.5" data-slide-to="1"></li>
-                <li data-target="#carousel_1.5" data-slide-to="2"></li>
+                <li data-target="#carousel_1-5" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel_1-5" data-slide-to="1"></li>
+                <li data-target="#carousel_1-5" data-slide-to="2"></li>
               </ol>
               <!-- carousel  -->
               <div class="carousel-inner my-gallery">
                 <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/1.5_1.jpg');">
-                  <a href="./images/Contents/1.5_1.jpg" itemprop="contentUrl" data-size="1265x406">
+                  <a href="./images/Contents/1.5_1.jpg" itemprop="contentUrl" data-size="2530x912">
                     <img class="d-block w-100" src="./images/Contents/1.5_1.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
                 </figure>
@@ -291,16 +291,16 @@
                   </a>
                 </figure>
                 <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1.5_3.jpg');">
-                  <a href="./images/Contents/1.5_3.jpg" itemprop="contentUrl" data-size="946x630">
+                  <a href="./images/Contents/1.5_3.jpg" itemprop="contentUrl" data-size="1892x1260">
                     <img class="d-block w-100" src="./images/Contents/1.5_3.jpg" itemprop="thumbnail" alt="images description" />
                   </a>
                 </figure>
               </div>
-              <a class="carousel-control-prev pcShow" href="#carousel_1.5" role="button" data-slide="prev">
+              <a class="carousel-control-prev DesktopShow" href="#carousel_1-5" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next pcShow" href="#carousel_1.5" role="button" data-slide="next">
+              <a class="carousel-control-next DesktopShow" href="#carousel_1-5" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
@@ -567,7 +567,7 @@
           <div class=" col-12 bg-darkd text-center text-white  pb-md-4 pt-md-1">
             <div class="titleText_2" data-i18n="Title.OtherRuins"></div>
             <!-- greater 1024 -->
-            <img class="pt-3 greater_1024_show" src="./images/Contents/OtherImage_w1.jpg" style="width: 80vw;">
+            <img class="pt-3 greater_1024_show" src="./images/Contents/OtherImage_w1.jpg" style="width: 85vw;">
             <!-- less 1024 -->
             <div class="my-gallery pt-3 px-3 less_1024_show">
               <figure style="background-image: url('./images/Contents/OtherImage_m1.jpg'); margin:0 0 2.5em">
@@ -916,45 +916,15 @@
   }
 
   // video 
-  $('.video-thumbnail').click(() => {
-    // $("#ytVideo").show()
-    // $(.video-thumbnail).hide()
+  // $('.video-thumbnail').click(() => {
+  //   let src = 'https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0'
+  //   let video = `<iframe allow='autoplay' id="ytVideo"
+  //         src="${src}" frameborder="0" 
+  //         allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>`
 
-
-    let src = 'https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0'
-    let video = `<iframe allow='autoplay' id="ytVideo"
-          src="${src}" frameborder="0" 
-          allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>`
-
-    // video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
-    $('.video-thumbnail').replaceWith(video);
-
-
-  });
-
-  $(function () {
-    var player;
-
-    function onYouTubeIframeAPIReady() {
-
-      video = document.getElementById('#ytVideo');
-      console.log(video)
-      player = new YT.Player(video, {
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      })
-    }
-
-    function onPlayerReady(e) {
-      console.log("hey Im ready");
-    }
-
-    function onPlayerStateChange(e) {
-      console.log(e)
-    }
-  })
+  //   // video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+  //   $('.video-thumbnail').replaceWith(video);
+  // });
 </script>
 
 
