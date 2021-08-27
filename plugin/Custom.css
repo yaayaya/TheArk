@@ -653,5 +653,5 @@ html {
   opacity: 0.8;
 }
 .video-thumbnail:hover:before {
-  color: #eee;
+  opacity: 1;
 }
