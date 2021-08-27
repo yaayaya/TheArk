@@ -16,23 +16,23 @@ let en = {
         },
         Instructions: {
             desktop: {
-                t1: 'Instructions for use：',
+                t1: 'Instructions',
                 t2: 'Rotate：Press and drag the left mouse button.',
-                t3: 'Zoom in：mouse scroll up, PageDown.',
-                t4: 'Zoom out：Mouse scroll down, PageUp.',
-                t5: 'Pan：Ctrl + left mouse button press and drag.'
+                t3: 'Zoom in：mouse wheel scroll up, PageDown.',
+                t4: 'Zoom out：Mouse wheel scroll down, PageUp.',
+                t5: 'Horizontal move：Ctrl + left mouse button press and drag.'
             },
             mobile: {
-                t1: 'Instructions for use：',
+                t1: 'Instructions',
                 t2: 'Rotate：Single finger press and drag.',
                 t3: 'Zoom in：press with two fingers and slide outward.',
                 t4: 'Zoom out：Press with two fingers and slide inward.',
-                t5: 'Pan：Press with two fingers and drag up and down.'
+                t5: 'Horizontal move：Press with two fingers and drag up and down.'
             }
         },
         loadingText: 'Loading 3D Model',
         ExhibitionInfo: {
-            Title: "《The whale legends of Noto and Suzu City》",
+            Title: "《The whale legends of Noto Town and Suzu City》",
             TodayOpen: "Open today 09:00 - 17: 00",
             WeeksOpenFull: "Opening time｜Tuesday～Sunday 9:00-17:00　Closed every Tuesday",
             OpeningTitle: "Opening time",
