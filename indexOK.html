@@ -24,27 +24,19 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./plugin/Bootstrap/bootstrap.min.css">
 
-  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
   <script src="./plugin/webcomponents-loader.js"></script>
 
-  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
   <script src="./plugin/intersection-observer.js"></script>
 
-  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
   <script src="./plugin/ResizeObserver.js"></script>
 
-  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
   <script src="./plugin/focus-visible.js" defer></script>
 
-  <!-- Loads <model-viewer> for modern browsers: -->
-  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
 
-
-
-
-  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
   <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 
@@ -60,14 +52,16 @@
   <script src="./plugin/i18next/jquery-i18next.min.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLPSPQHCN0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLPSPQHCN0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-ZLPSPQHCN0');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-ZLPSPQHCN0');
+  </script>
 
 </head>
 <div id="i18next">
@@ -89,8 +83,7 @@
       <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
         <div class="navbar-nav ml-auto flex-nowrap ">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
             </a>
             <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
               <a class="nav-item nav-link" data-i18n="Lang.jp" onclick="langChange('jp')"></a>
@@ -104,6 +97,7 @@
           <a class="nav-item nav-link mx-2" data-i18n="Title.Evolution" onclick="ToScroll('Evolution_id')"></a>
           <a class="nav-item nav-link mx-2" data-i18n="Title.Ruins" onclick="ToScroll('Ruins_id')"></a>
           <a class="nav-item nav-link mx-2" data-i18n="Title.Whale" onclick="ToScroll('Whale_id')"></a>
+          <a class="nav-item nav-link mx-2" data-i18n="Title.OtherRuins" onclick="ToScroll('OtherRuins_id')"></a>
 
         </div>
       </div>
@@ -122,20 +116,18 @@
       <div class="position-relative overflow-hidden text-left ">
         <!-- AR 放置 mx-auto-->
         <div class="pb-0 justify-content-center bg-darkd">
-          <!-- src="./glb/0825.glb" 
-        ios-src="./glb/0825.usdz"  -->
-
+          <!-- src="./glb/08253.glb" 
+          ios-src="./glb/08253.usdz" -->
           <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
           src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
           <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
-          <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
-            class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
-            src="./glb/08253.glb" 
-              ios-src="./glb/08253.usdz"
-            environment-Image="https://i.imgur.com/rIqOiW7.jpeg"
-            ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
+          <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
+          src="./glb/08253.glb" 
+            ios-src="./glb/08253.usdz"
+          
+          environment-Image="https://i.imgur.com/rIqOiW7.jpeg" ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
 
             <div id="progress" slot="progress-bar">
               <div class="bar"></div>
@@ -163,8 +155,7 @@
             </div>
 
             <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
-            <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;"
-              onclick="loadingModel()">
+            <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;" onclick="loadingModel()">
               <span data-i18n="loadingText"></span>
             </div>
 
@@ -178,7 +169,7 @@
           <p class="hero__meta pt-3" style="color:white">
             <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
             <span style="font-size: 1em; font-weight: bold;" data-i18n="ExhibitionInfo.TodayOpen"></span>
-          <div class="pt-1" style="color: white;" data-i18n="ExhibitionInfo.WeeksOpenFull"></div>
+            <div class="pt-1" style="color: white;" data-i18n="ExhibitionInfo.WeeksOpenFull"></div>
           </p>
         </div>
 
@@ -189,11 +180,11 @@
           <p class="hero__meta pt-3" style="color:white">
             <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
             <span style="font-size: 1.2em; font-weight: bold;" data-i18n="ExhibitionInfo.TodayOpen"></span>
-          <div class="pt-1" style="color: white;">
-            <span data-i18n="ExhibitionInfo.WeeksOpen_1"></span>
-            <br>
-            <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
-          </div>
+            <div class="pt-1" style="color: white;">
+              <span data-i18n="ExhibitionInfo.WeeksOpen_1"></span>
+              <br>
+              <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
+            </div>
           </p>
         </div>
 
@@ -203,14 +194,10 @@
           <!-- 分享連結 -->
           <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
             <div>
-              <img class="mt-3 mr-4 shareIcon" src="./images/icon/line_icon.png"
-                onclick="window.open(`${location.href}`, '_blank')" />
-              <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png"
-                onclick="window.open(`${location.href}`, '_blank')" />
-              <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png"
-                onclick="window.open(`${location.href}`, '_blank')" />
-              <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter_icon.png"
-                onclick="window.open(`${location.href}`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/line_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
+              <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
               <span class="mr-4 sharePageText" data-i18n="ShareThisPage"></span>
             </div>
           </div>
@@ -225,9 +212,14 @@
       </div>
       <div class="row bg-darkd ">
         <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
-          <iframe src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1"
-            frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            class="embedded-video-16-9"></iframe>
+          <div class="video-thumbnail fa fa-play-circle-o">
+            <img id="videoImage" src="./images/VideoImage.jpg" class="embedded-video-16-9">
+          </div>
+
+          <!-- <iframe 
+          data-thumbnail-src="./images/VideoImage.jpg"
+          src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" 
+          allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe> -->
         </div>
         <div class="col-md-12 col-sm-12"></div>
       </div>
@@ -252,39 +244,14 @@
           <!-- 圖片區塊 1  -->
           <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
             <div id="carousel_1" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carousel_1" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel_1" data-slide-to="1"></li>
-              </ol>
               <!-- carousel  -->
               <div class="carousel-inner my-gallery">
                 <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/1_1.jpg');">
-                  <a href="./images/Contents/1_1.jpg" itemprop="contentUrl" data-size="866x577">
-                    <img class="d-block w-100" src="./images/Contents/1_1.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                  <a href="./images/Contents/1_1.jpg" itemprop="contentUrl" data-size="1732x1154">
+                    <img class="d-block w-100" src="./images/Contents/1_1.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="RuinsInfo.imgDescription_1"></div>
-                  </figcaption>
-                </figure>
-                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1_2.jpg');">
-                  <a href="./images/Contents/1_2.jpg" itemprop="contentUrl" data-size="1265x406">
-                    <img class="d-block w-100" src="./images/Contents/1_2.jpg" itemprop="thumbnail"
-                      alt="images description" />
-                  </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="RuinsInfo.imgDescription_2"></div>
-                  </figcaption>
                 </figure>
               </div>
-              <a class="carousel-control-prev pcShow" href="#carousel_1" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next pcShow" href="#carousel_1" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
             </div>
           </div>
         </div>
@@ -310,18 +277,37 @@
           <!-- 圖片區塊 1.5  -->
           <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
             <div id="carousel_1.5" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel_1.5" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel_1.5" data-slide-to="1"></li>
+                <li data-target="#carousel_1.5" data-slide-to="2"></li>
+              </ol>
               <!-- carousel  -->
               <div class="carousel-inner my-gallery">
-                <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/1.5_1.png');">
-                  <a href="./images/Contents/1.5_1.png" itemprop="contentUrl" data-size="1938x897">
-                    <img class="d-block w-100" src="./images/Contents/1.5_1.png" itemprop="thumbnail"
-                      alt="Image description" />
+                <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/1.5_1.jpg');">
+                  <a href="./images/Contents/1.5_1.jpg" itemprop="contentUrl" data-size="1265x406">
+                    <img class="d-block w-100" src="./images/Contents/1.5_1.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="BiologicalSize.imgDescription_1"></div>
-                  </figcaption>
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1.5_2.png');">
+                  <a href="./images/Contents/1.5_2.png" itemprop="contentUrl" data-size="1938x897">
+                    <img class="d-block w-100" src="./images/Contents/1.5_2.png" itemprop="thumbnail" alt="images description" />
+                  </a>
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1.5_3.jpg');">
+                  <a href="./images/Contents/1.5_3.jpg" itemprop="contentUrl" data-size="946x630">
+                    <img class="d-block w-100" src="./images/Contents/1.5_3.jpg" itemprop="thumbnail" alt="images description" />
+                  </a>
                 </figure>
               </div>
+              <a class="carousel-control-prev pcShow" href="#carousel_1.5" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next pcShow" href="#carousel_1.5" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
           </div>
         </div>
@@ -341,21 +327,13 @@
               <div class="carousel-inner my-gallery">
                 <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/2_1.jpg');">
                   <a href="./images/Contents/2_1.jpg" itemprop="contentUrl" data-size="3500x1308">
-                    <img class="d-block w-100" src="./images/Contents/2_1.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/2_1.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="Evolution.imgDescription_1"></div>
-                  </figcaption>
                 </figure>
                 <figure class="carousel-item cencen " style="background-image: url('./images/Contents/2_2.jpg');">
                   <a href="./images/Contents/2_2.jpg" itemprop="contentUrl" data-size="1830x810">
-                    <img class="d-block w-100" src="./images/Contents/2_2.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/2_2.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="Evolution.imgDescription_2"></div>
-                  </figcaption>
                 </figure>
               </div>
               <a class="carousel-control-prev DesktopShow" href="#carousel_2" role="button" data-slide="prev">
@@ -424,21 +402,13 @@
               <div class="carousel-inner my-gallery">
                 <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/3_1.jpg');">
                   <a href="./images/Contents/3_1.jpg" itemprop="contentUrl" data-size="1815x2121">
-                    <img class="d-block w-90 " src="./images/Contents/3_1.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-90 " src="./images/Contents/3_1.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="Ruins.imgDescription_1"></div>
-                  </figcaption>
                 </figure>
                 <figure class="carousel-item cencen " style="background-image: url('./images/Contents/3_2.jpg');">
                   <a href="./images/Contents/3_2.jpg" itemprop="contentUrl" data-size="1803x1707">
-                    <img class="d-block w-100" src="./images/Contents/3_2.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/3_2.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="Ruins.imgDescription_2"></div>
-                  </figcaption>
                 </figure>
               </div>
               <a class="carousel-control-prev DesktopShow" href="#carousel_3" role="button" data-slide="prev">
@@ -488,12 +458,8 @@
               <div class="carousel-inner my-gallery">
                 <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/4_1.jpg');">
                   <a href="./images/Contents/4_1.jpg" itemprop="contentUrl" data-size="2508x1672">
-                    <img class="d-block w-100" src="./images/Contents/4_1.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/4_1.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
-                    <div data-i18n="WhaleLegend_1.imgDescription_1"></div>
-                  </figcaption>
               </div>
             </div>
           </div>
@@ -535,39 +501,35 @@
               <div class="carousel-inner my-gallery">
                 <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/5_1.jpg');">
                   <a href="./images/Contents/5_1.jpg" itemprop="contentUrl" data-size="1229x839">
-                    <img class="d-block w-100" src="./images/Contents/5_1.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/5_1.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
+                  <!-- <figcaption itemprop="caption">
                     <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
-                  </figcaption>
+                  </figcaption> -->
                 </figure>
                 <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_2.jpg');">
                   <a href="./images/Contents/5_2.jpg" itemprop="contentUrl" data-size="1217x813">
-                    <img class="d-block w-100" src="./images/Contents/5_2.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/5_2.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
+                  <!-- <figcaption itemprop="caption">
                     <div data-i18n="WhaleLegend_2.imgDescription_2"></div>
-                  </figcaption>
+                  </figcaption> -->
                 </figure>
                 <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_3.jpg');">
                   <a href="./images/Contents/5_3.jpg" itemprop="contentUrl" data-size="1593x2499">
-                    <img class="d-block w-100" src="./images/Contents/5_3.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/5_3.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
+                  <!-- <figcaption itemprop="caption">
                     <div data-i18n="WhaleLegend_2.imgDescription_3"></div>
-                  </figcaption>
+                  </figcaption> -->
                 </figure>
                 <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_4.jpg');">
                   <a href="./images/Contents/5_4.jpg" itemprop="contentUrl" data-size="1440x2560">
-                    <img class="d-block w-100" src="./images/Contents/5_4.jpg" itemprop="thumbnail"
-                      alt="Image description" />
+                    <img class="d-block w-100" src="./images/Contents/5_4.jpg" itemprop="thumbnail" alt="Image description" />
                   </a>
-                  <figcaption itemprop="caption">
+                  <!-- <figcaption itemprop="caption">
                     <div data-i18n="WhaleLegend_2.imgDescription_4"></div>
-                  </figcaption>
+                  </figcaption> -->
                 </figure>
               </div>
               <a class="carousel-control-prev DesktopShow" href="#carousel_4" role="button" data-slide="prev">
@@ -603,17 +565,57 @@
       </div>
 
 
-
-      <!-- 其他資料 -->
-      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd">
-        <div class=" col-12 bg-darkd text-center text-white  pb-md-4 pt-md-1">
-          <div class="titleText_2" >其他資訊</div>
-          <img class="pt-3" src="./images/othersImg.png" style="width: 100%;">
+      <!-- 其他遺跡 -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="OtherRuins_id">
+        <div class="row">
+          <div class=" col-12 bg-darkd text-center text-white  pb-md-4 pt-md-1">
+            <div class="titleText_2" data-i18n="Title.OtherRuins"></div>
+            <!-- greater 1024 -->
+            <img class="pt-3 greater_1024_show" src="./images/Contents/OtherImage_w1.jpg" style="width: 80vw;">
+            <!-- less 1024 -->
+            <div class="my-gallery px-3 pt-3 less_1024_show">
+              <figure style="background-image: url('./images/Contents/OtherImage_m1.jpg');">
+                <a href="./images/Contents/OtherImage_m1.jpg" itemprop="contentUrl" data-size="1498x2261">
+                  <img class="d-block w-100" src="./images/Contents/OtherImage_m1.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+              <br>
+              <figure style="background-image: url('./images/Contents/OtherImage_m2.jpg');">
+                <a href="./images/Contents/OtherImage_m2.jpg" itemprop="contentUrl" data-size="1498x2261">
+                  <img class="d-block w-100" src="./images/Contents/OtherImage_m2.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+              <br>
+              <figure style="background-image: url('./images/Contents/OtherImage_m3.jpg');">
+                <a href="./images/Contents/OtherImage_m3.jpg" itemprop="contentUrl" data-size="1498x3433">
+                  <img class="d-block w-100" src="./images/Contents/OtherImage_m3.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+              <br>
+              <figure style="background-image: url('./images/Contents/OtherImage_m4.jpg');">
+                <a href="./images/Contents/OtherImage_m4.jpg" itemprop="contentUrl" data-size="1498x3433">
+                  <img class="d-block w-100" src="./images/Contents/OtherImage_m4.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
-      
+
       <!-- 商店 -->
-      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-5 py-3 justify-content-center bg-darkd" >
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-5 py-3 justify-content-center bg-darkd">
         <img class="p-3" src="./images/storeImg.png" style="width: 100%;">
       </div>
 
@@ -636,20 +638,17 @@
               </a>
             </li>
             <li>
-              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer"
-                title="twitter_Share">
+              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer" title="twitter_Share">
                 <span class="f-icon f-twitter-icon"></span>
               </a>
             </li>
             <li>
-              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer"
-                title="ig_Share">
+              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer" title="ig_Share">
                 <span class="f-icon f-ig-icon"></span>
               </a>
             </li>
             <li>
-              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer"
-                title="facebook_Share">
+              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer" title="facebook_Share">
                 <span class="f-icon f-facebook-icon"></span>
               </a>
             </li>
@@ -669,14 +668,12 @@
         <div class="pt-1">
           <ul class="menu menu--icon-menu ">
             <li>
-              <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer"
-                title="facebook(另開新視窗)">
+              <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
                 <span class="f-icon f-facebook-icon"></span>
               </a>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank"
-                rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+              <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
             </li>
           </ul>
         </div>
@@ -696,8 +693,7 @@
       </div>
     </div>
     <!-- About  -->
-    <div class="py-2 px-4 " style="color: white; text-align: center;background-color: #000;font-size: 14px;"
-      data-i18n="License"></div>
+    <div class="py-2 px-4 " style="color: white; text-align: center;background-color: #000;font-size: 14px;" data-i18n="License"></div>
   </footer>
 
   <!-- PC Footer -->
@@ -709,14 +705,12 @@
         <div class="pt-2">
           <ul class="menu menu--icon-menu ">
             <li>
-              <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer"
-                title="facebook(另開新視窗)">
+              <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer" title="facebook(另開新視窗)">
                 <span class="f-icon f-facebook-icon"></span>
               </a>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank"
-                rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+              <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank" rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
             </li>
           </ul>
         </div>
@@ -749,8 +743,7 @@
           <!-- Back to the top -->
           <div style="font-size: 18px; font-weight: 500;cursor:pointer" onclick="ToScroll('body_id')">
             <span data-i18n="BackToTop"></span>
-            <image class="pt-3 ml-2" style="margin-bottom: 18px;"
-              src="https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg" width="16px">
+            <image class="pt-3 ml-2" style="margin-bottom: 18px;" src="https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg" width="16px">
             </image>
           </div>
         </div>
@@ -863,7 +856,7 @@
       }, 800);
     } else {
       $("html, body").animate({
-        scrollTop: $(`#${id}`).offset().top - 250
+        scrollTop: $(`#${id}`).offset().top - 300
       }, 800);
     }
   }
@@ -891,10 +884,6 @@
     })
   });
 
-  function setData() {
-    let a = $("#A").val()
-    $("#dimension-demo").attr("exposure", a)
-  }
 </script>
 
 <script>
@@ -902,20 +891,15 @@
   let lng = 'en'
   if (lang.indexOf('zh') != -1) {
     lng = 'zhtw'
-  }
-  else if (lang == 'ja') {
+  } else if (lang == 'ja') {
     lng = 'jp'
-  }
-  else {
+  } else {
     lng = 'en'
   }
 
-
-  // use plugins and options as needed, for options, detail see
-  // http://i18next.com/docs/
   let i18 = i18next.init({
-    lng: lng, // evtl. use language-detector https://github.com/i18next/i18next-browser-languageDetector
-    resources: { // evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
+    lng: lng, 
+    resources: { 
       zhtw,
       jp,
       en
@@ -933,11 +917,23 @@
     updateWebTitle()
   }
 
-  function updateWebTitle(){
+  function updateWebTitle() {
     let nowlang = i18next.language
     let webTitle = i18next.store.data[nowlang].translation.ExhibitionInfo.Title
     $('title').text(webTitle)
   }
+
+  // video 
+  $('.video-thumbnail').click(()=>{
+      let src='https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0'
+      let video = `<iframe allow='autoplay'
+          src="${src}" frameborder="0" 
+          allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>`
+
+      // video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
+      $('.video-thumbnail').replaceWith(video);
+
+  });
 </script>
 
 
