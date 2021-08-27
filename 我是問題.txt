@@ -26,25 +26,27 @@ skybox-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_
 environment-image="https://i.imgur.com/fhwQkws.png"
 environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_LDR.jpg"
 
+https://www.thearkmuseum.com/
 
-
-<a href="https://www.facebook.com/sharer.php?u=https://www.minwt.com" target="_blank">
+<a href="https://www.facebook.com/sharer.php?u=https://www.thearkmuseum.com/" target="_blank">
 Facebook
 </a>
 <br>
-<a href="http://line.naver.jp/R/msg/text/?https://www.minwt.com/" target="_blank">
+<a href="http://line.naver.jp/R/msg/text/?https://www.thearkmuseum.com/" target="_blank">
 LINE
 </a>
 <br>
-<a href="http://pinterest.com/pin/create/link/?url=https://www.minwt.com" target="_blank">
+<a href="http://pinterest.com/pin/create/link/?url=https://www.thearkmuseum.com/" target="_blank">
 PINTEREST</a>
 <br>
 
+<!-- http://instagram.com/sharer.php?u=https://www.thearkmuseum.com&media=圖片路徑&description=摘要/ -->
 <!-- http://instagram.com/sharer.php?u=連結&media=圖片路徑&description=摘要 -->
+
 <a href="http://instagram.com/sharer.php?u=https://www.minwt.com&media=imgurl&description=title" target="_blank">
 INSTAGRAM
 </a>
 <br>
 
-<!-- https://twitter.com/share?text=文字&url=網址 -->
+<!-- https://twitter.com/share?text=文字&url=https://www.thearkmuseum.com/ -->
 <a href="https://twitter.com/share?text=&url=https%3A%2F%2Fwww.minwt.com">TWITTER</a>

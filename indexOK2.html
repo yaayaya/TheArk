@@ -51,17 +51,15 @@
   <script src="./plugin/i18next/i18next.min.js"></script>
   <script src="./plugin/i18next/jquery-i18next.min.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLPSPQHCN0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3PRV6582L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-ZLPSPQHCN0');
-  </script>
+  gtag('config', 'G-Q3PRV6582L');
+</script>
 
 </head>
 <div id="i18next">
@@ -123,7 +121,10 @@
         ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
           <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
 
-          <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" environment-Image="https://i.imgur.com/rIqOiW7.jpeg" ar-scale="5%" alt="A 3D model" camera-controls ar reveal="interaction">
+          <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look" class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto" 
+          src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+          environment-Image="https://i.imgur.com/rIqOiW7.jpeg" ar-scale="50%" alt="A 3D model" camera-controls ar reveal="interaction">
 
             <div id="progress" slot="progress-bar">
               <div class="bar"></div>
@@ -190,10 +191,10 @@
           <!-- 分享連結 -->
           <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
             <div>
-              <img class="mt-3 mr-4 shareIcon" src="./images/icon/line_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
-              <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
-              <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
-              <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter_icon.png" onclick="window.open(`${location.href}`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/line_icon.png" onclick="window.open(`http://line.naver.jp/R/msg/text/?https://www.thearkmuseum.com/`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png" onclick="window.open(`https://www.facebook.com/sharer.php?u=https://www.thearkmuseum.com/`, '_blank')" />
+              <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png" onclick="window.open(`https://www.facebook.com/weizheng.tu`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter_icon.png" onclick="window.open(`https://twitter.com/share?url=https://www.thearkmuseum.com/`, '_blank')" />
               <span class="mr-4 sharePageText" data-i18n="ShareThisPage"></span>
             </div>
           </div>
@@ -211,7 +212,6 @@
           <div class="video-thumbnail fa fa-play-circle-o">
             <img id="videoImage" src="./images/VideoImage.jpg" class="embedded-video-16-9">
           </div>
-          <iframe allow='autoplay' id="ytVideo" style="display: none;" src="https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0" frameborder="0" allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>
           <!-- <iframe 
           data-thumbnail-src="./images/VideoImage.jpg"
           src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" 
@@ -355,7 +355,6 @@
 
                 <br><br>
                 <span data-i18n="Evolution.t2"></span>
-
 
               </div>
             </div>
@@ -626,22 +625,22 @@
         <div class="pt-1">
           <ul class="menu menu--icon-menu ">
             <li>
-              <a onclick="window.open(`${location.href}`, '_blank')" rel="noopener noreferrer" title="twitter_Share">
+              <a onclick="window.open(`http://line.naver.jp/R/msg/text/?https://www.thearkmuseum.com/`, '_blank')" rel="noopener noreferrer" title="twitter_Share">
                 <span class="f-icon f-line-icon"></span>
               </a>
             </li>
             <li>
-              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer" title="twitter_Share">
+              <a onclick="window.open(`https://twitter.com/share?url=https://www.thearkmuseum.com/`, '_blank')" target="_blank" rel="noopener noreferrer" title="twitter_Share">
                 <span class="f-icon f-twitter-icon"></span>
               </a>
             </li>
             <li>
-              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer" title="ig_Share">
+              <a onclick="window.open(`https://www.facebook.com/weizheng.tu`, '_blank')" target="_blank" rel="noopener noreferrer" title="ig_Share">
                 <span class="f-icon f-ig-icon"></span>
               </a>
             </li>
             <li>
-              <a onclick="window.open(`${location.href}`, '_blank')" target="_blank" rel="noopener noreferrer" title="facebook_Share">
+              <a onclick="window.open(`https://www.facebook.com/sharer.php?u=https://www.thearkmuseum.com/`, '_blank')" target="_blank" rel="noopener noreferrer" title="facebook_Share">
                 <span class="f-icon f-facebook-icon"></span>
               </a>
             </li>
@@ -915,16 +914,6 @@
     $('title').text(webTitle)
   }
 
-  // video 
-  // $('.video-thumbnail').click(() => {
-  //   let src = 'https://www.youtube.com/embed/BI8rpcXitBo?autoplay=1&modestbranding=1&mute=1&iv_load_policy=3&rel=0'
-  //   let video = `<iframe allow='autoplay' id="ytVideo"
-  //         src="${src}" frameborder="0" 
-  //         allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe>`
-
-  //   // video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
-  //   $('.video-thumbnail').replaceWith(video);
-  // });
 </script>
 
 
