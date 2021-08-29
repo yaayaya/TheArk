@@ -24,6 +24,10 @@ modelViewer.addEventListener('progress', (event) => {
     } = event.detail;
     progress.classList.toggle('show', totalProgress < 1);
     $(".bar").css('transform', `scaleX(${totalProgress})`)
+    if (totalProgress >= 1){
+        $("#arButton").show()
+        $(".tooltipDiv").show()
+    }
 });
 
 // 
