@@ -124,11 +124,10 @@
 
           <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
             class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
-            src="./glb/0829_3.glb" 
-              ios-src="./glb/0829_3.usdz"
-            environment-Image="https://i.imgur.com/rIqOiW7.jpeg"
+            src="./glb/0829_3.glb" ios-src="./glb/0829_3.usdz" environment-Image="https://i.imgur.com/rIqOiW7.jpeg"
             alt="A 3D model" camera-controls ar reveal="interaction">
-
+            <img id="arButton" 
+              slot="ar-button" src="./images/icon/AR_icon.png" style="border-radius: 4px; border: none; position: absolute; bottom:  16px; right: 16px; width: 2.5em; height: 2.5em;display: none;">
             <div id="progress" slot="progress-bar">
               <div class="bar"></div>
             </div>
@@ -589,40 +588,45 @@
           <div class=" col-12 bg-darkd text-center text-white  pb-md-4 pt-md-1">
             <div class="titleText_2" data-i18n="Title.OtherRuins"></div>
             <!-- greater 1024 -->
-            <img id="OtherImageDesktop_1" class="pt-3 greater_1024_show" src="./images/Contents/OtherImage_w1.jpg" style="width: 85vw;" >
+            <img id="OtherImageDesktop_1" class="pt-3 greater_1024_show" src="./images/Contents/OtherImage_w1.jpg"
+              style="width: 85vw;">
             <!-- less 1024 -->
             <div class="my-gallery pt-3 px-3 less_1024_show">
               <figure style="background-image: url('./images/Contents/OtherImage_m1.jpg'); margin:0 0 2.5em">
-                <a id="OtherImageMobile_a1" href="./images/Contents/OtherImage_m1.jpg" itemprop="contentUrl" data-size="1498x2300">
-                  <img id="OtherImageMobile_1" class="d-block w-100" src="./images/Contents/OtherImage_m1.jpg" itemprop="thumbnail"
-                    alt="Image description" />
+                <a id="OtherImageMobile_a1" href="./images/Contents/OtherImage_m1.jpg" itemprop="contentUrl"
+                  data-size="1498x2300">
+                  <img id="OtherImageMobile_1" class="d-block w-100" src="./images/Contents/OtherImage_m1.jpg"
+                    itemprop="thumbnail" alt="Image description" />
                 </a>
                 <!-- <figcaption itemprop="caption">
                   <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
                 </figcaption> -->
               </figure>
               <figure style="background-image: url('./images/Contents/OtherImage_m2.jpg'); margin:0 0 2.5em">
-                <a id="OtherImageMobile_a2" href="./images/Contents/OtherImage_m2.jpg" itemprop="contentUrl" data-size="1498x2300">
-                  <img id="OtherImageMobile_2" class="d-block w-100" src="./images/Contents/OtherImage_m2.jpg" itemprop="thumbnail" 
-                    alt="Image description" />
+                <a id="OtherImageMobile_a2" href="./images/Contents/OtherImage_m2.jpg" itemprop="contentUrl"
+                  data-size="1498x2300">
+                  <img id="OtherImageMobile_2" class="d-block w-100" src="./images/Contents/OtherImage_m2.jpg"
+                    itemprop="thumbnail" alt="Image description" />
                 </a>
                 <!-- <figcaption itemprop="caption">
                   <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
                 </figcaption> -->
               </figure>
               <figure style="background-image: url('./images/Contents/OtherImage_m3.jpg'); margin:0 0 2.5em">
-                <a id="OtherImageMobile_a3" href="./images/Contents/OtherImage_m3.jpg" itemprop="contentUrl" data-size="1498x3394">
-                  <img id="OtherImageMobile_3" class="d-block w-100" src="./images/Contents/OtherImage_m3.jpg" itemprop="thumbnail"
-                    alt="Image description" />
+                <a id="OtherImageMobile_a3" href="./images/Contents/OtherImage_m3.jpg" itemprop="contentUrl"
+                  data-size="1498x3394">
+                  <img id="OtherImageMobile_3" class="d-block w-100" src="./images/Contents/OtherImage_m3.jpg"
+                    itemprop="thumbnail" alt="Image description" />
                 </a>
                 <!-- <figcaption itemprop="caption">
                   <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
                 </figcaption> -->
               </figure>
               <figure style="background-image: url('./images/Contents/OtherImage_m4.jpg'); margin:0 0 2.5em">
-                <a id="OtherImageMobile_a4" href="./images/Contents/OtherImage_m4.jpg" itemprop="contentUrl" data-size="1498x3394">
-                  <img id="OtherImageMobile_4" class="d-block w-100" src="./images/Contents/OtherImage_m4.jpg" itemprop="thumbnail"
-                    alt="Image description" />
+                <a id="OtherImageMobile_a4" href="./images/Contents/OtherImage_m4.jpg" itemprop="contentUrl"
+                  data-size="1498x3394">
+                  <img id="OtherImageMobile_4" class="d-block w-100" src="./images/Contents/OtherImage_m4.jpg"
+                    itemprop="thumbnail" alt="Image description" />
                 </a>
                 <!-- <figcaption itemprop="caption">
                   <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
@@ -634,17 +638,18 @@
       </div>
 
       <!-- 商店 -->
-      <div class="d-md-flex flex-md-equal w-100 px-md-5 px-sm-0 py-3 justify-content-center  bg-store" >
+      <div class="d-md-flex flex-md-equal w-100 px-md-5 px-sm-0 py-3 justify-content-center  bg-store">
         <div class="row">
           <div class=" col-12 bg-store text-center text-white  pb-md-4 pt-md-1">
             <div class="titleText_2" style="color: black;" data-i18n="Title.Store"></div>
             <!-- greater 1024 -->
-            <img id="StoreImageDesktop_1" class="greater_1024_show" src="./images/Store/desktop.jpg" style="width: 85vw;" >
+            <img id="StoreImageDesktop_1" class="greater_1024_show" src="./images/Store/desktop.jpg"
+              style="width: 85vw;">
             <!-- less 1024 -->
             <div class="col-sm-12 bg-store text-left text-white overflow-hidden less_1024_show" style="height: 90%;">
               <div id="carousel_store" class="carousel slide contentCenter py-3 " data-ride="carousel">
                 <ol class="carousel-indicators" style>
-                  <li data-target="#carousel_store" class="dark_carousel active" data-slide-to="0" ></li>
+                  <li data-target="#carousel_store" class="dark_carousel active" data-slide-to="0"></li>
                   <li data-target="#carousel_store" class="dark_carousel" data-slide-to="1"></li>
                   <li data-target="#carousel_store" class="dark_carousel" data-slide-to="2"></li>
                   <li data-target="#carousel_store" class="dark_carousel" data-slide-to="3"></li>
@@ -655,7 +660,8 @@
                 </ol>
                 <!-- carousel  -->
                 <div class="carousel-inner my-gallery">
-                  <figure class="carousel-item cencen active" style="background-image: url('./images/Store/mobile1.jpg');">
+                  <figure class="carousel-item cencen active"
+                    style="background-image: url('./images/Store/mobile1.jpg');">
                     <a href="./images/Store/mobile1.jpg" itemprop="contentUrl" data-size="1403x1938">
                       <img class="d-block w-100" src="./images/Store/mobile1.jpg" itemprop="thumbnail"
                         alt="Image description" />
@@ -941,6 +947,7 @@
   // init pos setting
   function loadingModel() {
     $("#button-load").hide()
+    $("#arButton").show()
     $(".tooltipDiv").show()
     $(".arButtonDiv").show()
     $("#audio_bgm")[0].play()
@@ -1028,7 +1035,7 @@
     changeImgLang(i18next.language)
   }
 
-  function changeImgLang(lang){
+  function changeImgLang(lang) {
     let en01 = '1498x3917'
     let en02 = '1498x5462'
     let jp01 = '1498x3122'
@@ -1036,33 +1043,33 @@
     let zhtw01 = '1498x2300'
     let zhtw02 = '1498x3394'
 
-    $("#OtherImageDesktop_1").attr('src' , `./images/Others/${lang}/desktop.jpg`)
-    $("#OtherImageMobile_a1").attr('href' , `./images/Others/${lang}/mobile1.jpg`)
-    $("#OtherImageMobile_1").attr('src' , `./images/Others/${lang}/mobile1.jpg`)
-    $("#OtherImageMobile_a2").attr('href' , `./images/Others/${lang}/mobile2.jpg`)
-    $("#OtherImageMobile_2").attr('src' , `./images/Others/${lang}/mobile2.jpg`)
-    $("#OtherImageMobile_a3").attr('href' , `./images/Others/${lang}/mobile3.jpg`)
-    $("#OtherImageMobile_3").attr('src' , `./images/Others/${lang}/mobile3.jpg`)
-    $("#OtherImageMobile_a4").attr('href' , `./images/Others/${lang}/mobile4.jpg`)
-    $("#OtherImageMobile_4").attr('src' , `./images/Others/${lang}/mobile4.jpg`)
+    $("#OtherImageDesktop_1").attr('src', `./images/Others/${lang}/desktop.jpg`)
+    $("#OtherImageMobile_a1").attr('href', `./images/Others/${lang}/mobile1.jpg`)
+    $("#OtherImageMobile_1").attr('src', `./images/Others/${lang}/mobile1.jpg`)
+    $("#OtherImageMobile_a2").attr('href', `./images/Others/${lang}/mobile2.jpg`)
+    $("#OtherImageMobile_2").attr('src', `./images/Others/${lang}/mobile2.jpg`)
+    $("#OtherImageMobile_a3").attr('href', `./images/Others/${lang}/mobile3.jpg`)
+    $("#OtherImageMobile_3").attr('src', `./images/Others/${lang}/mobile3.jpg`)
+    $("#OtherImageMobile_a4").attr('href', `./images/Others/${lang}/mobile4.jpg`)
+    $("#OtherImageMobile_4").attr('src', `./images/Others/${lang}/mobile4.jpg`)
 
-    if (lang == 'jp'){
-      $("#OtherImageMobile_a1").attr('data-size' , jp01)
-      $("#OtherImageMobile_a2").attr('data-size' , jp01)
-      $("#OtherImageMobile_a3").attr('data-size' , jp02)
-      $("#OtherImageMobile_a4").attr('data-size' , jp02)
+    if (lang == 'jp') {
+      $("#OtherImageMobile_a1").attr('data-size', jp01)
+      $("#OtherImageMobile_a2").attr('data-size', jp01)
+      $("#OtherImageMobile_a3").attr('data-size', jp02)
+      $("#OtherImageMobile_a4").attr('data-size', jp02)
     }
-    else if (lang == 'zhtw'){
-      $("#OtherImageMobile_a1").attr('data-size' , zhtw01)
-      $("#OtherImageMobile_a2").attr('data-size' , zhtw01)
-      $("#OtherImageMobile_a3").attr('data-size' , zhtw02)
-      $("#OtherImageMobile_a4").attr('data-size' , zhtw02)
+    else if (lang == 'zhtw') {
+      $("#OtherImageMobile_a1").attr('data-size', zhtw01)
+      $("#OtherImageMobile_a2").attr('data-size', zhtw01)
+      $("#OtherImageMobile_a3").attr('data-size', zhtw02)
+      $("#OtherImageMobile_a4").attr('data-size', zhtw02)
     }
-    else if (lang == 'en'){
-      $("#OtherImageMobile_a1").attr('data-size' , en01)
-      $("#OtherImageMobile_a2").attr('data-size' , en01)
-      $("#OtherImageMobile_a3").attr('data-size' , en02)
-      $("#OtherImageMobile_a4").attr('data-size' , en02)
+    else if (lang == 'en') {
+      $("#OtherImageMobile_a1").attr('data-size', en01)
+      $("#OtherImageMobile_a2").attr('data-size', en01)
+      $("#OtherImageMobile_a3").attr('data-size', en02)
+      $("#OtherImageMobile_a4").attr('data-size', en02)
     }
   }
 
