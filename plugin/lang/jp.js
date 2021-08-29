@@ -3,12 +3,12 @@ let jp = {
 
     Title: {
       News: "ニュース",
-      RuinsInfo: "遺跡情報",
+      RuinsInfo: "遺跡の情報",
       BiologicalSize : '生物大小',
-      Evolution: "進化史",
+      Evolution: "進化の可能性",
       Ruins: "真脇遺跡",
-      Whale: "クジラ伝説",
-      OtherRuins: '其他遺跡',
+      Whale: "鯨伝說",
+      OtherRuins: 'その他の遺跡',
       Store : 'ストア'
     },
     Lang: {
