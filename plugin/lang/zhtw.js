@@ -7,7 +7,8 @@ let zhtw = {
             Evolution: '演化',
             Ruins: '真脇遺址',
             Whale: '鯨魚傳說',
-            OtherRuins: '其他遺址'
+            OtherRuins: '其他遺址',
+            Store : '商店'
         },
         Lang: {
             Title: "語言",

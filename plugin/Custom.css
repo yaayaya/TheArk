@@ -258,6 +258,13 @@ html {
 .bg-darkd_2 {
   background-color: #1d1d1d;
 }
+.bg-store {
+  background-color: #e5e5e5;
+}
+
+.dark_carousel{
+  background-color: #000 !important;
+}
 
 .contentCenter {
   max-width: 700px;

@@ -6,7 +6,9 @@ let en = {
             BiologicalSize : '生物大小',
             Evolution: 'Evolution',
             Ruins: 'Mawaki Site',
-            Whale: 'Whale legends'
+            Whale: 'Whale legends',
+            OtherRuins: 'Other Sites',
+            Store : 'Store'
         },
         Lang: {
             Title: "Language",
@@ -51,12 +53,12 @@ let en = {
             imgDescription_4: ""
         },
         BiologicalSize: {
-            t1: '就在近期石川縣政府對外宣布，在珠洲市的一座廢棄操場，發現了一具長約11.5公尺寬約3.5公尺的奇異生物骨骸化石。',
-            t2: '現場已經封鎖，並已有相關考古團隊進駐，主導考古調查與開挖。',
-            t3: '考古坑挖掘面積長約13公尺、寬6.5公尺、深約1.5公尺。該生物骨骸化石相當完整，狀似鯨魚骸骨，但該骸骨有著兩隻前鰭與兩隻巨大的後足。',
+            t1: 'The skeleton resembling a whale or a walking whale is relatively massive, with a total length of 11.5 metres and a width of 3.5 metres.It is worth noting that, despite resembling whale bones, the skeleton uncovered consists of two front fins and two huge hind feet similar to the leg bones and soles of the walking whale.',
+            t2: 'Even with apparent cracks and holes, the fossil appears well-preserved and neatly arranged thanks to the protective layer of hard calcareous rocks.',
+            t3: 'According to its sedimentary facies, the fossil of this enormous creature estimates to be from 1.5 to 5 million years ago, but why it shows up here is worthy of further research.',
             t4: '',
-            imgDescription_1: "考古團隊作業情形",
-            imgDescription_2: "奇異生物骨骸化石",
+            imgDescription_1: "",
+            imgDescription_2: "",
             imgDescription_3: "",
             imgDescription_4: ""
         },
