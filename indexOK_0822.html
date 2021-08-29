@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>《珠洲クジラ伝説遺跡》</title>
+  <link rel="icon" type="image/x-icon" sizes="64x64" href="./images/icon/web_title_icon.svg">
+  <!-- Apple/Safari icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/icon/web_title_icon.png">
+  <!-- Square Windows tiles -->
+  <meta name="msapplication-square70x70logo" content="./images/icon/web_title_icon.png">
+  <meta name="msapplication-square150x150logo" content="./images/icon/web_title_icon.png">
+  <meta name="msapplication-square310x310logo" content="./images/icon/web_title_icon.png">
+
+  <link rel="stylesheet" href="./plugin/Custom.css">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./plugin/Bootstrap/bootstrap.min.css">
+
+  <script src="./plugin/webcomponents-loader.js"></script>
+
+  <script src="./plugin/intersection-observer.js"></script>
+
+  <script src="./plugin/ResizeObserver.js"></script>
+
+  <script src="./plugin/focus-visible.js" defer></script>
+
+
+  <script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
+  <script src="./plugin/Bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- <script type="module" src="./plugin/model-viewer.min.js"></script> -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="./plugin/Photoswipe/photoswipe.css" />
+  <link rel="stylesheet" href="./plugin/Photoswipe/default-skin/default-skin.css" />
+
+  <script src="./plugin/Photoswipe/photoswipe-ui-default.js"></script>
+  <script src="./plugin/Photoswipe/photoswipe.js"></script>
+
+
+  <script src="./plugin/i18next/i18next.min.js"></script>
+  <script src="./plugin/i18next/jquery-i18next.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3PRV6582L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3PRV6582L');
+  </script>
+
+</head>
+<div id="i18next">
+
+  <body id="body_id">
+    <div class="fixed-img"></div>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark  navClass bg-darkd">
+      <div class="d-flex flex-grow-1">
+
+        <img src="./images/icon/logo.svg" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
+        <div class="w-100 text-right">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+        <div class="navbar-nav ml-auto flex-nowrap ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
+            </a>
+            <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
+              <a class="nav-item nav-link" data-i18n="Lang.jp" onclick="langChange('jp')"></a>
+              <a class="nav-item nav-link" data-i18n="Lang.zhtw" onclick="langChange('zhtw')"></a>
+              <a class="nav-item nav-link" data-i18n="Lang.en" onclick="langChange('en')"></a>
+            </div>
+          </li>
+
+          <a class="nav-item nav-link mx-2" data-i18n="Title.News" onclick="ToScroll('News_id')"></a>
+          <a class="nav-item nav-link mx-2" data-i18n="Title.RuinsInfo" onclick="ToScroll('RuinsInfo_id')"></a>
+          <a class="nav-item nav-link mx-2" data-i18n="Title.Evolution" onclick="ToScroll('Evolution_id')"></a>
+          <a class="nav-item nav-link mx-2" data-i18n="Title.Ruins" onclick="ToScroll('Ruins_id')"></a>
+          <a class="nav-item nav-link mx-2" data-i18n="Title.Whale" onclick="ToScroll('Whale_id')"></a>
+          <a class="nav-item nav-link mx-2" data-i18n="Title.OtherRuins" onclick="ToScroll('OtherRuins_id')"></a>
+
+        </div>
+      </div>
+    </nav>
+
+
+    <main>
+      <!-- BGM -->
+      <div style="display: none;">
+        <audio id="audio_bgm" controls loop src="./plugin/bgm.mp3">
+        </audio>
+        <code>audio</code> element.
+      </div>
+
+      <!-- 上方區塊 AR -->
+      <div class="position-relative overflow-hidden text-left ">
+        <!-- AR 放置 mx-auto-->
+        <div class="pb-0 justify-content-center bg-darkd">
+          <!-- src="./glb/08253.glb" 
+          ios-src="./glb/08253.usdz" -->
+          <!-- src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.glb?1542147958948" 
+          src="https://modelviewer.dev/shared-assets/models/shishkebab.glb"
+        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" -->
+          <!-- poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"  -->
+
+          <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
+            class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
+             src="./glb/0822.glb" 
+              ios-src="./glb/0822.usdz"
+            environment-Image="https://i.imgur.com/rIqOiW7.jpeg"
+            alt="A 3D model" camera-controls ar reveal="interaction">
+
+            <div id="progress" slot="progress-bar">
+              <div class="bar"></div>
+            </div>
+
+            <!-- Tip -->
+            <div class="tooltipDiv" style="display: none;">
+              <div onclick="toggleTip()" class="tipIcon">
+                <span></span>
+                <span class="tooltipText DesktopShow" style="width: 300px;">
+                  <span data-i18n="Instructions.desktop.t1"></span><br>
+                  <span data-i18n="Instructions.desktop.t2"></span><br>
+                  <span data-i18n="Instructions.desktop.t3"></span><br>
+                  <span data-i18n="Instructions.desktop.t4"></span><br>
+                  <span data-i18n="Instructions.desktop.t5"></span><br>
+                </span>
+                <span class="tooltipText MobileDeviceShow" style="width: 280px;">
+                  <span data-i18n="Instructions.mobile.t1"></span><br>
+                  <span data-i18n="Instructions.mobile.t2"></span><br>
+                  <span data-i18n="Instructions.mobile.t3"></span><br>
+                  <span data-i18n="Instructions.mobile.t4"></span><br>
+                  <span data-i18n="Instructions.mobile.t5"></span><br>
+                </span>
+              </div>
+            </div>
+
+            <div id="lazy-load-poster" slot="poster" onclick="loadingModel()"></div>
+            <div id="button-load" slot="poster" style="padding: 10px 25px 9px 25px; background-color: #000;"
+              onclick="loadingModel()">
+              <span data-i18n="loadingText"></span>
+            </div>
+
+          </model-viewer>
+        </div>
+
+        <!-- Title 展出時間 PC -->
+        <div class="p-3 justify-content-center pcShow bg-darkd" style="left:10%">
+          <strong class="hero_title" style="color: white;" data-i18n="ExhibitionInfo.Title"></strong>
+
+          <p class="hero__meta pt-3" style="color:white">
+            <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
+            <span style="font-size: 1em; font-weight: bold;" data-i18n="ExhibitionInfo.TodayOpen"></span>
+          <div class="pt-1" style="color: white;" data-i18n="ExhibitionInfo.WeeksOpenFull"></div>
+          </p>
+        </div>
+
+        <!-- Title 展出時間 mbile -->
+        <div class="p-4 justify-content-center mobileShow bg-darkd">
+          <strong class="hero_title" style="color: white;" data-i18n="ExhibitionInfo.Title"></strong><br>
+
+          <p class="hero__meta pt-3" style="color:white">
+            <image class="mb-2" src="./images/icon/clock_icon.png" width="18px"></image>
+            <span style="font-size: 1.2em; font-weight: bold;" data-i18n="ExhibitionInfo.TodayOpen"></span>
+          <div class="pt-1" style="color: white;">
+            <span data-i18n="ExhibitionInfo.WeeksOpen_1"></span>
+            <br>
+            <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
+          </div>
+          </p>
+        </div>
+
+
+        <div class="fixedBG">
+          <div style="height: 130px;"></div>
+          <!-- 分享連結 -->
+          <div class="d-md-flex flex-md-equal w-100 bg-darkGradient justify-content-end">
+            <div>
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/line_icon.png"
+                onclick="window.open(`http://line.naver.jp/R/msg/text/?https://www.thearkmuseum.com/?openExternalBrowser=1`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/fb_icon.png"
+                onclick="window.open(`https://www.facebook.com/sharer.php?u=https://www.thearkmuseum.com/`, '_blank')" />
+              <img class=" mt-3 mr-4 shareIcon" src="./images/icon/ig_icon.png"
+                onclick="window.open(`https://www.facebook.com/weizheng.tu`, '_blank')" />
+              <img class="mt-3 mr-4 shareIcon" src="./images/icon/twitter_icon.png"
+                onclick="window.open(`https://twitter.com/share?url=https://www.thearkmuseum.com/`, '_blank')" />
+              <span class="mr-4 sharePageText" data-i18n="ShareThisPage"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 影片 -->
+      <div class="row pt-3 pb-md-3 pb-2 bg-darkd" id="News_id">
+        <div class=" col-12 bg-darkd text-center text-white overflow-hidden">
+          <span class="titleText_2" data-i18n="Title.News"></span>
+        </div>
+      </div>
+      <div class="row bg-darkd ">
+        <div class="col-md-12 col-sm-12 youtube d-flex justify-content-center">
+          <div class="video-thumbnail fa fa-play-circle-o">
+            <img id="videoImage" src="./images/VideoImage.jpg" class="embedded-video-16-9">
+          </div>
+          <!-- <iframe 
+          data-thumbnail-src="./images/VideoImage.jpg"
+          src="https://www.youtube.com/embed/BI8rpcXitBo?modestbranding=1&iv_load_policy=3&rel=0&autohide=1" frameborder="0" 
+          allowfullscreen allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="embedded-video-16-9"></iframe> -->
+        </div>
+        <div class="col-md-12 col-sm-12"></div>
+      </div>
+
+      <!-- 區塊 1 -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="RuinsInfo_id">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+            <!-- 內文 1 -->
+            <div class="contentCenter px-3 pt-md-5 pt-3">
+              <div class="text-left" style="line-height: 1.2em;">
+                <span class="titleText_1" data-i18n="Title.RuinsInfo"></span>
+              </div>
+
+              <div class="mt-3 text-left">
+                <span data-i18n="RuinsInfo.t1"></span><br><br>
+                <span data-i18n="RuinsInfo.t2"></span><br><br>
+                <span data-i18n="RuinsInfo.t3"></span>
+              </div>
+            </div>
+          </div>
+          <!-- 圖片區塊 1  -->
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
+            <div id="carousel_1" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
+              <!-- carousel  -->
+              <div class="carousel-inner my-gallery">
+                <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/1_1.jpg');">
+                  <a href="./images/Contents/1_1.jpg" itemprop="contentUrl" data-size="1732x1154">
+                    <img class="d-block w-100" src="./images/Contents/1_1.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 區塊 1.5 -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd"
+        id="BiologicalSize_id">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+            <!-- 內文 1 -->
+            <div class="contentCenter px-3 pt-md-5 pt-3">
+              <!-- <div class="text-left" style="line-height: 1.2em;">
+                <span class="titleText_1" data-i18n="Title.BiologicalSize"></span>
+              </div> -->
+
+              <div class="mt-3 text-left">
+                <span data-i18n="BiologicalSize.t1"></span><br><br>
+                <span data-i18n="BiologicalSize.t2"></span><br><br>
+                <span data-i18n="BiologicalSize.t3"></span>
+              </div>
+            </div>
+          </div>
+          <!-- 圖片區塊 1.5  -->
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 420px;">
+            <div id="carousel_1-5" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel_1-5" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel_1-5" data-slide-to="1"></li>
+                <li data-target="#carousel_1-5" data-slide-to="2"></li>
+              </ol>
+              <!-- carousel  -->
+              <div class="carousel-inner my-gallery">
+                <figure class="carousel-item cencen active"
+                  style="background-image: url('./images/Contents/1.5_1.jpg');">
+                  <a href="./images/Contents/1.5_1.jpg" itemprop="contentUrl" data-size="2530x912">
+                    <img class="d-block w-100" src="./images/Contents/1.5_1.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1.5_2.png');">
+                  <a href="./images/Contents/1.5_2.png" itemprop="contentUrl" data-size="1938x897">
+                    <img class="d-block w-100" src="./images/Contents/1.5_2.png" itemprop="thumbnail"
+                      alt="images description" />
+                  </a>
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/1.5_3.jpg');">
+                  <a href="./images/Contents/1.5_3.jpg" itemprop="contentUrl" data-size="1892x1260">
+                    <img class="d-block w-100" src="./images/Contents/1.5_3.jpg" itemprop="thumbnail"
+                      alt="images description" />
+                  </a>
+                </figure>
+              </div>
+              <a class="carousel-control-prev DesktopShow" href="#carousel_1-5" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next DesktopShow" href="#carousel_1-5" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 區塊 2 -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2" id="Evolution_id">
+        <div class="row">
+          <!-- 圖片區塊 2 -->
+          <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden" style="height: 420px;">
+            <div id="carousel_2" class="carousel slide contentCenter  py-3 md-mx-2" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel_2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel_2" data-slide-to="1"></li>
+              </ol>
+              <!-- carousel -->
+              <div class="carousel-inner my-gallery">
+                <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/2_1.jpg');">
+                  <a href="./images/Contents/2_1.jpg" itemprop="contentUrl" data-size="3500x1308">
+                    <img class="d-block w-100" src="./images/Contents/2_1.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/2_2.jpg');">
+                  <a href="./images/Contents/2_2.jpg" itemprop="contentUrl" data-size="1830x810">
+                    <img class="d-block w-100" src="./images/Contents/2_2.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                </figure>
+              </div>
+              <a class="carousel-control-prev DesktopShow" href="#carousel_2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next DesktopShow" href="#carousel_2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <!-- 內文 2 -->
+          <div class="col-md-6 col-sm-12 bg-darkd_2 text-left text-white overflow-hidden">
+            <div class="contentCenter px-3 pt-md-5 pt-3">
+
+              <div class="text-left mb-2 ">
+                <span style="font-size: 2em;font-weight: bold;" data-i18n="Title.Evolution"></span>
+              </div>
+
+              <div class="mt-3 text-left">
+                <span data-i18n="Evolution.t1"></span>
+
+                <br><br>
+                <span data-i18n="Evolution.t2"></span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-3 bg-darkd_2"></div>
+
+
+
+      <!-- 區塊 3 -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Ruins_id">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+            <!-- 內文 3 -->
+            <div class="contentCenter px-3 pt-md-5 pt-3">
+              <div class="text-left" style="line-height: 1.2em;">
+                <span class="titleText_1" data-i18n="Title.Ruins"></span>
+              </div>
+
+              <div class=" mt-3 text-left">
+                <span data-i18n="Ruins.t1"></span>
+                <br><br>
+                <span data-i18n="Ruins.t2"></span>
+                <br><br>
+                <span data-i18n="Ruins.t3"></span>
+
+              </div>
+            </div>
+          </div>
+          <!-- 圖片區域 3 -->
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 450px;">
+            <div id="carousel_3" class="carousel slide contentCenter py-3 md-mx-2" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel_3" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel_3" data-slide-to="1"></li>
+              </ol>
+              <!-- carousel -->
+              <div class="carousel-inner my-gallery">
+                <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/3_1.jpg');">
+                  <a href="./images/Contents/3_1.jpg" itemprop="contentUrl" data-size="1815x2121">
+                    <img class="d-block w-90 " src="./images/Contents/3_1.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/3_2.jpg');">
+                  <a href="./images/Contents/3_2.jpg" itemprop="contentUrl" data-size="1803x1707">
+                    <img class="d-block w-100" src="./images/Contents/3_2.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                </figure>
+              </div>
+              <a class="carousel-control-prev DesktopShow" href="#carousel_3" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next DesktopShow" href="#carousel_3" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 背景圖 -->
+      <div class="fixedBG">
+        <div class="pcShow" style="height: 200px;"></div>
+        <div class="mobileShow" style="height: 120px;"></div>
+      </div>
+
+      <!-- 區塊 4-1 -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="Whale_id">
+        <div class="row">
+          <!-- 標題 -->
+          <div class=" col-12 bg-darkd text-center text-white overflow-hidden pb-md-4 pt-md-1">
+            <span class="titleText_2" data-i18n="Title.Whale"></span>
+          </div>
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden">
+            <!-- 內文 -->
+            <div class="contentCenter px-3 pt-md-2 ">
+              <div class="mt-3 text-left">
+                <span data-i18n="WhaleLegend_1.t1"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_1.t2"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_1.t3"></span>
+
+              </div>
+            </div>
+          </div>
+          <!-- 圖片區塊  -->
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 380px;">
+            <div id="carousel_1" class="carousel slide contentCenter md-mx-2 " data-ride="carousel">
+              <!-- carousel  -->
+              <div class="carousel-inner my-gallery">
+                <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/4_1.jpg');">
+                  <a href="./images/Contents/4_1.jpg" itemprop="contentUrl" data-size="2508x1672">
+                    <img class="d-block w-100" src="./images/Contents/4_1.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 區塊 4-2 -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 justify-content-center bg-darkd" id="Evolution_id">
+        <div class="row">
+          <!-- 內文 2 -->
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden less_1024_show">
+            <div class="contentCenter px-3">
+              <div class="text-left">
+                <span class="legend_class" data-i18n="WhaleLegend_2.t1"></span>
+                <br>
+                <span data-i18n="WhaleLegend_2.t2"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t3"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t4"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t5"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t6"></span>
+                <br><br>
+              </div>
+            </div>
+          </div>
+          <!-- 圖片區塊 -->
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden" style="height: 480px;">
+            <div id="carousel_4" class="carousel slide contentCenter px-3 md-mx-2" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel_4" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel_4" data-slide-to="1"></li>
+                <li data-target="#carousel_4" data-slide-to="2"></li>
+                <li data-target="#carousel_4" data-slide-to="3"></li>
+              </ol>
+              <!-- carousel -->
+              <div class="carousel-inner my-gallery">
+                <figure class="carousel-item cencen active" style="background-image: url('./images/Contents/5_1.jpg');">
+                  <a href="./images/Contents/5_1.jpg" itemprop="contentUrl" data-size="1229x839">
+                    <img class="d-block w-100" src="./images/Contents/5_1.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                  <!-- <figcaption itemprop="caption">
+                    <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                  </figcaption> -->
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_2.jpg');">
+                  <a href="./images/Contents/5_2.jpg" itemprop="contentUrl" data-size="1217x813">
+                    <img class="d-block w-100" src="./images/Contents/5_2.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                  <!-- <figcaption itemprop="caption">
+                    <div data-i18n="WhaleLegend_2.imgDescription_2"></div>
+                  </figcaption> -->
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_3.jpg');">
+                  <a href="./images/Contents/5_3.jpg" itemprop="contentUrl" data-size="1593x2499">
+                    <img class="d-block w-100" src="./images/Contents/5_3.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                  <!-- <figcaption itemprop="caption">
+                    <div data-i18n="WhaleLegend_2.imgDescription_3"></div>
+                  </figcaption> -->
+                </figure>
+                <figure class="carousel-item cencen " style="background-image: url('./images/Contents/5_4.jpg');">
+                  <a href="./images/Contents/5_4.jpg" itemprop="contentUrl" data-size="1440x2560">
+                    <img class="d-block w-100" src="./images/Contents/5_4.jpg" itemprop="thumbnail"
+                      alt="Image description" />
+                  </a>
+                  <!-- <figcaption itemprop="caption">
+                    <div data-i18n="WhaleLegend_2.imgDescription_4"></div>
+                  </figcaption> -->
+                </figure>
+              </div>
+              <a class="carousel-control-prev DesktopShow" href="#carousel_4" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next DesktopShow" href="#carousel_4" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <!-- 內文 2 -->
+          <div class="col-md-6 col-sm-12 bg-darkd text-left text-white overflow-hidden greater_1024_show">
+            <div class="contentCenter px-3">
+              <div class="mt-3 text-left">
+                <span class="legend_class" data-i18n="WhaleLegend_2.t1"></span>
+                <br>
+                <span data-i18n="WhaleLegend_2.t2"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t3"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t4"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t5"></span>
+                <br><br>
+                <span data-i18n="WhaleLegend_2.t6"></span>
+                <br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Other Ruins -->
+      <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="OtherRuins_id">
+        <div class="row">
+          <div class=" col-12 bg-darkd text-center text-white  pb-md-4 pt-md-1">
+            <div class="titleText_2" data-i18n="Title.OtherRuins"></div>
+            <!-- greater 1024 -->
+            <img id="OtherImageDesktop_1" class="pt-3 greater_1024_show" src="./images/Contents/OtherImage_w1.jpg" style="width: 85vw;" >
+            <!-- less 1024 -->
+            <div class="my-gallery pt-3 px-3 less_1024_show">
+              <figure style="background-image: url('./images/Contents/OtherImage_m1.jpg'); margin:0 0 2.5em">
+                <a id="OtherImageMobile_a1" href="./images/Contents/OtherImage_m1.jpg" itemprop="contentUrl" data-size="1498x2300">
+                  <img id="OtherImageMobile_1" class="d-block w-100" src="./images/Contents/OtherImage_m1.jpg" itemprop="thumbnail"
+                    alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+              <figure style="background-image: url('./images/Contents/OtherImage_m2.jpg'); margin:0 0 2.5em">
+                <a id="OtherImageMobile_a2" href="./images/Contents/OtherImage_m2.jpg" itemprop="contentUrl" data-size="1498x2300">
+                  <img id="OtherImageMobile_2" class="d-block w-100" src="./images/Contents/OtherImage_m2.jpg" itemprop="thumbnail" 
+                    alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+              <figure style="background-image: url('./images/Contents/OtherImage_m3.jpg'); margin:0 0 2.5em">
+                <a id="OtherImageMobile_a3" href="./images/Contents/OtherImage_m3.jpg" itemprop="contentUrl" data-size="1498x3394">
+                  <img id="OtherImageMobile_3" class="d-block w-100" src="./images/Contents/OtherImage_m3.jpg" itemprop="thumbnail"
+                    alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+              <figure style="background-image: url('./images/Contents/OtherImage_m4.jpg'); margin:0 0 2.5em">
+                <a id="OtherImageMobile_a4" href="./images/Contents/OtherImage_m4.jpg" itemprop="contentUrl" data-size="1498x3394">
+                  <img id="OtherImageMobile_4" class="d-block w-100" src="./images/Contents/OtherImage_m4.jpg" itemprop="thumbnail"
+                    alt="Image description" />
+                </a>
+                <!-- <figcaption itemprop="caption">
+                  <div data-i18n="WhaleLegend_2.imgDescription_1"></div>
+                </figcaption> -->
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商店 -->
+      <div class="d-md-flex flex-md-equal w-100 px-md-5 px-sm-0 py-3 justify-content-center  bg-store" >
+        <div class="row">
+          <div class=" col-12 bg-store text-center text-white  pb-md-4 pt-md-1">
+            <div class="titleText_2" style="color: black;" data-i18n="Title.Store"></div>
+            <!-- greater 1024 -->
+            <img id="StoreImageDesktop_1" class="greater_1024_show" src="./images/Store/desktop.jpg" style="width: 85vw;" >
+            <!-- less 1024 -->
+            <div class="col-sm-12 bg-store text-left text-white overflow-hidden less_1024_show" style="height: 90%;">
+              <div id="carousel_store" class="carousel slide contentCenter py-3 " data-ride="carousel">
+                <ol class="carousel-indicators" style>
+                  <li data-target="#carousel_store" class="dark_carousel active" data-slide-to="0" ></li>
+                  <li data-target="#carousel_store" class="dark_carousel" data-slide-to="1"></li>
+                  <li data-target="#carousel_store" class="dark_carousel" data-slide-to="2"></li>
+                  <li data-target="#carousel_store" class="dark_carousel" data-slide-to="3"></li>
+                  <li data-target="#carousel_store" class="dark_carousel" data-slide-to="4"></li>
+                  <li data-target="#carousel_store" class="dark_carousel" data-slide-to="5"></li>
+                  <li data-target="#carousel_store" class="dark_carousel" data-slide-to="6"></li>
+                  <li data-target="#carousel_store" class="dark_carousel" data-slide-to="7"></li>
+                </ol>
+                <!-- carousel  -->
+                <div class="carousel-inner my-gallery">
+                  <figure class="carousel-item cencen active" style="background-image: url('./images/store/mobile1.jpg');">
+                    <a href="./images/store/mobile1.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile1.jpg" itemprop="thumbnail"
+                        alt="Image description" />
+                    </a>
+                  </figure>
+                  <figure class="carousel-item cencen " style="background-image: url('./images/store/mobile2.jpg');">
+                    <a href="./images/store/mobile2.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile2.jpg" itemprop="thumbnail"
+                        alt="images description" />
+                    </a>
+                  </figure>
+                  <figure class="carousel-item cencen " style="background-image: url('./images/store/mobile3.jpg');">
+                    <a href="./images/store/mobile3.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile3.jpg" itemprop="thumbnail"
+                        alt="images description" />
+                    </a>
+                  </figure>
+                  <figure class="carousel-item cencen " style="background-image: url('./images/store/mobile4.jpg');">
+                    <a href="./images/store/mobile4.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile4.jpg" itemprop="thumbnail"
+                        alt="images description" />
+                    </a>
+                  </figure>
+                  <figure class="carousel-item cencen " style="background-image: url('./images/store/mobile5.jpg');">
+                    <a href="./images/store/mobile5.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile5.jpg" itemprop="thumbnail"
+                        alt="images description" />
+                    </a>
+                  </figure>
+                  <figure class="carousel-item cencen " style="background-image: url('./images/store/mobile6.jpg');">
+                    <a href="./images/store/mobile6.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile6.jpg" itemprop="thumbnail"
+                        alt="images description" />
+                    </a>
+                  </figure>
+                  <figure class="carousel-item cencen " style="background-image: url('./images/store/mobile7.jpg');">
+                    <a href="./images/store/mobile7.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile7.jpg" itemprop="thumbnail"
+                        alt="images description" />
+                    </a>
+                  </figure>
+                  <figure class="carousel-item cencen " style="background-image: url('./images/store/mobile8.jpg');">
+                    <a href="./images/store/mobile8.jpg" itemprop="contentUrl" data-size="1403x1938">
+                      <img class="d-block w-100" src="./images/store/mobile8.jpg" itemprop="thumbnail"
+                        alt="images description" />
+                    </a>
+                  </figure>
+                </div>
+                <a class="carousel-control-prev DesktopShow" href="#carousel_store" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next DesktopShow" href="#carousel_store" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pt-5 bg-store"></div>
+    </main>
+  </body>
+
+  <!-- mobile Footer -->
+  <footer class="footer mobileShow" style="background-color: #1d1d1d;">
+    <!-- Contact us  ShareThisPage-->
+    <div class="container py-3 px-4">
+      <div>
+        <h2 class="footer_h2" data-i18n="ShareThisPage"></h2>
+        <div class="pt-1">
+          <ul class="menu menu--icon-menu ">
+            <li>
+              <a onclick="window.open(`http://line.naver.jp/R/msg/text/?https://www.thearkmuseum.com/?openExternalBrowser=1`, '_blank')"
+                rel="noopener noreferrer" title="twitter_Share">
+                <span class="f-icon f-line-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a onclick="window.open(`https://twitter.com/share?url=https://www.thearkmuseum.com/`, '_blank')"
+                target="_blank" rel="noopener noreferrer" title="twitter_Share">
+                <span class="f-icon f-twitter-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a onclick="window.open(`https://www.facebook.com/weizheng.tu`, '_blank')" target="_blank"
+                rel="noopener noreferrer" title="ig_Share">
+                <span class="f-icon f-ig-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a onclick="window.open(`https://www.facebook.com/sharer.php?u=https://www.thearkmuseum.com/`, '_blank')"
+                target="_blank" rel="noopener noreferrer" title="facebook_Share">
+                <span class="f-icon f-facebook-icon"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Back Top -->
+      <div class="pt-3">
+        <button class="toTopButtonMobile" onclick="ToScroll('body_id')">
+          <div class="arrow" data-i18n="BackToTop"></div>
+        </button>
+      </div>
+      <!-- Contact Us -->
+      <div>
+        <h2 class="footer_h2 pt-3" data-i18n="AboutUs"></h2>
+        <div class="pt-1">
+          <ul class="menu menu--icon-menu ">
+            <li>
+              <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer"
+                title="facebook(另開新視窗)">
+                <span class="f-icon f-facebook-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank"
+                rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- info -->
+      <div class="pt-4" style="color: white; ">
+        <div data-i18n="Address.Address"></div>
+        <div data-i18n="Address.Phone"></div>
+        <div class="pt-2">
+          <image class="mr-1" src="./images/icon/clock_icon.png" width="16px"></image>
+          <span class="pt-1" style="font-size: 1em;" data-i18n="ExhibitionInfo.WeeksOpen_1"><br>
+            <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
+
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- About  -->
+    <div class="py-2 px-4 " style="color: white; text-align: center;background-color: #000;font-size: 14px;"
+      data-i18n="License"></div>
+  </footer>
+
+  <!-- PC Footer -->
+  <footer class="footer pcShow ">
+    <!-- Contact us -->
+    <div class="pt-3 pb-2 row " style="background-color: #1d1d1d;margin-right:0px">
+      <div class="col-6" style="left:10%">
+        <h2 style="color: white;" data-i18n="AboutUs"></h2>
+        <div class="pt-2">
+          <ul class="menu menu--icon-menu ">
+            <li>
+              <a href="https://www.facebook.com/weizheng.tu" target="_blank" rel="noopener noreferrer"
+                title="facebook(另開新視窗)">
+                <span class="f-icon f-facebook-icon"></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCNg5AbDxmSh0Ny5ouhlwJvg" target="_blank"
+                rel="noopener noreferrer" title="youtube(另開新視窗)" class="f-icon f-youtube-icon">youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- info -->
+      <div class="col-3" style="color: white;">
+        <div style="font-weight: 500;" data-i18n="Address.Title"></div>
+        <div data-i18n="Address.Address"></div>
+        <div data-i18n="Address.Phone"></div>
+        <div class="pt-2">
+          <img src="./images/qrcode.png" style="width: 65px; height: 65px;">
+        </div>
+      </div>
+
+      <div class="col-3" style="color: white;">
+        <div>
+          <div>
+            <div style="font-weight: bold;">
+              <image class=" mr-1" src="./images/icon/clock_icon.png" width="16px"></image>
+              <span data-i18n="ExhibitionInfo.OpeningTitle"></span>
+            </div>
+            <div>
+              <span data-i18n="ExhibitionInfo.WeeksOpen_1"></span>
+              <br>
+              <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
+            </div>
+
+          </div>
+          <br>
+          <!-- Back to the top -->
+          <div style="font-size: 18px; font-weight: 500;cursor:pointer" onclick="ToScroll('body_id')">
+            <span data-i18n="BackToTop"></span>
+            <image class="pt-3 ml-2" style="margin-bottom: 18px;"
+              src="https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg" width="16px">
+            </image>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-2 px-4 " style="color: white;text-align: center;" data-i18n="License"></div>
+
+  </footer>
+</div>
+
+<!-- Photoswipe. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+  <div class="pswp__bg"></div>
+
+  <div class="pswp__scroll-wrap">
+
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+
+    <div class="pswp__ui pswp__ui--hidden">
+
+      <div class="pswp__top-bar">
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+
+      <button class="pswp__button pswp__button--arrow--left DesktopShow" title="Previous (arrow left)">
+      </button>
+
+      <button class="pswp__button pswp__button--arrow--right DesktopShow" title="Next (arrow right)">
+      </button>
+
+      <div class="pswp__caption">
+        <div class="pswp__caption__center" style="text-align: center;font-size: 1em;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/mv_setting.js"></script>
+<script src="./js/ps_setting.js"></script>
+
+<script type="text/javascript" src="./plugin/lang/zhtw.js"></script>
+<script type="text/javascript" src="./plugin/lang/jp.js"></script>
+<script type="text/javascript" src="./plugin/lang/en.js"></script>
+
+<script>
+  let hideTime = 0;
+  var isMobile = /iPhone|iPad|iPod|Android|iPadPro/i.test(navigator.userAgent);
+
+  $(function () {
+    if (isMobile) {
+
+      $(".DesktopShow").hide()
+    } else {
+      $(".MobileDeviceShow").hide()
+    }
+
+
+    // >1024 行動裝置隱藏
+    if (jQuery(window).width() > 1024) {
+      $(".less_1024_show").hide()
+    } else {
+      $(".greater_1024_show").hide()
+    }
+  })
+
+  // init pos setting
+  function loadingModel() {
+    $("#button-load").hide()
+    $(".tooltipDiv").show()
+    $(".arButtonDiv").show()
+    $("#audio_bgm")[0].play()
+
+    // Large
+    if (jQuery(window).width() > 1280) {
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 0%")
+      // Midium
+    } else if (jQuery(window).width() > 768) {
+      $("#dimension-demo").attr("camera-orbit", "0deg 45deg 80%")
+      // Small
+    } else {
+      $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
+    }
+
+  }
+
+  // Scroll
+  function ToScroll(id) {
+    if (jQuery(window).width() > 768) {
+      $("html, body").animate({
+        scrollTop: $(`#${id}`).offset().top
+      }, 800);
+    } else {
+      $("html, body").animate({
+        scrollTop: $(`#${id}`).offset().top - 300
+      }, 800);
+    }
+  }
+
+  // Navbar
+  $('.navbar-nav>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+  // toggleTip
+  function toggleTip() {
+    $(".tooltipText").toggleClass('showTip')
+  }
+
+  // Image Setting
+  $(document).ready(function () {
+    $("#carouselExampleIndicators").on("swiperight", function () {
+      $(this).carousel('prev');
+    });
+    $("#carouselExampleIndicators").on("swipeleft", function () {
+      $(this).carousel('next');
+    });
+    $('.carousel').carousel({
+      interval: 10000
+    })
+  });
+</script>
+
+<script>
+  let lang = window.navigator.userLanguage || window.navigator.language;
+  let lng = 'en'
+  if (lang.indexOf('zh') != -1) {
+    lng = 'zhtw'
+  } else if (lang == 'ja') {
+    lng = 'jp'
+  } else {
+    lng = 'en'
+  }
+
+  let i18 = i18next.init({
+    lng: lng,
+    resources: {
+      zhtw,
+      jp,
+      en
+    }
+  }, function (err, t) {
+    jqueryI18next.init(i18next, $);
+    $('#i18next').localize();
+    updateWebTitle()
+    changeImgLang(i18next.language)
+  });
+
+  function langChange(lang) {
+    i18next.changeLanguage(lang)
+    $('#i18next').localize();
+    $('.navbar-collapse').collapse('hide')
+    updateWebTitle()
+    changeImgLang(i18next.language)
+  }
+
+  function changeImgLang(lang){
+    let en01 = '1498x3917'
+    let en02 = '1498x5462'
+    let jp01 = '1498x3122'
+    let jp02 = '1498x4415'
+    let zhtw01 = '1498x2300'
+    let zhtw02 = '1498x3394'
+
+    $("#OtherImageDesktop_1").attr('src' , `./images/Others/${lang}/desktop.jpg`)
+    $("#OtherImageMobile_a1").attr('href' , `./images/Others/${lang}/mobile1.jpg`)
+    $("#OtherImageMobile_1").attr('src' , `./images/Others/${lang}/mobile1.jpg`)
+    $("#OtherImageMobile_a2").attr('href' , `./images/Others/${lang}/mobile2.jpg`)
+    $("#OtherImageMobile_2").attr('src' , `./images/Others/${lang}/mobile2.jpg`)
+    $("#OtherImageMobile_a3").attr('href' , `./images/Others/${lang}/mobile3.jpg`)
+    $("#OtherImageMobile_3").attr('src' , `./images/Others/${lang}/mobile3.jpg`)
+    $("#OtherImageMobile_a4").attr('href' , `./images/Others/${lang}/mobile4.jpg`)
+    $("#OtherImageMobile_4").attr('src' , `./images/Others/${lang}/mobile4.jpg`)
+
+    if (lang == 'jp'){
+      $("#OtherImageMobile_a1").attr('data-size' , jp01)
+      $("#OtherImageMobile_a2").attr('data-size' , jp01)
+      $("#OtherImageMobile_a3").attr('data-size' , jp02)
+      $("#OtherImageMobile_a4").attr('data-size' , jp02)
+    }
+    else if (lang == 'zhtw'){
+      $("#OtherImageMobile_a1").attr('data-size' , zhtw01)
+      $("#OtherImageMobile_a2").attr('data-size' , zhtw01)
+      $("#OtherImageMobile_a3").attr('data-size' , zhtw02)
+      $("#OtherImageMobile_a4").attr('data-size' , zhtw02)
+    }
+    else if (lang == 'en'){
+      $("#OtherImageMobile_a1").attr('data-size' , en01)
+      $("#OtherImageMobile_a2").attr('data-size' , en01)
+      $("#OtherImageMobile_a3").attr('data-size' , en02)
+      $("#OtherImageMobile_a4").attr('data-size' , en02)
+    }
+  }
+
+  function updateWebTitle() {
+    let nowlang = i18next.language
+    let webTitle = i18next.store.data[nowlang].translation.ExhibitionInfo.Title
+    $('title').text(webTitle)
+  }
+
+</script>
+
+
+</html>
