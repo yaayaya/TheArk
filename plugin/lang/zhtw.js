@@ -8,7 +8,7 @@ let zhtw = {
             Ruins: '真脇遺址',
             Whale: '鯨魚傳說',
             OtherRuins: '其他遺址',
-            Store : '商店'
+            Store : '歡迎來到方舟博物館商店'
         },
         Lang: {
             Title: "語言",

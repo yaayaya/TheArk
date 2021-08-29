@@ -9,7 +9,7 @@ let jp = {
       Ruins: "真脇遺跡",
       Whale: "鯨伝說",
       OtherRuins: 'その他の遺跡',
-      Store : 'ストア'
+      Store : '方舟ミュージアムショップ へようこそ'
     },
     Lang: {
       Title: "言語",

@@ -8,7 +8,7 @@ let en = {
             Ruins: 'Mawaki Site',
             Whale: 'Whale legends',
             OtherRuins: 'Other Sites',
-            Store : 'Store'
+            Store : 'Welcome to The Ark Museum Shop'
         },
         Lang: {
             Title: "Language",
