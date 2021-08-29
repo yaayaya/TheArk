@@ -2,7 +2,7 @@ let en = {
     translation: {
         Title: {
             News: 'News',
-            RuinsInfo: 'Site Info',
+            RuinsInfo: 'Site Information',
             BiologicalSize : '生物大小',
             Evolution: 'Evolution',
             Ruins: 'Mawaki Site',
