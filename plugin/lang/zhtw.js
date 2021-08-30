@@ -109,7 +109,8 @@ let zhtw = {
         Address: {
             Title: '地址:',
             Address: '日本珠洲市折戸町石川縣 927-1446',
-            Phone: '03-329-6662'
+            Phone: '03-329-6662',
+            TwAddress : '333009 台灣桃園市龜山區中坑街521號'
         },
         License: "© 2021 Tu's Archeology Team 版權所有"
     }

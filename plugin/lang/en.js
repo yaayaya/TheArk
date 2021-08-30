@@ -109,7 +109,8 @@ let en = {
         Address: {
             Title: 'Address:',
             Address: 'Oritomachi, Suzu Shi, Ishikawa Ken, 927-1446, Japan',
-            Phone: '03-329-6662'
+            Phone: '03-329-6662',
+            TwAddress : 'No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)'
         },
         License: "© 2021 Tu's Archeology Team All Rights Reserved"
     }

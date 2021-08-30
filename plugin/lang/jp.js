@@ -110,7 +110,8 @@ let jp = {
     Address: {
       Title: "アドレス:",
       Address: "珠洲市折戸町石川県927-1446",
-      Phone: '03-329-6662'
+      Phone: '03-329-6662',
+      TwAddress : 'No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)'
     },
     License: "© 2021 Tu's Archeology Team All Rights Reserved",
   }
