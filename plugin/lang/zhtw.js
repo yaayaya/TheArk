@@ -35,11 +35,11 @@ let zhtw = {
         loadingText: '讀取3D模型',
         ExhibitionInfo: {
             Title: "《珠洲鯨魚傳說遺址》",
-            TodayOpen: "本日開館 09:00 - 17:30",
-            WeeksOpenFull: "開館時間｜星期二～星期日 9:00-17:30　每週二休館",
-            OpeningTitle: "開館時間",
-            WeeksOpen_1: "星期二～星期日 9:00-17:30",
-            WeeksOpen_2: "每週二休館",
+            TodayOpen: "本日開放 09:00 - 17:30",
+            WeeksOpenFull: "開放時間 每日 9:00-17:30",
+            OpeningTitle: "開放時間",
+            WeeksOpen_1: "每日 9:00-17:30",
+            WeeksOpen_2: "",
         },
         ShareThisPage: "分享網站",
         RuinsInfo: {

@@ -36,10 +36,10 @@ let en = {
         ExhibitionInfo: {
             Title: "《The whale legends of Noto Town and Suzu City》",
             TodayOpen: "Open today 09:00 - 17:30",
-            WeeksOpenFull: "Opening time｜Tuesday～Sunday 9:00-17:30　Closed every Tuesday",
+            WeeksOpenFull: "Opening time 9:00-17:30　Open Everyday",
             OpeningTitle: "Opening time",
-            WeeksOpen_1: "Tuesday～Sunday 9:00-17:30",
-            WeeksOpen_2: "Closed every Tuesday",
+            WeeksOpen_1: "Everyday 9:00-17:30",
+            WeeksOpen_2: "",
         },
         ShareThisPage: "Share This Page",
         RuinsInfo: {

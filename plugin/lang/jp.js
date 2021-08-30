@@ -36,11 +36,11 @@ let jp = {
     loadingText: "Loading 3D Model",
     ExhibitionInfo: {
       Title: "《珠洲クジラ伝説遺跡》",
-      TodayOpen: "本日開館 09:00 - 17:30",
-      WeeksOpenFull: "開館時間｜火曜日～ 日曜日 9:00-17:30　毎週月曜日休館",
-      OpeningTitle: "開館時間",
-      WeeksOpen_1: "火曜日～ 日曜日 9:00-17:30",
-      WeeksOpen_2: "毎週月曜日休館",
+      TodayOpen: "本日オープン 09:00 - 17:30",
+      WeeksOpenFull: "オープン時間　每日 9:00-17:30",
+      OpeningTitle: "オープン時間",
+      WeeksOpen_1: "每日 9:00-17:30",
+      WeeksOpen_2: "",
     },
     ShareThisPage: "シェアリンク",
     RuinsInfo: {
