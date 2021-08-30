@@ -39,7 +39,7 @@ let jp = {
       TodayOpen: "本日オープン 09:00 - 17:30",
       WeeksOpenFull: "オープン時間　每日 9:00-17:30",
       OpeningTitle: "オープン時間",
-      WeeksOpen_1: "每日 9:00-17:30",
+      WeeksOpen_1: "オープン時間 每日 9:00-17:30",
       WeeksOpen_2: "",
     },
     ShareThisPage: "シェアリンク",

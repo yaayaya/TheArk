@@ -38,7 +38,7 @@ let en = {
             TodayOpen: "Open today 09:00 - 17:30",
             WeeksOpenFull: "Opening time 9:00-17:30　Open Everyday",
             OpeningTitle: "Opening time",
-            WeeksOpen_1: "Everyday 9:00-17:30",
+            WeeksOpen_1: "Open Everyday 9:00-17:30",
             WeeksOpen_2: "",
         },
         ShareThisPage: "Share This Page",

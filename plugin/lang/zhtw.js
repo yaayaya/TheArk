@@ -38,7 +38,7 @@ let zhtw = {
             TodayOpen: "本日開放 09:00 - 17:30",
             WeeksOpenFull: "開放時間 每日 9:00-17:30",
             OpeningTitle: "開放時間",
-            WeeksOpen_1: "每日 9:00-17:30",
+            WeeksOpen_1: "每日開放 9:00-17:30 ",
             WeeksOpen_2: "",
         },
         ShareThisPage: "分享網站",
