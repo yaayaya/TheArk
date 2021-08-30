@@ -71,12 +71,12 @@ const movePan = (thisX, thisY) => {
     // console.log(`${target.x}m ${target.y}m ${target.z}m`)
 
     // This pauses turntable rotation
-    modelViewer.dispatchEvent(new CustomEvent(
-        'camera-change', {
-            detail: {
-                source: 'user-interaction'
-            }
-        }));
+    // modelViewer.dispatchEvent(new CustomEvent(
+    //     'camera-change', {
+    //         detail: {
+    //             source: 'user-interaction'
+    //         }
+    //     }));
 };
 
 const recenter = (pointer) => {
