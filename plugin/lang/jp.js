@@ -4,7 +4,7 @@ let jp = {
     Title: {
       News: "ニュース",
       RuinsInfo: "遺跡の情報",
-      BiologicalSize : '生物大小',
+      BiologicalSize : 'サイズ',
       Evolution: "進化の可能性",
       Ruins: "真脇遺跡",
       Whale: "鯨伝說",
@@ -36,10 +36,10 @@ let jp = {
     loadingText: "Loading 3D Model",
     ExhibitionInfo: {
       Title: "《珠洲クジラ伝説遺跡》",
-      TodayOpen: "本日開館 09:00 - 17: 00",
-      WeeksOpenFull: "開館時間｜火曜日～ 日曜日 9:00-17:00　毎週月曜日休館",
+      TodayOpen: "本日開館 09:00 - 17:30",
+      WeeksOpenFull: "開館時間｜火曜日～ 日曜日 9:00-17:30　毎週月曜日休館",
       OpeningTitle: "開館時間",
-      WeeksOpen_1: "火曜日～ 日曜日 9:00-17:00",
+      WeeksOpen_1: "火曜日～ 日曜日 9:00-17:30",
       WeeksOpen_2: "毎週月曜日休館",
     },
     ShareThisPage: "シェアリンク",
@@ -109,7 +109,7 @@ let jp = {
     AboutUs: "関連リンク",
     Address: {
       Title: "アドレス:",
-      Address: "No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)",
+      Address: "珠洲市折戸町石川県927-1446",
       Phone: '03-329-6662'
     },
     License: "© 2021 Tu's Archeology Team All Rights Reserved",

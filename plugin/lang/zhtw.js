@@ -35,10 +35,10 @@ let zhtw = {
         loadingText: '讀取3D模型',
         ExhibitionInfo: {
             Title: "《珠洲鯨魚傳說遺址》",
-            TodayOpen: "本日開館 09:00 - 17: 00",
-            WeeksOpenFull: "開館時間｜星期二～星期日 9:00-17:00　每週二休館",
+            TodayOpen: "本日開館 09:00 - 17:30",
+            WeeksOpenFull: "開館時間｜星期二～星期日 9:00-17:30　每週二休館",
             OpeningTitle: "開館時間",
-            WeeksOpen_1: "星期二～星期日 9:00-17:00",
+            WeeksOpen_1: "星期二～星期日 9:00-17:30",
             WeeksOpen_2: "每週二休館",
         },
         ShareThisPage: "分享網站",
@@ -108,7 +108,7 @@ let zhtw = {
         AboutUs: "關於我們",
         Address: {
             Title: '地址:',
-            Address: '333009台灣桃園市龜山區中坑街521號',
+            Address: '日本珠洲市折戸町石川縣 927-1446',
             Phone: '03-329-6662'
         },
         License: "© 2021 Tu's Archeology Team 版權所有"

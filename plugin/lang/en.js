@@ -3,10 +3,10 @@ let en = {
         Title: {
             News: 'News',
             RuinsInfo: 'Site Information',
-            BiologicalSize : '生物大小',
+            BiologicalSize : 'Biological Size',
             Evolution: 'Evolution',
             Ruins: 'Mawaki Site',
-            Whale: 'Whale legends',
+            Whale: 'Whale Legends',
             OtherRuins: 'Other Sites',
             Store : 'Welcome to The Ark Museum Shop'
         },
@@ -35,10 +35,10 @@ let en = {
         loadingText: 'Loading 3D Model',
         ExhibitionInfo: {
             Title: "《The whale legends of Noto Town and Suzu City》",
-            TodayOpen: "Open today 09:00 - 17: 00",
-            WeeksOpenFull: "Opening time｜Tuesday～Sunday 9:00-17:00　Closed every Tuesday",
+            TodayOpen: "Open today 09:00 - 17:30",
+            WeeksOpenFull: "Opening time｜Tuesday～Sunday 9:00-17:30　Closed every Tuesday",
             OpeningTitle: "Opening time",
-            WeeksOpen_1: "Tuesday～Sunday 9:00-17:00",
+            WeeksOpen_1: "Tuesday～Sunday 9:00-17:30",
             WeeksOpen_2: "Closed every Tuesday",
         },
         ShareThisPage: "Share This Page",
@@ -108,7 +108,7 @@ let en = {
         AboutUs: "About Us",
         Address: {
             Title: 'Address:',
-            Address: 'No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)',
+            Address: 'Oritomachi, Suzu Shi, Ishikawa Ken, 927-1446, Japan',
             Phone: '03-329-6662'
         },
         License: "© 2021 Tu's Archeology Team All Rights Reserved"
