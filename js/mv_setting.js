@@ -4,17 +4,17 @@ const bar = progress.querySelector('.bar');
 
 
 // Status check
-modelViewer.addEventListener('ar-status', (event) => {
-    alert(event)
-    console.log(event)
-    if (event.detail.status === 'failed') {
-        const error = document.querySelector("#error");
-        error.classList.remove('hide');
-        error.addEventListener('transitionend', (event) => {
-            error.classList.add('hide');
-        });
-    }
-});
+// modelViewer.addEventListener('ar-status', (event) => {
+//     alert(event)
+//     console.log(event)
+//     if (event.detail.status === 'failed') {
+//         const error = document.querySelector("#error");
+//         error.classList.remove('hide');
+//         error.addEventListener('transitionend', (event) => {
+//             error.classList.add('hide');
+//         });
+//     }
+// });
 
 // Loading bar
 modelViewer.addEventListener('progress', (event) => {
