@@ -6,7 +6,6 @@ const bar = progress.querySelector('.bar');
 // Status check
 modelViewer.addEventListener('ar-status', (event) => {
     alert("This device is not supported AR mode.")
-    console.log(event)
     if (event.detail.status === 'failed') {
         const error = document.querySelector("#error");
         error.classList.remove('hide');

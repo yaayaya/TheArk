@@ -34,7 +34,7 @@ let en = {
         },
         loadingText: 'Loading 3D Model',
         ExhibitionInfo: {
-            Title: "《The whale legends of Noto Town and Suzu City》",
+            Title: "《Archaeological Site of the Whale Legend in Suzu》",
             TodayOpen: "Open today 09:00 - 17:30",
             WeeksOpenFull: "Opening time 9:00-17:30　Open Everyday",
             OpeningTitle: "Opening time",
