@@ -943,20 +943,13 @@
     }
   })
 
-  focus();
-  var listener = window.addEventListener('blur', function () {
-    if (document.activeElement === document.getElementById('ytIframe')) {
-      $("#audio_bgm")[0].pause()
-    }
-    window.removeEventListener('blur', listener);
-  });
-
   // init pos setting
   function loadingModel() {
     $("#button-load").hide()
     $(".arButtonDiv").show()
+    let audio = $("#audio_bgm")[0] 
     $("#audio_bgm")[0].play()
-    $("#audio_bgm")[0].volume = 0.2
+    $("#audio_bgm")[0].volume = 0.3
 
     // Large
     if (jQuery(window).width() > 1280) {
