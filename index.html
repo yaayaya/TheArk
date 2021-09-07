@@ -118,11 +118,11 @@
 
     <main>
       <!-- BGM -->
-      <!-- <div style="display: none;">
+      <div style="display: none;">
         <audio id="audio_bgm" controls loop src="./plugin/bgm.mp3">
         </audio>
         <code>audio</code> element.
-      </div> -->
+      </div>
 
       <!-- 上方區塊 AR -->
       <div class="position-relative overflow-hidden text-left ">
@@ -138,7 +138,7 @@
           <model-viewer exposure="2" id="dimension-demo" ar-modes="webxr scene-viewer quick-look"
             class="text-center vmc" max-camera-orbit="auto 86deg auto" min-camera-orbit="auto 7deg auto"
             src="./glb/0829.glb" 
-              ios-src="./glb/0829.usdz"
+            ios-src="./glb/0829.usdz"
             environment-Image="https://i.imgur.com/rIqOiW7.jpeg"
             alt="A 3D model" camera-controls ar reveal="interaction">
             <img id="arButton" 
@@ -1007,7 +1007,8 @@
   function loadingModel() {
     $("#button-load").hide()
     $(".arButtonDiv").show()
-    // $("#audio_bgm")[0].play()
+    $("#audio_bgm")[0].volume = 0.5
+    $("#audio_bgm")[0].play()
 
     // Large
     if (jQuery(window).width() > 1280) {
