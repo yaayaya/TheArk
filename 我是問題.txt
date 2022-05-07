@@ -85,3 +85,24 @@ https://yaayaya.github.io/TheArk/indexOK_0822.html
 https://yaayaya.github.io/TheArk/indexOK_0431.html
 
 https://yaayaya.github.io/TheArk/index.html
+
+
+關於我們字體改成1.8rem
+
+平板版標題選單修改
+
+下午 05:53 2022/5/6、AR ICON刪除
+
+卜南文明遺跡-大旗遺址  ->  大旗遺址  #先不動
+在某某地方至右
+
+館藏文物 中文中文
+
+大標題更新為洞洞圖  手機板照舊
+
+標題至左
+
+標題都同行
+
+
+內文顏色變暗

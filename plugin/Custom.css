@@ -1,7 +1,9 @@
+/* 內容顏色 #f5f5f5cf */
+
 /* 字體大小 */
 html {
   font-size: 1.1rem;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 @include media-breakpoint-up(sm) {
@@ -28,6 +30,14 @@ html {
   text-align: center;
 }
 
+.nav-item-BTitle {
+  color: rgb(255 255 255 / 80%);
+  cursor: pointer;
+  text-align: left;
+  padding-left: 1.2rem !important;
+  padding-right: 1.2rem !important;
+}
+
 /* 電腦版CSS */
 @media (min-width: 768px) {
   .navbar-logo {
@@ -42,6 +52,10 @@ html {
     position: relative;
   }
 
+  .pcShowNB{
+    position: relative;
+  }
+
   .mobileShow {
     display: none;
   }
@@ -52,8 +66,41 @@ html {
     margin: 0 auto;
   }
 
-  .fixedBG {
-    background-image: url("../images/bg_PC.jpg");
+  .fixedBG_PC_whale {
+    background-image: url("../images/Background/whale_bg_PC.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fixedBG_PC_giant {
+    background-image: url("../images/Background/giant_bg_PC.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fixedBG_PC_plant {
+    background-image: url("../images/Background/plant_bg_PC.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .fixedBG_PC_BuNam {
+    background-image: url("../images/Background/BuNam_bg_PC.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .fixedBG_PC_collection {
+    background-image: url("../images/Background/collection_bg_PC.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -163,8 +210,8 @@ html {
   background-position: center;
 }
 
-.fixed-img {
-  background-image: url("../images/bg_mobile.jpg");
+.fixedBG_mobile {
+  background-image: url("../images/Background/whale_bg_mobile.jpg");
   width: 100%;
   height: 100%;
   position: fixed;
@@ -174,9 +221,36 @@ html {
   z-index: -1;
 }
 
+/* .fixedBG_mobile_BuNam {
+  background-image: url("../images/Background/BuNam_bg_mobile.png");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.fixedBG_mobile_collection {
+  background-image: url("../images/Background/collection_bg_mobile.png");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+} */
+
+
 /* 手機板CSS */
 @media (max-width: 768px) {
   .pcShow {
+    display: none !important;
+  }
+
+  .pcShowNB{
     display: none !important;
   }
 
@@ -195,7 +269,17 @@ html {
     margin: 0 auto;
   }
 
-  .fixedBG {}
+  .fixedBG_PC_whale {
+  }
+
+  .fixedBG_PC_BuNam {
+  }
+
+  .fixedBG_PC_giant {
+  }
+
+  .fixedBG_PC_collection {
+  }
 
   .bg-darkGradient {
     background-color: #000;
@@ -262,7 +346,7 @@ html {
   background-color: #e5e5e5;
 }
 
-.dark_carousel{
+.dark_carousel {
   background-color: #000 !important;
 }
 
@@ -291,7 +375,7 @@ html {
 }
 
 /* This keeps child nodes hidden while the element loads */
-:not(:defined)>* {
+:not(:defined) > * {
   display: none;
 }
 
@@ -387,7 +471,7 @@ html {
   }
 }
 
-/* hero title 手機板 */
+/* hero title 手機版 */
 @media (max-width: 768px) {
   .hero_title {
     font-size: 1.77778rem;
@@ -421,7 +505,8 @@ html {
 }
 
 .f-youtube-icon {
-  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat center/contain;
+  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat
+    center/contain;
 }
 
 .f-twitter-icon {
@@ -507,7 +592,7 @@ html {
   opacity: 1;
 }
 
-#progress>.bar {
+#progress > .bar {
   width: 100%;
   height: 100%;
   background-color: #1d1d1d;
@@ -556,7 +641,7 @@ html {
   }
 }
 
-@media (man-width: 1025px) {
+@media (min-width: 1025px) {
   .carousel {
     width: 100%;
   }
@@ -585,27 +670,34 @@ html {
 
 .titleText_1,
 .titleText_2 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 2em;
   font-weight: bold;
+  line-height: 1.2em;
+}
+
+.subTitleText_1{
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.2em;
 }
 
 .footer_h2 {
   color: white;
   letter-spacing: 2px;
-  font-weight: bold;
+  font-size: 1.8rem !important;
 }
 
-.navbar-default .navbar-nav>.show>a,
-.navbar-default .navbar-nav>.show>a:focus,
-.navbar-default .navbar-nav>.show>a:hover {
+.navbar-default .navbar-nav > .show > a,
+.navbar-default .navbar-nav > .show > a:focus,
+.navbar-default .navbar-nav > .show > a:hover {
   color: #555;
   background-color: #e7e7e7;
 }
 
 .nav-link {
   color: rgb(255 255 255 / 90%) !important;
-
 }
 
 .nav-link:hover {
@@ -628,16 +720,20 @@ html {
   opacity: 0;
 }
 
+.dropdown{
+  white-space: nowrap;
+}
+
 .dropdown .show {
-  max-height: 200px;
+  max-height: 250px;
   opacity: 1;
-  padding: .5rem 0;
-  margin: .125rem 0 0;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
 }
 
 .legend_class {
   display: block;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 .video-thumbnail {
@@ -652,7 +748,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  background: url('../images/play_button.png')  no-repeat;
+  background: url("../images/play_button.png") no-repeat;
   content: "";
   width: 50px;
   height: 50px;
@@ -661,4 +757,79 @@ html {
 }
 .video-thumbnail:hover:before {
   opacity: 1;
+}
+
+.imgTitleText {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f5f5f5cf !important;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.subTitle{
+  font-size: 1.4em;
+  color : white;
+  font-weight: bold;
+}
+
+.BTitleBar{
+  display: block !important; 
+  
+  padding: 10px ;
+}
+
+.STitleBarButton{
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(3%, -50%);
+}
+
+/* override Bootstrap */
+.navbar-expand-lg .navbar-nav .BTitle-dropdown-menu {
+  position: absolute !important;
+}
+
+.BigTitleInImg {
+  position: absolute;
+  color: white;
+  top: 35%;
+  left: 5%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(0%, 50%);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.contentColor{
+  color:#f5f5f5cf
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #f5f5f5cf;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  background-color: #f5f5f5cf;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

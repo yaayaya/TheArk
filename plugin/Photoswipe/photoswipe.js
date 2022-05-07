@@ -332,6 +332,7 @@ var _options = {
     },
     getDoubleTapZoom: function(isMouseClick, item) {
     	if(isMouseClick) {
+			console.log("test")
     		return 1;
     	} else {
     		return item.initialZoomLevel < 0.7 ? 1 : 1.33;

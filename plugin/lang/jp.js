@@ -1,6 +1,12 @@
 let jp = {
   translation: {
-
+    BTitle: {
+      whale: "Whale Legends",
+      giant: "Giant Site",
+      plant: "Dayan Site",
+      BuNam: "Bu-Nam Site",
+      collection: "Collection",
+    },
     Title: {
       News: "ニュース",
       RuinsInfo: "遺跡の情報",
@@ -36,6 +42,7 @@ let jp = {
     loadingText: "Loading 3D Model",
     ExhibitionInfo: {
       Title: "《珠洲クジラ伝説遺跡》",
+      SubTitle:"",
       TodayOpen: "本日オープン 09:00 - 17:30",
       WeeksOpenFull: "オープン時間　每日 9:00-17:30",
       OpeningTitle: "オープン時間",
