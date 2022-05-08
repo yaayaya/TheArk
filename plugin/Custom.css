@@ -82,7 +82,7 @@ html {
   }
 
   .fixedBG_PC_giant {
-    background-image: url("../images/Background/giant_bg_PC.png");
+    background-image: url("../images/Background/giant_bg_PC.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -90,7 +90,7 @@ html {
   }
 
   .fixedBG_PC_plant {
-    background-image: url("../images/Background/plant_bg_PC.png");
+    background-image: url("../images/Background/plant_bg_PC.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -99,7 +99,7 @@ html {
 
 
   .fixedBG_PC_BuNam {
-    background-image: url("../images/Background/BuNam_bg_PC.png");
+    background-image: url("../images/Background/BuNam_bg_PC.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -107,7 +107,7 @@ html {
   }
 
   .fixedBG_PC_collection {
-    background-image: url("../images/Background/collection_bg_PC.png");
+    background-image: url("../images/Background/collection_bg_PC.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
