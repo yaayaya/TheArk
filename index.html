@@ -81,18 +81,24 @@
   </script>
 
 </head>
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
 <div id="i18next">
 
   <body id="body_id">
     <div class="fixedBG_mobile"></div>
     <div>
       <!-- 導覽列 -->
-      <nav class="navbar navbar-expand-lg navbar-dark  navClass bg-darkd" id="vueNav">
+      <nav class="navWrap navbar navbar-expand-lg navbar-dark  navClass bg-darkd" id="vueNav">
         <div class="d-flex flex-grow-1">
-
+          <!-- ICON -->
           <img src="./images/icon/logo.jpg" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
 
-          <div class="w-100" style="display: flex; align-items: center;">
+          <!-- 手機、平板大標 -->
+          <div class="w-100 mobileShow" style="display: flex; align-items: center;">
             <!-- 大標 -->
             <div class="collapse navbar-collapse flex-grow-1 " style="display: inline-block;">
               <div class="navbar-nav  flex-nowrap ">
@@ -100,12 +106,18 @@
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" :data-i18n="BTitle">
                   </a>
-                  <div class="dropdown-menu BTitle-dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
-                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.whale" @click="changePage('whale')"></a>
-                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.giant" @click="changePage('giant')"></a>
-                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.plant" @click="changePage('plant')"></a>
-                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.BuNam" @click="changePage('BuNam')"></a>
-                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.collection" @click="changePage('collection')"></a>
+                  <div class="dropdown-menu BTitle-dropdown-menu" aria-labelledby="navbarDropdown"
+                    style="background-color: #1d1d1d;">
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.whale"
+                      @click="changePage('whale')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.giant"
+                      @click="changePage('giant')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.plant"
+                      @click="changePage('plant')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.BuNam"
+                      @click="changePage('BuNam')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.collection"
+                      @click="changePage('collection')"></a>
                   </div>
                 </li>
               </div>
@@ -117,42 +129,87 @@
           </div>
         </div>
 
+        <!-- PC 大、小標 -->
+        <div class="pcShow" style="text-align: right;">
+          <!-- 大標 -->
+          <div class="pc_BTitle_button">
+            <a class="nav-item-BTitle  hover-underline-animation dInlineBlock" data-i18n="BTitle.whale"
+              @click="changePage('whale')"></a>
+            <a class="nav-item-BTitle  hover-underline-animation dInlineBlock" data-i18n="BTitle.giant"
+              @click="changePage('giant')"></a>
+            <a class="nav-item-BTitle  hover-underline-animation dInlineBlock" data-i18n="BTitle.plant"
+              @click="changePage('plant')"></a>
+            <a class="nav-item-BTitle  hover-underline-animation dInlineBlock" data-i18n="BTitle.BuNam"
+              @click="changePage('BuNam')"></a>
+            <a class="nav-item-BTitle  hover-underline-animation dInlineBlock" data-i18n="BTitle.collection"
+              @click="changePage('collection')"></a>
+          </div>
 
-        <!-- 小標 -->
-        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
-          <div class="navbar-nav ml-auto flex-nowrap ">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
-              </a>
-              <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
-                <a v-show="currentPN == 'whale' " class="nav-item nav-link hover-underline-animation" data-i18n="Lang.jp"
-                  onclick="langChange('jp')"></a>
-                <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.zhtw" onclick="langChange('zhtw')"></a>
-                <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.en" onclick="langChange('en')"></a>
-              </div>
-            </li>
-            <a v-show="currentPN == 'whale' || currentPN == 'giant' " class="nav-item nav-link mx-2"
+          <!-- 小標 -->
+          <div class="pt-3 contentColor pc_STitle_button">
+            <a v-show="currentPN == 'whale' || currentPN == 'giant' " class="hover-underline-animation dInlineBlock nav-item mx-2"
               data-i18n="Title.News" onclick="ToScroll('News_id')"></a>
             <a v-show="currentPN == 'whale' || currentPN == 'giant' || currentPN == 'plant'  || currentPN == 'BuNam' "
-              class="nav-item nav-link mx-2" data-i18n="Title.RuinsInfo" onclick="ToScroll('RuinsInfo_id')"></a>
-            <a v-show="currentPN == 'whale'" class="nav-item nav-link mx-2" data-i18n="Title.Evolution"
+              class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.RuinsInfo" onclick="ToScroll('RuinsInfo_id')"></a>
+            <a v-show="currentPN == 'whale'" class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.Evolution"
               onclick="ToScroll('Evolution_id')"></a>
-            <a v-show="currentPN == 'whale'" class="nav-item nav-link mx-2" data-i18n="Title.Ruins"
+            <a v-show="currentPN == 'whale'" class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.Ruins"
               onclick="ToScroll('Ruins_id')"></a>
-            <a v-show="currentPN == 'whale'" class="nav-item nav-link mx-2" data-i18n="Title.Whale"
+            <a v-show="currentPN == 'whale'" class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.Whale"
               onclick="ToScroll('Whale_id')"></a>
 
-            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.giant"
+            <a v-show="currentPN == 'collection'" class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.giant"
               onclick="ToScroll('giant_id')"></a>
-            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.biological"
+            <a v-show="currentPN == 'collection'" class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.biological"
               onclick="ToScroll('biological_id')"></a>
-            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.plant"
+            <a v-show="currentPN == 'collection'" class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.plant"
               onclick="ToScroll('plant_id')"></a>
-            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.BuNam"
+            <a v-show="currentPN == 'collection'" class="hover-underline-animation dInlineBlock nav-item mx-2" data-i18n="Title.BuNam"
               onclick="ToScroll('BuNam_id')"></a>
+          </div>
+        </div>
 
-            <!-- <a class="nav-item nav-link mx-2" data-i18n="Title.OtherRuins" onclick="ToScroll('OtherRuins_id')"></a> -->
+
+        <!-- mobile 小標 -->
+        <div class="mobileShow" style="width: 100%">
+          <div class=" collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+
+            <div class="navbar-nav ml-auto flex-nowrap ">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
+                </a>
+                <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
+                  <a v-show="currentPN == 'whale' " class="nav-item nav-link hover-underline-animation"
+                    data-i18n="Lang.jp" onclick="langChange('jp')"></a>
+                  <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.zhtw"
+                    onclick="langChange('zhtw')"></a>
+                  <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.en"
+                    onclick="langChange('en')"></a>
+                </div>
+              </li>
+              <a v-show="currentPN == 'whale' || currentPN == 'giant' " class="nav-item nav-link mx-2"
+                data-i18n="Title.News" onclick="ToScroll('News_id')"></a>
+              <a v-show="currentPN == 'whale' || currentPN == 'giant' || currentPN == 'plant'  || currentPN == 'BuNam' "
+                class="nav-item nav-link mx-2" data-i18n="Title.RuinsInfo" onclick="ToScroll('RuinsInfo_id')"></a>
+              <a v-show="currentPN == 'whale'" class="nav-item nav-link mx-2" data-i18n="Title.Evolution"
+                onclick="ToScroll('Evolution_id')"></a>
+              <a v-show="currentPN == 'whale'" class="nav-item nav-link mx-2" data-i18n="Title.Ruins"
+                onclick="ToScroll('Ruins_id')"></a>
+              <a v-show="currentPN == 'whale'" class="nav-item nav-link mx-2" data-i18n="Title.Whale"
+                onclick="ToScroll('Whale_id')"></a>
+
+              <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.giant"
+                onclick="ToScroll('giant_id')"></a>
+              <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.biological"
+                onclick="ToScroll('biological_id')"></a>
+              <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.plant"
+                onclick="ToScroll('plant_id')"></a>
+              <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.BuNam"
+                onclick="ToScroll('BuNam_id')"></a>
+
+              <!-- <a class="nav-item nav-link mx-2" data-i18n="Title.OtherRuins" onclick="ToScroll('OtherRuins_id')"></a> -->
+            </div>
           </div>
         </div>
       </nav>
@@ -413,7 +470,7 @@
     } else {
       $("#myNavbar7").collapse('hide')
       $("html, body").animate({
-        scrollTop: $(`#${id}`).offset().top - 300
+        scrollTop: $(`#${id}`).offset().top - 250
       }, 800);
     }
 
@@ -430,7 +487,7 @@
   }
 
   // Image Setting
-  $(document).ready(function () {
+  function reloadSwipeButton() {
     $("#carouselExampleIndicators").on("swiperight", function () {
       $(this).carousel('prev');
     });
@@ -440,7 +497,7 @@
     $('.carousel').carousel({
       interval: 10000
     })
-  });
+  }
 
   // 重新加載網頁內容
   function reloadPage(e) {
@@ -451,6 +508,7 @@
       $("#main").empty()
       $("#main").html(data)
       langChange(lng)
+      reloadSwipeButton()
       reload()
     });
   }

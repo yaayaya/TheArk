@@ -126,7 +126,7 @@ let en = {
       TwAddress:
         "No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)",
     },
-    License: "© 2021 Tu's Archeology Team All Rights Reserved",
+    License: "© 2022 Tu's Archeology Team All Rights Reserved",
     // 泰國甲米
     Thailand_1: {
       Title: "'Giant Ruins'",

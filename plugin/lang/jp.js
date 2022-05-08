@@ -120,6 +120,6 @@ let jp = {
       Phone: '03-329-6662',
       TwAddress : 'No. 521, Zhongkeng St., Guishan Dist., Taoyuan City 333009 , Taiwan (R.O.C.)'
     },
-    License: "© 2021 Tu's Archeology Team All Rights Reserved",
+    License: "© 2022 Tu's Archeology Team All Rights Reserved",
   }
 };

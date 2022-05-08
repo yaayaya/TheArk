@@ -125,7 +125,7 @@ let zhtw = {
       Phone: "03-329-6662",
       TwAddress: "333009 台灣桃園市龜山區中坑街521號",
     },
-    License: "© 2021 Tu's Archeology Team 版權所有",
+    License: "© 2022 Tu's Archeology Team 版權所有",
     // 泰國甲米
     Thailand_1: {
       Title: "「巨人巨蛇神話遺跡」",
