@@ -30,7 +30,6 @@ html {
   text-align: center;
 }
 
-
 /* 電腦版CSS */
 @media (min-width: 768px) {
   .navbar-logo {
@@ -40,13 +39,12 @@ html {
     /* transform: translateY(80%); */
   }
 
-
   .nav-item-BTitle {
     color: rgb(255 255 255 / 80%);
     cursor: pointer;
     text-align: left;
-    padding-left: .6rem !important;
-    padding-right: .6rem !important;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
   }
 
   /* NAV不換行 */
@@ -69,7 +67,6 @@ html {
 
   main {
     overflow: hidden;
-    background-color: #000;
     margin: 0 auto;
   }
 
@@ -96,7 +93,6 @@ html {
     background-size: cover;
     background-position: center;
   }
-
 
   .fixedBG_PC_BuNam {
     background-image: url("../images/Background/BuNam_bg_PC.jpg");
@@ -250,7 +246,6 @@ html {
   z-index: -1;
 } */
 
-
 /* 手機板CSS */
 @media (max-width: 767px) {
   .nav-item-BTitle {
@@ -262,7 +257,7 @@ html {
   }
 
   .navWrap {
-    flex-flow: wrap !important
+    flex-flow: wrap !important;
   }
 
   .pcShow {
@@ -288,13 +283,17 @@ html {
     margin: 0 auto;
   }
 
-  .fixedBG_PC_whale {}
+  .fixedBG_PC_whale {
+  }
 
-  .fixedBG_PC_BuNam {}
+  .fixedBG_PC_BuNam {
+  }
 
-  .fixedBG_PC_giant {}
+  .fixedBG_PC_giant {
+  }
 
-  .fixedBG_PC_collection {}
+  .fixedBG_PC_collection {
+  }
 
   .bg-darkGradient {
     background-color: #000;
@@ -366,12 +365,7 @@ html {
   background-color: #000 !important;
 }
 
-.contentCenter {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: -webkit-center;
-}
+
 
 /* 長度標籤 */
 #controls {
@@ -391,7 +385,7 @@ html {
 }
 
 /* This keeps child nodes hidden while the element loads */
-:not(:defined)>* {
+:not(:defined) > * {
   display: none;
 }
 
@@ -423,7 +417,6 @@ html {
 .footer {
   bottom: 0;
   width: 100%;
-  background-color: #000;
   border-top: solid 0.1em #ffffff59;
 }
 
@@ -434,7 +427,6 @@ html {
 /* nav */
 .navClass {
   border-bottom: solid 0.1em #ffffff59;
-  background-color: #000 !important;
   font-weight: bold;
 }
 
@@ -521,7 +513,8 @@ html {
 }
 
 .f-youtube-icon {
-  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat center/contain;
+  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat
+    center/contain;
 }
 
 .f-twitter-icon {
@@ -607,7 +600,7 @@ html {
   opacity: 1;
 }
 
-#progress>.bar {
+#progress > .bar {
   width: 100%;
   height: 100%;
   background-color: #1d1d1d;
@@ -621,9 +614,8 @@ html {
   transform: translateY(-50%);
 }
 
-.carousel-item {
-  padding: 10px;
-  position: relative;
+.carousel {
+  height: 100%;
 }
 
 .carousel-inner {
@@ -632,7 +624,60 @@ html {
 
 .carousel-inner img {
   margin: auto;
+  visibility: hidden;
 }
+
+/* 電腦版設定 */
+@media (min-width: 1025px) {
+  .carousel-item-hero {
+    padding: 10px;
+    position: relative;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .carousel-item-origin {
+    padding: 10px;
+    position: relative;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 85%;
+  }
+
+  .contentCenter {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+  }
+
+  .carouselAreaSetting{
+    height: 90vh;
+    width: 90vw;
+  }
+}
+/* 手機、平板 */
+@media (max-width: 1024px) {
+  .carousel-item-origin {
+    padding: 10px;
+    position: relative;
+    background-size: contain;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 85%;
+    background-repeat: no-repeat;
+  }
+
+  .contentCenter {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+  }
+}
+
 
 /* 不顯示下標題 */
 .my-gallery figcaption {
@@ -650,7 +695,7 @@ html {
 }
 
 /* 輪播圖片 */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   .carousel {
     width: 700px;
   }
@@ -660,28 +705,9 @@ html {
   .carousel {
     width: 100%;
   }
-}
+} */
 
-.carousel {
-  height: 100%;
-}
 
-.carousel-inner {
-  /* make sure your .items will get correct height */
-  height: 100%;
-}
-
-.carousel-item {
-  background-size: contain;
-  background-position: 50% 50%;
-  width: 100%;
-  height: 85%;
-  background-repeat: no-repeat;
-}
-
-.carousel-item img {
-  visibility: hidden;
-}
 
 .titleText_1,
 .titleText_2 {
@@ -704,9 +730,9 @@ html {
   font-size: 1.8rem !important;
 }
 
-.navbar-default .navbar-nav>.show>a,
-.navbar-default .navbar-nav>.show>a:focus,
-.navbar-default .navbar-nav>.show>a:hover {
+.navbar-default .navbar-nav > .show > a,
+.navbar-default .navbar-nav > .show > a:focus,
+.navbar-default .navbar-nav > .show > a:hover {
   color: #555;
   background-color: #e7e7e7;
 }
@@ -823,7 +849,7 @@ html {
 }
 
 .contentColor {
-  color: #f5f5f5cf
+  color: #f5f5f5cf;
 }
 
 .hover-underline-animation {
@@ -833,7 +859,7 @@ html {
 }
 
 .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 80%;
   transform: scaleX(0);
@@ -855,8 +881,6 @@ html {
   display: inline-block;
 }
 
-
-
 .pc_BTitle_button a:hover {
   color: #f5f5f5cf;
   text-decoration: none;
@@ -866,7 +890,6 @@ html {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
-
 
 .pc_STitle_button a:hover {
   color: #b4b4b4;
@@ -886,7 +909,7 @@ html {
 }
 
 .pc_BTitle_button .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 90%;
   transform: scaleX(0);
@@ -912,7 +935,7 @@ html {
 }
 
 .pc_STitle_button .hover-underline-animation:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -928,4 +951,23 @@ html {
 .pc_STitle_button .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* 背景顏色 */
+.bg-theme {
+  background-color: #787878;
+}
+
+.bg-theme-footer {
+  background-color: black;
+}
+
+.imgBorder {
+  width: 500px;
+  height: 350px;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
 }

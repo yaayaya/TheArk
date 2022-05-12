@@ -92,10 +92,10 @@
     <div class="fixedBG_mobile"></div>
     <div>
       <!-- 導覽列 -->
-      <nav class="navWrap navbar navbar-expand-lg navbar-dark  navClass bg-darkd" id="vueNav">
+      <nav class="navWrap navbar navbar-expand-lg navbar-dark navClass bg-theme " id="vueNav">
         <div class="d-flex flex-grow-1">
           <!-- ICON -->
-          <img src="./images/icon/logo.svg" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
+          <img src="./images/icon/LOGO-0512.png" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
 
           <!-- 手機、平板大標 -->
           <div class="w-100 mobileShow" style="display: flex; align-items: center;">
@@ -215,7 +215,7 @@
       </nav>
     </div>
 
-    <main id="main">
+    <main id="main" class="bg-theme">
 
     </main>
 
@@ -223,7 +223,7 @@
   </body>
 
   <!-- mobile Footer -->
-  <footer class="footer mobileShow" style="background-color: #1d1d1d;">
+  <footer class="footer mobileShow bg-theme-footer">
     <!-- Contact us  ShareThisPage-->
     <div class="container py-3 px-4">
       <div>
@@ -302,7 +302,7 @@
   </footer>
 
   <!-- PC Footer -->
-  <footer class="footer pcShow ">
+  <footer class="footer pcShow bg-theme-footer">
     <!-- Contact us -->
     <div class="pt-3 pb-2 row " style="background-color: #1d1d1d;margin-right:0px">
       <div class="col-6" style="left:10%">
@@ -357,7 +357,7 @@
         </div>
       </div>
     </div>
-    <div class="py-2 px-4 " style="color: white;text-align: center;" data-i18n="License"></div>
+    <div class="py-2 px-4" style="color: white;text-align: center;" data-i18n="License"></div>
 
   </footer>
 </div>
@@ -420,9 +420,9 @@
   let hideTime = 0;
   var isMobile = /iPhone|iPad|iPod|Android|iPadPro/i.test(navigator.userAgent);
 
-  $(function () {
-    reload()
-  })
+  // $(function () {
+  //   reload()
+  // })
 
   function reload() {
     if (isMobile) {
@@ -431,8 +431,6 @@
     } else {
       $(".MobileDeviceShow").hide()
     }
-
-
     // >1024 行動裝置隱藏
     if (jQuery(window).width() > 1024) {
       $(".less_1024_show").hide()
@@ -504,12 +502,12 @@
     if (lng == "jp" && e != "whale") {
       lng = "en"
     }
+    reload()
     $.get(`./${e}.html`, function (data, status) {
       $("#main").empty()
       $("#main").html(data)
       langChange(lng)
       reloadSwipeButton()
-      reload()
     });
   }
 
@@ -592,6 +590,9 @@
         }
         else if (e == "collection") {
           $('.fixedBG_mobile').css('background-image', `url(./images/Background/${e}_bg_mobile.jpg`);
+        }
+        else{
+          $('.fixedBG_mobile').css('background-image', "");
         }
       }
     },
