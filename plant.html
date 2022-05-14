@@ -82,18 +82,21 @@
 
             <!-- 圖片區塊 1.5  -->
             <div class="col-md-6 col-sm-12 bg-theme text-left text-white overflow-hidden pcShow" style="height: 420px;">
-                <div id="carousel_1-5" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
-                    <!-- carousel  -->
-                    <div class="carousel-inner my-gallery">
-                        <figure class="carousel-item carousel-item-origin cencen active"
-                            style="background-image: url('./images/Contents/Plant/2_4.jpg');">
+                <div id="singleImg_1" >
+                    <a href="./images/Contents/Plant/2_4.jpg" >
+                        <img src="./images/Contents/Plant/2_4.jpg" class="centerImage"/>
+                    </a>
+                </div>
+                <!-- <div id="carousel_1-5" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
+                    <div class=" my-gallery">
+                        <figure class="carousel-item  active">
                             <a href="./images/Contents/Plant/2_4.jpg" itemprop="contentUrl" data-size="3516x1492">
                                 <img class="d-block w-100" src="./images/Contents/Plant/2_4.jpg" itemprop="thumbnail"
                                     alt="Image description" />
                             </a>
                         </figure>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -154,7 +157,16 @@
             download: false,
             showZoomInOutIcons: true,
         })
+        lightGallery(document.getElementById('singleImg_1'), {
+            mousewheel: true,
+            download: false,
+            showZoomInOutIcons: true,
+            width:"100%"
+        })
     })
+
+
+    
     $(document).ready(function () {
         $("#content-slider").lightSlider({
             loop: true,
@@ -164,7 +176,7 @@
                 {
                     breakpoint: 1025,
                     settings: {
-                        controls:false,
+                        controls: false,
                         enableDrag: true,
                         item: 2,
                     }
@@ -172,7 +184,7 @@
                 {
                     breakpoint: 480,
                     settings: {
-                        controls:false,
+                        controls: false,
                         enableDrag: true,
                         item: 1,
                         slideMove: 1
@@ -189,6 +201,10 @@
     });
 </script>
 <style>
+    .singleImg{
+        width: 100%;
+    }
+
     .disabledHover {
         pointer-events: none;
     }

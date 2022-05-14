@@ -649,8 +649,6 @@ html {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     height: auto !important;
-
-
   }
   .carousel-item-origin {
     padding: 10px;
@@ -703,7 +701,6 @@ html {
     height: 50vh;
     width: 100vw;
   }
-  
 }
 
 .contentCenter {
@@ -1005,8 +1002,17 @@ html {
 }
 
 /* 水平、垂直中 */
-.centerImage{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+
+.centerImage {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
