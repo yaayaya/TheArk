@@ -284,7 +284,7 @@ let zhtw = {
       imgDescription_37_2: "(40x27x8 cm)(5.4)	",
     },
     Collection_3: {
-      Title: "植物化石　　　　　　　　　　　　",
+      Title: "植物化石",
 
       imgTitle_21: "PM 01",
       imgDescription_21_1: "2020 遺跡化石Trace Fossil-PM 01",
@@ -352,7 +352,7 @@ let zhtw = {
     },
 
     Collection_4: {
-      Title: "卜湳文明遺跡文物　　　　　　　　　　",
+      Title: "卜湳文明遺跡文物",
 
     },
   },
