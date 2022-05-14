@@ -1,0 +1,111 @@
+<div>
+    <div>
+        <ul id="content-slider" class="content-slider">
+            <li data-thumb="./images/Contents/Plant/2_1.JPG" data-src="./images/Contents/Plant/2_1.JPG">
+                <img src="./images/Contents/Plant/2_1.JPG" />
+            </li>
+            <li data-thumb="./images/Contents/Plant/2_2.JPG" data-src="./images/Contents/Plant/2_2.JPG">
+                <img src="./images/Contents/Plant/2_2.JPG" />
+            </li>
+            <li data-thumb="./images/Contents/Plant/2_3.JPG" data-src="./images/Contents/Plant/2_3.JPG">
+                <img src="./images/Contents/Plant/2_3.JPG" />
+            </li>
+
+            <li data-thumb="./images/Contents/Plant/2_4.jpg" data-src="./images/Contents/Plant/2_4.jpg">
+                <img src="./images/Contents/Plant/2_4.jpg" />
+            </li>
+
+            <li data-thumb="./images/Contents/Plant/2_5.jpg" data-src="./images/Contents/Plant/2_5.jpg">
+                <img src="./images/Contents/Plant/2_5.jpg" />
+            </li>
+
+            <li data-thumb="./images/Contents/Plant/2_6.jpg" data-src="./images/Contents/Plant/2_6.jpg">
+                <img src="./images/Contents/Plant/2_6.jpg" />
+            </li>
+
+            <li data-thumb="./images/Contents/Plant/2_7.jpg" data-src="./images/Contents/Plant/2_7.jpg">
+                <img src="./images/Contents/Plant/2_7.jpg" />
+            </li>
+
+            <li data-thumb="./images/Contents/Plant/2_8.jpg" data-src="./images/Contents/Plant/2_8.jpg">
+                <img src="./images/Contents/Plant/2_8.jpg" />
+            </li>
+            <li data-thumb="./images/Contents/Plant/2_9.jpg" data-src="./images/Contents/Plant/2_9.jpg">
+                <img src="./images/Contents/Plant/2_9.jpg" />
+            </li>
+            <li data-thumb="./images/Contents/Plant/2_10.jpg" data-src="./images/Contents/Plant/2_10.jpg">
+                <img src="./images/Contents/Plant/2_10.jpg" />
+            </li>
+            <li data-thumb="./images/Contents/Plant/2_11.jpg" data-src="./images/Contents/Plant/2_11.jpg">
+                <img src="./images/Contents/Plant/2_11.jpg" />
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        lightGallery(document.getElementById('content-slider'), {
+            mousewheel: true,
+            download: false,
+            showZoomInOutIcons: true,
+        })
+        lightGallery(document.getElementById('singleImg_1'), {
+            mousewheel: true,
+            download: false,
+            showZoomInOutIcons: true,
+            width:"100%"
+        })
+    })
+
+
+    
+    $(document).ready(function () {
+        $("#content-slider").lightSlider({
+            loop: true,
+            enableDrag: false,
+            currentPagerPosition: 'left',
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        controls: false,
+                        enableDrag: true,
+                        item: 2,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        controls: false,
+                        enableDrag: true,
+                        item: 1,
+                        slideMove: 1
+                    }
+                }
+            ],
+            onBeforeSlide: function (el) {
+                el.addClass('disabledHover')
+            },
+            onAfterSlide: function (el) {
+                el.removeClass('disabledHover')
+            },
+        });
+    });
+</script>
+
+<style>
+    .singleImg{
+        width: 100%;
+    }
+
+    .disabledHover {
+        pointer-events: none;
+    }
+
+    li img {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+    }
+</style>

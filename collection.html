@@ -1,3 +1,10 @@
+<style>
+    .content-slider-collection li img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+    }
+</style>
 
 <!-- 背景圖 -->
 <div class="fixedBG_PC_collection">
@@ -8,354 +15,116 @@
 
 
 <div>
-    <!-- 區塊 1 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="giant_id">
-        <div class="row">
-            <!-- 標題 -->
-            <!-- <div class=" col-12 bg-darkd text-center contentColor overflow-hidden pb-md-4 pt-md-1 pcShow">
-                <span class="titleText_2" data-i18n="BTitle.collection"></span>
-            </div> -->
-            
-            <div class="col-md-6 col-sm-12 bg-darkd text-left contentColor overflow-hidden">
-                <!-- 內文 1 -->
-                <div class="contentCenter px-3 pt-md-5 pt-3">
-                    <div class="text-left" style="line-height: 1.2em;">
-                        <span class="titleText_1" data-i18n="Collection_1.Title"></span>
-                    </div>
+    <!-- 巨人巨獸化石 標題 -->
+    <div class="row pt-4 pb-4 bg-theme" id="RuinsInfo_id">
+        <div class=" col-12 text-center text-white overflow-hidden">
+            <span class="titleText_1" data-i18n="Collection_1.Title"></span>
+        </div>
+    </div>
+    <!-- 巨人巨獸化石 輪播 -->
+    <div class="pb-4">
+        <div>
+            <ul id="content-slider1" class="content-slider-collection">
 
-                </div>
-            </div>
-            <!-- 圖片區塊 1  -->
-            <div class="col-md-6 col-sm-12 bg-darkd text-left contentColor overflow-hidden" style="height: 420px;">
-                <div id="carousel_1" class="carousel slide contentCenter py-3 md-mx-2 " data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel_1" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel_1" data-slide-to="1"></li>
-                        <li data-target="#carousel_1" data-slide-to="2"></li>
-                        <li data-target="#carousel_1" data-slide-to="3"></li>
-                    </ol>
-                    <!-- carousel  -->
-                    <div class="carousel-inner my-gallery">
-                        <figure class="carousel-item cencen active"
-                            style="background-image: url('./images/Contents/Collection/1_1.png');">
-                            <a href="./images/Contents/Collection/1_1.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/1_1.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_1.imgDescription_1_1"></div>
-                                <div data-i18n="Collection_1.imgDescription_1_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_1.imgTitle_1"></div>
-
-                        </figure>
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/1_2.png');">
-                            <a href="./images/Contents/Collection/1_2.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/1_2.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_1.imgDescription_2_1"></div>
-                                <div data-i18n="Collection_1.imgDescription_2_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_1.imgTitle_2"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/1_3.png');">
-                            <a href="./images/Contents/Collection/1_3.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/1_3.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_1.imgDescription_3_1"></div>
-                                <div data-i18n="Collection_1.imgDescription_3_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_1.imgTitle_3"></div>
-                        </figure>
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/1_6.png');">
-                            <a href="./images/Contents/Collection/1_6.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/1_6.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_1.imgDescription_6_1"></div>
-                                <div data-i18n="Collection_1.imgDescription_6_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_1.imgTitle_6"></div>
-
-                        </figure>
-
-                    </div>
-                    <a class="carousel-control-prev DesktopShow" href="#carousel_1" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next DesktopShow" href="#carousel_1" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
+                <li data-src="./images/Contents/collection/1_1.png"
+                    data-sub-html="<div data-i18n='Collection_2.imgDescription_7_2'></div>">
+                    <img src="./images/Contents/collection/1_1.png" />
+                    <div data-i18n="Collection_1.imgDescription_1_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_1.imgDescription_1_2" class="collectionDesriptText"></div>
+                </li>
+                </li>
+                <li data-thumb="./images/Contents/collection/1_2.png" data-src="./images/Contents/collection/1_2.png">
+                    <img src="./images/Contents/collection/1_2.png" />
+                    <div data-i18n="Collection_1.imgDescription_2_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_1.imgDescription_2_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/1_3.png" data-src="./images/Contents/collection/1_3.png">
+                    <img src="./images/Contents/collection/1_3.png" />
+                    <div data-i18n="Collection_1.imgDescription_3_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_1.imgDescription_3_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/1_6.png" data-src="./images/Contents/collection/1_6.png">
+                    <img src="./images/Contents/collection/1_6.png" />
+                    <div data-i18n="Collection_1.imgDescription_6_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_1.imgDescription_6_2" class="collectionDesriptText"></div>
+                </li>
+            </ul>
         </div>
     </div>
 
-
-
-    <!-- 區塊 2 -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-0 px-3 py-3 justify-content-center bg-darkd_2" id="biological_id">
-        <div class="row">
-            <!-- 內文 2 -->
-            <div class="col-md-6 col-sm-12 bg-darkd_2 text-left overflow-hidden">
-                <div class="contentCenter px-3 pt-md-5 pt-3">
-
-                    <div class="text-left mb-2 text-white">
-                        <span style="font-size: 2em;font-weight: bold;" data-i18n="Collection_2.Title"></span>
-                    </div>
-                    <!-- 
-                                <div class="mt-3 text-left">
-                                    <span data-i18n="BuNam_2.t3"></span>
-                                    <br><br>
-                                    <span data-i18n="BuNam_2.t4"></span>
-            
-                                </div> -->
-                </div>
-            </div>
-            <!-- 圖片區塊 2 -->
-            <div class="col-md-6 col-sm-12 bg-darkd_2 text-left contentColor overflow-hidden" style="height: 420px;">
-                <div id="carousel_2" class="carousel slide contentCenter  py-3 md-mx-2" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel_2" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel_2" data-slide-to="1"></li>
-                        <li data-target="#carousel_2" data-slide-to="2"></li>
-                        <li data-target="#carousel_2" data-slide-to="3"></li>
-                        <li data-target="#carousel_2" data-slide-to="4"></li>
-                        <li data-target="#carousel_2" data-slide-to="5"></li>
-                        <li data-target="#carousel_2" data-slide-to="6"></li>
-                        <li data-target="#carousel_2" data-slide-to="7"></li>
-                        <li data-target="#carousel_2" data-slide-to="8"></li>
-                        <li data-target="#carousel_2" data-slide-to="9"></li>
-                        <li data-target="#carousel_2" data-slide-to="10"></li>
-                        <li data-target="#carousel_2" data-slide-to="11"></li>
-                        <li data-target="#carousel_2" data-slide-to="12"></li>
-                        <li data-target="#carousel_2" data-slide-to="13"></li>
-                        <li data-target="#carousel_2" data-slide-to="14"></li>
-                    </ol>
-                    <!-- carousel -->
-                    <div class="carousel-inner my-gallery">
-                        <figure class="carousel-item cencen active"
-                            style="background-image: url('./images/Contents/Collection/2_7.png');">
-                            <a href="./images/Contents/Collection/2_7.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_7.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_7_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_7_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_7"></div>
-                        </figure>
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_8.png');">
-                            <a href="./images/Contents/Collection/2_8.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_8.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_8_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_8_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_8"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_9.png');">
-                            <a href="./images/Contents/Collection/2_9.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_9.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_9_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_9_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_9"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_10.png');">
-                            <a href="./images/Contents/Collection/2_10.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_10.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_10_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_10_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_10"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_11.png');">
-                            <a href="./images/Contents/Collection/2_11.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_11.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_11_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_11_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_11"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_12.png');">
-                            <a href="./images/Contents/Collection/2_12.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_12.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_12_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_12_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_12"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_13.png');">
-                            <a href="./images/Contents/Collection/2_13.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_13.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_13_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_13_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_13"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_14.jpg');">
-                            <a href="./images/Contents/Collection/2_14.jpg" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_14.jpg"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_14_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_14_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_14"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_15.jpg');">
-                            <a href="./images/Contents/Collection/2_15.jpg" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_15.jpg"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_15_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_15_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_15"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_16.jpg');">
-                            <a href="./images/Contents/Collection/2_16.jpg" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_16.jpg"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_16_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_16_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_16"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_17.jpg');">
-                            <a href="./images/Contents/Collection/2_17.jpg" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_17.jpg"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_17_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_17_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_17"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_18.jpg');">
-                            <a href="./images/Contents/Collection/2_18.jpg" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_18.jpg"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_18_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_18_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_18"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_19.png');">
-                            <a href="./images/Contents/Collection/2_19.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_19.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_19_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_19_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_19"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_20.png');">
-                            <a href="./images/Contents/Collection/2_20.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_20.png"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_20_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_20_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_20"></div>
-                        </figure>
-
-                        <figure class="carousel-item cencen"
-                            style="background-image: url('./images/Contents/Collection/2_37.jpg');">
-                            <a href="./images/Contents/Collection/2_37.jpg" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-100" src="./images/Contents/Collection/2_37.jpg"
-                                    itemprop="thumbnail" alt="Image description" />
-                            </a>
-                            <figcaption itemprop="caption">
-                                <div data-i18n="Collection_2.imgDescription_37_1"></div>
-                                <div data-i18n="Collection_2.imgDescription_37_2"></div>
-                            </figcaption>
-                            <div class="imgTitleText" data-i18n="Collection_2.imgTitle_37"></div>
-                        </figure>
-                    </div>
-                    <a class="carousel-control-prev DesktopShow" href="#carousel_2" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next DesktopShow" href="#carousel_2" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-
+    <!-- 生物化石 標題 -->
+    <div class="row pt-4 pb-4 bg-theme-darker" id="RuinsInfo_id">
+        <div class=" col-12 text-center text-white overflow-hidden">
+            <span class="titleText_1" data-i18n="Collection_2.Title"></span>
         </div>
     </div>
-
-    <div class="pt-3 bg-darkd_2"></div>
-
-
+    <!-- 生物化石 輪播 -->
+    <div class="pb-4 bg-theme-darker">
+        <div>
+            <ul id="content-slider2" class="content-slider-collection">
+                <li data-thumb="./images/Contents/collection/2_10.png" data-src="./images/Contents/collection/2_10.png">
+                    <img src="./images/Contents/collection/2_10.png" />
+                    <div data-i18n="Collection_2.imgDescription_10_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_10_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_11.png" data-src="./images/Contents/collection/2_11.png">
+                    <img src="./images/Contents/collection/2_11.png" />
+                    <div data-i18n="Collection_2.imgDescription_11_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_11_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_12.png" data-src="./images/Contents/collection/2_12.png">
+                    <img src="./images/Contents/collection/2_12.png" />
+                    <div data-i18n="Collection_2.imgDescription_12_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_12_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_13.png" data-src="./images/Contents/collection/2_13.png">
+                    <img src="./images/Contents/collection/2_13.png" />
+                    <div data-i18n="Collection_2.imgDescription_13_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_13_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_14.jpg" data-src="./images/Contents/collection/2_14.jpg">
+                    <img src="./images/Contents/collection/2_14.jpg" />
+                    <div data-i18n="Collection_2.imgDescription_14_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_14_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_15.jpg" data-src="./images/Contents/collection/2_15.jpg">
+                    <img src="./images/Contents/collection/2_15.jpg" />
+                    <div data-i18n="Collection_2.imgDescription_15_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_15_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_16.jpg" data-src="./images/Contents/collection/2_16.jpg">
+                    <img src="./images/Contents/collection/2_16.jpg" />
+                    <div data-i18n="Collection_2.imgDescription_16_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_16_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_17.jpg" data-src="./images/Contents/collection/2_17.jpg">
+                    <img src="./images/Contents/collection/2_17.jpg" />
+                    <div data-i18n="Collection_2.imgDescription_17_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_17_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_18.jpg" data-src="./images/Contents/collection/2_18.jpg">
+                    <img src="./images/Contents/collection/2_18.jpg" />
+                    <div data-i18n="Collection_2.imgDescription_18_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_18_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_19.png" data-src="./images/Contents/collection/2_19.png">
+                    <img src="./images/Contents/collection/2_19.png" />
+                    <div data-i18n="Collection_2.imgDescription_19_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_19_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_20.png" data-src="./images/Contents/collection/2_20.png">
+                    <img src="./images/Contents/collection/2_20.png" />
+                    <div data-i18n="Collection_2.imgDescription_20_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_20_2" class="collectionDesriptText"></div>
+                </li>
+                <li data-thumb="./images/Contents/collection/2_37.jpg" data-src="./images/Contents/collection/2_37.jpg">
+                    <img src="./images/Contents/collection/2_37.jpg" />
+                    <div data-i18n="Collection_2.imgDescription_37_1" class="collectionDesriptText"></div>
+                    <div data-i18n="Collection_2.imgDescription_37_2" class="collectionDesriptText"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- 區塊 3 -->
     <div class="d-md-flex flex-md-equal w-100 my-md-3 px-3 py-3 justify-content-center bg-darkd" id="plant_id">
@@ -620,7 +389,7 @@
         </div>
     </div>
 
-    
+
     <!-- 背景圖 -->
     <div class="fixedBG_PC_collection">
         <div class="pcShow" style="height: 200px;"></div>
@@ -660,78 +429,78 @@
                         <figure class="carousel-item cencen active"
                             style="background-image: url('./images/Contents/Collection/4_1.png');">
                             <a href="./images/Contents/Collection/4_1.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_1.png" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_1.png"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_2.jpg');">
                             <a href="./images/Contents/Collection/4_2.jpg" itemprop="contentUrl" data-size="2826x4506">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_2.jpg" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_2.jpg"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_3.JPG');">
                             <a href="./images/Contents/Collection/4_3.JPG" itemprop="contentUrl" data-size="4032x3024">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_3.JPG" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_3.JPG"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_4.jpg');">
                             <a href="./images/Contents/Collection/4_4.jpg" itemprop="contentUrl" data-size="2250x1704">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_4.jpg" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_4.jpg"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_5.JPG');">
                             <a href="./images/Contents/Collection/4_5.JPG" itemprop="contentUrl" data-size="3872x2592">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_5.JPG" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_5.JPG"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_6.jpg');">
                             <a href="./images/Contents/Collection/4_6.jpg" itemprop="contentUrl" data-size="11200x8400">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_6.jpg" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_6.jpg"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_7.jpg');">
                             <a href="./images/Contents/Collection/4_7.jpg" itemprop="contentUrl" data-size="7900x6675">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_7.jpg" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_7.jpg"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_8.jpg');">
                             <a href="./images/Contents/Collection/4_8.jpg" itemprop="contentUrl" data-size="834x1191">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_8.jpg" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_8.jpg"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_9.png');">
                             <a href="./images/Contents/Collection/4_9.png" itemprop="contentUrl" data-size="1656x1656">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_9.png" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_9.png"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_10.jpg');">
                             <a href="./images/Contents/Collection/4_10.jpg" itemprop="contentUrl" data-size="1478x1108">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_10.jpg" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_10.jpg"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                         <figure class="carousel-item cencen"
                             style="background-image: url('./images/Contents/Collection/4_11.jpg');">
                             <a href="./images/Contents/Collection/4_11.jpg" itemprop="contentUrl" data-size="1478x1108">
-                                <img class="d-block w-90 " src="./images/Contents/Collection/4_11.jpg" itemprop="thumbnail"
-                                    alt="Image description" />
+                                <img class="d-block w-90 " src="./images/Contents/Collection/4_11.jpg"
+                                    itemprop="thumbnail" alt="Image description" />
                             </a>
                         </figure>
                     </div>
@@ -753,3 +522,90 @@
 </div>
 
 <script src="./js/ps_setting.js"></script>
+
+<script>
+    $(function () {
+        lightGallery(document.getElementById('content-slider1'), {
+            mousewheel: true,
+            download: false,
+            showZoomInOutIcons: true,
+        })
+        lightGallery(document.getElementById('content-slider2'), {
+            mousewheel: true,
+            download: false,
+            showZoomInOutIcons: true,
+        })
+    })
+
+
+
+    $(document).ready(function () {
+        $("#content-slider1").lightSlider({
+            loop: true,
+            plugins: [lgZoom, lgThumbnail],
+            enableDrag: false,
+            item: 4,
+            currentPagerPosition: 'left',
+            controls: false,
+            pager: false,
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        enableDrag: true,
+                        pager: true,
+                        item: 3,
+                    }
+                },
+                {
+                    breakpoint: 960,
+                    settings: {
+                        enableDrag: true,
+                        pager: true,
+                        item: 2,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        enableDrag: true,
+                        pager: true,
+                        item: 1,
+                    }
+                }
+            ],
+        });
+        $("#content-slider2").lightSlider({
+            loop: true,
+            enableDrag: false,
+            item: 4,
+            currentPagerPosition: 'left',
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        enableDrag: true,
+                        pager: true,
+                        item: 3,
+                    }
+                },
+                {
+                    breakpoint: 960,
+                    settings: {
+                        enableDrag: true,
+                        pager: true,
+                        item: 2,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        enableDrag: true,
+                        pager: true,
+                        item: 1,
+                    }
+                }
+            ],
+        });
+    });
+</script>

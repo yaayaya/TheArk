@@ -994,6 +994,10 @@ html {
   background-color: #787878;
 }
 
+.bg-theme-darker {
+  background-color: #505050;
+}
+
 .bg-theme-footer {
   background-color: #23272e;
 }
@@ -1002,8 +1006,6 @@ html {
 }
 
 /* 水平、垂直中 */
-
-
 .centerImage {
   max-height: 100%;
   max-width: 100%;
@@ -1015,4 +1017,17 @@ html {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.singleImg {
+  width: 100%;
+}
+
+.disabledHover {
+  pointer-events: none;
+}
+
+.collectionDesriptText {
+  text-align: center;
+  color: white;
 }

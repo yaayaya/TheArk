@@ -198,7 +198,7 @@ let zhtw = {
       t6: "",
     },
     Collection_1: {
-      Title: "巨人巨獸化石　　　　　　　　　　",
+      Title: "巨人巨獸化石",
 
       imgTitle_1: "巨人斯金納1號",
       imgDescription_1_1: "2020 巨人斯金納1號",
@@ -221,7 +221,7 @@ let zhtw = {
       imgDescription_6_2: "(1140x320x55 cm)(1824)	",
     },
     Collection_2: {
-      Title: "生物化石　　　　　　　　　　　　",
+      Title: "生物化石",
 
       imgTitle_7: "MB 02局部01",
       imgDescription_7_1: "2019 遺跡化石Trace Fossil-MB 02局部01",
