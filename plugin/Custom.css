@@ -30,7 +30,7 @@ html {
   text-align: center;
 }
 
-/* 電腦版CSS */
+/* 電腦、平板 CSS */
 @media (min-width: 768px) {
   .navbar-logo {
     padding: 10px !important;
@@ -365,8 +365,6 @@ html {
   background-color: #000 !important;
 }
 
-
-
 /* 長度標籤 */
 #controls {
   position: absolute;
@@ -629,12 +627,30 @@ html {
 
 /* 電腦版設定 */
 @media (min-width: 1025px) {
+  .w1025show {
+    display: block;
+  }
+
+  .carousel-item {
+    padding: 10px;
+    position: relative;
+    background-size: contain;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 85%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   .carousel-item-hero {
     padding: 10px;
     position: relative;
     background-size: contain;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    height: auto !important;
+
+
   }
   .carousel-item-origin {
     padding: 10px;
@@ -646,20 +662,34 @@ html {
     height: 85%;
   }
 
-  .contentCenter {
-    max-width: 90%;
+  .contentFullWith {
+    max-width: 100vw !important;
     margin-left: auto;
     margin-right: auto;
     text-align: -webkit-center;
   }
 
-  .carouselAreaSetting{
+  .carouselAreaSetting {
     height: 90vh;
-    width: 90vw;
+    width: 100vw;
   }
 }
 /* 手機、平板 */
 @media (max-width: 1024px) {
+  .w1025show {
+    display: none !important;
+  }
+
+  .carousel-item {
+    padding: 10px;
+    position: relative;
+    background-size: contain;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 85%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .carousel-item-origin {
     padding: 10px;
     position: relative;
@@ -669,15 +699,26 @@ html {
     height: 85%;
     background-repeat: no-repeat;
   }
-
-  .contentCenter {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: -webkit-center;
+  .carouselAreaSetting {
+    height: 50vh;
+    width: 100vw;
   }
+  
 }
 
+.contentCenter {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: -webkit-center;
+}
+
+.contentCenter1400 {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: -webkit-center;
+}
 
 /* 不顯示下標題 */
 .my-gallery figcaption {
@@ -706,8 +747,6 @@ html {
     width: 100%;
   }
 } */
-
-
 
 .titleText_1,
 .titleText_2 {
@@ -959,15 +998,15 @@ html {
 }
 
 .bg-theme-footer {
-  background-color: black;
+  background-color: #23272e;
+}
+.bg-theme-license {
+  background-color: #5a5a5a;
 }
 
-.imgBorder {
-  width: 500px;
-  height: 350px;
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid;
+/* 水平、垂直中 */
+.centerImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
