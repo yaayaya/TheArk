@@ -998,6 +998,10 @@ html {
   background-color: #505050;
 }
 
+.bg-theme-nav{
+  background-color: #787878;
+}
+
 .bg-theme-footer {
   background-color: #23272e;
 }

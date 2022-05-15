@@ -1,3 +1,21 @@
+<script src="./plugin/Bootstrap/jquery-3.6.0.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js"></script>
+
+
+<!-- lightslider -->
+<link rel="stylesheet" href="./plugin/lightslider-master/css/lightslider.css" />
+<script src="./plugin/lightslider-master/js/lightslider.min.js"></script>
+
+<!-- lightGallery -->
+<link rel="stylesheet" href="./plugin/lightgallery/css/lightgallery-bundle.css" />
+<!-- <link rel="stylesheet" href="./plugin/lightgallery/css/lg-thumbnail.css" />
+  <link rel="stylesheet" href="./plugin/lightgallery/css/lg-zoom.css" /> -->
+
+
+<script src="./plugin/lightgallery/js/lightgallery.umd.js"></script>
+<script src="./plugin/lightgallery/js/lg-thumbnail.umd.js"></script>
+<script src="./plugin/lightgallery/js/lg-zoom.umd.js"></script>
+
 <div>
     <div>
         <ul id="content-slider" class="content-slider">
@@ -45,21 +63,31 @@
 
 <script>
     $(function () {
-        lightGallery(document.getElementById('content-slider'), {
-            mousewheel: true,
-            download: false,
-            showZoomInOutIcons: true,
-        })
-        lightGallery(document.getElementById('singleImg_1'), {
-            mousewheel: true,
-            download: false,
-            showZoomInOutIcons: true,
-            width:"100%"
-        })
+        // lightGallery(document.getElementById('content-slider'), {
+        // })
+        jQuery("#content-slider")
+            .justifiedGallery({
+            })
+            .on("jg.complete", function () {
+                window.lightGallery(
+                    document.getElementById("content-slider"),
+                    {
+                        galleryId: "nature",
+                        plugins: [lgZoom, lgThumbnail],
+                        mobileSettings: {
+                            controls: false,
+                            showCloseIcon: false,
+                            download: false,
+                            rotate: false
+                        }
+                    }
+                );
+            });
+
     })
 
 
-    
+
     $(document).ready(function () {
         $("#content-slider").lightSlider({
             loop: true,
@@ -95,7 +123,7 @@
 </script>
 
 <style>
-    .singleImg{
+    .singleImg {
         width: 100%;
     }
 
