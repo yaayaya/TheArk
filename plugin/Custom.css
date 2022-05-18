@@ -36,7 +36,6 @@ html {
     padding: 10px !important;
     width: 200px;
     height: 100%;
-    /* transform: translateY(80%); */
   }
 
   .nav-item-BTitle {
@@ -273,9 +272,9 @@ html {
   }
 
   .navbar-logo {
+    
     width: 110px;
     height: 100%;
-    /* transform: translateY(80%); */
   }
 
   main {
@@ -671,6 +670,13 @@ html {
     height: 90vh;
     width: 100vw;
   }
+  .contentCenter {
+    width: 700px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+  }
 }
 /* 手機、平板 */
 @media (max-width: 1024px) {
@@ -701,14 +707,17 @@ html {
     height: 50vh;
     width: 100vw;
   }
-}
 
-.contentCenter {
+  .contentCenter {
+  width: auto;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   text-align: -webkit-center;
 }
+}
+
+
 
 .contentCenter1400 {
   max-width: 1400px;
@@ -991,40 +1000,49 @@ html {
 
 /* 背景顏色 */
 .bg-theme {
-  background-color: #787878;
+  background-color: #000;
 }
 
 .bg-theme-darker {
-  background-color: #505050;
+  background-color: #1d1d1d;
 }
 
-.bg-theme-nav{
-  background-color: #787878;
+.bg-theme-nav {
+  background-color: #000;
 }
 
 .bg-theme-footer {
-  background-color: #23272e;
+  background-color: #1d1d1d;
 }
 .bg-theme-license {
-  background-color: #5a5a5a;
+  background-color: #000;
 }
 
-/* 水平、垂直中 */
+.bg-theme-dropdown-menu {
+  background-color: #1d1d1d;
+}
+@media (min-width: 768px) {
+  .main-theme {
+    background-color: #000;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-theme {}
+}
+
+/* 水平、垂直中 單一不輪播圖片*/
 .centerImage {
   max-height: 100%;
   max-width: 100%;
   width: auto;
   height: auto;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
+  left:0;
   margin: auto;
-}
-
-.singleImg {
-  width: 100%;
 }
 
 .disabledHover {
@@ -1034,4 +1052,25 @@ html {
 .collectionDesriptText {
   text-align: center;
   color: white;
+}
+
+/* 輪播設定 */
+.singleImg {
+  width: 100%;
+}
+
+.disabledHover {
+  pointer-events: none;
+}
+
+.sliderSI img {
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+}
+
+.sliderBI img {
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
 }
