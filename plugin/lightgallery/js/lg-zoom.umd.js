@@ -484,6 +484,7 @@
             return scale > 1;
         };
         Zoom.prototype.getScale = function (scale) {
+
             var actualSizeScale = this.getCurrentImageActualSizeScale();
             if (scale < 1) {
                 scale = 1;

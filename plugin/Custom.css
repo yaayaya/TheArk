@@ -30,8 +30,8 @@ html {
   text-align: center;
 }
 
-.fixedBG_PC{
-  height:780px
+.fixedBG_PC {
+  height: 780px;
 }
 
 /* 電腦、平板 CSS */
@@ -276,7 +276,15 @@ html {
   }
 
   .navbar-logo {
-    padding: 1px ;
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 1px;
     width: 110px;
     height: 100%;
   }
@@ -675,6 +683,7 @@ html {
     width: 100vw;
   }
   .contentCenter {
+    color: #d7d7d7;
     width: 700px;
     max-width: 700px;
     margin-left: auto;
@@ -713,17 +722,17 @@ html {
   }
 
   .contentCenter {
-  width: auto;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: -webkit-center;
+    color: #d7d7d7;
+    width: auto;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+  }
 }
-}
-
-
 
 .contentCenter1400 {
+  color: #d7d7d7;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -815,7 +824,7 @@ html {
 }
 
 .dropdown .show {
-  max-height: 250px;
+  max-height: 280px;
   opacity: 1;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
@@ -952,7 +961,7 @@ html {
 
 /* PC版大標動畫 */
 .pc_BTitle_button .hover-underline-animation {
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   color: wthie;
 }
@@ -1032,7 +1041,8 @@ html {
 }
 
 @media (max-width: 768px) {
-  .main-theme {}
+  .main-theme {
+  }
 }
 
 /* 水平、垂直中 單一不輪播圖片*/
@@ -1045,7 +1055,7 @@ html {
   top: 0;
   bottom: 0;
   right: 0;
-  left:0;
+  left: 0;
   margin: auto;
 }
 
@@ -1055,7 +1065,13 @@ html {
 
 .collectionDesriptText {
   text-align: center;
+  margin: auto;
   color: white;
+}
+
+.cdtd {
+  color: #d7d7d7;
+  max-width: 1400px;
 }
 
 /* 輪播設定 */
@@ -1078,7 +1094,7 @@ html {
   /* width: 100%;
   object-fit: contain; */
 
-  display:block;
-  width:100%; 
+  display: block;
+  width: 100%;
   object-fit: cover;
 }

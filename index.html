@@ -109,17 +109,17 @@
     <div class="fixedBG_mobile"></div>
     <div>
       <!-- 導覽列 -->
-      <nav class="navWrap navbar navbar-expand-lg navClass bg-theme-nav navbar-dark py-3" id="vueNav">
+      <nav class="navWrap navbar navbar-expand-lg navClass bg-theme-nav navbar-dark py-3 " id="vueNav">
         <div class="d-flex flex-grow-1">
           <!-- ICON -->
-          <img src="./images/icon/logo.svg" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
+          <img src="./images/icon/logo.svg" class="navbar-logo " style="padding-bottom: 0px;height: 100%;">
 
           <!-- 手機、平板大標 -->
           <div class="w-100 mobileShow" style="display: flex; ">
             <!-- 大標 -->
             <div class="collapse navbar-collapse flex-grow-1 " style="display: inline-block;">
               <div class="navbar-nav  flex-nowrap ">
-                <li class="nav-item dropdown dropdownBTitle" style="text-align:left; padding-left: .8rem;">
+                <li class="nav-item dropdown dropdownBTitle" style="text-align:left; padding-left: .5rem;">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" :data-i18n="BTitle">
                   </a>
@@ -150,6 +150,20 @@
         <div class="pcShow" style="text-align: right;">
           <!-- 大標 -->
           <div class="pc_BTitle_button">
+            <!-- 語言 -->
+            <li class="px-2 nav-item dropdown" style="display:inline-block">
+              <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
+              </a>
+              <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
+                <a v-show="currentPN == 'whale' " class="nav-item nav-link hover-underline-animation"
+                  data-i18n="Lang.jp" onclick="langChange('jp')"></a>
+                <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.zhtw"
+                  onclick="langChange('zhtw')"></a>
+                <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.en"
+                  onclick="langChange('en')"></a>
+              </div>
+            </li>
             <a class="nav-item-BTitle  hover-underline-animation dInlineBlock" data-i18n="BTitle.whale"
               @click="changePage('whale')"></a>
             <a class="nav-item-BTitle  hover-underline-animation dInlineBlock" data-i18n="BTitle.giant"

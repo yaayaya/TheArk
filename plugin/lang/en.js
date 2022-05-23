@@ -199,7 +199,7 @@ let en = {
       t6: "",
     },
     Collection_1: {
-      Title: "Giant beast Fossil　　　　　　　　　　",
+      Title: "Giant beast Fossil",
 
       imgTitle_1: "Skinner No.1",
       imgDescription_1_1: "2020 Skinner No.1",
@@ -219,141 +219,141 @@ let en = {
 
       imgTitle_6: "Whale Monster 01",
       imgDescription_6_1: "2021 Trace Fossil - Whale Monster 01",
-      imgDescription_6_2: "(1140x320x55 cm)(1824)	",
+      imgDescription_6_2: "(1140x320x55 cm)",
     },
     Collection_2: {
-      Title: "Biological Fossil　　　　　　　　　　　　",
+      Title: "Biological Fossil",
 
       imgTitle_7: "MB 02 partial 01",
       imgDescription_7_1: "2019 Trace Fossil-MB 02 partial 01",
-      imgDescription_7_2: "(455x150x15 cm)(341)",
+      imgDescription_7_2: "(455x150x15 cm)",
 
       imgTitle_8: "MB 04",
       imgDescription_8_1: "2019 Trace Fossil-MB 04",
-      imgDescription_8_2: "(200x103x14 cm)(103)",
+      imgDescription_8_2: "(200x103x14 cm)",
 
       imgTitle_9: "MB 03",
       imgDescription_9_1: "2019 Trace Fossil-MB 03",
-      imgDescription_9_2: "(182x103x12 cm)(93)",
+      imgDescription_9_2: "(182x103x12 cm)",
 
       imgTitle_10: "MB 13",
       imgDescription_10_1: "2020 Trace Fossil-MB 13",
-      imgDescription_10_2: "(184x103x9 cm)(95)",
+      imgDescription_10_2: "(184x103x9 cm)",
 
       imgTitle_11: "MB 16",
       imgDescription_11_1: "2020 Trace Fossil-MB 16",
-      imgDescription_11_2: "(296x138x14 cm)(204)",
+      imgDescription_11_2: "(296x138x14 cm)",
 
       imgTitle_12: "MB 14",
       imgDescription_12_1: "2020 Trace Fossil-MB 14",
-      imgDescription_12_2: "(140x60x10 cm)(42)",
+      imgDescription_12_2: "(140x60x10 cm)",
 
       imgTitle_13: "MB 08",
       imgDescription_13_1: "2020 Trace Fossil-MB 08",
-      imgDescription_13_2: "(74x52x10 cm)(19)",
+      imgDescription_13_2: "(74x52x10 cm)",
 
       imgTitle_14: "MB 06",
       imgDescription_14_1: "2020 Trace Fossil-MB 06",
-      imgDescription_14_2: "(60×38×10 cm)(11.4)",
+      imgDescription_14_2: "(60×38×10 cm)",
 
       imgTitle_15: "MB 07",
       imgDescription_15_1: "2020 Trace Fossil-MB 07",
-      imgDescription_15_2: "(53×42.5×5 cm)(11.2)",
+      imgDescription_15_2: "(53×42.5×5 cm)",
 
       imgTitle_16: "MB 09",
       imgDescription_16_1: "2020 Trace Fossil-MB 09",
-      imgDescription_16_2: "(62x53x5.5 cm)(16.4)",
+      imgDescription_16_2: "(62x53x5.5 cm)",
 
       imgTitle_17: "MB 10",
       imgDescription_17_1: "2020 Trace Fossil-MB 10",
-      imgDescription_17_2: "(50x60.5x4 cm)(15)",
+      imgDescription_17_2: "(50x60.5x4 cm)",
 
       imgTitle_18: "MB 11",
       imgDescription_18_1: "2020 Trace Fossil-MB 11",
-      imgDescription_18_2: "(87x42.5x8 cm)(18.5)",
+      imgDescription_18_2: "(87x42.5x8 cm)",
 
       imgTitle_19: "MB 15",
       imgDescription_19_1: "2022 Trace Fossil-MB 15",
-      imgDescription_19_2: "(57x71x25 cm)(20)",
+      imgDescription_19_2: "(57x71x25 cm)",
 
       imgTitle_20: "MB 12",
       imgDescription_20_1: "2020 Trace Fossil-MB 12",
-      imgDescription_20_2: "(98x89x4 cm)(43.6)",
+      imgDescription_20_2: "(98x89x4 cm)",
 
       imgTitle_37: "MB 17",
       imgDescription_37_1: "2020 Trace Fossil-MB 17",
-      imgDescription_37_2: "(40x27x8 cm)(5.4)	",
+      imgDescription_37_2: "(40x27x8 cm)",
     },
     Collection_3: {
-      Title: "Plant Fossil　　　　　　　　　　　　",
+      Title: "Plant Fossil",
 
       imgTitle_21: "PM 01",
       imgDescription_21_1: "2020 Trace Fossil-PM 01",
-      imgDescription_21_2: "(310x111x6 cm)(172)",
+      imgDescription_21_2: "(310x111x6 cm)",
 
       imgTitle_22: "PM 19",
       imgDescription_22_1: "2020 Trace Fossil-PM 19",
-      imgDescription_22_2: "(159x120x6.5cm)(95)",
+      imgDescription_22_2: "(159x120x6.5cm)",
 
       imgTitle_23: "PM 18",
       imgDescription_23_1: "2020 Trace Fossil-PM 18",
-      imgDescription_23_2: "(169x83x9 cm)(70)",
+      imgDescription_23_2: "(169x83x9 cm)",
 
       imgTitle_24: "PM 16",
       imgDescription_24_1: "2020 Trace Fossil-PM 16",
-      imgDescription_24_2: "(160x50x7 cm)(40)",
+      imgDescription_24_2: "(160x50x7 cm)",
 
       imgTitle_25: "PM 05",
       imgDescription_25_1: "2022 Trace Fossil-PM 05",
-      imgDescription_25_2: "(152x60x6 cm)(45.6)",
+      imgDescription_25_2: "(152x60x6 cm)",
 
       imgTitle_26: "PM 07",
       imgDescription_26_1: "2022 Trace Fossil-PM 07",
-      imgDescription_26_2: "(80x39x4 cm)(15.6)",
+      imgDescription_26_2: "(80x39x4 cm)",
 
       imgTitle_27: "PM 06",
       imgDescription_27_1: "2022 Trace Fossil-PM 06",
-      imgDescription_27_2: "(142x36x3 cm)(25.5)",
+      imgDescription_27_2: "(142x36x3 cm)",
 
       imgTitle_28: "PM 21",
       imgDescription_28_1: "2020 Trace Fossil-PM 21",
-      imgDescription_28_2: "(61×28×4 cm)(8.5)",
+      imgDescription_28_2: "(61×28×4 cm)",
 
       imgTitle_29: "PM 22",
       imgDescription_29_1: "2020 Trace Fossil- PM 22",
-      imgDescription_29_2: "(40x52x6 cm)(10.4)",
+      imgDescription_29_2: "(40x52x6 cm)",
 
       imgTitle_30: "PM 23",
       imgDescription_30_1: "2020 Trace Fossil-PM 23",
-      imgDescription_30_2: "(42x29x5 cm)(6)",
+      imgDescription_30_2: "(42x29x5 cm)",
 
       imgTitle_31: "PM 25",
       imgDescription_31_1: "2020 Trace Fossil-PM 25",
-      imgDescription_31_2: "(47x30x6 cm)(7)",
+      imgDescription_31_2: "(47x30x6 cm)",
 
       imgTitle_32: "PM 26",
       imgDescription_32_1: "2020 Trace Fossil-PM 26",
-      imgDescription_32_2: "(30x51x5.5 cm)(7.65)",
+      imgDescription_32_2: "(30x51x5.5 cm)",
 
       imgTitle_33: "PM 27",
       imgDescription_33_1: "2020 Trace Fossil-PM 27",
-      imgDescription_33_2: "(49x40x4 cm)(9.8)	",
+      imgDescription_33_2: "(49x40x4 cm)",
 
       imgTitle_34: "PM 28",
       imgDescription_34_1: "2020 Trace Fossil-PM 28",
-      imgDescription_34_2: "(40x30x4 cm)(6)",
+      imgDescription_34_2: "(40x30x4 cm)",
 
       imgTitle_35: "PM 29",
       imgDescription_35_1: "2022 Trace Fossil-PM 29",
-      imgDescription_35_2: "(24.5x32x2 cm)(3.9)",
+      imgDescription_35_2: "(24.5x32x2 cm)",
 
       imgTitle_36: "PM 30",
       imgDescription_36_1: "2022 Trace Fossil-PM 30",
-      imgDescription_36_2: "(21x17x2 cm)(1.8)",
+      imgDescription_36_2: "(21x17x2 cm)",
     },
 
     Collection_4: {
-      Title: "Bu-Nam cultural Relics　　　　　　　　　　",
+      Title: "Bu-Nam cultural Relics",
 
     },
   },
