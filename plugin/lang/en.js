@@ -202,31 +202,37 @@ let en = {
       Title: "Giant beast Fossil",
 
       imgTitle_1: "Skinner No.1",
-      imgDescription_1_1: "2020 Skinner No.1",
+      imgDescription_1_1: "2019 Skinner No.1",
       imgDescription_1_2: "(342x156xH238 cm)",
+      imgDescription_1_3: "Skinner No.1 was unearthed at the Yicun Site in Taipei City in 2019. Compared with the average human skeleton, the 5-metre long fossil reveals the eye sockets, palms and soles of the feet areas larger in proportion. Peculiar mechanical devices are embedded in the bones of the left palm and gingers, left knee, left pelvis, left scapula, and the back of the skull. The fossil had emerged alongside the Giant Sharkdeer No. 2 at the excavation site, completing a spectacle of the moment of the fatal clash.",
 
-      imgTitle_2: "Beast-Shark Deer",
-      imgDescription_2_1: "2020 Trace Fossil - Beast-Shark Deer",
+      imgTitle_2: "Giant Sharkdeer No. 2",
+      imgDescription_2_1: "2019 Trace Fossil - Beast-Shark Deer",
       imgDescription_2_2: "(342x156xH200 cm)",
+      imgDescription_2_3: "Unearthed at the Yicun site in Taipei City in 2019, Giant Sharkdeer No. 2 reveals a creature whose upper body resembles the deer and the lower the fish. The fossil had emerged in a scuf fling manner with Skinner No.1 at the excavation site, contributing to the spectacular scene of the fatal clash.",
 
-      imgTitle_3: "Beast-Bird Fossil No.1",
-      imgDescription_3_1: "2020 Trace Fossil - Beast-Bird Fossil No.1",
+      imgTitle_3: "Giant Bird No. 3",
+      imgDescription_3_1: "2019 Trace Fossil - Beast-Bird Fossil No.1",
       imgDescription_3_2: "(102x60x60 cm)",
+      imgDescription_3_3: "Unearthed at the Danan Site in Taipei in 2019, Giant Bird No. 3 measures roughly one metre long and three metres in wing length. Discovered next to the site are plant fossils over 10 metres tall.",
 
-      imgTitle_4: "",
-      imgDescription_4_1: "",
-      imgDescription_4_2: "",
+      imgTitle_4: "Fossil Specimen Display No. 5",
+      imgDescription_4_1: "2018-2019 Fossil Specimen Display No. 5",
+      imgDescription_4_2: "(102x60x60 cm)",
+      imgDescription_4_3: "Fossil Specimen Display No. 5 presents a collection of fossil fragments of the yet unknown giants and beasts unearthed at the Khao Khanap Nam stalactite cave in Krabi and the Yicun site in Taipei.",
 
-      imgTitle_6: "Whale Monster 01",
-      imgDescription_6_1: "2021 Trace Fossil - Whale Monster 01",
+      imgTitle_6: "Whale Monster No. 6",
+      imgDescription_6_1: "2020 Trace Fossil - Whale Monster 01",
       imgDescription_6_2: "(1140x320x55 cm)",
+      imgDescription_6_3: "Unearthed in Suzu, Japan in 2020, Whale Monster No. 6 measures 11.5 metres long and 3.5 metres wide. The well-preserved fossil reveals the skeleton of a creature resembling the whales except for two front fins and two huge hind feet. Is this creature of a kind close to the ancestor of whales, the walking whale, Ambulocetus natans? Or direct evidence of the evolution of the walking whale?",
     },
     Collection_2: {
       Title: "Biological Fossil",
 
-      imgTitle_7: "MB 02 partial 01",
-      imgDescription_7_1: "2019 Trace Fossil-MB 02 partial 01",
+      imgTitle_7: "MB 02 01",
+      imgDescription_7_1: "2017 Trace Fossil-MB 02 partial 01",
       imgDescription_7_2: "(455x150x15 cm)",
+      imgDescription_7_3: "Unearthed in Luzhu, Taoyuan in 2017, Trace Fossil-MB 02 Detail 1 likely resembles a large and a small seabed creature, with the large one in fragments. Their bodies are composed of several mechanical parts, pointing to unknown robotic organisms.",
 
       imgTitle_8: "MB 04",
       imgDescription_8_1: "2019 Trace Fossil-MB 04",
@@ -239,10 +245,12 @@ let en = {
       imgTitle_10: "MB 13",
       imgDescription_10_1: "2020 Trace Fossil-MB 13",
       imgDescription_10_2: "(184x103x9 cm)",
+      imgDescription_13_3: "Trace Fossil-MB 13 is a fossil of an unknown mechanical device or structure with several interconnected cables or metallic threads, seemingly possessing biological characteristics.",
 
       imgTitle_11: "MB 16",
       imgDescription_11_1: "2020 Trace Fossil-MB 16",
       imgDescription_11_2: "(296x138x14 cm)",
+      imgDescription_11_3: "Trace Fossil-MB 16 is a well-preserved fossil of an unknown mechanical device or structure with several interconnected cables or metallic threads, resembling members of Decapodiformes.",
 
       imgTitle_12: "MB 14",
       imgDescription_12_1: "2020 Trace Fossil-MB 14",
@@ -288,8 +296,9 @@ let en = {
       Title: "Plant Fossil",
 
       imgTitle_21: "PM 01",
-      imgDescription_21_1: "2020 Trace Fossil-PM 01",
+      imgDescription_21_1: "2019 Trace Fossil-PM 01",
       imgDescription_21_2: "(310x111x6 cm)",
+      imgDescription_21_3: "Unearthed at the Danan Site of Danan Forest Park, Taoyuan in 2019, Trace Fossil-PM 01 is a well-preserved, three-metre long giant plant fossil. The fossil resembles a Japanese banana leaf, yet its petiole shows to be in a mechanised state.",
 
       imgTitle_22: "PM 19",
       imgDescription_22_1: "2020 Trace Fossil-PM 19",
@@ -353,8 +362,75 @@ let en = {
     },
 
     Collection_4: {
-      Title: "Bu-Nam cultural Relics",
+      Title: "卜湳文明遺跡文物",
 
+      imgTitleBuNam_1: "卜湳文明遺跡-魂遁之舟",
+      imgDescriptionBuNam_1_1: "2019 卜湳文明遺跡-魂遁之舟",
+      imgDescriptionBuNam_1_2: "(180×140×180 cm)",
+      imgDescriptionBuNam_1_3: "《卜湳文明遺跡-魂遁之舟》的功能和用途不明，可能是某種神秘儀式性的雕塑品。盤形中央是略高的八角形，有著神秘的浮雕與文字印記。盤形外圈有八片構成繁複簍空的捲草紋飾，八片扇形中央有劍形物件。中央左右各一球體，球形部分由幾個組件構成，有層次與空間性。下方中央為法器形狀之棘花座台，呈現舟的造型，托住並支撐輪體。這件文物雕刻精緻細膩，形態特殊、秀麗壯闊，是目前為止造型最繁複而精緻的卜湳文物。在荷蘭國家博物館及法國尼斯亞洲博物館展出時，造成轟動!!",
+      imgDescriptionBuNam_1_4: "銅",
+
+      imgTitleBuNam_2: "卜湳文明-魂遁之輪遺址",
+      imgDescriptionBuNam_2_1: "2016 卜湳文明-魂遁之輪遺址",
+      imgDescriptionBuNam_2_2: "(2700x1200x200 cm)",
+      imgDescriptionBuNam_2_3: "這個遺跡於2016年發現於英國西薩塞克斯郡的Goodwood古德伍德莊園，占地26英畝的林地中。Goodwood古德伍德莊園是由Wilfred和Jeannette Cass夫婦在22年前創立的英國卡斯雕塑基金會的雕塑公園。「卜湳文明魂遁之輪遺址」在5個4公尺見方，最深約2公尺的探方坑，發現了兩個巨大圓盤，還有其他散置的不明金屬物質共約有25個。這究竟由何人製作？如何製作？作為何用？組裝後的造形和功能究竟是什麼？這些神秘的浮雕透露著什麼訊息？都有待相關學者繼續思考與研究。",
+      imgDescriptionBuNam_2_4: "銅",
+
+      imgTitleBuNam_3: "卜湳文明-魂遁之輪",
+      imgDescriptionBuNam_3_1: "2016 卜湳文明-魂遁之輪",
+      imgDescriptionBuNam_3_2: "(3200x3500x350 cm)",
+      imgDescriptionBuNam_3_3: "《卜湳文明遺跡-魂遁之輪》3.5公尺高重達7噸的銅雕。它的外型有不明飛行物的聯想，或具有某種神秘儀式性的雕塑。中央是圓形中間略高的盤狀，盤形中央左右各一球體，球形部分為類似孔明鎖的方式組合，簍空增加浮雕視覺層次與空間性，並提高結構強度。下方中央為法器形狀之棘花座台，托住並支撐輪體。圓盤上面有著神秘的浮雕與文字印記。少數地方銹蝕、殘缺、破損，表面呈現類似銅綠顏色，並夾雜著出土當地的白堊土，金屬造型與顏色均相當吸引人。在歷經6年的挖掘和研究，這些散置在遺址坑內的不明金屬物件被運回台灣，並且組裝起來。",
+      imgDescriptionBuNam_3_4: "銅",
+
+      imgTitleBuNam_4: "繁花似錦1號",
+      imgDescriptionBuNam_4_1: "2017 繁花似錦1號",
+      imgDescriptionBuNam_4_2: "(44.5x176x4.5 cm)",
+      imgDescriptionBuNam_4_3: "「繁花似錦1號」是卜湳文物中少有的形制。它屬於捲草紋直向簍空的形式，有奇異的蝴蝶、植物和機械造型的浮雕。工藝造詣卓爾不凡，造型優美華麗、線條繁複交錯、層次豐富。",
+      imgDescriptionBuNam_4_4: "銅",
+
+      imgTitleBuNam_5: "繁花似錦2號",
+      imgDescriptionBuNam_5_1: "2017 繁花似錦2號",
+      imgDescriptionBuNam_5_2: "(52×57×7 cm)",
+      imgDescriptionBuNam_5_3: "「繁花似錦2號」呈現扇形卜湳捲草紋簍空形制，有奇異的蝴蝶、植物和機械法器造型的浮雕。工藝造詣卓爾不凡，造型優美華麗、線條繁複交錯、層次豐富。",
+      imgDescriptionBuNam_5_4: "銅",
+
+      imgTitleBuNam_6: "BM0803",
+      imgDescriptionBuNam_6_1: "2008 BM0803",
+      imgDescriptionBuNam_6_2: "(63x80x17 cm)",
+      imgDescriptionBuNam_6_3: "「BM0803」是一尊8顆頭獨身的神像雕塑，所有的頭都長得不同，並連接到同一個載體。中央有一個類似面具的樣式，額頭和雙眼有神秘法器。左右6個頭的下方有管線連結到面具，造型相當獨特。",
+      imgDescriptionBuNam_6_4: "夸石",
+
+      imgTitleBuNam_7: "BM66號 魂遁之門",
+      imgDescriptionBuNam_7_1: "2007 BM66號-魂遁之門",
+      imgDescriptionBuNam_7_2: "(630x280x10 cm)",
+      imgDescriptionBuNam_7_3: "「魂遁之門」高270公分、寬630公分、厚20公分，共85大小不一的石塊組成，中央圓形雜體環繞交疊，呈現細膩的淺浮雕。二環卜湳硬刻七行迴文字，字體公整，三環為卜湳法器構成的「捲索紋」，一內一外交錯對稱，形態柔美流暢。四環為小型「雷孔」，外有星翼，左右下方兩側有貼金左右脅獸豩豤背對，後為法器石，上方有殘缺大型雷孔。整體性優美壯觀，是近年出土的卜湳文物中最為大型的出土雕刻之一。",
+      imgDescriptionBuNam_7_4: "夸石",
+
+      imgTitleBuNam_8: "BM2號石 未來之門",
+      imgDescriptionBuNam_8_1: "2004 BM2號石—未來之門",
+      imgDescriptionBuNam_8_2: "(160×370×10 cm)",
+      imgDescriptionBuNam_8_3: "卜湳文明遺址1號墓室東牆石刻，牆面可見精緻的淺浮雕刻，刻畫類似神壇或建築神龕，神龕中有濦霵祇神族的眾神，下方有眾多法器石。從這面墓室石牆的雕刻研判，卜湳文明的宗教信仰應是多神教，也顯示此文明具有其獨立而完整的神話系統。",
+      imgDescriptionBuNam_8_4: "夸石",
+
+      imgTitleBuNam_9: "BM0801 魂遁之星",
+      imgDescriptionBuNam_9_1: "2008 BM0801 魂遁之星",
+      imgDescriptionBuNam_9_2: "(R-208x15 cm)",
+      imgDescriptionBuNam_9_3: "「魂遁之星」直徑208公分，最厚處12公分。中心雜體環繞交疊，呈現半球體高浮雕，二環卜湳軟刻單行迴形文字，線條優美，文字內容不詳。下方中央為法器形狀之蓮花座台，三環為卜湳法器構成的「捲索紋」。雕刻精細繁複，線條優美、重複對稱、疏密有致。該文物作品依出土狀態推測，應為墓室中獻祭場域建築牆面的一部分，表現出卜湳文明當時宗教祭祀聖殿的榮景。",
+      imgDescriptionBuNam_9_4: "夸石",
+
+      imgTitleBuNam_10: "BM0802 搜櫺掛",
+      imgDescriptionBuNam_10_1: "2008 BM0802 搜櫺掛",
+      imgDescriptionBuNam_10_2: "(170x170x15 cm)",
+      imgDescriptionBuNam_10_3: "「搜櫺卦」約略為正八邊形，每邊70公分，最長邊對角線為180公分，最厚處12公分。中央圓形略高浮雕，具體可辨兩女兩獸四人軀體交雜環繞。兩獸形狀奇特，軀體仿若機械質感，女體保留卜湳神話中「人屘」的特徵，疑為人屘的同族。浮雕圖騰特別在於兩獸肢體與女體纏繞交接於腦後與脊椎處，有攝魂之意。外八邊卦繁複有致，為卜湳神秘法器構成，形成具有層次的放射狀態。",
+      imgDescriptionBuNam_10_4: "夸石",
+
+      imgTitleBuNam_11: "12聖獸",
+      imgDescriptionBuNam_11_1: "2007 12聖獸",
+      imgDescriptionBuNam_11_2: "(51x20x53 cm x 12 pieces)",
+      imgDescriptionBuNam_11_3: "「12聖獸」是2003年出土於台南「卜湳遺址」，是卜湳文明遺跡最具特色的出土文物之一。這套獸形石刻推測應非日常生活用品，可能為陪葬品或宗教用途的祭祀或裝飾聖物。出土時部分殘缺，經修復後保持十分完整的面貌，這些奇形怪狀的獸形雕塑紀錄了卜湳文明特有的精神與宗教特色。",
+      imgDescriptionBuNam_11_4: "夸石",
+
+      
     },
   },
 };
