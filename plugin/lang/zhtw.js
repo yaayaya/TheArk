@@ -228,136 +228,140 @@ let zhtw = {
     Collection_2: {
       Title: "脊椎動物化石",
 
-      imgTitle_7: "MB 02局部01",
+      imgTitle_7: "MB 02 局部01",
       imgDescription_7_1: "2017 遺跡化石-MB 02局部01",
       imgDescription_7_2: "(455x150x15 cm)",
       imgDescription_7_3:"「遺跡化石MB 02局部01」2017年出土於桃園蘆竹。猶如一大一小兩隻海底生物化石，大隻僅有局部，身形由許多機械所構成，宛如一種不明的機械生物化石。",
 
+      imgTitle_9: "MB 03",
+      imgDescription_9_1: "2017 遺跡化石-MB 03",
+      imgDescription_9_2: "(182x103x12 cm)",
+
       imgTitle_8: "MB 04",
-      imgDescription_8_1: "2019 遺跡化石-MB 04",
+      imgDescription_8_1: "2017 遺跡化石-MB 04",
       imgDescription_8_2: "(200x103x14 cm)",
 
-      imgTitle_9: "MB 03",
-      imgDescription_9_1: "2019 遺跡化石-MB 03",
-      imgDescription_9_2: "(182x103x12 cm)",
+      imgTitle_MB05: "",
+      imgDescription_MB05_1: "",
+      imgDescription_MB05_2: "",
+
+      imgTitle_14: "MB 06",
+      imgDescription_14_1: "2017 遺跡化石-MB 06",
+      imgDescription_14_2: "(60×38×10 cm)",
+
+      imgTitle_15: "MB 07",
+      imgDescription_15_1: "2017 遺跡化石-MB 07",
+      imgDescription_15_2: "(53×42.5×5 cm)",
+
+      imgTitle_13: "MB 08",
+      imgDescription_13_1: "2019 遺跡化石-MB 08",
+      imgDescription_13_2: "(74x52x10 cm)",
+
+      imgTitle_16: "MB 09",
+      imgDescription_16_1: "2017 遺跡化石-MB 09",
+      imgDescription_16_2: "(62x53x5.5 cm)",
+
+      imgTitle_17: "MB 10",
+      imgDescription_17_1: "2017 遺跡化石-MB 10",
+      imgDescription_17_2: "(50x60.5x4 cm)",
+
+      imgTitle_18: "MB 11",
+      imgDescription_18_1: "2017 遺跡化石-MB 11",
+      imgDescription_18_2: "(87x42.5x8 cm)",
+
+      imgTitle_20: "MB 12",
+      imgDescription_20_1: "2017 遺跡化石-MB 12",
+      imgDescription_20_2: "(98x89x4 cm)",
+      imgDescription_20_3: "",
 
       imgTitle_10: "MB 13",
       imgDescription_10_1: "2020 遺跡化石-MB 13",
       imgDescription_10_2: "(184x103x9 cm)",
       imgDescription_10_3:"「遺跡化石-MB 13」具有不明機械裝置或結構的化石，結構上有多處連結的管線或金屬般材質的線條，也彷彿有某種生物型態。",
 
+      imgTitle_12: "MB 14",
+      imgDescription_12_1: "2019 遺跡化石-MB 14",
+      imgDescription_12_2: "(140x60x10 cm)",
+
+      imgTitle_19: "MB 15",
+      imgDescription_19_1: "2017 遺跡化石-MB 15",
+      imgDescription_19_2: "(57x71x25 cm)",
+
       imgTitle_11: "MB 16",
       imgDescription_11_1: "2020 遺跡化石-MB 16",
       imgDescription_11_2: "(296x138x14 cm)",
       imgDescription_11_3:"「遺跡化石-MB 16」具有不明機械裝置或結構的化石，類似頭足綱十腕目的生物。結構上有多處金屬般質感的管線連接，型態相當完整。",
 
-      imgTitle_12: "MB 14",
-      imgDescription_12_1: "2020 遺跡化石-MB 14",
-      imgDescription_12_2: "(140x60x10 cm)",
-
-      imgTitle_13: "MB 08",
-      imgDescription_13_1: "2020 遺跡化石-MB 08",
-      imgDescription_13_2: "(74x52x10 cm)",
-
-      imgTitle_14: "MB 06",
-      imgDescription_14_1: "2020 遺跡化石-MB 06",
-      imgDescription_14_2: "(60×38×10 cm)",
-
-      imgTitle_15: "MB 07",
-      imgDescription_15_1: "2020 遺跡化石-MB 07",
-      imgDescription_15_2: "(53×42.5×5 cm)",
-
-      imgTitle_16: "MB 09",
-      imgDescription_16_1: "2020 遺跡化石-MB 09",
-      imgDescription_16_2: "(62x53x5.5 cm)",
-
-      imgTitle_17: "MB 10",
-      imgDescription_17_1: "2020 遺跡化石-MB 10",
-      imgDescription_17_2: "(50x60.5x4 cm)",
-
-      imgTitle_18: "MB 11",
-      imgDescription_18_1: "2020 遺跡化石-MB 11",
-      imgDescription_18_2: "(87x42.5x8 cm)",
-
-      imgTitle_19: "MB 15",
-      imgDescription_19_1: "2022 遺跡化石-MB 15",
-      imgDescription_19_2: "(57x71x25 cm)",
-
-      imgTitle_20: "MB 12",
-      imgDescription_20_1: "2020 遺跡化石-MB 12",
-      imgDescription_20_2: "(98x89x4 cm)",
-      imgDescription_20_3: "",
-
       imgTitle_37: "MB 17",
-      imgDescription_37_1: "2020 遺跡化石-MB 17",
+      imgDescription_37_1: "2017 遺跡化石-MB 17",
       imgDescription_37_2: "(40x27x8 cm)",
     },
     Collection_3: {
       Title: "植物化石",
 
       imgTitle_21: "PM 01",
-      imgDescription_21_1: "2020 遺跡化石-PM 01",
+      imgDescription_21_1: "2019 遺跡化石-PM 01",
       imgDescription_21_2: "(310x111x6 cm)",
       imgDescription_21_3:"「遺跡化石-PM 01」2019年出土於桃園大湳森林公園中的「大湳遺址」，是一個長3公尺巨型類似芭蕉葉的植物化石，但枝梗有電子或機械化的狀態，型態保存相當完整。",
-
-      imgTitle_22: "PM 19",
-      imgDescription_22_1: "2020 遺跡化石-PM 19",
-      imgDescription_22_2: "(159x120x6.5cm)",
-
-      imgTitle_23: "PM 18",
-      imgDescription_23_1: "2020 遺跡化石-PM 18",
-      imgDescription_23_2: "(169x83x9 cm)",
-
-      imgTitle_24: "PM 16",
-      imgDescription_24_1: "2020 遺跡化石-PM 16",
-      imgDescription_24_2: "(160x50x7 cm)",
-
+      
       imgTitle_25: "PM 05",
-      imgDescription_25_1: "2022 遺跡化石-PM 05",
+      imgDescription_25_1: "2019 遺跡化石-PM 05",
       imgDescription_25_2: "(152x60x6 cm)",
 
-      imgTitle_26: "PM 07",
-      imgDescription_26_1: "2022 遺跡化石-PM 07",
-      imgDescription_26_2: "(80x39x4 cm)",
-
       imgTitle_27: "PM 06",
-      imgDescription_27_1: "2022 遺跡化石-PM 06",
+      imgDescription_27_1: "2019 遺跡化石-PM 06",
       imgDescription_27_2: "(142x36x3 cm)",
 
+      imgTitle_26: "PM 07",
+      imgDescription_26_1: "2019 遺跡化石-PM 07",
+      imgDescription_26_2: "(80x39x4 cm)",
+
+      imgTitle_24: "PM 16",
+      imgDescription_24_1: "2019 遺跡化石-PM 16",
+      imgDescription_24_2: "(160x50x7 cm)",
+            
+      imgTitle_23: "PM 18",
+      imgDescription_23_1: "2019 遺跡化石-PM 18",
+      imgDescription_23_2: "(169x83x9 cm)",
+
+      imgTitle_22: "PM 19",
+      imgDescription_22_1: "2019 遺跡化石-PM 19",
+      imgDescription_22_2: "(159x120x6.5cm)",
+
       imgTitle_28: "PM 21",
-      imgDescription_28_1: "2020 遺跡化石-PM 21",
+      imgDescription_28_1: "2017 遺跡化石-PM 21",
       imgDescription_28_2: "(61×28×4 cm)",
 
       imgTitle_29: "PM 22",
-      imgDescription_29_1: "2020 遺跡化石- PM 22",
+      imgDescription_29_1: "2017 遺跡化石- PM 22",
       imgDescription_29_2: "(40x52x6 cm)",
 
       imgTitle_30: "PM 23",
-      imgDescription_30_1: "2020 遺跡化石-PM 23",
+      imgDescription_30_1: "2017 遺跡化石-PM 23",
       imgDescription_30_2: "(42x29x5 cm)",
 
       imgTitle_31: "PM 25",
-      imgDescription_31_1: "2020 遺跡化石-PM 25",
+      imgDescription_31_1: "2017 遺跡化石-PM 25",
       imgDescription_31_2: "(47x30x6 cm)",
 
       imgTitle_32: "PM 26",
-      imgDescription_32_1: "2020 遺跡化石-PM 26",
+      imgDescription_32_1: "2017 遺跡化石-PM 26",
       imgDescription_32_2: "(30x51x5.5 cm)",
 
       imgTitle_33: "PM 27",
-      imgDescription_33_1: "2020 遺跡化石-PM 27",
+      imgDescription_33_1: "2017 遺跡化石-PM 27",
       imgDescription_33_2: "(49x40x4 cm)",
 
       imgTitle_34: "PM 28",
-      imgDescription_34_1: "2020 遺跡化石-PM 28",
+      imgDescription_34_1: "2017 遺跡化石-PM 28",
       imgDescription_34_2: "(40x30x4 cm)",
 
       imgTitle_35: "PM 29",
-      imgDescription_35_1: "2022 遺跡化石-PM 29",
+      imgDescription_35_1: "2019 遺跡化石-PM 29",
       imgDescription_35_2: "(24.5x32x2 cm)",
 
       imgTitle_36: "PM 30",
-      imgDescription_36_1: "2022 遺跡化石-PM 30",
+      imgDescription_36_1: "2019 遺跡化石-PM 30",
       imgDescription_36_2: "(21x17x2 cm)",
     },
 
