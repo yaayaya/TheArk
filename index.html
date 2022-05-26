@@ -450,13 +450,12 @@
   let hideTime = 0;
   var isMobile = /iPhone|iPad|iPod|Android|iPadPro/i.test(navigator.userAgent);
 
-  // $(function () {
-  //   reload()
-  // })
+  $(function () {
+    reload()
+  })
 
   function reload() {
     if (isMobile) {
-
       $(".DesktopShow").hide()
     } else {
       $(".MobileDeviceShow").hide()

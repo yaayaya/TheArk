@@ -1,8 +1,17 @@
 <style>
-    .content-slider-collection li img {
-        width: 100%;
-        height: 400px;
-        object-fit: contain;
+    @media (min-width: 1025px) {
+        .content-slider-collection li img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+        }
+    }
+    @media (max-width: 1025px) {
+        .content-slider-collection li img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
     }
 </style>
 
@@ -26,7 +35,8 @@
         <div>
             <ul id="content-slider1" class="content-slider-collection">
 
-                <li data-thumb="./images/Contents/Collection/1_1.png" data-src="./images/Contents/Collection/1_1.png" data-sub-html="#imgDescription_1">
+                <li data-thumb="./images/Contents/Collection/1_1.png" data-src="./images/Contents/Collection/1_1.png"
+                    data-sub-html="#imgDescription_1">
                     <div id="imgDescription_1" class="imgDesClass">
                         <span data-i18n="Collection_1.imgDescription_1_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_1.imgDescription_1_2" class="collectionDesriptText"></span>
@@ -55,8 +65,7 @@
                     <img src="./images/Contents/Collection/1_3.png" />
                     <div data-i18n="Collection_1.imgDescription_3_1" class="collectionDesriptText"></div>
                 </li>
-                <li data-src="./images/Contents/Collection/1_4.png"
-                    data-sub-html="#imgDescription_4">
+                <li data-src="./images/Contents/Collection/1_4.png" data-sub-html="#imgDescription_4">
                     <div id="imgDescription_4" class="imgDesClass">
                         <span data-i18n="Collection_1.imgDescription_4_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_1.imgDescription_4_2" class="collectionDesriptText"></span>
@@ -89,8 +98,7 @@
     <div class="py-4 bg-theme-darker">
         <div>
             <ul id="content-slider2" class="content-slider-collection">
-                <li data-src="./images/Contents/Collection/2_7.png"
-                    data-sub-html="#imgDescription_7">
+                <li data-src="./images/Contents/Collection/2_7.png" data-sub-html="#imgDescription_7">
                     <div id="imgDescription_7" class="imgDesClass">
                         <span data-i18n="Collection_2.imgDescription_7_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_2.imgDescription_7_2" class="collectionDesriptText"></span>
@@ -100,8 +108,7 @@
                     <div data-i18n="Collection_2.imgDescription_7_1" class="collectionDesriptText"></div>
                 </li>
 
-                <li data-src="./images/Contents/Collection/2_8.png"
-                    data-sub-html="#imgDescription_8">
+                <li data-src="./images/Contents/Collection/2_8.png" data-sub-html="#imgDescription_8">
                     <div id="imgDescription_8" class="imgDesClass">
                         <span data-i18n="Collection_2.imgDescription_8_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_2.imgDescription_8_2" class="collectionDesriptText"></span>
@@ -111,8 +118,7 @@
                     <div data-i18n="Collection_2.imgDescription_8_1" class="collectionDesriptText"></div>
                 </li>
 
-                <li data-src="./images/Contents/Collection/2_9.png"
-                    data-sub-html="#imgDescription_9">
+                <li data-src="./images/Contents/Collection/2_9.png" data-sub-html="#imgDescription_9">
                     <div id="imgDescription_9" class="imgDesClass">
                         <span data-i18n="Collection_2.imgDescription_9_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_2.imgDescription_9_2" class="collectionDesriptText"></span>
@@ -120,8 +126,8 @@
                     </div>
                     <img src="./images/Contents/Collection/2_9.png" />
                     <div data-i18n="Collection_2.imgDescription_9_1" class="collectionDesriptText"></div>
-                </li>                
-                
+                </li>
+
                 <li data-thumb="./images/Contents/Collection/2_10.png" data-src="./images/Contents/Collection/2_10.png"
                     data-sub-html="#imgDescription_10">
                     <div id="imgDescription_10" class="imgDesClass">
@@ -275,8 +281,7 @@
                     <img src="./images/Contents/Collection/3_23.png" />
                     <div data-i18n="Collection_3.imgDescription_23_1" class="collectionDesriptText"></div>
                 </li>
-                <li data-src="./images/Contents/Collection/3_24.png"
-                    data-sub-html="#imgDescription_24">
+                <li data-src="./images/Contents/Collection/3_24.png" data-sub-html="#imgDescription_24">
                     <div id="imgDescription_24" class="imgDesClass">
                         <span data-i18n="Collection_3.imgDescription_24_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_3.imgDescription_24_2" class="collectionDesriptText"></span>
@@ -284,8 +289,7 @@
                     <img src="./images/Contents/Collection/3_24_thumbnail.png" />
                     <div data-i18n="Collection_3.imgDescription_24_1" class="collectionDesriptText"></div>
                 </li>
-                <li data-src="./images/Contents/Collection/3_25.png"
-                    data-sub-html="#imgDescription_25">
+                <li data-src="./images/Contents/Collection/3_25.png" data-sub-html="#imgDescription_25">
                     <div id="imgDescription_25" class="imgDesClass">
                         <span data-i18n="Collection_3.imgDescription_25_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_3.imgDescription_25_2" class="collectionDesriptText"></span>
@@ -397,13 +401,13 @@
 
 
     <!-- 卜湳文明遺跡文物 標題 -->
-    <div class="row pt-4 pb-4 bg-theme" id="BuNam_id">
+    <div class="row py-4 bg-theme" id="BuNam_id">
         <div class=" col-12 text-center text-white overflow-hidden">
             <span class="titleText_1" data-i18n="Collection_4.Title"></span>
         </div>
     </div>
     <!-- 卜湳文明遺跡文物 輪播 -->
-    <div class="pb-4 bg-theme">
+    <div class="py-4 bg-theme">
         <div>
             <ul id="content-slider4" class="content-slider-collection">
                 <li data-thumb="./images/Contents/Collection/4_1.png" data-src="./images/Contents/Collection/4_1.png"
@@ -412,7 +416,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_1_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_1_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_1_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_1_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_1_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_1.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_1_1" class="collectionDesriptText"></div>
@@ -424,7 +429,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_2_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_2_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_2_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_2_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_2_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_2.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_2_1" class="collectionDesriptText"></div>
@@ -436,7 +442,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_3_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_3_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_3_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_3_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_3_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_3.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_3_1" class="collectionDesriptText"></div>
@@ -448,7 +455,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_4_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_4_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_4_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_4_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_4_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_4.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_4_1" class="collectionDesriptText"></div>
@@ -460,7 +468,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_5_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_5_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_5_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_5_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_5_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_5.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_5_1" class="collectionDesriptText"></div>
@@ -472,7 +481,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_6_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_6_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_6_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_6_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_6_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_6.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_6_1" class="collectionDesriptText"></div>
@@ -484,7 +494,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_7_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_7_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_7_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_7_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_7_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_7_thumbnail.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_7_1" class="collectionDesriptText"></div>
@@ -496,7 +507,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_8_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_8_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_8_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_8_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_8_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_8_thumbnail.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_8_1" class="collectionDesriptText"></div>
@@ -508,7 +520,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_9_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_9_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_9_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_9_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_9_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_9_thumbnail.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_9_1" class="collectionDesriptText"></div>
@@ -520,7 +533,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_10_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_10_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_10_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_10_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_10_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_10_thumbnail.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_10_1" class="collectionDesriptText"></div>
@@ -532,7 +546,8 @@
                         <span data-i18n="Collection_4.imgDescriptionBuNam_11_1" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_11_2" class="collectionDesriptText"></span>
                         <span data-i18n="Collection_4.imgDescriptionBuNam_11_4" class="collectionDesriptText"></span>
-                        <div data-i18n="Collection_4.imgDescriptionBuNam_11_3" class="collectionDesriptText  cdtd pt-1"></div>
+                        <div data-i18n="Collection_4.imgDescriptionBuNam_11_3" class="collectionDesriptText  cdtd pt-1">
+                        </div>
                     </div>
                     <img src="./images/Contents/Collection/4_11_thumbnail.png" />
                     <div data-i18n="Collection_4.imgDescriptionBuNam_11_1" class="collectionDesriptText"></div>

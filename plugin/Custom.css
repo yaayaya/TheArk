@@ -1088,13 +1088,13 @@ html {
   height: 450px;
   object-fit: contain;
 }
-
 .sliderBI img {
+  width: 100%;
   max-height: 85vh;
-  /* width: 100%;
-  object-fit: contain; */
+  object-fit: contain;
 
+  /* max-height: 85vh;
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: cover; */
 }
