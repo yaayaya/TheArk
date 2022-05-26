@@ -36,11 +36,7 @@ html {
 
 /* 電腦、平板 CSS */
 @media (min-width: 768px) {
-  .navbar-logo {
-    padding: 10px !important;
-    width: 200px;
-    height: 100%;
-  }
+
 
   .nav-item-BTitle {
     color: rgb(255 255 255 / 80%);
@@ -273,20 +269,6 @@ html {
 
   .mobileShow {
     display: block;
-  }
-
-  .navbar-logo {
-    max-height: 100%;
-    max-width: 100%;
-    height: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    padding: 1px;
-    width: 110px;
-    height: 100%;
   }
 
   main {
@@ -638,6 +620,19 @@ html {
 
 /* 電腦版設定 */
 @media (min-width: 1025px) {
+  /* nav背景圖 */
+  #vueNav{
+    background-image: url("../images/icon/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: 30px 0px;
+  }
+
+  .navbar-logo {
+    display: none !important;
+
+  }
+
   .w1025show {
     display: block;
   }
@@ -691,8 +686,19 @@ html {
     text-align: -webkit-center;
   }
 }
+
 /* 手機、平板 */
 @media (max-width: 1024px) {
+  #vueNav{
+    padding: 0 0.5rem 0.5rem 1rem !important
+  }
+
+  .navbar-logo {
+    width: 100%;
+    max-height: 100px;
+    margin: auto;
+  }
+
   .w1025show {
     display: none !important;
   }
@@ -1099,9 +1105,4 @@ html {
   object-fit: cover;
 }
 
-#vueNav{
-  background-image: url("../images/icon/logo.svg");
-  background-repeat: no-repeat;
-  background-size: contain, cover;
-  background-position: 30px 0px;
-}
+
