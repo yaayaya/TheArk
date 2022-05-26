@@ -1089,12 +1089,19 @@ html {
   object-fit: contain;
 }
 .sliderBI img {
-  width: 100%;
+  /* width: 100%;
   max-height: 85vh;
-  object-fit: contain;
+  object-fit: contain; */
 
-  /* max-height: 85vh;
+  max-height: 85vh;
   display: block;
   width: 100%;
-  object-fit: cover; */
+  object-fit: cover;
+}
+
+#vueNav{
+  background-image: url("../images/icon/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: 30px 0px;
 }
