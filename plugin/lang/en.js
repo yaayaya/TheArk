@@ -17,9 +17,9 @@ let en = {
       OtherRuins: "Other Sites",
       Store: "Welcome to The Ark Museum Shop",
 
-      giant: "Giant beast Fossil",
+      giant: "Giant beast Fossils",
       biological: "Vertebrate Fossils",
-      plant: "Plant Fossil",
+      plant: "Dayan Ruins",
       BuNam: "Bu-Nam cultural Relics",
     },
     Lang: {
@@ -376,7 +376,7 @@ let en = {
     },
 
     Collection_4: {
-      Title: "Bu-Nam Sites",
+      Title: "Bu-Nam cultural Relics",
 
       imgTitleBuNam_1: "Bu Num Civilisation— Vessel of Fleeing Souls",
       imgDescriptionBuNam_1_1: "2019 Bu Num Civilisation— Vessel of Fleeing Souls",
