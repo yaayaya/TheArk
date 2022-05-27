@@ -122,8 +122,8 @@ let zhtw = {
     Address: {
       Title: "地址:",
       Address: "日本珠洲市折戸町石川縣 927-1446",
-      Phone: "03-329-6662",
-      TwAddress: "333009 台灣桃園市龜山區中坑街521號",
+      Phone: "02-2659-0798",
+      TwAddress: "耿畫廊 台北市內湖區瑞光路548巷15號1樓",
     },
     License: "© 2022 Tu's Archeology Team 版權所有",
     // 泰國甲米
@@ -394,13 +394,13 @@ let zhtw = {
 
       imgTitleBuNam_5: "繁花似錦2號",
       imgDescriptionBuNam_5_1: "2017 繁花似錦2號",
-      imgDescriptionBuNam_5_2: "(52×57×7 cm)",
+      imgDescriptionBuNam_5_2: "(62×57×7 cm)",
       imgDescriptionBuNam_5_3: "「繁花似錦2號」呈現扇形卜湳捲草紋簍空形制，有奇異的蝴蝶、植物和機械法器造型的浮雕。工藝造詣卓爾不凡，造型優美華麗、線條繁複交錯、層次豐富。",
       imgDescriptionBuNam_5_4: "銅",
 
       imgTitleBuNam_6: "BM0803",
       imgDescriptionBuNam_6_1: "2008 BM0803",
-      imgDescriptionBuNam_6_2: "(63x80x17 cm)",
+      imgDescriptionBuNam_6_2: "(53x80x17 cm)",
       imgDescriptionBuNam_6_3: "「BM0803」是一尊8顆頭獨身的神像雕塑，所有的頭都長得不同，並連接到同一個載體。中央有一個類似面具的樣式，額頭和雙眼有神秘法器。左右6個頭的下方有管線連結到面具，造型相當獨特。",
       imgDescriptionBuNam_6_4: "夸石",
 
