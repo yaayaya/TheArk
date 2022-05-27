@@ -200,7 +200,7 @@ let en = {
       t6: "",
     },
     Collection_1: {
-      Title: "Giant beast Fossil",
+      Title: "Giant beast Fossils",
 
       imgTitle_1: "Skinner No.1",
       imgDescription_1_1: "2019 Skinner No.1",
@@ -306,7 +306,7 @@ let en = {
         "Trace Fossil-MB 16 is a well-preserved fossil of an unknown mechanical device or structure with several interconnected cables or metallic threads, resembling members of Decapodiformes.",
     },
     Collection_3: {
-      Title: "Plant Fossil",
+      Title: "Plant Fossils",
 
       imgTitle_21: "PM 01",
       imgDescription_21_1: "2019 Trace Fossil-PM 01",
@@ -376,7 +376,7 @@ let en = {
     },
 
     Collection_4: {
-      Title: "Bu-Nam Site",
+      Title: "Bu-Nam Sites",
 
       imgTitleBuNam_1: "Bu Num Civilisation— Vessel of Fleeing Souls",
       imgDescriptionBuNam_1_1: "2019 Bu Num Civilisation— Vessel of Fleeing Souls",
