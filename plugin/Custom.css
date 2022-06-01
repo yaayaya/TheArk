@@ -636,6 +636,9 @@ html {
   .w1025show {
     display: block;
   }
+  .w1025hide{
+    display:  none !important;
+  }
 
   .carousel-item {
     padding: 10px;
@@ -701,6 +704,10 @@ html {
 
   .w1025show {
     display: none !important;
+  }
+
+  .w1025hide{
+    display:  block;
   }
 
   .carousel-item {
