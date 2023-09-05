@@ -126,7 +126,7 @@ let en = {
       TwAddress:
         "Tina Keng Gallery. 1F., No. 15, Ln. 548, Ruiguang Rd., Neihu Dist., Taipei City , Taiwan (R.O.C.)",
     },
-    License: "© 2022 Tu's Archeology Team All Rights Reserved",
+    License: "© 2023 Tu's Archeology Team All Rights Reserved",
     // 泰國甲米
     Thailand_1: {
       Title: "'Giant Ruins'",

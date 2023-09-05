@@ -548,7 +548,7 @@ html {
 }
 
 .arrow {
-  background-image: url(https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg);
+  background-image: url("../images/icon/icon-chevron-white-up.svg");
   background-repeat: no-repeat;
   background-position: center right 0px;
   padding-right: 60px;

@@ -125,7 +125,7 @@ let zhtw = {
       Phone: "02-2659-0798",
       TwAddress: "耿畫廊 台北市內湖區瑞光路548巷15號1樓",
     },
-    License: "© 2022 Tu's Archeology Team 版權所有",
+    License: "© 2023 Tu's Archeology Team 版權所有",
     // 泰國甲米
     Thailand_1: {
       Title: "「巨人巨蛇神話遺跡」",
